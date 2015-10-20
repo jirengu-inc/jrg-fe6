@@ -90,7 +90,7 @@
               
             function printFile($file, $path)  
             {  
-                echo '<li><a href="' . $path . $file . '">'. $file.'</a></li>';  
+                echo '<li><a target="_blank" href="' . $path . $file . '">'. $file.'</a></li>';  
             }  
               
             function printSubDir($dir, $path)  
