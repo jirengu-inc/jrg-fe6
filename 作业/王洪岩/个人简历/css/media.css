@@ -1,0 +1,15 @@
+@media (max-width: 640px){
+	.pic,.per,.ask,.present{
+		float: none;
+	}
+	.present{
+		width: 90%;
+		padding: 5% 5%;
+	}
+	.ask{
+		margin: 0;
+	}
+	.wrapped,.content,.profile,.ask,.per,.pic{
+		width: 100%;
+	}
+}
