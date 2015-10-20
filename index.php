@@ -71,9 +71,9 @@
                   
                     while (false !== ($file = readdir($handle)))   
                     {  
-                        if (is_dir($path.$file) && $file != '.' && $file !='..' && substr($file, 0, 1) !='.' && $file != 'Procfile' && $file != 'README.md' && $file != 'index.php' && $file != 'composer.json')  
+                        if (is_dir($path.$file) && $file != '.' && $file !='..' && substr($file, 0, 1) !='.'  &&$file!='support' && $file!='vendor' && $file != 'Procfile' && $file != 'README.md' && $file != 'index.php' && $file != 'composer.json')  
                             printSubDir($file, $path, $queue);  
-                        else if ($file != '.' && $file !='..'  && substr($file, 0, 1) !='.' && $file != 'Procfile' && $file != 'README.md' && $file != 'index.php' && $file != 'composer.json')  
+                        else if ($file != '.' && $file !='..'  && substr($file, 0, 1) !='.' &&$file!='support' && $file!='vendor'&& $file != 'Procfile' && $file != 'README.md' && $file != 'index.php' && $file != 'composer.json')  
                             $queue[] = $file;  
                     }  
                       
