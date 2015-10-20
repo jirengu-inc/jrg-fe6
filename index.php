@@ -67,9 +67,9 @@
                   
                     while (false !== ($file = readdir($handle)))   
                     {  
-                        if (is_dir($path.$file) && $file != '.' && $file !='..')  
+                        if (is_dir($path.$file) && $file != '.' && $file !='..' && $file!='.git' && $file!='.gitignore'&& $file!='.DS_Store')  
                             printSubDir($file, $path, $queue);  
-                        else if ($file != '.' && $file !='..')  
+                        else if ($file != '.' && $file !='..' && $file!='.git' && $file!='.gitignore'&& $file!='.DS_Store')  
                             $queue[] = $file;  
                     }  
                       
@@ -80,20 +80,23 @@
               
             function printQueue($queue, $path)  
             {  
-                foreach ($queue as $file)   
-                {  
-                    printFile($file, $path);  
-                }   
+                if(sizeof($queue)>0){
+                    foreach ($queue as $file)   
+                    {  
+                        printFile($file, $path);  
+                    }  
+                }
+ 
             }  
               
             function printFile($file, $path)  
             {  
-                echo "<li><a href="".$path.$file."">$file</a></li>";  
+                echo '<li><a href="' . $path . $file . '">'. $file.'</a></li>';  
             }  
               
             function printSubDir($dir, $path)  
             {  
-                echo "<li><span class="toggle">$dir</span>";  
+                echo "<li><span>$dir</span>";  
                 createDir($path.$dir."/");  
                 echo "</li>";  
             }  
@@ -101,9 +104,6 @@
             createDir($path);  
         ?>  
   
-
-
-
 
         </div>
 
