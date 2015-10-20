@@ -20,7 +20,7 @@
     @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
         html, body {margin: 0; padding: 0; height: 100%; width: 100%; background-color: #f0f0f0; }
         .wrapper {font-family: "Microsoft YaHei",monospace,sans-serif; width: 90%; margin: auto; }
-        .tree {}
+        .tree {margin: -30px 30px 0;}
         .tree > ul > li:before,
         .tree > ul > li:after{display: none; }
         .tree li {position: relative; list-style: none; margin: 0; padding: .5em 1em; color: #16a085; }
@@ -54,6 +54,10 @@
         <div class='menubar'>
             <div class='menu section' role='flatdoc-menu'></div>
         </div>
+        <div class="content">
+            <h1>目录</h1>
+            <h2></h2>
+        </div>
         <div class="tree">
             
         <?php  
@@ -67,9 +71,9 @@
                   
                     while (false !== ($file = readdir($handle)))   
                     {  
-                        if (is_dir($path.$file) && $file != '.' && $file !='..' && $file!='.git' && $file!='.gitignore'&& $file!='.DS_Store')  
+                        if (is_dir($path.$file) && $file != '.' && $file !='..' && substr($file, 0, 1) !='.')  
                             printSubDir($file, $path, $queue);  
-                        else if ($file != '.' && $file !='..' && $file!='.git' && $file!='.gitignore'&& $file!='.DS_Store')  
+                        else if ($file != '.' && $file !='..'  && substr($file, 0, 1) !='.')  
                             $queue[] = $file;  
                     }  
                       
