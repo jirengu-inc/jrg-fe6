@@ -4,10 +4,116 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>淘宝登录</title>
-<tyle type="text/css"></style>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<style type="text/css">
+html,body,ul,li,p{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+.clearfix{
+	*zoom: 1;
+}
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+}
+
+
+.container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#header .logo img{
+	height: 43px;
+	margin-top: 27px;
+}
+#content{
+	margin-top: 66px;
+}
+
+#content .ad{
+	float: left;
+	margin-left: 120px;
+}
+
+#content .ad img{
+
+}
+
+#content .login-area {
+	float: left;
+	margin-left: 232px;
+	width: 250px;
+	padding: 23px 30px;
+	border: 2px solid #dfdfdf;
+	border-top: 2px solid #ff5738;
+}
+
+#content .login-area .hd{
+}
+#content .login-area .title{
+	color: #ccc;
+	font-size: 16px;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #ccc;
+}
+#content .login-area .title.active{
+	color: #000;
+	border-bottom: 1px solid #ff5738;
+}
+
+
+
+</style>
 
 </head>
 <body>
-    
+    <div id="header">
+	    <div class="container">
+	    	<a class="logo" href="/"><img src="images/logo.png" /> </a>
+	    </div>
+    </div>
+    <div id="content">
+    	<div class="container clearfix">
+    		<div class="ad">
+	    		<a href="#"><img src="images/plane.png" /></a>
+	    	</div>
+	    	<div class="login-area">
+	    		<div class="hd">
+	    			<a class="title" href="#">快速登录</a><a class="title active" href="#">账户密码登录</a>
+	    		</div>
+	    		<div class="bd">
+	 				<div class="ipt">
+	 					<i class="fa fa-user"></i>
+	 					<input type="text" placeholder="手机号/会员名/邮箱">
+	 				</div>
+	 				<div class="ipt">
+	 					<i class="fa fa-lock"></i>
+	 					<input type="password" placeholder="密码">
+	 				</div>
+
+	 				<div class="txt">
+	 					<a href="#">忘记密码</a>
+	 					<a href="#">免费注册</a>
+	 				</div>
+	 				<a class="signin btn" href="javascript:void(0)">登录</a>
+	    		</div>
+	    	</div>
+	    </div>
+    </div>
+
 </body>
 </html>
