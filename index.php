@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width">
-    <title>暴风雨</title>
+    <title>6班作业</title>
     <!-- Flatdoc -->
     <script src='support/vendor/jquery.js'></script>
     <script src='support/legacy.js'></script>
@@ -14,10 +14,9 @@
     <link href='support/theme-white/style.css' rel='stylesheet'>
     <script src='support/theme-white/script.js'></script>
     <link href='support/theme.css' rel='stylesheet'>
+    <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <style type="text/css">
 
-
-    @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
         html, body {margin: 0; padding: 0; height: 100%; width: 100%; background-color: #f0f0f0; }
         .wrapper {font-family: "Microsoft YaHei",monospace,sans-serif; width: 90%; margin: auto; }
         .tree {margin: -30px 30px 0;}
@@ -35,11 +34,7 @@
 
     </style>
     <!-- Initializer -->
-    <script>
-    Flatdoc.run({
-        fetcher: Flatdoc.file('README.md')
-    });
-    </script>
+
 </head>
 
 <body role='flatdoc'>
@@ -133,7 +128,12 @@
                     }
                 }
             });
+            Flatdoc.run({
+                fetcher: Flatdoc.file('README.md')
+            });    
         });
+
+
 
     </script>
     <!-- -->
