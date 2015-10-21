@@ -6,11 +6,11 @@ $(function (){
 
 	Inp.each(function(){
        $(this).focus(function(){
-		   $(this).parents('.inp').css('border','1px solid #a7c9ec');
+		   $(this).parents('.inp').css('outline','2px solid #a7c9ec');
 	   });
 	});
 	Inp.blur(function(){
-        $('.inp').css('border','1px solid #dedede')
+        $('.inp').css('outline','1px solid #dedede')
 	});
 	idInp.bind('input propertychange', function(){
 		if($(this).val() != 0){
@@ -24,7 +24,7 @@ $(function (){
 		Con.hide();
 	});
     function col(){
-        $('.inp').css('border','1px solid #ff8e8e');
+        $('.inp').css('outline','1px solid #ff8e8e');
 		$('.prompt').show();
     }
 	$('.but').click(function(){

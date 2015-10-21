@@ -79,7 +79,7 @@ li{
 .inp{
 	margin-top: 20px;
 	height: 35px;
-	border: 1px solid #dedede;
+	outline: 1px solid #dedede;
 	position: relative;
 }
 .inp p{
@@ -91,7 +91,7 @@ li{
 	text-align: center;
 }
 .inp input{
-	width: 203px;
+	width: 200px;
 	height: 35px;
 	padding-left: 10px;
 	outline: none;
