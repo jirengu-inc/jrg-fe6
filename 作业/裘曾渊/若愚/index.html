@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>百度搜索</title>
+	<link rel="short icon" type="image/x-icon" href="https://www.baidu.com/favicon.ico">
+
+	<style type="text/less">
+	@gray:#333;
+	@light-gray:#666;
+	@baidu-blue:#2d78f4;
+	
+	p,body{
+		padding:0;
+		margin:0;
+
+	}
+  	a{ 
+  		margin:0;
+  		padding: 0;
+		color:@gray;
+  	}
+
+	
+
+  	ul{float: right;
+  		margin:20px 10px 0 0 ;
+		  	li{
+		  		margin:0;
+		  		padding: 0;
+		  		list-style: none;
+		  		display: inline-block;
+		  		margin-left: 16px;
+			  	a{
+			  		font-size: 13px;
+			  		font-weight: bold;
+			  		&:hover{
+			  			color:@baidu-blue;
+			  			transition: all .3s;
+			  		}
+			  		}
+
+			  	.more{
+	  			color:white;width: 60px;background-color: @baidu-blue;text-decoration: none;line-height: 24px;height: 24px;display: block;font-weight: normal;text-align: center;
+	  				&:hover{
+	  					color:@gray;
+	  					background: #f9f9f9;
+	  				}
+		  	}	
+	  	}
+
+	}
+
+  	section{
+  		display: table;
+  		margin:0 auto;
+  		clear:both;
+		text-align: center;
+
+  		img{
+  			width:270px;
+  			height:129px;
+  		}
+  		.search{ margin-top: 20px;
+	  		.searchct{
+	  			display: inline-block;
+	  			width: 539px;height: 34px;
+	  			border:1px solid @baidu-blue;
+	  			input{
+	  				height: 20px;
+	  				width: 500px;
+	  				border:0 none;
+	  				margin: 6px 0 0 7px;
+	  				position: relative;
+	  				left:-16px;
+	  			}
+	  		}
+	  		.searchbt{
+	  			input{background: #3385ff;border:1px solid #2d78f4;color:white;font-size: 15px;width:100px;height: 36px;position: relative;
+	  				top:1px; left:-5px;
+	  			}
+	  		}
+  		}
+  	}
+
+	footer{
+		display: table;
+  		margin:0 auto;
+  		position: absolute;
+  		bottom:70px;
+  		width:100%;
+  		text-align: center;
+  		font-size: 12px;
+
+  		.upper{
+  			a{
+  				margin: 0 10px;
+				color:#00c;
+  				}
+  		}
+  		.down{
+  			margin-top: 4px;
+  			color:@light-gray;
+			a{
+				color:@light-gray;
+				margin: 0 1px;
+			}
+			.icon{
+				width: 14px;height: 17px;
+				display: inline-block;
+				position: relative;
+				top:3px;
+				background: url("https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png") no-repeat scroll -600px -96px;
+			}
+  		}
+	}
+	
+	</style>
+</head>
+
+
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">hao123</a></li>
+			<li><a href="#">地图</a></li>
+			<li><a href="#">视频</a></li>
+			<li><a href="#">贴吧</a></li>
+			<li><a href="#">登录</a></li>
+			<li><a href="#">设置</a></li>
+			<li><a href="#" class="more">更多产品</a></li>
+		</ul>
+	</nav>
+
+
+	<section>
+		<img src="http://www.baidu.com/img/bd_logo1.png">
+		<div class="search">
+			<span class="searchct"><input></input></span>
+			<span class="searchbt"><input type="submit" value="百度一下"/></span>
+		</div>
+	</section>
+
+
+	<footer>
+    	<p class="upper">
+    		<a href="#">把百度设为主页</a>
+    		<a href="#">关于百度</a>
+    		<a href="#">About Baidu</a>
+    	</p>
+		<p class="down">
+			©2015 Baidu <a href="#">使用百度前必读</a><a href="#">意见反馈</a> 京ICP证030173号 <i class="icon"></i>
+		</p>
+	</footer>
+
+
+	<script src="http://cdn.bootcss.com/less.js/2.5.3/less.min.js"></script>
+
+</body>
+</html>
