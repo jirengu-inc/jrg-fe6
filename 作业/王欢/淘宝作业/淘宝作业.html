@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝作业</title>
+	<link rel="stylesheet" href="https://assets.alicdn.com/g/tb/login/0.4.1/css/new-login.css?t=20150420"/>
+	<style>
+		html,body,ul,li,input{
+			margin: 0;
+			padding: 0;
+		}
+
+		/*清除浮动*/
+		.clearfix{
+			zoom:1;
+		}
+		.clearfix:after {
+		    content: ' ';
+		    display: block;
+		    height: 0;
+		    clear: both;
+		}
+		
+		#page{
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		#header .logo-img{
+			margin-top: 30px;
+		}
+		#header .logo-img img{
+			width: 106px;
+			height: 43px;
+		}
+
+		#content{
+			margin-top: 65px;
+			position: relative;
+		}
+		#content .con-ad{
+			/*overflow: hidden;*/
+			margin-left: 170px;
+			position: absolute;
+		}
+		#content .con-ad img{
+			width: 350px;
+			height: 280px;
+		}
+		#content .con-login{
+			border: 2px solid #dedede;
+			border-top: 2px solid #f40;
+			width: 253px;
+			height: 276px;
+			float: right;
+			margin-right: 150px;
+			padding: 20px 30px 30px 30px;
+		}
+		#content .con-login .con-hd .title{
+			text-align: center;
+			color: #999;
+			width: 50%;
+			font-size: 14px;
+			font-weight: bold;
+			border-bottom: 1px solid #dedede;
+			padding-bottom: 15px;
+			display: block;
+			float: left;
+		}
+		#content .con-login .con-hd .active{
+			color: #333;
+			border-bottom: 1px solid #f40;
+		}
+		#content .con-login .con-form{
+			width: 250px;
+		}
+		#content .con-login .con-form .form-bd{
+			width: 250px;
+			height: 35px;
+			margin-top: 20px;
+			position: relative;
+		}
+		#content .con-login .con-form .form-bd label{
+			color: #fff;
+			background: #ccc;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			display: block;
+			position: absolute;
+			top: 1px;
+		}
+		#content .con-login .con-form .form-bd .ipt{
+			width: 203px;
+			height: 35px;
+			line-height: 35px;
+			border: 1px solid #dedede;
+			padding-left: 49px;
+		}
+		#content .con-login .login-link{
+			width: 254px;
+			height: 20px;
+			margin-top: 24px;
+			
+		}
+		#content .con-login .login-link a{
+			text-decoration: none;
+			font-size: 12px;
+			/*font-family: */
+			color: #666;
+		}
+		#content .con-login .login-link .forget-pwd{
+			float: left;
+		}
+		#content .con-login .login-link .register{
+			float: right;
+		}
+
+		#content .con-login .login-submit button{
+			width: 254px;
+			height: 37px;
+			color: #fff;
+			font-size: 16px;
+			font-weight: bold;
+			background: #f40;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			margin-top: 13px;
+
+		}
+		#content .con-login .login-other{
+
+			margin-top: 20px;
+		}
+		#content .con-login .login-other a{
+			color: #666;
+			font-size: 12px;
+			padding:1px 0 1px 23px;
+			margin-left: 8px;
+			text-decoration: none;
+			display: inline-block;
+		}
+		#content .con-login .login-other .weibo-login{
+
+			background: url(images/c.png) no-repeat 0 -213px;
+		}
+		#content .con-login .login-other .zfb-login{
+			background: url(images/icon-alipay.png) no-repeat 0 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div class="logo-img">
+				<img src="images/logo.png" alt="">
+			</div>
+		</div>
+
+		<div id="content">
+			<div class="con-ad clearfix">
+				<img src="images/ad.png" alt="">
+			</div>
+			<div class="con-login">
+				<div class="con-hd clearfix">
+					<span class="title">快速登录</span>
+					<span class="title active">账户密码登录</span>
+				</div>
+				<div class="con-form">
+					<div class="form-bd">
+						<label for="username"> <i class="iconfont" title="会员名">&#xe601;</i></label>
+						<input id="username" class="ipt" type="text" placeholder="手机号/会员名/邮箱">
+					</div>
+					<div class="form-bd">
+						<label for="password"><i class="icon iconfont" title="登录密码">&#xe600;</i></label>
+						<input id="password" class="ipt" type="password">
+					</div>
+				</div> 
+				<div class="login-link">
+					<a href="#" class="forget-pwd">忘记登录密码？</a>
+					<a href="#" class="register">免费注册</a>
+				</div>
+				<div class="login-submit">
+					<button class="log-btn">登 &nbsp;录</button>
+				</div>
+				<div class="login-other">
+					<a href="#" class="weibo-login">微博登录</a>
+					<a href="#" class="zfb-login">支付宝登录</a>
+				</div>
+			</div>
+		</div>
+		<!-- <div id="footer"></div> -->
+	</div>
+</body>
+</html>

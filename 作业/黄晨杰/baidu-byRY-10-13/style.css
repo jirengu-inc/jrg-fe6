@@ -23,7 +23,7 @@ body{
 .nav-bar{
 	float: right;
 	list-style: none;
-	margin-top: 20px;
+	margin-top: 15px;
 	overflow: hidden;
 }
 
@@ -32,6 +32,17 @@ body{
 	height: 25px;
 	font-size: 13px;
 	margin-right: 22px;
+}
+
+.nav-bar li:last-child{
+	margin-right: 10px;
+}
+
+.nav-bar li:last-child a, .nav-bar li:last-child .side-bar{
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
 }
 
 .nav-bar a{
@@ -54,10 +65,95 @@ body{
 	padding: 0 5px;
 	color: white;
 	text-decoration: none;
+	position: relative;
+	z-index: 100;
 }
 
-.nav-bar .app-product:hover{
-	color: #333;
+.nav-bar li:last-child:hover a{
+	color: #333333;
+	background-color: #f9f9f9;
+}
+
+.nav-bar li:last-child:hover .side-bar{
+	display: block;
+}
+
+.side-bar{
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 82px;
+	background-color: #f9f9f9;
+	border-left: 1px solid #e7e7e7;
+}
+
+.side-bar ul{
+	position: relative;
+	top: 52px;
+	list-style: none;
+}
+
+.side-bar li{
+	float: none;
+	height: 76px;
+	width: 65px;
+	border-top: 1px solid #f0f0f0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.side-bar ul li:last-child{
+	padding-top: 12px;
+	text-decoration: underline;
+}
+
+.side-bar i{
+	background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_2e35e84b.png) no-repeat;
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: 12px auto 2px;
+}
+
+.side-bar .rice{
+	background-position: 0 0;
+}
+
+.side-bar .knowledge{
+	background-position: -36px 0;
+}
+
+.side-bar .music{
+	background-position: -72px 0;
+	width: 40px;
+}
+
+.side-bar .picture{
+	background-position: -112px 0;
+}
+
+.side-bar .article{
+	background-position: -148px 0;
+}
+
+.side-bar .billboard{
+	background-position: -184px 0;
+}
+
+.side-bar .publish{
+	background-position: -220px 0;
+}
+
+.side-bar a{
+	text-decoration: none;
+	color: #666666;
+}
+
+.side-bar a:hover{
+	color: #666666;
+	text-decoration: underline;
 }
 
 /* nav-bar finish */
