@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;}
+		.wrapper{
+			width: 100%
+			overflow: hidden;
+		}
+		.main{
+			min-height: 500px;
+			background: #ddd;
+			float:left;
+			width: 100%
+		}
+		.aside{
+			float:left;
+			height: 300px;
+			background: green;
+			width: 150px;
+			margin-left: -100%
+		}
+		.cd{
+			float:left;
+			height: 300px;
+			background: green;
+			width: 150px;
+			margin-left:-150px;
+		}
+		.main>.inner{
+			margin-left:150px;
+			margin-right: 150px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="inner">
+				main
+			</div>
+		</div>
+		<div class="aside"></div>
+		<div class="cd"></div>
+	</div>
+</body>
+</html>
