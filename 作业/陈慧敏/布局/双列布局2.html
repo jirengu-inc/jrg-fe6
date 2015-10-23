@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrapper{
+			margin:0 auto;
+			width: 960px;
+			position: relative;
+		}
+		.wrapper:after{
+			content:"";
+			display: block;
+			clear: both;
+		}
+		.main{
+			float:left;
+			width:800px;
+			background:green;
+			min-height:500px;
+		}
+		.aside{
+			float:left;
+			width: 150px;
+			background:red;
+			min-height:400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="aside"></div>
+		<div class="main"></div>
+	</div>
+</body>
+</html>

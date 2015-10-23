@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	min-width: 680px;
+	min-height: 680px;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+#header{
+	overflow: hidden;
+}
+
+.nav-bar{
+	float: right;
+	list-style: none;
+	margin-top: 15px;
+	overflow: hidden;
+}
+
+.nav-bar li{
+	float: left;
+	height: 25px;
+	font-size: 13px;
+	margin-right: 22px;
+}
+
+.nav-bar li:last-child{
+	margin-right: 10px;
+}
+
+.nav-bar li:last-child a, .nav-bar li:last-child .side-bar{
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+}
+
+.nav-bar a{
+	color: #333;
+	line-height: 25px;
+}
+
+.nav-bar a:hover{
+	color: #00c;
+}
+
+.nav-bar .app-usual{
+	font-weight: bold;
+}
+
+.nav-bar .app-product{
+	display: block;
+	background-color: #38f;
+	line-height: 25px;
+	padding: 0 5px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	z-index: 100;
+}
+
+.nav-bar li:last-child:hover a{
+	color: #333333;
+	background-color: #f9f9f9;
+}
+
+.nav-bar li:last-child:hover .side-bar{
+	display: block;
+}
+
+.side-bar{
+	display: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 82px;
+	background-color: #f9f9f9;
+	border-left: 1px solid #e7e7e7;
+}
+
+.side-bar ul{
+	position: relative;
+	top: 52px;
+	list-style: none;
+}
+
+.side-bar li{
+	float: none;
+	height: 76px;
+	width: 65px;
+	border-top: 1px solid #f0f0f0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.side-bar ul li:last-child{
+	padding-top: 12px;
+	text-decoration: underline;
+}
+
+.side-bar i{
+	background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/logos/bdbri_icons_2e35e84b.png) no-repeat;
+	width: 36px;
+	height: 36px;
+	display: block;
+	margin: 12px auto 2px;
+}
+
+.side-bar .rice{
+	background-position: 0 0;
+}
+
+.side-bar .knowledge{
+	background-position: -36px 0;
+}
+
+.side-bar .music{
+	background-position: -72px 0;
+	width: 40px;
+}
+
+.side-bar .picture{
+	background-position: -112px 0;
+}
+
+.side-bar .article{
+	background-position: -148px 0;
+}
+
+.side-bar .billboard{
+	background-position: -184px 0;
+}
+
+.side-bar .publish{
+	background-position: -220px 0;
+}
+
+.side-bar a{
+	text-decoration: none;
+	color: #666666;
+}
+
+.side-bar a:hover{
+	color: #666666;
+	text-decoration: underline;
+}
+
+/* nav-bar finish */
+
+#main{
+	margin-top: 10px;
+}
+
+#main img{
+	width: 270px;
+	height: 129px;
+}
+
+.img-wrap{
+	width: 270px;
+	margin: 0 auto;
+}
+
+.search-wrap{
+	width: 640px;
+	margin: 15px auto 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.search-wrap input{
+	width: 532px;
+	border: 1px solid #999;
+	border-right: none;
+	height: 34px;
+	padding-left: 6px;
+	font: 16px/18px Arial;
+	float: left;
+}
+
+.search-wrap i{
+	position: absolute;
+	font-family: "iconfont" !important;
+    font-size: 22px;
+    color: #3385ff;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    right: 105px;
+    top: 7px;
+}
+
+.search-wrap .btn-baidu{
+	width: 100px;
+	height: 36px;
+	font-size: 15px;
+	line-height: 36px;
+	text-align: center;
+	border: none;
+	background-color: #3385ff;
+	color: white;
+	float: left;
+	cursor: pointer;
+}
+
+.search-wrap .btn-baidu:hover{
+	background-color: #317ef3;
+}
+
+/* main-area finished */
+
+#footer{
+	margin-top: 255px;
+	font-size: 12px;
+	text-align: center;
+}
+
+.extension-wrap a{
+	margin-left: 16px;
+}
+
+.extension-wrap a:first-child{
+	margin-left: 0;
+}
+
+.info-wrap{
+	margin-top: 9px;
+	color: #666;
+}
+
+.info-wrap a{
+	margin-left: 10px;
+	color: #666;
+}
+
+.info-wrap a:nth-child(2){
+	margin-right: 10px;
+}
+
+.info-wrap i{
+	width: 14px;
+	height: 17px;
+	background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+	background-position: -600px -96px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+}
