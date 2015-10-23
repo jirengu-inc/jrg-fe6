@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>单列布局</title>
+	<style>
+		*{
+			margin: 0;padding: 0;
+		}
+		.wrapper{
+			min-width: 960px;
+		}
+		.wrapped{
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+		.head{
+			background: yellow;
+			height: 100px;
+			width: 100%;
+		}
+		.main{
+			background: orange;
+			height: 300px;
+		}
+		.footer{
+			background:pink;
+			height: 100px;
+			width: 100%;
+		}
+		.footer a{
+			display:inline-block;
+			width: 100px;
+			height: 20px;
+			background: #ddd;
+			border:1px solid #ccc;
+			font-size: 12px;
+			line-height: 20px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		.footer-link{
+			text-align: center;
+			font-size: 0;
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="head">
+			<div class="wrapped">
+				<h1>Head</h1>
+			</div>
+		</div>
+		<div class="main wrapped wrapper">
+			<h1>This is Main.</h1>
+		</div>
+		<div class="footer">
+			<div class="wrapped">
+				<h2>Footer</h2>
+				<div class="footer-link">
+					<a href="#">链接1</a>
+					<a href="#">链接2</a>
+					<a href="#">链接3</a>
+					<a href="#">链接4</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
