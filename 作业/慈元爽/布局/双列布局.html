@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>双列布局</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrapper{
+			margin: 0 auto;
+			width: 1100px;
+			height: 800px;
+			position: relative;
+		}
+		.aside{
+			background: orange;
+			width: 200px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 800px;
+		}
+		.main{
+			margin-left: 200px;
+			background: yellow;
+			height: 800px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			main
+		</div>
+		<div class="aside">
+			aside
+		</div>
+	</div>
+</body>
+</html>

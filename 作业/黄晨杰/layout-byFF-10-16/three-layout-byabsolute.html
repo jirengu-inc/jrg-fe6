@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>三列布局基于Absolute</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		.side-bar{
+			width: 100px;
+			background-color: rgba(255, 0, 0, 0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 400px;
+		}
+
+		.main{
+			background-color: rgba(0, 0, 255, 0.5);
+			margin: 0 200px 0 100px;
+			height: 200px;
+		}
+
+		.extra{
+			width: 200px;
+			background-color: rgba(0, 255, 0, 0.5);
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 600px;
+		}
+
+		p{
+			border: 2px dashed #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="side-bar"></div>
+	<div class="main"></div>
+	<div class="extra"></div>
+	<p>Like the double layout by <strong>Absolute</strong>, three layout has the same bug.</p>
+	<p><a href="http://www.imooc.com/wenda/detail/254035">圣杯布局/双飞翼布局</a></p>
+</body>
+</html>
