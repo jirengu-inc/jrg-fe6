@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下</title>
+	<meta name="description" content="百度内容">
+	<meta name="keywords" content="百度">
+	<style>
+		body,ul,li,input{
+			margin: 0;
+			padding: 0;
+		}
+		body{height: 100%;}
+		li{list-style: none;}
+		#header{;
+				overflow: hidden;
+
+				}
+		#header .header-wrap{float: right;
+							margin-top: 19px;
+							margin-right: 16px;
+							margin-bottom: 5px;
+							font-size: 13px;
+							
+		}
+		#header .header-wrap li{float: left;
+			margin-left: 19px;
+			line-height: 24px;}
+		#header .app-item{
+				color: #333;
+				font-weight: bold;
+		}
+		#header .header-wrap .app-item1{
+				font-weight: normal;
+		}
+		#header .more{
+				color: #fff;
+				background: #38f;
+				padding: 6px;
+				margin-right: 2px;
+				text-decoration: none;
+		}
+
+	#content{
+		
+		width: 642px;
+		margin:0 auto;
+		text-align:center;
+		position: relative;
+		top: -191px;
+	}
+	img{vertical-align:top;
+		height: 129px;
+		}
+
+	#inner{
+			overflow: hidden;
+			margin:22px auto 0;
+			}
+
+	#write{height: 36px;
+			width: 540px;
+			border: 1px solid #b8b8b8;
+			float: left;
+		}
+	#search{background-color: #3385ff;
+			width: 100px;
+			height: 38px;
+			float: left;
+			}
+
+	#inner span{line-height: 38px;
+		font-size: 18px;
+		color:white;
+		}
+	#img{height: 132px;}
+
+
+	#footer{font-size: 12px;position: absolute;
+			bottom: 44px;
+			height: 100px;
+			width: 100%;
+			text-align: center;
+			font-family: "arial";
+			
+	}
+	#footer #footer-top a{margin:0 10px;color:#00c;}
+	#footer #footer-top{width:720px;margin:16px auto 5px;
+		height: 15px;
+			}
+	#footer #footer-bottom{width:720px;height: 20px;
+		margin:0 auto;
+		color: #666666;
+		}
+	#footer #footer-bottom a{
+		color: #666666;
+
+			}
+	#blank{position: relative;
+		top: 31%;
+		height: 191px;}
+	.icon{display: inline-block;
+		width: 14px;
+		height: 17px;
+		
+		position: relative;
+		top: 3px;
+		background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat -600px -96px;
+	}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<ul class="header-wrap">
+			<li><a class="app-item" href="#">新闻</a></li>
+			<li><a class="app-item" href="#">hao123</a></li>
+			<li><a class="app-item" href="#">地图</a></li>
+			<li><a class="app-item" href="#">视频</a></li>
+			<li><a class="app-item" href="#">贴吧</a></li>
+			<li><a class="app-item app-item1" href="#">登陆</a></li>
+			<li><a class="app-item app-item1" href="#">设置</a></li>
+			<li><a class="more" href="#">更多产品</a></li>
+		</ul>
+	</div>
+
+	<div id="blank">
+	<div id="content">
+		<div id="img"><img src="https://www.baidu.com/img/bd_logo1.png" alt="百度图片"></div>
+		<div id="inner">
+			<input id="write" type="text">
+			<div id="search"><span>百度一下</span></div>
+		</div>
+	</div>
+	</div>
+	
+	<div id="footer">
+		<p id="footer-top">
+			<a href="#">把百度设为主页</a>
+			<a href="#">关于百度</a>
+			<a href="#">About Baidu</a>
+		</p>
+		<p id="footer-bottom">
+			©2015&nbspBaidu&nbsp
+			<a href="#">使用百度前必读</a>
+			<a href="#">意见反馈</a>
+			&nbsp京ICP证030173号
+			<span class="icon"></span>
+		</p>
+	</div>
+</body>
+</html>
