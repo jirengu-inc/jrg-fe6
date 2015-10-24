@@ -2,6 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
 		<title>resume</title>
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-1.11.3.min.js"></script>
@@ -10,11 +12,20 @@
 		<header>
 			<div class="wrap wrap-header">
 				<div class="wrap-share fr">
-					<span class="icon share">&#xe67e;</span>
-					<div class="share-box" id="share-box" style="display: none;">
-						分享到：
-						<span class="sina icon">&#xf0020;</span>
-						<span class="wx icon">&#xe601;</span>
+					<div class="share1" id="share1">
+						<span class="icon share">&#xe67e;</span>
+						<div class="share-box" id="share-box" style="display: none;">
+							分享到：
+							<span class="sina icon">&#xf0020;</span>
+							<span class="wx icon">&#xe601;</span>
+						</div>
+					</div>
+					<div class="share2" id="share2">
+						<img src="http://h5.jobdeer.com/img/more-vert.png" alt="" class="share-icon">
+						<ul class="share-box2" id="share-box2" style="display: none;">
+							<li class="sina">分享到微博</li>
+							<li class="wx">分享到微信</li>
+						</ul>
 					</div>
 				</div>
 				<div class="wrap-title">
@@ -118,9 +129,11 @@
 				}
 			});
 			$(".wrap-share").click(function(){
-				$(".share-box").fadeToggle();
+				if($("#share1").css("display") == "block")
+					$("#share-box").fadeToggle();
+				else
+					$("#share-box2").fadeToggle();
 			});
-
 		})
 		</script>
 	</body>

@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@mixin max-screen($res){
+    @media only screen and (max-width: $res)
+    {
+        @content;
+    }
+}
+$max-width: 800px;      /* 自适应*/
 @font-face {font-family: 'iconfont';
     src: url('iconfont.eot'); /* IE9*/
     src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -64,54 +71,109 @@ header{
         .icon{
             font-size: 28px;
             padding-right: 8px;
+            @include max-screen($max-width){
+                font-size: 24px;
+            }
         }
         > h1{
             font-size: 28px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            @include max-screen($max-width){
+                font-size: 24px;
+            }
         }
     }
     .wrap-share{
         position: relative;
-        .share{
-            color: #21B396;
-            font-size: 28px;
-            -webkit-transform: translate(180deg);
-                -ms-transform: translate(180deg);
-                    transform: translate(180deg);
-        }
-        .share-box{
-            font-size: 14px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.25);
-            padding: 15px;
-            position: absolute;
-            top: 50px;
-            width: 132px;
-            right: 0px;
-            .sina,.wx{
-                color: white;
-                background: #D84C4C;
-                display: inline-block;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                border-radius: 5px;
+        .share2{
+            display: none;
+            @include max-screen($max-width)
+            {
+                display: block;
             }
-            .wx{
-                background: #73A64F;
+            .share-icon{
+                width: 24px;
+                height: 24px;
+                margin-top: 11px;
+            }
+            .share-box2{
+                background: white;
+                position: absolute;
+                right: 0;
+                width: 100px;
+                padding: 5px 0;
+                -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+                        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+                > li{
+                    color: #333;
+                    padding: 0 10px;
+                    line-height: 2;
+                    &:hover{
+                        background: #f5f5f5;
+                        color: #262626;
+                    }
+                }
+            }
+        }
+        .share1{
+            @include max-screen($max-width){
+                display: none;
+            }
+             .share{
+                color: #21B396;
+                font-size: 28px;
+                -webkit-transform: translate(180deg);
+                    -ms-transform: translate(180deg);
+                        transform: translate(180deg);
+            }
+            .share-box{
+                font-size: 14px;
+                background: white;
+                -webkit-border-radius: 5px;
+                        border-radius: 5px;
+                -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.25);
+                        box-shadow: 0 0 5px rgba(0,0,0,0.25);
+                padding: 15px;
+                position: absolute;
+                top: 50px;
+                width: 132px;
+                right: 0px;
+                .sina,.wx{
+                    color: white;
+                    background: #D84C4C;
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    -webkit-border-radius: 5px;
+                            border-radius: 5px;
+                }
+                .wx{
+                    background: #73A64F;
+                }
             }
         }
     }
 }
 main{
     .resume{
+        @include max-screen($max-width){
+            display: block;
+            background: #f7f6f8;
+        }
         margin-top: 95px;
         background: white;
         display: table;
         width: 100%;
         font-size: 18px;
         .resume-head{
+            @include max-screen($max-width){
+                width: 100%;
+                display: block;
+            }
             width: 332px;
             height: 240px;
             background: url("http://h5.jobdeer.com/img/avatar/2.png") no-repeat #97D3F3;
@@ -123,6 +185,9 @@ main{
             display: table-cell;
             .text{
                 padding: 0px 20px;
+                @include max-screen($max-width){
+                    padding: 30px 20px 0px 20px;
+                }
             }
         }
         .resume-content{
@@ -131,9 +196,18 @@ main{
             -webkit-box-sizing: border-box;
                     box-sizing: border-box;
                     display: table-cell;
+            @include max-screen($max-width){
+                display: block;
+                margin: 15px;
+                background: white;
+                height: auto;
+            }
         }
     }
     .info{
+        @include max-screen($max-width){
+            display: block;
+        }
         display: table;
         width: 100%;
         margin-top: 15px;
@@ -142,10 +216,16 @@ main{
             font-size: 24px;
         }   
         .person{
+            @include max-screen($max-width){
+                width: auto;
+            }
             width: 270px;
             -webkit-box-sizing: border-box;
                     box-sizing: border-box; 
             .information{
+                @include max-screen($max-width){
+                    margin: 15px;
+                }
                 background: white;
                 padding: 20px 20px 20px 20px;
                 margin: 0px 15px 15px 0;
@@ -164,6 +244,9 @@ main{
         .other{
             display: table-cell;
             .question{
+                @include max-screen($max-width){
+                    margin: 15px;
+                }
                 background: white;
                 padding: 20px;
                 margin: 0 0px 15px 0px;
@@ -181,7 +264,8 @@ main{
                             content: "Q";
                             background: #4CC1AA;
                             color: white;
-                            border-radius: 5px;
+                            -webkit-border-radius: 5px;
+                                    border-radius: 5px;
                             margin-right: 5px;
                         }
                     }
@@ -191,6 +275,9 @@ main{
                 }
             }
             .contact{
+                @include max-screen($max-width){
+                    margin: 15px;
+                }
                 background: white;
                 padding: 20px;
                 .contact-cont{
@@ -208,7 +295,8 @@ main{
                         margin-right: 20px;
                         padding: 0 1em;
                         background: #4CC1AA;
-                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                                border-radius: 5px;
                         text-decoration: none;
                         &:hover{
                             background: #2CA28B;
@@ -219,3 +307,9 @@ main{
         }
     }
 }
+/*@include max-screen(480px)
+{
+    body{
+        font-size: 14px;
+    }
+}*/
