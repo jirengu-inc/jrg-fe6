@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    font-family: "微软雅黑" "arial";
+    font-size: 16px;
+    color: #797979;
+    line-height: 1.8;
+    background: #f7f6f8;
+}
+.icon{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fr{
+    float: right;
+}
+.clear-fix{
+    &:after{
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+            box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1em;
+    
+    &.scroll{
+        padding: 0 1em;
+    }
+    .wrap-header{
+        -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        padding: 1em 1em 0 1em;
+    }
+    .wrap-title{
+        .icon{
+            font-size: 28px;
+            padding-right: 8px;
+        }
+        > h1{
+            font-size: 28px;
+        }
+    }
+    .wrap-share{
+        position: relative;
+        .share{
+            color: #21B396;
+            font-size: 28px;
+            -webkit-transform: translate(180deg);
+                -ms-transform: translate(180deg);
+                    transform: translate(180deg);
+        }
+        .share-box{
+            font-size: 14px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.25);
+            padding: 15px;
+            position: absolute;
+            top: 50px;
+            width: 132px;
+            right: 0px;
+            .sina,.wx{
+                color: white;
+                background: #D84C4C;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .wx{
+                background: #73A64F;
+            }
+        }
+    }
+}
+main{
+    .resume{
+        margin-top: 95px;
+        background: white;
+        display: table;
+        width: 100%;
+        font-size: 18px;
+        .resume-head{
+            width: 332px;
+            height: 240px;
+            background: url("http://h5.jobdeer.com/img/avatar/2.png") no-repeat #97D3F3;
+            background-size: 164px;
+            background-position: center bottom;
+            color: white;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            display: table-cell;
+            .text{
+                padding: 0px 20px;
+            }
+        }
+        .resume-content{
+            padding: 50px;
+            height: 260px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    display: table-cell;
+        }
+    }
+    .info{
+        display: table;
+        width: 100%;
+        margin-top: 15px;
+        h2.title{
+            color: #4CC1AA;
+            font-size: 24px;
+        }   
+        .person{
+            width: 270px;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box; 
+            .information{
+                background: white;
+                padding: 20px 20px 20px 20px;
+                margin: 0px 15px 15px 0;
+                ul.dl{
+                    line-height: 3;
+                    > li{
+                        border-bottom: 1px dashed #e2e2e2;
+                        .dd{
+                            float: right;
+                            color: #4CC1AA;
+                        }
+                    }
+                }
+            }
+        }
+        .other{
+            display: table-cell;
+            .question{
+                background: white;
+                padding: 20px;
+                margin: 0 0px 15px 0px;
+                dl.wrap-q{
+                    > dt{
+                        color: #4CC1AA;
+                        font-size: 18px;
+                        padding: 10px 10px 10px 0px;
+                        &::before{
+                            display: inline-block;
+                            width: 24px;
+                            height: 24px;
+                            line-height: 24px;
+                            text-align: center;
+                            content: "Q";
+                            background: #4CC1AA;
+                            color: white;
+                            border-radius: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                    > dd{
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+            .contact{
+                background: white;
+                padding: 20px;
+                .contact-cont{
+                    margin-top: 50px;
+                    padding-bottom: 50px;
+                    text-align: center;
+                    border-bottom: 1px solid #e2e2e2;
+                }
+                .btn-box{
+                    margin-top: 20px;
+                    > a{
+                        line-height: 2.5;
+                        color: white;
+                        display: inline-block;
+                        margin-right: 20px;
+                        padding: 0 1em;
+                        background: #4CC1AA;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        &:hover{
+                            background: #2CA28B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

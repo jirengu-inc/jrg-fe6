@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下</title>
+</head>
+<style>
+	body,ul,li{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	#header .header_wrap{
+		float:right;
+		margin-top: 10px;
+		margin-right: 10px;
+		font-size: 14px;
+	}
+	#header{
+		overflow: hidden;
+	}
+	#header .header_wrap li{
+		float:left;
+		margin-left: 15px;
+	}
+	#header .app_item{
+		color: #333;
+		font-weight: bold;
+	}
+	#header .app_item:hover{
+		color: #38f;
+	}
+	#header .more{
+		color: #fff;
+		background-color: #3385ff;
+		padding: 5px;
+		text-decoration: none;
+	}
+	#header .more:hover{
+		text-decoration: underline;
+	}
+	#content .img_wrap{
+		margin-top: 60px;
+		text-align: center;
+	}
+	.search_wrap{
+		width: 655px;
+		margin: 38px auto 265px;
+	}
+	.search_wrap input{
+		width: 525px;
+		border: 1px solid #38f;
+		height: 35px;
+		line-height: 35px;
+		float: left;
+		border-color: #b8b8b8 transparent #ccc #b8b8b8; 
+		font-size: 18px;
+	}
+	.search_wrap .btn{
+		background: #38f;
+		width: 100px;
+		height: 39px;
+		line-height: 39px;
+		text-align: center;
+		display: block;
+		float: left;
+		background-color: #3385ff;
+		color:#fff;
+	}
+	.search_wrap .btn:hover{
+		background: #317ef3;
+		cursor: pointer;
+	}
+	.search_wrap .btn:active{
+		background-color:#3075dc;
+	}
+	#footer .content_wrap{
+		width: 500px;
+		margin:400px auto 0; 
+		text-align: center;
+	}
+	#footer .content_wrap li{
+		margin-left: 15px;
+		display: inline;
+	}
+	#footer .content_wrap li:first-child{
+		margin-left: 0;
+	}
+	#footer .content_wrap ul{
+		overflow: hidden;
+		
+	}
+	#footer .cp,.cp>a{
+		color: #666;
+		font-size: 12px;
+	}
+</style>
+<body>
+	<div id="header">
+		<ul class="header_wrap">
+			<li><a class="app_item" href="#">新闻</a></li>
+			<li><a class="app_item" href="#">hao123</a></li>
+			<li><a class="app_item" href="#">地图</a></li>
+			<li><a class="app_item" href="#">视频</a></li>
+			<li><a class="app_item" href="#">贴吧</a></li>
+			<li><a class="app_item" href="#">登录</a></li>
+			<li><a class="app_item" href="#">设置</a></li>
+			<li><a class="more" href="#">更多产品</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div class="img_wrap">
+			<img src="https://www.baidu.com/img/bd_logo1.png">
+		</div>
+		<div class="search_wrap">
+			<input class="ipt_search" type="text">
+			<span class="voice"></span>
+			<a class="btn">百度一下</a>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="content_wrap">
+			<ul>
+				<li><a href="#">把百度设为主页</a></li>
+				<li class="foot_item"><a href="#">关于百度</a></li>
+				<li class="foot_item"><a href="#">About Baidu</a></li>
+			</ul>
+			<p class="cp">
+				©2015Baidu
+				<a href="#">使用百度前必读</a> 
+				<a href="#">意见反馈</a>
+				京ICP证030173号
+				<span>
+					<img src="url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat" alt="">
+				</span>
+			</p>
+		</div>	
+	</div>
+</body>
+</html>

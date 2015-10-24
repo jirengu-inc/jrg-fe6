@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+
+	@font-face {
+		font-family: "iconfont1";
+  		src: url('./fonts/iconfont.eot'); /* IE9*/
+  		src: url('./fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  		url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+  		url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+ 		url('./fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+	.iconfont {
+	  font-family:"iconfont1" !important;
+	  font-size:16px;
+	  font-style:normal;
+	  -webkit-font-smoothing: antialiased;
+	  -webkit-text-stroke-width: 0.2px;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+	.icon-username:before { content: "\e626"; }
+	.icon-lock:before { content: "\e69a"; }
+
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style: none;
+	}
+	.wrap{
+		max-width: 1190px;
+		margin: 0 auto;
+	}
+	.clear{
+		*zoom:1;
+	}
+	.clear:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#header{
+		margin-top: 27px;
+	}
+	#header a{
+		width: 106px;
+		height: 43px;
+	}
+	#header a img{
+		width: 106px;
+		height: 43px;
+	}
+	#content{
+		margin-top: 66px;
+	}
+	#content .ad{
+		float: left;
+		width: auto;
+	}
+	@media(max-width: 768px){
+		#content .ad{
+			display: none;
+		}
+		#header{
+			text-align: center;
+		}
+	}
+	#content .ad a{
+		width: 348px;
+		height: 285px;
+		display: block;
+	}
+	#content .login-area{
+		width: 256px;
+		padding: 22px 30px;
+		float: right;
+		border: 2px solid #ccc;
+		border-top:2px solid #FF4400;
+	}
+	@media(max-width: 768px){
+		#content .login-area{
+			float: none;
+			margin: 0 auto;
+		}
+	}
+	#content .login-head{
+		margin-bottom: 10px;
+	}
+	#content .login-head a{
+		font-size: 14px;
+		display: inline-block;
+		*display: inline;
+		*zoom:1;
+		padding:0 33px 15px 20px;
+		font-weight: bold;
+	}
+	#content .login-head a:first-child{
+		color: #999;
+		border-bottom: 1px solid #dedede;
+	}
+	#content .login-head a:last-child{
+		color: #000;
+		border-bottom: 1px solid orange;
+	}
+	#content .login-inp input{
+		margin: 10px 0;
+		padding: 8px;
+		background-color: #FAFFBD;
+		width: 196px;
+		border: 1px solid #ccc;
+	}
+	#content .login-inp span{
+		display: inline-block;
+		*display: inline;
+		*zoom:1;
+		width: 35px;
+		height: 35px;
+		text-align: center;
+		line-height: 35px;
+		background-color: #ccc;
+		cursor: default;
+		
+	}
+	#content .login-inp .pwd-inp{
+		background-color: #fff;
+	}
+	#content .login-text a{
+		margin: 10px 0;
+		display: inline-block;
+		*display: inline;
+		*zoom:1;
+		font-size: 12px;
+		color: #666;
+	}
+	#content .login-text a:hover{
+		text-decoration: underline;
+		color: #FF4400;
+	}
+	#content .login-text a:first-child{
+		float: left;
+	}	
+	#content .login-text a:last-child{
+		float: right;
+	}
+	#content .login-btn a{
+		padding: 10px 100px;
+		display: block;
+		background-color: #FF4400;
+		color: #fff;
+		font-weight: bold;
+		border-radius: 5px;
+	}
+	#content .login-link{
+		margin-top: 20px;
+	}
+	#content .login-link a{
+		font-size: 12px;
+		color: #666;
+		margin-right: 10px;
+	}
+	#content .login-link a:hover{
+		color: #FF4400;
+		text-decoration: underline;;
+	}
+	#weibo-lg{
+		background: url(https://assets.alicdn.com/g/tb/login/0.4.1/images/c.png) no-repeat 0 -213px;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		*display: inline;
+		*zoom:1;
+		position: relative;
+		top: 5px;
+	}
+	#zfb-lg{
+		background: url(https://assets.alicdn.com/g/tb/login/0.4.1/images/icon-alipay.png) no-repeat ;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		*display: inline;
+		*zoom:1;
+		position: relative;
+		top: 5px;
+	}
+	#content .content-wrap{
+		max-width: 980px;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div class="wrap">
+			<a href="javascript:;"><img src="https://assets.alicdn.com/apps/login/static/logo.png" alt="淘宝网"></a>
+		</div>
+	</div>
+	<div id="content">
+		<div class="content-wrap clear">
+			<div class="ad">
+				<a href="javascript:;"><img src="./img/tmall.png"></a>
+			</div>
+			<div class="login-area">
+				<div class="login-head">
+					<a href="">快速登录</a><a href="">账号密码登录</a>
+				</div>
+				<div class="login-inp">
+					<span class="iconfont">&#xe626;</span><input type="text" placeholder="手机号/会员名/邮箱">
+					<span class="iconfont">&#xe69a;</span><input type="password" class="pwd-inp">
+				</div>
+				<div class="login-text clear">
+					<a href="">忘记登录密码</a>
+					<a href="">免费注册</a>
+				</div>
+				<div class="login-btn">
+					<a href="">登　录</a>
+				</div>
+				<div class="login-link">
+					<a href=""><i id="weibo-lg"></i>微博登录</a>
+					<a href=""><i id="zfb-lg"></i>支付宝登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+</body>
+</html>
