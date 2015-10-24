@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>双列布局基于Float</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
 	<style type="text/css">
 		*{
 			margin: 0;
@@ -27,7 +28,7 @@
 		.side{
 			background-color: rgba(0, 0, 255, 0.5);
 			width: 200px;
-			height: 400px;
+			height: 600px;
 		}
 
 		.main{
@@ -45,8 +46,7 @@
 	<div class="wrap">
 		<div class="side"></div>
 		<div class="main"></div>
-		<div class="footer">666</div>
-		<!-- 个人感觉这里 -->
 	</div>
+	<p>Question: Like all the layout by float, you need to <strong>clear float</strong> to make the wrap element has the <em>real height</em>. After this, the following element(s) will not be affected by the before height. Otherwise, just like the demo.</p>
 </body>
 </html>
