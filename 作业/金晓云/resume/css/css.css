@@ -1,0 +1,117 @@
+/* reset */
+body,p,ul,input{margin:0;padding:0;}
+
+li{list-style:none}
+a{text-decoration:none;}
+img{border:none;}
+
+/* end reset */
+
+body{font-family: "微软雅黑";
+	color: #797979;
+	font-size: 14px;
+	line-height: 180%;
+background-color: #f7f6f8;
+min-height: 1000px;}
+
+/*公用样式*/
+.clearfix:after{content: "";
+				display: block;
+				clear: both;
+}
+.f24{font-size: 24px;}
+.f16{font-size: 16px;}
+.blue{color:#4CC1AA;}
+.f20{font-size: 20px;}
+
+
+/*end 公用样式*/
+.bgcolor{background-color: white;}
+
+#main{margin-top: 100px;}
+
+/* top-bar css */
+.top-bar{width: 100%;
+	height: 60px;
+	box-shadow: 0 4px 10px rgba(0,0,0,.1);
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	padding-top: 40px;
+}
+.top-bar-wrap{width: 970px;
+			/*height: 35px;*/
+			margin:0 auto;
+}
+.person{font-size: 28px;color:#bcbcbc;float: left;position: relative;top: 2px;}
+.menu img{width:30px;cursor: pointer;vertical-align:middle;}
+.share img{width:24px;cursor: pointer;}
+.menu {width: 30px;height:30px;float: left;/*position:relative;top:3px;*/}
+.share{width: 24px;height:24px;float: right;/*position: relative;top:5px;*/}
+
+/*main-head css*/
+.main-head{width: 970px;
+	height: 260px;
+	margin:0 auto 0;
+	margin-bottom: 15px;}
+.avatar{float: left;width: 240px;height:260px;position: relative;background-color: rgb(32,178,149);}
+.avatar-info{width: 200px;padding-top: 30px;margin:0 auto;font-size: 18px;text-align: left;color: white;}
+.avatar-image{width: 240px;height: 175px;position: absolute;bottom: 0px;text-align: center;}
+.avatar-image img{width: 164px;height:175px;text-align: bottom;}
+.description{float:left;width:630px;padding: 50px 50px;height:160px;font-size: 18px;line-height: 180%;}
+
+/**main-left&main-right csss*/
+.main-left{width: 270px;float: left;}
+.main-right{width: 685px;padding-left: 15px;float: left;}
+
+.main-bottom-wrap{width:970px;margin: 0 auto;}
+
+
+
+.info-inner{line-height: 180%;padding: 20px;margin-bottom: 15px;}
+.intension{line-height: 180%;padding: 20px;margin-bottom: 15px;}
+
+.pd10{padding:10px 0;border-bottom:1px dashed #e4e4e4;}
+.span-left{float: left;}
+.span-right{float: right;}
+
+.info-ul{margin:15px 0;}
+.info{margin-bottom: 15px;}
+
+.question{margin-bottom: 15px;padding: 20px;}
+.f18{font-size: 18px;}
+.question-title{margin-bottom: 20px;}
+.question1{margin-top: 10px;}
+.question1 span{display: inline-block;width:24px;height:24px;background-color:#36b39a;color: white;border-radius:4px;font-size: 14px;text-align: center; }
+.question-answer{padding: 10px 0;}
+.ma10{margin-bottom: 10px;}
+
+
+.get-resume{padding: 6px 12px;border: 1px solid transparent;cursor: pointer;border-radius: 4px;background-color: #36b39a;
+color: white;width: 96px;float: left;box-shadow: 0 4px 10px rgba(0,0,0,.1);}
+.share-resume{padding: 6px 12px;border: 1px solid transparent;cursor: pointer;border-radius: 4px;background-color: #36b39a;
+color: white;width: 32px;float: left;margin-left: 20px;box-shadow: 0 4px 10px rgba(0,0,0,.1);}
+
+.contact{padding:20px;margin-bottom: 40px;}
+.agree{margin-top: 50px;padding-bottom: 50px;border-bottom: 1px solid #f2f2f2;text-align: center;color: #f2f2f2;}
+.get-share{margin-top: 15px;}
+
+
+/*小分辨率时的显示情况*/
+@media (max-width: 760px){
+
+.top-bar{width: 100%}
+.top-bar-wrap{width: 100%;box-sizing: border-box;padding:0 15px;}
+.main-head{width: 100%;height: auto;margin-bottom: 15px;}
+.avatar-info{margin-left:20px;}
+
+.main-bottom-wrap{width:100%;}
+.main-left{width:100%;float:none;padding:0 15px;box-sizing: border-box;}
+.main-right{width:100%;float:none;padding:0 15px;box-sizing: border-box;}
+.description{float:none;width:100%;height:auto;padding:0 15px;margin:15px 0;box-sizing:border-box;background-color: #f7f6f8;}
+.avatar-image{width:100%;position: absolute;bottom: 0px;text-align: center;}
+.avatar{float:none;width:100%;}
+
+.description-inner{background-color:white;box-sizing: border-box;padding:20px;}
+
+}

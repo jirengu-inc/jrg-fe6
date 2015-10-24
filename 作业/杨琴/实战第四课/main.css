@@ -1,0 +1,95 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+header{
+	font-size: 13px;
+	overflow: auto;
+}
+.header-top{
+	float: right;
+	margin: 20px 15px 0 0;
+}
+.header-top::after{
+	clear: both;
+}
+.header-top a{
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #333;
+}
+.header-top a.login{
+	font-weight: normal;
+}
+.header-top a.more{
+	font-weight: normal;
+	background: #38f;
+	color: #fff;
+	text-decoration: none;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 5px;
+}
+.baidu-logo{
+	margin: 20px auto 26px;
+}
+.baidu-logo img{
+	display: block;
+	margin: 0 auto;
+	width: 280px;
+}
+.search-input{
+	width: 640px;
+	margin: 0 auto 260px;
+	height: 36px;
+	overflow: hidden;
+}
+.search-input .inp01{
+	width: 528px;
+	height: 34px;
+	border: 1px solid #b6b6b6;
+	border-right: none;
+	padding: 0 0 0 10px;
+	line-height: 34px;
+	overflow: hidden;
+	float: left;
+}
+.search-input .inp02{
+	float: left;
+	width: 100px;
+	height: 36px;
+	line-height: 36px;
+	background: #38f;
+	text-align: center;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+}
+footer p{
+	text-align: center;
+	font-family: arial;
+}
+footer .ft-a a{
+	font-size: 12px;
+	color: #00c;
+	margin: 0 10px;
+}
+footer .ft-b{
+	font-size: 12px;
+	color: #666;
+	margin: 10px 0 90px;
+}
+footer .ft-b a{
+	color: #666;
+}
+footer .ft-b .icon_img{
+	background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_45de3f02.png) no-repeat;
+	background-position: -600px -96px;
+	width: 14px;
+	height: 17px;
+	display: inline-block;
+    position: relative;
+    top: 3px;
+}

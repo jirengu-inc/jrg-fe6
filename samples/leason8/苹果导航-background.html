@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        *{margin:0;padding:0;}
+		.sprite {background-image: url(images/spritesheet.png); background-repeat: no-repeat; display: block; }
+		.sprite-apple-nav_03 {width: 107px; height: 38px; background-position: -5px -5px; }
+		.sprite-apple-nav_03:hover {width: 107px; height: 38px; background-position: -122px -5px; }
+		.sprite-apple-nav_04 {width: 106px; height: 38px; background-position: -5px -53px; }
+		.sprite-apple-nav_05 {width: 106px; height: 38px; background-position: -121px -53px; }
+		.sprite-apple-nav_06 {width: 106px; height: 38px; background-position: -5px -101px; }
+		.sprite-apple-nav_07 {width: 106px; height: 38px; background-position: -121px -101px; }
+		.sprite-apple-nav_08 {width: 105px; height: 38px; background-position: -5px -149px; }
+		.sprite-apple-nav_09 {width: 105px; height: 38px; background-position: -120px -149px; }
+		.sprite-apple-nav_10 {width: 105px; height: 38px; background-position: -239px -5px; }
+		.sprite-apple-nav_11 {width: 136px; height: 38px; background-position: -5px -197px; }
+
+        .wrapped{margin: 0 auto; width: 1000px; }
+        
+        .nav > ul > li{float: left; }
+        .clearfix:after{content: ''; display: block; clear:both; }
+        .clearfix{*zoom:1; }
+        .nav > ul {padding-left: 11px; list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="nav wrapped">
+    	<ul class="clearfix">
+    		<li><a href="baidu1.com" class="sprite sprite-apple-nav_03"> </a></li>
+    		<li><a href="baidu2.com" class="sprite sprite-apple-nav_04"> </a></li>
+    		<li><a href="baidu3.com" class="sprite sprite-apple-nav_05"> </a></li>
+    		<li><a href="baidu4.com" class="sprite sprite-apple-nav_06"> </a></li>
+    		<li><a href="baidu5.com" class="sprite sprite-apple-nav_07"> </a></li>
+    		<li><a href="baidu6.com" class="sprite sprite-apple-nav_08"> </a></li>
+    		<li><a href="baidu7.com" class="sprite sprite-apple-nav_09"> </a></li>
+    		<li><a href="baidu8.com" class="sprite sprite-apple-nav_10"> </a></li>
+    		<li><a href="baidu9.com" class="sprite sprite-apple-nav_11"> </a></li>
+    	</ul>
+    </div>
+
+    <div class="main wrapped">
+        <img src="images/iPad.png" alt=""/>
+    </div>
+
+</body>
+</html>
