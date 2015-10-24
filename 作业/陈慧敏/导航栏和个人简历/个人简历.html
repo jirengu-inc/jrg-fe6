@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		@font-face {font-family: "iconfont";
+		  src: url('fonts/iconfont.eot'); /* IE9*/
+		  src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		  url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+		  url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+		  url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+		}
+
+		.iconfont {
+		  font-family:"iconfont" !important;
+		  font-size:16px;
+		  font-style:normal;
+		  -webkit-font-smoothing: antialiased;
+		  -webkit-text-stroke-width: 0.2px;
+		  -moz-osx-font-smoothing: grayscale;
+		}
+		.icon-menu:before { content: "\e745"; }
+		.icon-share:before { content: "\e61a"; }
+		body{
+			font-size: 16px;
+			line-height: 1.5;
+			background-color: #F7F6F8;
+			font-family: "微软雅黑"
+		}
+		.topbar h1{
+			font-size: 28px;
+			line-height: 40px;
+			color:#BCBCBC;
+			font-weight: normal;
+			position: relative;
+			padding-left: 30px;
+		}
+		.topbar{
+			padding:36px 0 24px;
+			box-shadow: 0 0 8px hsla(0,0%,0%,0.25);
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+		}
+		.wrapper{
+			width: 970px;
+			margin: 0 auto;
+		}
+		@media (max-width: 480px){
+			.wrapper{
+				width: 100%
+			}
+		}
+
+
+		.topbar h1>.iconfont{
+			position: absolute;
+		}
+		.topbar h1>.share{
+			right: 0;
+			top:0;
+			font-size: 26px;
+			color: #51AA92;
+		}
+		.topbar h1>.menu{
+			left: 0;
+			top:0;
+			font-size: 26px;
+		}
+		.summary:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.summary{
+			font-size: 18px;
+		}
+		.summary .avatar{
+			float: left;
+			width: 220px;
+			height: 230px;
+			background-color: #58C1D3;
+			padding-top: 30px;
+			padding-left: 20px;
+			color: white;
+			position: relative;
+		}
+		@media (max-width: 480px){
+			.summary .avatar{
+				float: none;
+				width: auto;
+				height: 230px;
+				background-color: #58C1D3;
+				padding-top: 30px;
+				padding-left: 20px;
+				color: white;
+				position: relative;
+			}
+		}
+		.summary .avatar img{
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -82px
+		}
+		.summary .description{
+			float: left;
+			width: 630px;
+			height: 160px;
+			padding:50px;
+			word-break:break-all;
+			color:#818181;
+			line-height: 34px;
+		}
+		@media (max-width: 480px){
+			.summary .description{
+				float: none;
+				width: auto;
+				height: auto;
+				margin: 15px;
+
+			}
+		}
+		.panel{
+			margin-bottom: 15px;
+			background-color: #fff;
+			color:#818181;
+		}
+
+
+		.panel dl:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+
+		.panel dd,dt{
+			float: left;
+			width: 50%;
+			border-bottom: 1px dashed #E4E4E4;
+			line-height: 45px;
+		}
+		.panel dd{
+			text-align: right;
+			color:#74BCAA;
+		}
+		
+		.profile-and-willing{
+			float:left;
+			width: 270px;
+		}
+		@media (max-width: 480px){
+			.profile-and-willing{
+				float:none;
+				width: auto;
+				margin:15px;
+			}
+			.profile{
+				background-color: #fff;
+			}
+		}
+		.qa-and-resume{
+			float:left;
+			width: 685px;
+			margin-left: 15px;
+		} 
+		@media (max-width: 480px){
+			.qa-and-resume{
+				float:none;
+				width: auto;
+				margin:15px;
+			}
+			.profile{
+				background-color: #fff;
+			}
+		}
+		.profile,.willing,.resume{
+			padding: 14px 18px 35px;
+		}
+		.panel.qa{
+			padding: 14px 18px;
+		}
+		.panel h2{
+			font-size: 24px;
+			color:#4CC1AA;
+			font-weight: normal;
+			font-family: "微软雅黑";
+		}
+		.qa-and-resume h3{
+			margin: 10px 0;
+			font-weight: normal;
+			color: #4CC1AA;
+			padding-left: 5px;
+		}
+		.qa-and-resume h3:before{
+			content: "Q";
+			display: inline-block;
+			background-color: #4CC1AA;
+			font-size: 14px;
+			line-height: 100%;
+			padding: 5px 6px;
+			color: white;
+			border-radius: 5px;
+			position: relative;
+			top: -4px;
+			left: -5px;
+		}
+		.qa-and-resume .qa p{
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+		.qa-and-resume .resume p{
+			line-height: 20px;
+			margin:20px 0;
+		}
+		.qa-and-resume .resume button{
+			padding:10px 20px;
+			border-radius: 5px;
+			border:0;
+			background: #4CC1AA;
+			color:white;
+			cursor: pointer;
+		}
+		@media (max-width: 480px){
+			.qa-and-resume .resume button{
+				margin-bottom: 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="topbar">
+		<div class="wrapper">
+			<h1>
+				<span class="menu iconfont icon-menu"></span>
+					候选人
+				<span class="share iconfont icon-share"></span>
+			</h1>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="panel summary">
+			<div class="avatar">
+				<p>09.23</p>
+				<p>前端工程师</p>
+				<img src="http://h5.jobdeer.com/img/avatar/3.png" width="160" alt="">
+			</div>
+			<div class="description">
+				<p>工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验工作经验</p>
+			</div>
+		</div>
+	
+	
+		<div class="profile-and-willing">
+			<div class="panel profile">
+				<h2>
+					个人信息
+				</h2>
+				<dl>
+					<dt>性别</dt>
+					<dd>男</dd>
+					<dt>出生年月</dt>
+					<dd>1992年</dd>
+					<dt>学历</dt>
+					<dd>本科</dd>
+				</dl>
+			</div>
+			<div class="panel willing">
+				<h2>求职意向</h2>
+				<dl>
+					<dt>期望职位</dt>
+					<dd>WEB工程师</dd>
+					<dt>目前所在城市</dt>
+					<dd>杭州</dd>
+					<dt>当前薪资</dt>
+					<dd>你猜</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="qa-and-resume">
+			<div class="panel qa">
+				<h2>面试问答</h2>	
+				<h3>为什么想换工作</h3>
+				<p>因为所以科学道理你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊</p>
+				<h3>对新公司的期待是什么</h3>
+				<p>你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊你猜啊</p>
+			</div>
+			<div class="panel resume">
+				<h2>简历和联系方式</h2>
+				<p>可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见可见</p>
+				<button>索取完整简历</button>
+				<button>分享</button>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>
