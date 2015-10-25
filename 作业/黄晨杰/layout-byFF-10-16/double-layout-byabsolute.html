@@ -3,13 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>双列布局基于Absolute</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
 	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-		}
-
-		div:first-child{
+		.side-bar{
 			background-color: rgba(255, 0, 0, 0.5);
 			position: absolute;
 			top: 0;
@@ -18,7 +14,7 @@
 			width: 200px;
 		}
 
-		div:last-child{
+		.main{
 			background-color: rgba(0, 255, 0, 0.5);
 			height: 500px;
 			margin-left: 210px;
@@ -26,8 +22,10 @@
 	</style>
 </head>
 <body>
-	<div></div>
-	<div></div>
-	666
+	<div class="side-bar"></div>
+	<div class="main"></div>
+	<p>
+		Question: The <strong>position Absoulute</strong> element(s) don't have the real document height. So the after elements must pay attention to the <strong>really height</strong> of the before elements. The CSS property '<em>min-height</em>' or '<em>max-height</em>' could solve before bug.
+	</p>
 </body>
 </html>

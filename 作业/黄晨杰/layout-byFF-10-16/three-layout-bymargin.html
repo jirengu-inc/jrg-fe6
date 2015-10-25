@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>三列布局基于负边距</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		body>div{
+			float: left;
+		}
+
+		.main-wrap{
+			width: 100%;
+		}
+
+		.side-bar{
+			width: 100px;
+			margin-left: -100%;
+			background-color: rgba(0, 255, 0, 0.5);
+			height: 400px;
+		}
+
+		.extra{
+			width: 50px;
+			margin-left: -50px;
+			background-color: rgba(0, 0, 255, 0.5);
+			height: 300px;
+		}
+
+		.main{
+			margin: 0 60px 0 110px;
+			background-color: rgba(255, 0, 0, 0.5);
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-wrap">
+		<div class="main"></div>
+	</div>
+	<div class="side-bar"></div>
+	<div class="extra"></div>
+</body>
+</html>
