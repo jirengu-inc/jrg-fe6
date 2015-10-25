@@ -150,6 +150,7 @@ dl{
 @media screen and (max-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
   .avatar {
     float: none;
+    padding: 30px 0;
     width: 100%;
   }
   .text-desc{
