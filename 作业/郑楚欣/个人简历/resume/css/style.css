@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* 自适应*/
 @font-face {
   font-family: 'iconfont';
   src: url("iconfont.eot");
@@ -57,27 +58,65 @@ header {
   header .wrap-title .icon {
     font-size: 28px;
     padding-right: 8px; }
+    @media only screen and (max-width: 800px) {
+      header .wrap-title .icon {
+        font-size: 24px; } }
   header .wrap-title > h1 {
-    font-size: 28px; }
+    font-size: 28px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+    @media only screen and (max-width: 800px) {
+      header .wrap-title > h1 {
+        font-size: 24px; } }
   header .wrap-share {
     position: relative; }
-    header .wrap-share .share {
+    header .wrap-share .share2 {
+      display: none; }
+      @media only screen and (max-width: 800px) {
+        header .wrap-share .share2 {
+          display: block; } }
+      header .wrap-share .share2 .share-icon {
+        width: 24px;
+        height: 24px;
+        margin-top: 11px; }
+      header .wrap-share .share2 .share-box2 {
+        background: white;
+        position: absolute;
+        right: 0;
+        width: 100px;
+        padding: 5px 0;
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); }
+        header .wrap-share .share2 .share-box2 > li {
+          color: #333;
+          padding: 0 10px;
+          line-height: 2; }
+          header .wrap-share .share2 .share-box2 > li:hover {
+            background: #f5f5f5;
+            color: #262626; }
+    @media only screen and (max-width: 800px) {
+      header .wrap-share .share1 {
+        display: none; } }
+    header .wrap-share .share1 .share {
       color: #21B396;
       font-size: 28px;
       -webkit-transform: translate(180deg);
       -ms-transform: translate(180deg);
       transform: translate(180deg); }
-    header .wrap-share .share-box {
+    header .wrap-share .share1 .share-box {
       font-size: 14px;
       background: white;
+      -webkit-border-radius: 5px;
       border-radius: 5px;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
       padding: 15px;
       position: absolute;
       top: 50px;
       width: 132px;
       right: 0px; }
-      header .wrap-share .share-box .sina, header .wrap-share .share-box .wx {
+      header .wrap-share .share1 .share-box .sina, header .wrap-share .share1 .share-box .wx {
         color: white;
         background: #D84C4C;
         display: inline-block;
@@ -85,8 +124,9 @@ header {
         height: 30px;
         line-height: 30px;
         text-align: center;
+        -webkit-border-radius: 5px;
         border-radius: 5px; }
-      header .wrap-share .share-box .wx {
+      header .wrap-share .share1 .share-box .wx {
         background: #73A64F; }
 
 main .resume {
@@ -95,6 +135,10 @@ main .resume {
   display: table;
   width: 100%;
   font-size: 18px; }
+  @media only screen and (max-width: 800px) {
+    main .resume {
+      display: block;
+      background: #f7f6f8; } }
   main .resume .resume-head {
     width: 332px;
     height: 240px;
@@ -105,18 +149,34 @@ main .resume {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: table-cell; }
+    @media only screen and (max-width: 800px) {
+      main .resume .resume-head {
+        width: 100%;
+        display: block; } }
     main .resume .resume-head .text {
       padding: 0px 20px; }
+      @media only screen and (max-width: 800px) {
+        main .resume .resume-head .text {
+          padding: 30px 20px 0px 20px; } }
   main .resume .resume-content {
     padding: 50px;
     height: 260px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: table-cell; }
+    @media only screen and (max-width: 800px) {
+      main .resume .resume-content {
+        display: block;
+        margin: 15px;
+        background: white;
+        height: auto; } }
 main .info {
   display: table;
   width: 100%;
   margin-top: 15px; }
+  @media only screen and (max-width: 800px) {
+    main .info {
+      display: block; } }
   main .info h2.title {
     color: #4CC1AA;
     font-size: 24px; }
@@ -124,10 +184,16 @@ main .info {
     width: 270px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    @media only screen and (max-width: 800px) {
+      main .info .person {
+        width: auto; } }
     main .info .person .information {
       background: white;
       padding: 20px 20px 20px 20px;
       margin: 0px 15px 15px 0; }
+      @media only screen and (max-width: 800px) {
+        main .info .person .information {
+          margin: 15px; } }
       main .info .person .information ul.dl {
         line-height: 3; }
         main .info .person .information ul.dl > li {
@@ -141,6 +207,9 @@ main .info {
       background: white;
       padding: 20px;
       margin: 0 0px 15px 0px; }
+      @media only screen and (max-width: 800px) {
+        main .info .other .question {
+          margin: 15px; } }
       main .info .other .question dl.wrap-q > dt {
         color: #4CC1AA;
         font-size: 18px;
@@ -154,6 +223,7 @@ main .info {
           content: "Q";
           background: #4CC1AA;
           color: white;
+          -webkit-border-radius: 5px;
           border-radius: 5px;
           margin-right: 5px; }
       main .info .other .question dl.wrap-q > dd {
@@ -161,6 +231,9 @@ main .info {
     main .info .other .contact {
       background: white;
       padding: 20px; }
+      @media only screen and (max-width: 800px) {
+        main .info .other .contact {
+          margin: 15px; } }
       main .info .other .contact .contact-cont {
         margin-top: 50px;
         padding-bottom: 50px;
@@ -175,9 +248,17 @@ main .info {
           margin-right: 20px;
           padding: 0 1em;
           background: #4CC1AA;
+          -webkit-border-radius: 5px;
           border-radius: 5px;
           text-decoration: none; }
           main .info .other .contact .btn-box > a:hover {
             background: #2CA28B; }
+
+/*@include max-screen(480px)
+{
+    body{
+        font-size: 14px;
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

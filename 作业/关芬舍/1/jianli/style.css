@@ -1,0 +1,98 @@
+*{margin: 0px; padding: 0px; font-family: "微软雅黑"; font-weight: normal;}
+
+body{background: #F7F6F8;}
+
+h2{font-size: 24px; color: #4cc1aa;}
+
+ul{list-style-type: none; }
+
+.header{height: 100px; border-bottom: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); background: #fff; }
+@media (max-width: 540px){
+	.header{height: 100px; width: 100%; border-bottom: 1px solid #ccc; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); background: #fff; }
+}
+
+.header .menu{width: 1000px; height: 100px;  margin: 0px auto;}
+
+.header .menu h1{font-size: 28px; line-height: 100px; color: #BCBCBC;}
+
+.header .menu h1 .icon-right{float: right;}
+
+.header .menu h1 .icon-left{ margin-right: -5px;}
+@media (max-width: 540px){
+	.header .menu{width: 100%; height: 100px;  margin: 0px auto;}
+}
+/*header结束*/
+
+.container{width: 970px; margin: 0px auto;}
+@media (max-width: 540px){
+	.container{width: 540px; height: 100%; }
+}
+
+.clearfix{clear: both;display: block;}
+
+.about-me{height: 260px; background-color: #fff;}
+@media (max-width: 540px){
+	.about-me{height: 260px; width:100%;background-color: #fff;}
+}
+
+.about-me .portrait{width: 240px; height: 260px; background-color: #28C5D6; float: left; position: relative;}
+@media (max-width: 540px){
+	.about-me .portrait{width: 100%; height: 260px; background-color: #28C5D6;position: relative;}
+}
+
+.about-me .portrait p{padding: 30px 0px 0px 20px; font-size: 18px; color: #fff;}
+
+.about-me .portrait img{position: absolute; bottom: 0px; left: 15%;}
+@media (max-width: 540px){
+	.about-me .portrait img{position: absolute; bottom: 0px; left: 33%;}
+}
+
+.about-me .information{width: 730px; height: 260px; float: left;}
+@media (max-width: 540px){
+	.about-me .information{width: 100%; height: 100%; background: #fff; margin: 15px;}
+}
+
+.about-me .information p{padding: 30px 25px 0px 25px; color: #797979; font-size: 18px; word-wrap:break-word;word-break:break-all; line-height: 30px;}
+
+/*about-me结束*/
+.information-container{margin-top: 15px;}
+@media (max-width: 540px){
+	.information-container{margin-top: 15px; width: 100%;}
+}
+
+.information-dada{width: 270px; float: left; height: 100%;}
+@media (max-width: 540px){
+	.information-dada{width: 100%; margin: 0px 15px 15px 15px; height: 100%;}
+}
+
+.personal,.job{background: #fff; padding-bottom: 30px; margin-bottom: 15px;}
+.personal h2{padding: 20px 20px 10px 20px;}
+.personal ul{padding: 0px 20px 10px 20px; }
+.personal ul li{line-height: 46px; font-size: 16px; border-bottom: 1px dashed #E4E4E4; }
+.personal ul li .personal_right{float: right; color: #4cc1aa;}
+.job h2{padding: 20px 20px 10px 20px;}
+.job ul{padding: 0px 20px 10px 20px; }
+.job ul li{line-height: 46px; font-size: 16px; border-bottom: 1px dashed #E4E4E4; }
+.job ul li .job_right{float: right; color: #4cc1aa;}
+
+/*左边样式*/
+
+.interview{width: 685px; height: 100%; float:left; margin-left: 15px;}
+@media (max-width: 540px){
+	.interview{width: 100%; height: 100%; margin: 0px 15px 15px 15px;}
+}
+
+.faq{ background: #fff; padding-bottom: 14px; margin-bottom: 15px;}
+.faq h2{padding: 20px 10px 10px 20px;}
+.faq h3{font-size: 18px; color: #4cc1aa; padding-left: 20px;}
+.faq h3 .yuanjiao{width: 25px; height: 25px; display: inline-block; text-align: center; border-radius: 5px; margin-right:7px; color: #fff; background: #4cc1aa;}
+.faq p{padding:20px 40px 20px 20px; line-height: 28px; font-size: 16px; color: #949494; }
+
+.contact{ background: #fff; padding-bottom: 14px; margin-bottom: 15px;}
+.contact h2{padding: 20px 10px 10px 20px;}
+.contact p{margin: 20px 20px 15px 20px; padding-bottom: 50px; border-bottom: 1px solid #E4E4E4; color:#E4E4E4; font-size: 20px; text-align: center;}
+.contact input{padding: 10px;border-radius: 6px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); margin-left: 20px; font-size: 16px; color: #fff; cursor: pointer; background: #4cc1aa; border: 0px;}
+/*右边样式*/
+
+
+
