@@ -47,9 +47,11 @@ body{
     color: #fff;
     padding: 30px 20px;
     font-size: 18px;
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    top: 0; 
+    top: 0;  */
+    position: relative;
+    float: left;
 }
 .avatar > img{
     position: absolute;
@@ -65,7 +67,7 @@ body{
     line-height: 1.8;
     background: #fff;
     height: 160px;
-    display: inline-block;
+    
 }
 
 .l-block{
@@ -73,9 +75,10 @@ body{
 }
 .s-block{
     width: 260px;
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    top: 0;
+    top: 0; */
+    float: left;
 }
 .s-block > div{
     margin-bottom: 20px;
@@ -147,9 +150,17 @@ dl{
 
 @media screen and (max-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
   .avatar {
+    float: none;
     width: 100%;
   }
   .text-desc{
+    margin-left: 0;
+  }
+  .s-block{
+    float: none;
+    width: 100%;
+  }
+  .l-block{
     margin-left: 0;
   }
 }
