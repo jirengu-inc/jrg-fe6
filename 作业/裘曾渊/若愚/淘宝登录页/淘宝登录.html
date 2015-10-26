@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<style type="text/less">
+			.fontstyle-h1{color:#929292;
+				font-size: 14px;
+				font-weight: bold;
+				text-align:center;
+			}
+			body,div,h2,ul,li,h5,p{margin:0;padding:0;}
+			ul{list-style: none;}
+			a{text-decoration: none;}
+			a:hover{color:#f40!important;
+				text-decoration: underline;
+				transition: all .3s;}
+			.clearfix:after {
+				content:'';
+				display:block;
+				height:0;
+				clear:both;
+			}
+			.clearfix {
+				*zoom:1;
+			}
+			.wrapper{width:1190px;margin:0 auto;}
+			.logo{margin-top: 30px;}
+
+			.ad{position: absolute;left:300px;}
+			.content{margin-top: 60px;}
+
+
+			.login{
+				float: right;
+				width:250px;
+				padding: 23px 30px;
+				margin-right: 30px;
+				border-width: 2px;
+				border-style: solid;
+				border-color: #FF5738 #DFDFDF #DFDFDF;
+			}
+			.login-head{
+				font-size: 0;
+				h2{.fontstyle-h1; 
+
+				display: inline-block;
+				padding-bottom: 14px;
+				border-bottom: 1px solid #ccc;
+				width: 50%;
+				}
+				.active {
+					width: 50%;
+					color:#000;
+					border-bottom: 1px solid #ff5738;
+				}
+
+			}
+			.login-body{
+				input{
+
+					background-color: #F5FDB5;
+					height: 36px;
+					width: 208px;
+					border: 1px solid #D2D2D2;
+					padding-left: 10px;
+					margin-left: 36px;
+				}
+
+				.icon{
+
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					width: 19px;
+					height: 22px;
+
+				}
+				.username{
+					position: relative;
+					background: #D2D2D2;
+					margin-top: 14px;
+					.icon-user{
+	background: transparent url("user.png") no-repeat scroll 0px 0px;
+					}
+				}
+
+				.password{
+					position: relative;
+					background: #D2D2D2;
+					margin-top: 14px;
+					.icon-lock{
+	background: transparent url("lock.png") no-repeat scroll 0px 0px;
+					}
+				}
+			}
+			.loginlink{
+				a{display: inline-block;margin-top: 20px;
+					font-size: 12px;
+					color:#676767;
+					font-weight: normal;
+				}
+				.forget{float: left;}
+				.signup{float: right;}
+			}
+
+			.loginbtn{
+					border:none;
+					margin-top: 14px;
+					background-color: #F40;
+					color:white;
+					width:100%;
+					height: 37px;
+					display:block;
+					text-align: center;
+					line-height: 37px;
+					border-radius: 3px;
+						}
+			ul>li{display: inline-block;font-size: 12px;color:#676767;margin-left: 10px;line-height: 20px;margin-top: 14px;
+
+	&.weibo{background: url("c.png") no-repeat scroll 0px -213px;}
+	&.alipay{background: url("icon-alipay.png") no-repeat scroll 0px 2px}
+				a{color:#676767;margin-left:20px;}
+				}
+
+		</style>
+                        
+		<script type="text/javascript" src="http://cdn.bootcss.com/less.js/2.5.3/less.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="logo"><img src="logo.png" alt="" href="#"></div>
+			<div class="content clearfix">
+				<div class="ad"><img src="squareAd.png" alt="" href="#"></div>
+				<div class="login">
+					<div class="login-head">
+						<h2>快速登陆</h2>
+						<h2 class="active">账户密码登录</h2>
+					</div>
+					<div class="login-body">
+						<form>
+							<div class="username">
+								<i class="icon icon-user"></i>
+								<input placeholder="手机号/账户名/邮箱"></input>
+							</div>
+							<div class="password">
+								<i class="icon icon-lock"></i>
+								<input type="password"  placeholder="密码"></input>
+							</div>
+							<div class="loginlink clearfix">
+								<a href="#" class="forget">忘记登陆密码</a>
+								<a href="#" class="signup">免费注册</a>
+							</div>
+							<button class="loginbtn" href="#">登录</button>
+							<ul>
+								<li class="weibo"><a href="#">微博登陆</a></li>
+								<li class="alipay"><a href="#">支付宝登录</a></li>
+							</ul>
+						</form>
+
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>
