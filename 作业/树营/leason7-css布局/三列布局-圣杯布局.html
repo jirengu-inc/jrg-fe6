@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+
+        .main{
+            float:left;
+            width: 100%;
+            min-height: 500px;
+            background: #ddd;
+        }
+        .aside{
+            float: left;
+            width: 150px;
+            height: 300px;
+            background: green;
+            margin-left: -100%;
+
+        }
+        .ad{
+            width: 150px;
+            float: left;
+            height: 300px;
+            background: green;
+            margin-left: -150px;
+        }
+
+
+        
+        .wrapper{
+            position: relative;
+            width: 980px;
+            padding: 0 150px 0 150px;
+            margin: 0 auto;
+        }
+
+        .aside {
+            position: relative;
+            top: 0;
+            left: -150px;
+        }
+
+        .ad {
+            position: relative;
+            top: 0;
+            right: -150px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">main</div>
+        <div class="aside"></div>
+        <div class="ad"></div>
+    </div>
+</body>
+</html>
