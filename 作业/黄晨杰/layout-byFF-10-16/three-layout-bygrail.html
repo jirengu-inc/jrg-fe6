@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>三列布局基于圣杯布局</title>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		body{
+			padding: 0 210px 0 110px;
+		}
+
+		div{
+			float: left;
+		}
+
+		.main{
+			width: 100%;
+			background-color: rgba(255, 0, 0, 0.5);
+			height: 600px;
+		}
+
+		.side-bar{
+			width: 100px;
+			margin-left: -100%;
+			background-color: rgba(0, 255, 0, 0.5);
+			height: 300px;
+			position: relative;
+			left: -110px;
+		}
+
+		.extra{
+			width: 200px;
+			margin-left: -200px;
+			background-color: rgba(0, 0, 255, 0.5);
+			height: 200px;
+			position: relative;
+			left: 210px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main"></div>
+	<div class="side-bar"></div>
+	<div class="extra"></div>
+</body>
+</html>

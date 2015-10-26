@@ -1,0 +1,28 @@
+@media (max-width: 1190px){
+	.content{
+		width: 990px;
+	}
+	.sign{
+	    margin-right: 70px;
+    }
+}
+@media (max-width: 640px){
+	.content{
+		width: 100%;
+	}
+	.sign{
+	    margin-right: 0px;
+	    position: absolute;
+	    left: 50%;
+	    margin-left: -156px;
+    }
+    .sement{
+    	display: none;
+    }
+    .logo{
+    	border-bottom: 1px solid #dedede;
+    }
+    .logo img{
+    	margin: 20px 0 10px 85px;
+    }
+}
