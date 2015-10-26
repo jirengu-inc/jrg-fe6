@@ -1,0 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+p{
+	font: 18px/1.8 "Microsoft YaHei";
+	margin: 40px auto 0;
+	width: 60%;
+}
+
+p strong{
+	color: rgba(255, 0, 255, 0.5);
+}
+
+p em{
+	color: rgba(0, 255, 255, 0.9);
+}

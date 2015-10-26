@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .parent {
+            text-align: center;
+            font-size: 0;
+            *word-spacing:-1px; /* for IE7- */
+        }
+        
+        .parent >a {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #ddd;
+            font-size: 12px;
+            color: black;
+            font-family: arial, "simsun", serif;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <a href="http://www.url.com" target="_blank">load more</a>
+        <a href="http://www.url.com" target="_blank">load more</a>
+        <a href="http://www.url.com" target="_blank">load more</a>
+    </div>
+</body>
+
+</html>

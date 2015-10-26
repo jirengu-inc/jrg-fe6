@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .parent {
+            text-align:center;
+        }
+
+        .parent > .inner{
+            display:inline-block;
+        }
+        
+        .parent a {
+            float:left;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #ccc;
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 该方法在IE7及以下无效 -->
+    <div class="parent">
+        <div class="inner">
+            <a href="http://www.url.com" target="_blank">load more</a>
+            <a href="http://www.url.com" target="_blank">load more</a>
+            <a href="http://www.url.com" target="_blank">load more</a>
+        </div>
+    </div>
+</body>
+
+</html>
