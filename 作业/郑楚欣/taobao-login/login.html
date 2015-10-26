@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<ul class="login-tab clear-fix">
+			<li id="quick"><a href="javascript:void(0)">快速登录</a></li>
+			<li class="focus" id="password"><a href="javascript:void(0)">账户密码登录</a></li>
+		</ul>
+		<div class="password-login">
+			<div class="user-input">
+				<input type="text" class="user" placeholder="手机号/会员名/邮箱">
+				<span class="user-icon icon">&#xe6aa;</span>
+			</div>
+			<div class="user-input">
+				<input type="password" class="user">
+				<span class="user-icon icon">&#xe60f;</span>
+			</div>
+			<div class="actions clear-fix">
+				<a href="" class="register fr">免费注册</a>
+				<a href="" class="find">忘记登录密码？</a>
+			</div>
+			<div class="login-action">
+				<a href="javascript:void(0)" class="btn">登录</a>
+			</div>
+			<div class="login-style">
+				<a href="javascript:void(0)" class="sina"><span class="sina icon">&#xe63a;</span> 微博登录</a>
+				<a href="javascript:void(0)" class=""><span class="aliapp icon">&#xe62d;</span> 支付宝登录</a>
+			</div>
+		</div>
+		<div class="quick-login" style="display:none;">
+			<div class="qr-codes">
+				<img src="images/qr-codes.jpg" alt="">
+			</div>
+			<div class="qrcodes-desc">
+				手机扫码 安全登录
+			</div>
+			<div class="qrcodes-desc" style="font-size:12px; font-weight: normal">
+				使用<a href="javascript:void(0)" class="link">手机淘宝</a>、<a href="javascript:void(0)" class="link">阿里钱盾</a>扫描二维码
+			</div>
+		</div>
+	</div>
+	<script>
+	$(document).ready(function(){
+		$("#quick,#password").click(function(){
+			var sibling = $(this).siblings()[0];
+			$(this).addClass("focus");
+			$(sibling).removeClass("focus");
+			if($(this).attr("id") == "password")
+			{
+				$(".password-login").css("display","block");
+				$(".quick-login").css("display","none");
+			}else{
+				$(".password-login").css("display","none");
+				$(".quick-login").css("display","block");
+			}
+			
+		})
+	})
+	</script>
+</body>
+</html>
