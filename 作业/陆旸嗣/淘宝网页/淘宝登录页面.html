@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>淘宝登录</title>
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	a{text-decoration: none;}
+.logo{margin-top: 27px;
+	margin-left: 40px;
+	margin-bottom: 66px;
+}
+.plane{float: left;
+	margin-left: 210px;
+}
+.inputBox{float: left;
+  	margin-left: 232px;
+  	width: 250px;
+  	height: 300px;
+  	border: 2px solid;
+  	border-color: #ff5738 #dfdfdf  #dfdfdf  #dfdfdf;
+  	padding: 23px;
+} 
+.hd{text-align: center;
+}
+.hd a{font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 14px;
+}
+.word{color: #929292;	
+      border-bottom: 1px solid;
+      border-color: #ccc
+}
+.wordactive{border-bottom: 1px solid;
+            border-color: #ff5738;
+            color: #000;
+}
+/*头顶文字结束*/
+.iconuser{background-color:#ff5738;
+width: 40px;
+height: 40px;
+position: relative;
+top: 15px; 
+}
+.iconlock{;
+width: 40px;
+height: 40px;
+position: relative;
+top: 15px; }
+
+.input{margin-top: 28px;
+	   width:250px;
+       height:217px;
+}
+
+.name{background-color: #f5fdb5;
+       width:200px;
+       height:36px;
+}
+.pastword{background-color: #f5fdb5;
+       width:200px;
+       height:36px;
+}
+.inputpastword{margin-top: 14px;}
+.lock{margin-top: 14px;}
+/*输入框结束*/
+.remark{margin-top: 20px;
+font-size:12px;
+display: block;}
+.remark a{color:#676c67;}
+.remarka1{float: left;}
+.remarka2{float: right;}
+/*忘记密码结束*/
+.signin{width: 250px;
+height: 37px;
+margin-top: 64px;
+background-color: #ff4400;
+text-align:center;
+font-size: 16px;
+line-height: 37px;
+border-radius: 3px;
+}
+.signin a{color:#fff;}
+/*登录结束*/
+
+.weibo{
+	background: url(./images/c.png) no-repeat 0 -213px;
+}
+.zhifubao{
+	background: url(./images/icon-alipay.png) no-repeat 0 2px;
+}
+.login-ways a{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	color: #676c67;
+	font-size: 12px;
+	margin-left: 10px;
+	padding-left: 20px;
+	margin-top: 14px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="logo">
+    <a href="http://www.taobao.com"><img src="images/logo.png"></a>
+</div>
+<div class="plane">
+	<img src="images/plane.png">
+</div>
+
+<div class="inputBox">
+	<div class="hd">
+		<a class="word" href="#">快速登录</a>
+		<a class="wordactive" href="#">账户密码登录</a>
+	</div>
+<!--头顶文字-->
+	<div class="input">
+	   <div>
+		<img  class="iconuser" src="images/user.png"
+		><input class="name" type="text" placeholder="手机号/会员名/邮箱"></input>
+	   </div>
+	   <div class="lock">
+	    <img class="iconlock" src="images/lock.png"
+	    ><input class="pastword" type="pastword" placeholder="密码"></input>
+	   </div>
+	   <!--输入框-->
+	   <div class="remark">
+	   	<a class="remarka1" href="#">忘记密码</a>
+	   	<a class="remarka2" href="#">免费注册</a>
+	   </div>
+	   <!--忘记密码 免费注册-->
+	   <div class="signin">
+	   	<a href="#">登录</a>
+	   </div>
+	   <div class="login-ways">
+	 		<a class="weibo" href=""> 微博登录</a>
+	 		<a class="zhifubao" href="#"> 支付宝登录</a>
+	 	</div>
+	</div>
+
+
+</div>
+	
+</body>
