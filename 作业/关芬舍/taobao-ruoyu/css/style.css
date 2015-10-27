@@ -1,0 +1,23 @@
+*{margin: 0px;padding: 0px;}
+ul{list-style-type: none;}
+.warper{width: 1190px; margin: 0px auto; height: 100%;}
+.header a img{margin-top: 30px; padding: 0px;}
+.main{height: 510px; margin-top: 60px; position: relative;}
+.clearfix{clear: both;display: block;}
+.main_advertisement{position:absolute; left: 177px;}
+.main_advertisement a img{width: 350px; height: 250px;}
+.main_land{position: absolute; right: 150px; width: 314px;height:330px; border: 2px solid #ccc;border-top: 2px solid #F40;}
+.main_land a{font-size: 14px; color: #000; text-decoration: none;padding: 25px 29px 15px 25px; font-weight:bold; display:inline-block; text-align: center; border-bottom: 1px solid #ccc;}
+.main_land a:last-child{border-bottom: 1px solid #F40;}
+.main_land .a_left{margin-left: 20px;}
+.main_land .a_right{margin-right: 20px;}
+.land_input{margin:0px 20px; position: relative;}
+.land_input input{height: 37px; width: 232px;margin-left: 38px;}
+.user_input,.information{margin-top: 20px;}
+.information{width: 275px;}
+.information span a{font-size: 12px; padding: 0px; border: 0px !important;font-weight: normal;}
+.information span a:hover{text-decoration: underline; color: #F40;}
+.registered{float: right;}
+.login input{width: 275px; background: #F40; border: 0px; border-radius: 3px; font-size: 18px; color: #fff;letter-spacing:10px;margin: 15px 0px 0px 0px;}
+.san_input{margin-top: 15px;}
+.san_input a{padding: 5px 5px 0px 20px; border: 0px !important;font-weight: normal;}
