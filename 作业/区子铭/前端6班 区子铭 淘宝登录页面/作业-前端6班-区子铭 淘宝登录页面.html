@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝登录页面</title>
+	<style type="text/css">
+		*{margin:0; padding: 0;}
+
+		#body{
+			width: 1300px;
+		}
+
+		.logo{
+			width: 100%;
+			margin:0 auto;
+		}
+
+		.logo img{
+			display: block;
+			margin-top: 25px;
+			margin-left: 75px;
+		}
+		/*  上面图片完成  */
+
+		.connent{
+			width: 100%;
+			height:400px;
+			overflow: auto;
+		}
+
+		.flyplane img{
+			margin-top: 70px;
+			margin-left:200px;
+			float:left;
+		}
+		/*  飞机图片完成  */
+
+		.wrapped{
+			border: 2px solid #dfdfdf; 
+			border-top-color: #ff5738;
+			width: 300px;
+			height:317px;
+			margin-top: 70px;
+			margin-left:230px;
+			float: left;
+		}
+
+		.menu{
+			width: 310px;
+			height: 60px; 
+			overflow: auto;
+		}
+
+		.menu .title-one{
+			font-size: 14px;
+			color: #929292;
+			font-weight: bold;
+			display: block;
+			text-decoration: none;
+			margin-left: 45px;
+			padding: 18px 17px; 
+			border-bottom:1px solid #ccc;
+			float: left;
+		}
+		.menu .title-two{
+			font-size: 14px;
+			color: #000;
+			font-weight: bold;
+			display: block;
+			text-decoration: none;
+			padding: 18px 17px;
+			border-bottom: 1px solid #ff5738 ;
+			float: left;
+		}
+		/*  快速登录 ，账户密码登录完成  */
+
+
+		.ipt{
+			position: relative;
+			width: 160px;
+			margin-top: 14px;
+			margin-left: 30px;
+			background-color: #d2d2d2;
+		}
+		.icon{position: absolute;
+			top: 10px;
+			left: 10px;
+			width: 19px;
+			height: 22px;
+		}
+
+		.icon-area .icon-user{
+			background: url(./images/user.png) 0 0 no-repeat;
+		}
+
+		.icon-area .icon-lock{
+			background: url(./images/lock.png) 0 0 no-repeat;
+		}
+		
+		input{	
+			width: 180px;
+			height: 40px;
+			padding-left: 10px;
+			margin-left: 40px;
+			border: 1px solid #d2d2d2;
+			background-color: #f5fdb5;
+		}
+
+		
+		/*  用户框完成  */
+		
+		.service{
+			height:40px;
+			margin-top: 10px;
+			padding-left:30px;
+			padding-right: 50px; 
+			overflow:auto;
+
+		}
+		.service1{
+			font-size: 12px;
+			color: #676c67;
+			display: block;
+			float: left;
+			text-decoration: none;
+		}
+		.service2{
+			font-size: 12px;
+			color: #676c67;
+			display: block;
+			float: right;
+			text-decoration: none;
+		}
+
+		/*  忘记密码 免费注册  */
+
+		.loginbar{
+
+			width: 230px;
+			height: 40px;
+			font-size: 16px;
+			border:1px solid #FF4705;
+			border-radius: 3px;
+			background-color: #FF4705;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.loginbar a{
+			display: block;
+			text-decoration: none;
+			color: white;
+			line-height: 37px;
+		}
+		/* 登录条完成 */
+
+		.partner{
+			width: 230px;
+			height: 40px;
+			margin-top: 10px;
+			margin-left: 40px;
+			overflow: auto;
+			float: left;
+		}
+		a.weibo{
+			background: url(./images/c.png) no-repeat 0 -213px;
+
+			display: inline-block;
+			color: #676c67;
+			font-size: 12px;
+			padding-left: 20px;
+			padding-right: 20px;
+			text-decoration: none;
+			line-height: 22px;
+
+		}
+		a.zhifubao{background: url(./images/icon-alipay.png) no-repeat 0 2px;
+
+			display: inline-block;
+			color: #676c67;
+			font-size: 12px;
+			padding-left: 20px;
+			text-decoration: none;
+			line-height: 22px;
+		}
+		/* 微博 支付宝 完成 */
+
+		#footer{
+			margin-left: 80px;
+			margin-top: 50px;
+		}
+
+		#footer p{
+			font-family: Tahoma;
+			font-size: 13px;
+		}
+
+		#footer a{
+			color: #0000EE;
+			font-size: 12px;
+			font-family: Tahoma;
+			text-decoration: none;
+		}
+
+		/* 右下角小字 */
+
+	</style>
+</head>
+<body>
+	
+	<div class="logo">
+		<a href="http://www.taobao.com"><img src="images/logo.png"></a>
+	</div>
+	
+	<div class="connent">
+		<div class="flyplane">
+			<a href="#"><img src="images/plane.png"></a>
+		</div>
+		<div class="wrapped">
+			<div class="menu">
+				<a href="#" class="title-one">快速登录</a>
+				<a href="#" class="title-two">账户密码登录</a>
+			</div>
+			<div class="icon-area">
+				<div class="ipt">
+	 				<i class="icon icon-user"></i>
+	 				<input type="text" placeholder="手机号/会员名/邮箱">
+	 			</div>
+	 			<div class="ipt">
+	 				<i class="icon icon-lock"></i>
+	 				<input type="password" placeholder="密码">
+	 			</div>
+			</div>
+			<div class="service">
+				<a href="#" class="service1">忘记密码</a>
+				<a href="#" class="service2">免费注册</a>
+			</div>
+			<div class="loginbar">
+				<a href="#" >登录</a>
+			</div>
+			<div class="partner">
+				<a href="#" class="weibo">微博登录</a>
+				<a href="#" class="zhifubao">支付宝登录</a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<p>手机登录<a href="#">m.taobao.com</a>，随时随地购物</p>
+		</div>
+	</div>
+</body>
+</html>
