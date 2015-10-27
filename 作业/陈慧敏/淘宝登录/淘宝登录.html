@@ -5,10 +5,144 @@
 
 <style>
 	*{padding:0;margin:0;}
-	.wrapper{
-		width: 1200px;
-		margin: 30px 400px 0;
+	a{text-decoration: none;}
+	@font-face {font-family: "iconfont";
+	  src: url('font/iconfont.eot'); /* IE9*/
+	  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	  url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+	  url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	  url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 	}
+
+	.iconfont {
+	  font-family:"iconfont" !important;
+	  font-size:16px;
+	  font-style:normal;
+	  -webkit-font-smoothing: antialiased;
+	  -webkit-text-stroke-width: 0.2px;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+	.icon-password:before { content: "\e687"; }
+	.icon-login:before { content: "\e60b"; }
+
+	.clearfix:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.wrapper{
+		width: 1100px;
+		margin: 30px 400px 0;
+		padding:10px;
+	}
+	.content .ad{
+		margin: 80px 0 0 140px;
+		float: left;
+	}
+	.content .login-area{
+		box-sizing:border-box;
+		height:333px;
+		width: 314px;
+		float:left;
+		margin:64px 0 0 215px;
+		border:2px solid;
+		border-color: rgb(255,68,0) rgb(222,222,222) rgb(222,222,222);
+		padding:8px 32px;
+	}
+	.content .login-area .hd a{
+		box-sizing:border-box;
+		display: inline-block;
+		width: 48%;
+		line-height: 27px;
+		padding:10px 0;
+		text-align: center;
+		color: rgb(153,153,153);
+		border-bottom: 1px solid rgb(222,222,222);
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.content .login-area .hd .active{
+		color: black;
+		border-bottom: 1px solid rgb(255,68,0);
+	}
+	.content .login-area .bd .ipt{
+		margin-top: 20px;
+		position: relative;
+	}
+	.content .login-area .bd .ipt input:focus{
+		outline: 2px solid rgb(150,184,239);
+	}
+	.content .login-area .bd .ipt .icon{
+		display: inline-block;
+		height: 38px;
+		width: 36px;
+		background: rgb(204,204,204);
+		text-align: center;
+		line-height: 38px;
+		outline: none;
+	}
+	.content .login-area .bd .ipt input{
+		height: 34px;
+		width: 196px;
+		position: absolute;
+		padding-left: 10px;
+		outline: rgb(222,222,222);
+	}
+	.content .login-area .bd .txt{
+		margin-top: 20px;
+		font-size: 12px;
+		color: rgb(102,102,102);
+	}
+
+	.content .login-area .first-line>a:first-child{
+		float:left;
+		color: rgb(102,102,102);
+	}
+	.content .login-area .first-line>a:last-child{
+		float:right;
+		color: rgb(102,102,102);
+	}
+
+	.content .login-area .first-line>a:hover,.third-line>a:hover{
+		color: red;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	.content .login-area .second-line{
+		overflow: hidden;
+	}
+	.content .login-area .second-line>a{
+		display:block;
+		width: 245px;
+		height:36px;
+		margin-top: 14px;
+		background: rgb(255,68,0);
+		text-align: center;
+		line-height: 36px;
+		color:white;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 15px;
+		border-radius: 3px;
+	}
+	.content .login-area .third-line{
+		margin-top: 20px;
+	}
+	.content .login-area .third-line .weibo{
+		width: 17px;
+		height: 13px;
+	}
+	.content .login-area .third-line a{
+		margin-right: 5px;
+	}
+	.content .login-area .third-line .zhifubao{
+		position: relative;
+		top: 4px;
+	}
+
 </style>	
 </head>
 <body>
@@ -23,20 +157,29 @@
 			<div class="login-area">
 				<div class="hd">
 					<a href="#" class="title">快速登录</a>
-					<a href="#" class="title">账户密码登录</a>
+					<a href="#" class="title active">账户密码登录</a>
 				</div>
 				<div class="bd">
 					<div class="ipt">
-						<span class="icon"></span>
-						<input type="text" placeholder="手机号/会员名/邮箱">
+						<label for="userName"><span class="icon iconfont icon-login"></span></label>
+						<input id="userName" type="text" placeholder="手机号/会员名/邮箱">
 					</div>
 					<div class="ipt">
-						<span class="icon"></span>
-						<input type="password">
+						<label for="password"><span class="icon iconfont icon-password"></span></label>
+						<input id="password" type="password">
 					</div>
 					<div class="txt">
-						<a href="#">忘记密码</a>
-						<a href="#">免费注册</a>
+						<div class="first-line clearfix">
+							<a href="#">忘记登录密码?</a>
+							<a href="#">免费注册</a>
+						</div>
+						<div class="second-line">
+							<a href="#">登录</a>
+						</div>
+						<div class="third-line">
+							<a><img class="weibo" src="wb.jpg"></span>微博登录</a>
+							<a><img class="zhifubao" src="zhifubao.png">支付宝登录</a>
+						</div>
 					</div>
 				</div>
 			</div>

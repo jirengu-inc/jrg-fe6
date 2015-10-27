@@ -37,9 +37,20 @@
 		position: relative;
 		z-index: 1;
 	}
-	.top-bar h1 {
-		font-size: 28px;
+	.top-bar h1{
 		color: #BCBCBC;
+	}
+	.top-bar .menu,.top-bar .share{
+		font-size: 28px;
+		cursor: default;
+	}
+	.top-bar .menu{
+		float: left;
+	}
+	.top-bar .share{
+		float: right;
+	}
+	.top-bar h1{
 		font-weight: normal;
 		margin-top: 38px;
 		line-height: 37px;
@@ -88,8 +99,8 @@
 	@media(max-width: 760px){
 		.text{
 			float: none;
-			width: 100%;
-			overflow: hidden;
+			width: auto;
+			height: auto;
 		}
 	}
 	.text p {
@@ -101,13 +112,20 @@
 		word-break: break-all;
 		color: #797979;
 	}
+	@media(max-width: 760px){
+		.text p{
+			margin-top: 10px;
+			padding-top: 20px;
+			overflow: hidden;
+		}
+	}
 	.panel {
-		overflow: hidden;
 		float: left;
+
 	}
 	@media (max-width: 760px){
 		.panel{
-			width: 100%;
+			width: auto;
 			float: none;
 		}
 	}
@@ -120,7 +138,7 @@
 	}
 	@media(max-width: 760px){
 		.personal-info,.career{
-			width: 93%;
+			width: auto;
 			float: none;
 		}
 	}
@@ -152,6 +170,22 @@
 		color: #4CC1AA;
 		font-weight: normal;
 	}
+	.interview i{
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		*display: inline;
+		*zoom:1;
+		background-color: #4CC1AA;
+		color: #fff;
+		text-align: center;
+		border-radius: 5px;
+		margin-right: 5px;
+		cursor: default;
+	}
+	.interview i:before{
+		content: "Q";
+	}
 	.interview p {
 		font-size: 16px;
 		margin-bottom: 15px;
@@ -168,7 +202,7 @@
 	}
 	@media(max-width: 760px){
 		.interview, .resume{
-			width: 93%;
+			width: auto;
 			margin-left: 0;
 		}
 	}

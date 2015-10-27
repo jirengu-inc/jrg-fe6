@@ -1,0 +1,166 @@
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: "Microsoft Yahei";
+}
+body{
+    background:#f7f6f8;
+}
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.w{
+    max-width: 975px;
+    margin: 0 auto;
+    position: relative;
+}
+.topbar{
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.menu{
+    font-size: 28px;
+    color: #bcbcbc;
+}
+.menu i{
+    color: #bcbcbc;
+}
+.share{
+    font-size: 28px;
+    float: right;
+}
+.overview{
+    position: relative;
+}
+.avatar{
+    width: 200px;
+    height: 200px;
+    background: rgb(151, 211, 243);
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 18px;
+    /* position: absolute;
+    left: 0;
+    top: 0;  */
+    position: relative;
+    float: left;
+}
+.avatar > img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -82px;
+}
+.text-desc{
+    margin-left: 240px;
+    padding: 50px;
+    color: #797979;
+    font-size: 18px;
+    line-height: 1.8;
+    background: #fff;
+    height: 160px;
+    
+}
+
+.l-block{
+    margin-top: 20px;
+}
+.s-block{
+    width: 260px;
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+    float: left;
+}
+.s-block > div{
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+}
+.l-block > div{
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+}
+.s-block dt{
+    float: left;
+    color: #949494;
+}
+.s-block dd{
+    float: right;
+    color: #4CC1AA;
+}
+.l-block{
+    margin-left: 280px;
+}
+.title{
+    font-size: 24px;
+    color: #4CC1AA;
+}
+dl{
+   font-size: 16px;
+   padding: 10px 0;
+   border-bottom: 1px dashed #e4e4e4;
+}
+.question{
+    color: #4CC1AA;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+}
+.question i{
+    margin-right: 5px;
+    font-size: 22px;
+}
+.answer{
+    color: #949494;
+}
+.contact-content{
+    color: #E4E4E4;
+    padding: 50px 0;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+}
+.opper{
+    padding-top:20px;
+    font-size: 0;
+}
+.opper a{
+    display: inline-block;
+    padding: 6px 10px;
+    background: #4CC1AA;
+    color: #fff;
+    border-radius:5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.ask-for{
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+  .avatar {
+    float: none;
+    padding: 30px 0;
+    width: 100%;
+  }
+  .text-desc{
+    margin-left: 0;
+  }
+  .s-block{
+    float: none;
+    width: 100%;
+  }
+  .l-block{
+    margin-left: 0;
+  }
+}
