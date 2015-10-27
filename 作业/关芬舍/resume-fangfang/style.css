@@ -28,7 +28,7 @@ ul{list-style-type: none; }
 	.container{width: 540px; height: 100%; }
 }
 
-.clearfix{clear: both;display: block;}
+.clearfix:after{content: "";clear: both;display: block;}
 
 .about-me{height: 260px; background-color: #fff;}
 @media (max-width: 540px){
