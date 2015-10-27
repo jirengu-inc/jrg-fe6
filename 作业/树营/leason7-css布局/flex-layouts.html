@@ -3,15 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            /* basic styling */
+            width: 100%;
+            height: 200px;
+            border: 1px solid #555;
+            font: 14px Arial;
+
+            /* flexbox setup */
+            display: -webkit-flex;
+            display: flex;
+
+            -webkit-flex-direction: row; 
+            flex-direction: row; /* row/column */
+        }
+        
+        .wrapper > div {
+            -webkit-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+
+        .wrapper > div:nth-child(1) { background: #009246;}
+        .wrapper > div:nth-child(2) { background: #f1f2f1;}
+        .wrapper > div:nth-child(3) { background: #ce2b37;}
+        
+
+        /* transition hover */
+        .wrapper > div {
+            width: 30px;
+            -webkit-transition: width 0.7s ease-out;
+            transition: width 0.7s ease-out;
+        }
+        .wrapper > div:hover {
+            width: 80%;
+        }
+
+    </style>
 </head>
 <body>
     <div class="wrapper">
-        <div class="aside">
-        </div>
-        <div class="main">
-        </div>
-        <div class="ad">
-        </div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+
+    <br>
+    <p>来源：张鑫旭 - 弹性盒子模型简介<a target="_blank" href="http://www.zhangxinxu.com/wordpress/2010/12/css-box-flex%E5%B1%9E%E6%80%A7%EF%BC%8C%E7%84%B6%E5%90%8E%E5%BC%B9%E6%80%A7%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%AE%80%E4%BB%8B/">详细说明</a></p>
+    <p>来源：mozilla - MDN - CSS开发指南 - 使用CSS弹性盒<a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Flexible_boxes">详细说明</a></p>
+    <p>来源：W3cplus - 深入了解 Flexbox 伸缩盒模型<a target="_blank" href="http://www.w3cplus.com/blog/666.html">详细说明</a></p>
 </body>
 </html>

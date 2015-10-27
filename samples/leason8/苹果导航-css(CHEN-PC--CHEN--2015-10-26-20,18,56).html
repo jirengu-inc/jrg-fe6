@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        *{margin:0;padding:0;}
+        body{
+        	font-size: 12px;
+        }
+
+        .wrapped{margin: 0 auto; width: 1000px; }
+        
+        .clearfix:after{content: ''; display: block; clear:both; }
+        .clearfix{*zoom:1; }
+        .nav > ul {list-style: none; background-color: #5D5D5D; margin-left: 11px; margin-right: 8px;border-radius: 5px 5px 5px 5px;}
+        .nav > ul > li{float: left; background: transparent url(images/background.png) repeat-x 0 0; height: 36px;border-left: 1px solid #7e7e7e; border-right: 1px solid #7e7e7e;
+        	margin-left: 1px ;}
+    	.nav > ul > li:first-child{margin-left:0; border-radius: 5px 0 0 5px}
+    	.nav > ul > li:last-child{border-radius: 0 5px 5px 0;}
+        .nav > ul > li > a{display:block; width: 106px; height: 38px; line-height: 38px; text-align: center; color: white; text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="nav wrapped">
+    	<ul class="clearfix">
+    		<li><a href="baidu1.com" class="">Apple</a></li>
+    		<li><a href="baidu2.com" class="">在线商店</a></li>
+    		<li><a href="baidu3.com" class="">Mac</a></li>
+    		<li><a href="baidu4.com" class="">iPod</a></li>
+    		<li><a href="baidu5.com" class="">iPhone</a></li>
+    		<li><a href="baidu6.com" class="">iPad</a></li>
+    		<li><a href="baidu7.com" class="">iTunes</a></li>
+    		<li><a href="baidu8.com" class="">技术支持</a></li>
+    		<li><a href="baidu9.com" class="">示意</a></li>
+    	</ul>
+    </div>
+
+    <div class="main wrapped">
+        <img src="images/iPad.png" alt=""/>
+    </div>
+
+</body>
+</html>
