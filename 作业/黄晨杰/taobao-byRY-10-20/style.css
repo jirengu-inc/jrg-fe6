@@ -1,0 +1,207 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+	min-width: 1190px;
+	width: 1190px;
+	margin: 0 auto;
+}
+
+header img{
+	margin-top: 30px;
+}
+
+/* header part finished */
+
+.main{
+	width: 890px;
+	height: 500px;
+	margin: 65px auto 0;
+}
+
+.main:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.main>div{
+	float: left;
+}
+
+.login-wrap{
+	margin-left: 220px;
+	border: 2px solid;
+	border-color: #ff4400 #dedede #dedede #dedede;
+	width: 250px;
+	padding: 30px;
+	color: #666;
+}
+
+.login-wrap ul{
+	list-style: none;
+}
+
+.login-wrap ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.login-wrap li{
+	float: left;
+	border-bottom: 1px solid #dedede;
+	color: #999;
+	text-align: center;
+	width: 50%;
+	font-size: 14px;
+	padding-bottom: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.login-wrap ul .current{
+	color: #333;
+	border-bottom: 1px solid #ff4400;
+}
+
+.quick-wrap img{
+	display: block;
+	margin: 25px auto 0;
+	padding: 5px;
+	box-shadow: 0 0 8px #ddd;
+}
+
+.quick-wrap h3{
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.quick-wrap p{
+	font-size: 10px;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.quick-wrap strong{
+	color: #ff4400;
+	font-weight: normal;
+}
+
+/* quick-wrap part finished */
+
+.userinfo-wrap{
+	margin-top: 20px;
+	position: relative;
+}
+
+.userinfo-wrap input{
+	height: 35px;
+	border: 1px solid #dedede;
+	width: 210px;
+	font-size: 14px;
+	line-height: 35px;
+	padding-left: 40px;
+}
+
+.userinfo-icon{
+	width: 35px;
+	height: 35px;
+	background-color: #ccc;
+	color: white;
+	position: absolute;
+	font-size: 17px;
+	line-height: 35px;
+	text-align: center;
+	top: 1px;
+	left: 1px;
+}
+
+.pwd-register-wrap{
+	margin-top: 28px;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.pwd-register-wrap a{
+	text-decoration: none;
+	color: #666;
+}
+
+.pwd-register-wrap a:hover{
+	color: #ff4400;
+	text-decoration: underline;
+}
+
+.pwd-register-wrap a:last-child{
+	float: right;
+}
+
+.login-btn{
+	margin: 16px auto 0;
+	width: 250px;
+	height: 38px;
+	background-color: #ff4400;
+	color: white;
+	text-align: center;
+	line-height: 38px;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.friend-company-wrap{
+	margin: 24px 0 0 15px;
+	overflow: hidden;
+}
+
+.friend-company-item{
+	float: left;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.friend-company-item a{
+	text-decoration: none;
+	color: #666;
+	margin: 0 15px 0 5px;
+}
+
+.friend-company-item a:hover{
+	color: #ff4400;
+}
+
+.friend-company-icon{
+	line-height: 20px;
+	font-size: 18px;
+	color: #f40a01;
+}
+
+.friend-company-wrap>div:last-child .friend-company-icon{
+	position: relative;
+	top: 2px;
+	color: #0053a9;
+}
