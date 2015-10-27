@@ -20,13 +20,13 @@
 }
 
 body{
-	min-width: 1190px;
 	width: 1190px;
 	margin: 0 auto;
 }
 
 header img{
 	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 /* header part finished */
@@ -34,7 +34,7 @@ header img{
 .main{
 	width: 890px;
 	height: 500px;
-	margin: 65px auto 0;
+	margin: 45px auto 0;
 }
 
 .main:after{
@@ -204,4 +204,32 @@ header img{
 	position: relative;
 	top: 2px;
 	color: #0053a9;
+}
+
+@media (max-width: 767px){
+	body{
+		width: auto;
+	}
+
+	header{
+		border-bottom: 1px solid #dedede;
+	}
+
+	header a{
+		margin-left: 50px;
+	}
+
+	.main{
+		width: auto;
+	}
+
+	.img-wrap{
+		display: none;
+	}
+
+	.login-wrap{
+		float: none !important;
+		margin-left: 0;
+		margin: 0 auto;
+	}
 }
