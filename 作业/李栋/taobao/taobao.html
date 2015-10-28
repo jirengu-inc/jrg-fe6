@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝网</title>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<style>
+
+			html,ul,li,p,body,.content,input{
+				margin: 0;
+				padding: 0;
+
+
+			}
+			a{
+				text-decoration:none;
+			}
+
+			.container{
+				
+				width: 1085px;
+				margin:0 auto;
+			}
+			/*不要加在a标签上，要加在图片上*/
+			.logo img{
+				height: 43px;
+				margin-top:30px;
+				
+			}
+			#content .ad{
+				float: left;
+				margin-left: 64px;
+				margin-top: 60px;
+
+			}
+			#content .login-area{
+				float:left;
+				margin-left:206px;
+				margin-top:60px;
+				border:2px solid #dedede;
+				border-top:2px solid #f40;
+				padding:20px 30px;
+				width:250px;
+
+
+			}
+			.clearfix:after{
+				content:'';
+				display: block;
+				clear: both;
+			}
+			.head1 .tittle1{
+				font-size:14px;
+				color: #999;
+				display:inline-block;
+				width:50%;
+				text-align: center;
+				padding-bottom: 12px;
+				border-bottom:1px solid #999;
+
+			}
+			.tittle1.active{
+				color: #333;
+				border-bottom: 1px solid #f40;
+
+			}
+			.masg{
+				width: 250px;
+				border:0.5px solid #ccc;
+				margin-top: 20px;
+				position: relative;
+			}
+			.masg input{
+				width: 211px;
+				height:35px;
+				padding-left: 39px;
+			}
+			.masg i{
+
+				color: white;
+				padding:9.5px;
+				background: #ccc;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			.icon-lockt{
+				padding-left:1.5px ;
+				padding-right: 1.5px; 
+			}
+			.shenming{
+				margin-top: 25px;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.text1{
+				color: #666;
+				float: left;
+			}
+			.text2{
+				color: #666;
+				float: right;
+			}
+			.btn{
+				margin-top: 15px;
+				display: block;
+				color: white;
+				width: 250px;
+				height: 37px;
+				background: red;
+				text-align: center;
+				line-height: 37px;
+			}
+			.foot{
+				margin-top: 20px;
+				color: #666;
+				font-size: 12px;
+			}
+			.foot i{
+				color: red;
+			}
+			.foot img{
+				margin-left: 2px;
+				width: 18px;
+				height: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<a class="logo" href="http://www.taobao.com"><img src="images/logo.png"></a>
+			</div>
+			
+		</div>
+		<div id="content">
+			<div class="container clearfix">
+				<div class="ad">
+					<a href="#"><img src="images/ad.png"></a>
+				</div>
+				<div class="login-area">
+					
+					<div class="head1">
+						<a class="tittle1" href="#">快速登录</a><a class="tittle1 active" href="#">账户密码登录</a>
+					</div>
+					<div class="masg">
+						<i class="icon-user"></i>
+						<input type="text" placeholder="手机号/会员名/邮箱">
+					</div>
+					<div class="masg">
+						<i class="icon-lock"></i>
+						<input type="password" placeholder="密码">
+					</div>
+					<div class="shenming clearfix">
+						<a class="text1" href="#">忘记登陆密码？</a>
+						<a class="text2" href="#">免费注册</a>
+					</div>
+					<a class="btn" href="#">登录</a>
+					<div class="foot">
+						<p><i class="icon-weibo"> </i><a href="#">微博登录</a> <img src="images/bao.jpg"><a href="#">支付宝登录</a></p>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
