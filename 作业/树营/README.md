@@ -1,11 +1,13 @@
-# lesson7-CSS布局
+site: http://csy347.coding.io
+
+## lesson7-CSS布局
 
 - 单列布局
 - 双列布局
 - 三列布局
 - flex布局
 
-# lesson8
+## lesson8
 ### 苹果导航栏
 - 苹果导航-map ： 通过<area> shape="rect" 来确定链接的位置
 
@@ -15,5 +17,5 @@
 
 ### 简历
 
-site: http://csy347.coding.io
+
 
