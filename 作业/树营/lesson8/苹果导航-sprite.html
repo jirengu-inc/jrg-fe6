@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .wrapped {
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        .nav > ul > li {
+            float: left;
+        }
+
+        .nav > ul {
+            padding-left: 11px;
+            list-style: none;
+        }
+
+        .sprite {
+            display: block;
+            width: 106px;
+            height: 38px;
+            background-image: url(img/sprite.png);
+            background-repeat: no-repeat;
+        }
+
+        .sprite-apple-nav-03 {
+            width: 107px;
+            background-position: -5px -5px;
+        }
+
+        .sprite-apple-nav-03:hover {
+            width: 107px;
+            background-position: -122px -5px;
+        }
+
+        .sprite-apple-nav-04 {
+            background-position: -5px -53px;
+        }
+
+        .sprite-apple-nav-05 {
+            background-position: -121px -53px;
+        }
+
+        .sprite-apple-nav-06 {
+            background-position: -5px -101px;
+        }
+
+        .sprite-apple-nav-07 {
+            background-position: -121px -101px;
+        }
+
+        .sprite-apple-nav-08 {
+            width: 105px;
+            background-position: -5px -149px;
+        }
+
+        .sprite-apple-nav-09 {
+            width: 105px;
+            background-position: -120px -149px;
+        }
+
+        .sprite-apple-nav-10 {
+            width: 105px;
+            background-position: -239px -5px;
+        }
+
+        .sprite-apple-nav-11 {
+            width: 136px;
+            background-position: -5px -197px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav wrapped">
+        <ul class="clearfix">
+            <li><a href="http://www.baidu1.com" class="sprite sprite-apple-nav-03"> </a></li>
+            <li><a href="http://www.baidu2.com" class="sprite sprite-apple-nav-04"> </a></li>
+            <li><a href="http://www.baidu3.com" class="sprite sprite-apple-nav-05"> </a></li>
+            <li><a href="http://www.baidu4.com" class="sprite sprite-apple-nav-06"> </a></li>
+            <li><a href="http://www.baidu5.com" class="sprite sprite-apple-nav-07"> </a></li>
+            <li><a href="http://www.baidu6.com" class="sprite sprite-apple-nav-08"> </a></li>
+            <li><a href="http://www.baidu7.com" class="sprite sprite-apple-nav-09"> </a></li>
+            <li><a href="http://www.baidu8.com" class="sprite sprite-apple-nav-10"> </a></li>
+            <li><a href="http://www.baidu9.com" class="sprite sprite-apple-nav-11"> </a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
