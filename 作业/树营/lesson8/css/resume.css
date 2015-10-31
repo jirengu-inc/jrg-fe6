@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f7f6f8;
+}
+
+@font-face {font-family: "resumefont";
+    src: url('../fonts/resumefont.eot'); /* IE9*/
+    src: url('../fonts/resumefont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/resumefont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/resumefont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/resumefont.svg#resumefont') format('svg'); /* iOS 4.1- */
+}
+
+.resumefont {
+    font-family:"resumefont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.resumefont-share:before { 
+    content: "\e61a"; 
+}
+.resumefont-menu:before { 
+    content: "\e752"; 
+}
+
+.wrapped {
+    width: 970px;
+    margin: 0 auto;
+}
+
+/* topbar */
+.topbar {
+    position: relative;
+    z-index: 1;
+    min-width: 970px;
+    padding: 34px 0 26px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.topbar h1 {
+    position: relative;
+    font: 300 28px/40px arial, serif;
+    padding-left: 30px;
+    color: #bcbdbd;
+}
+
+.topbar .resumefont {
+    position: absolute;
+}
+
+.topbar h1 > .menu {
+    top: 0;
+    left: 0;
+    font-size: 26px;
+}
+
+.topbar h1 > .share {
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    color: #51aa92;
+}
+
+/* summary */
+.summary {
+    font-size: 18px;
+}
+
+.summary:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.summary .avatar {
+    float: left;
+    position: relative;
+    width: 220px;
+    height: 230px;
+    padding-top: 30px;
+    padding-left: 20px;
+    background-color: #58c1d3;
+    color: #fff;
+}
+
+.summary .avatar img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -82px;
+}
+
+.summary .text {
+    float: left;
+    width: 630px;
+    height: 160px;
+    padding: 50px;
+    line-height: 33px;
+    color: #818181;
+}
+
+.summary .text p{
+    padding: 10px 19px;
+    word-wrap: break-word;
+}
+
+.panel {
+    margin-bottom: 15px;
+    background-color: #fff;
+    color: #818181;
+}
+
+.panel h2 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #74bcaa;
+}
+
+.panel dt,
+.panel dd {
+    float: left;
+    width: 50%;
+    border-bottom: 1px dashed #e4e4e4;
+    line-height: 45px;
+    white-space: nowrap;
+}
+
+.panel dl:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.profile,
+.wish,
+.question,
+.contact {
+    padding: 12px 19px 35px;
+}
+
+/* profile-and-wish */
+.profile-and-wish {
+    float: left;
+    width: 270px;
+}
+
+/* question-and-contact */
+.question-and-contact {
+    float: left;
+    width: 685px;
+    margin-left: 15px;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+.question h3 {
+    color: #4cc1aa;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0 8px;
+}
+
+.question h3::before {
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    background: #4cc1aa none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    content: "Q";
+    font-size: 14px;
+    line-height: 100%;
+    margin-right: 5px;
+    padding: 5px 6px;
+}
+
+
+.contact p {
+    border-bottom: 1px solid #f2f2f2;
+    color: #e4e4e4;
+    font-size: 20px;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact .btn {
+    background: #36b39a none repeat scroll 0 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+/* 小于640像素 */
+@media (max-width: 640px) {
+    .wrapped {
+        width: 100%;
+    }
+
+    .topbar {
+        min-width: auto;
+        padding: 10px;
+    }
+
+    .summary .avatar {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .summary .text {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-and-wish {
+        float: none;
+        width: 100%;
+    }
+
+    .question-and-contact {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
