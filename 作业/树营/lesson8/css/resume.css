@@ -236,6 +236,10 @@ body {
         padding: 0;
     }
 
+    .panel dd:nth-child(even) {
+        text-align: right;
+    }
+
     .profile-and-wish {
         float: none;
         width: 100%;
