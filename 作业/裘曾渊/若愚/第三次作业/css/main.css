@@ -13,7 +13,8 @@ p{font-weight: 400;color:#6a7483;font-size:13px;line-height:24px;margin-bottom: 
 nav{padding:10px 0;margin-top: 10px;z-index: 999;}
 .navlist{display: inline-block;float: right;margin-top: 10px;}
 .navlist li{float: left;}
-.navlist .active a{background-color:#232c3b;color:#fff;}
+.navlist a{transition:all 0.2s;}
+.navlist a:hover{background-color:#232c3b;color:#fff;}
 .navlist li a{padding:10px 20px;font-size: 12px;}
 .banner { background: url(http://premiumlayers.com/demos/infinity/images/bg/sub-banner.jpg) no-repeat fixed center center; background-size:cover;height: 382px;position: relative;margin-top: 83px;}
 .about-wrapper{text-align: center;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);}
@@ -28,15 +29,16 @@ nav{padding:10px 0;margin-top: 10px;z-index: 999;}
 	text-transform:uppercase;
 	font-weight:normal;
 	letter-spacing:1.3px; }
-
-
 .getAppear .content-wrapper>img{width:555px;float:left;}
-.getAppear .aside{float: left;width:555px;}
-.getAppear .aside p{display: inline-block;}
+.getAppear .aside{float: left;width:555px;text-align: left;margin-left: 30px;}
+.getAppear .aside p{font-weight: 400;
+	color: #6a7483;
+	font-size:13px;
+	line-height: 24px;
+margin-bottom: 20px;}
 .getAppear .aside ul{text-align: left;}
 .getAppear .aside ul li{margin-bottom: 10px;}
 .getAppear .aside ul li p{font-size: 15px;color:#232c3b;line-height: 24px;vertical-align: middle;}
-
 .getAppear  h2{font-size: 40px;
 	margin-top: 0px;
 	margin-bottom: 15px;
@@ -44,7 +46,7 @@ nav{padding:10px 0;margin-top: 10px;z-index: 999;}
 	color:#232c3b;
 	font-family: 'Alegreya Sans';
 	letter-spacing: 1px;}
-.getAppear  .aside p img{margin-right: 15px;}
+.getAppear  .aside p img{margin-right: 15px;vertical-align: middle;}
 .getAppear .button{	background: #222935;
 	display: inline-block;
 	font-size: 12px;
@@ -69,4 +71,14 @@ nav{padding:10px 0;margin-top: 10px;z-index: 999;}
 	letter-spacing: 1px;}
 .clients ul{width:1170px;}	
 .clients li{display: inline-block;width:19%;}	
-.clients-heading{margin-bottom: 80px;}
+.heading{margin-bottom: 80px;}
+.team h2{font-size: 40px;
+	text-transform: none;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	font-weight: bold;
+	color:#232c3b;
+	letter-spacing: 1px;}
+.team p{	color:#6a7483;
+	font-size:15px;
+	letter-spacing:1px;}
