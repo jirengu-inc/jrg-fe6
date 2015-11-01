@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航02</title>
+	<style>
+     *{
+     	margin: 0px;
+     	padding: 0px;
+     }
+     .wrapped{
+        width: 1108px;
+        margin:0 auto;
+     }
+     .nav{
+     	list-style: none;
+     }
+     .nav01{
+     	float: left;
+     }
+     .clare{
+        clear: both;
+     }
+	</style>
+</head>
+<body>
+	<div class="nav wrapped">
+       <ul class="nav">
+       	<li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_03.jpg" alt=""></a></li>
+       	<li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_04.jpg" alt=""></a></li>
+       	<li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_05.jpg" alt=""></a></li>
+       	<li class="nav01"<a href="htpp://www.baidu.com" target="_blank"><img src="images/apple-nav_06.jpg" alt=""></a></li>
+       	<li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_07.jpg" alt=""></a></li>
+       	<li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_08.jpg" alt=""></a></li>
+        <li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_09.jpg" alt=""></a></li>
+        <li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_10.jpg" alt=""></a></li>
+        <li class="nav01"><a href="http://www.baidu.com" target="_blank"><img src="images/apple-nav_11.jpg" alt=""></a></li>
+       </ul>
+		<div class="clear"></div>
+	</div>
+    <div class="main wrapped">
+    	<img src="images/iPad.png">
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 12px;
+        }
+
+        .wrapped {
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .nav > ul {
+            list-style: none;
+            background-color: #5D5D5D;
+            margin-left: 11px;
+            margin-right: 8px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        .nav > ul > li {
+            float: left;
+            background: transparent url(img/background.png) repeat-x 0 0;
+            height: 36px;
+            border-left: 1px solid #7e7e7e;
+            border-right: 1px solid #7e7e7e;
+            margin-left: 1px;
+        }
+
+        .nav > ul > li:first-child {
+            margin-left: 0;
+            border-radius: 5px 0 0 5px
+        }
+
+        .nav > ul > li:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+
+        .nav > ul > li > a {
+            display: block;
+            width: 106px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="nav wrapped">
+    <ul class="clearfix">
+        <li><a href="http://baidu1.com">Apple</a></li>
+        <li><a href="http://baidu2.com">在线商店</a></li>
+        <li><a href="http://baidu3.com">Mac</a></li>
+        <li><a href="http://baidu4.com">iPod</a></li>
+        <li><a href="http://baidu5.com">iPhone</a></li>
+        <li><a href="http://baidu6.com">iPad</a></li>
+        <li><a href="http://baidu7.com">iTunes</a></li>
+        <li><a href="http://baidu8.com">技术支持</a></li>
+        <li><a href="http://baidu9.com">示意</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
