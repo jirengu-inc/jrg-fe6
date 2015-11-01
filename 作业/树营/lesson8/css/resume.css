@@ -9,8 +9,7 @@ ul {
 }
 
 body {
-    font-size: 16px;
-    line-height: 1.5;
+    font: 300 16px/1.5 arial, "microsoft yahei", "resumefont", serif;
     background-color: #f7f6f8;
 }
 

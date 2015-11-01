@@ -1,0 +1,151 @@
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face{
+	font-family: 'Montserrat';
+	src: url(../fonts/montserrat/montserrat-regular-webfont.eot);
+	src: url('../fonts/montserrat/montserrat-regular-webfont?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/montserrat/montserrat-regular-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/montserrat/montserrat-regular-webfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+	border-top: 4px solid #222935;
+}
+
+.contact-way-wrap{
+	width: 915px;
+	margin: 0 auto;
+	background-color: #222935;
+	height: 49px;
+	line-height: 49px;
+	color: #fff;
+	font-size: 12px;
+	position: relative;
+	left: 60px;
+}
+
+.contact-way-wrap:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 49px;
+	left: -35px;
+	top: 0;
+	background-image: url(../images/top-left-bar.jpg);
+}
+
+.contact-way-wrap:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 49px;
+	right: -35px;
+	top: 0;
+	background-image: url(../images/top-right-bar.jpg);
+}
+
+.contact-way-wrap .circle-icon{
+	color: #fff;
+	background-color: #4f5662;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	/* font-size 最小为 12px 怎么更加小？ */
+
+	margin: 9px 0 0 5px;
+	transition: 0.3s all ease-in-out;
+}
+
+.contact-way-wrap a:first-child{
+	margin-left: 15px;
+}
+
+.contact-way-wrap .circle-icon:hover{
+	background-color: rgb(255, 108, 58);
+}
+
+.contact-way-wrap .header-icon{
+	color: #4f5662;
+}
+
+.contact-info-wrap{
+	float: right;
+	margin-right: 15px;
+}
+
+.contact-info-wrap i{
+	margin: 0 4px 0 55px;
+	font-size: 18px;
+}
+
+.contact-info-wrap i:first-child{
+	margin-right: 3px;
+}
+
+/* contact-wrap part finish */
+
+.nav-bar{
+	margin: 15px 0;
+}
+
+.nav-bar .container{
+	width: 1170px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0 auto;
+}
+
+.nav-bar img, .nav-bar li{
+	float: left;
+}
+
+.nav-bar img{
+	margin-top: 15px;
+}
+
+.nav-bar ul{
+	float: right;
+	margin-right: 20px;
+}
+
+.nav-bar li a{
+	padding: 10px 20px;
+	color: #232c3b;
+	font-size: 12px;
+	font-family: 'Montserrat';
+}
+
+.nav-bar ul li:last-child a{
+	padding: 10px;
+}
+
+.nav-bar ul li:last-child a i{
+	font-size: 12px;
+}
+
+.nav-bar li a:hover{
+	text-decoration: none;
+	color: white;
+	background-color: #222935;
+}
