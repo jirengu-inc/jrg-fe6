@@ -107,3 +107,47 @@ margin-bottom: 20px;}
 .mailTo{float: right;border-left: 1px solid #A15642;position: relative;margin-top: -80px;padding:0 20px 0 20px;line-height: 70px;color:#A25742;}
 .mailTo:hover{color:#fff;}
 footer{background: #232C3B;}
+footer .content-wrapper{padding-top:50px;padding-left: 15px; }
+footer .content-wrapper h6 {
+	float: left;
+	color: #FFF;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.1;
+}
+.newsletter{width: 50%;}
+.newsletter form{float:right;}
+.icons{width:50%;float:right;}
+.icons li {display: inline-block;}
+.icons li a {
+	background: #4F5662 none repeat scroll 0% 0%;
+	height: 31px;
+	width: 31px;
+	text-align: center;
+	line-height: 31px;
+	color: #FFF;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 12px;
+}
+.formgroup input {
+	border: 1px solid #3C4450;
+	height: 50px;
+	width: 100%;
+	padding: 0px 20px;
+	background: transparent;
+}
+footer .newsletter button {
+	background: #FF6C3A none repeat scroll 0% 0%;
+	width: 55px;
+	height: 50px;
+	float: right;
+	margin-top: -50px;
+	position: relative;
+	z-index: 1;
+	border: medium none;
+	color: #FFF;
+	font-size: 20px;
+}
