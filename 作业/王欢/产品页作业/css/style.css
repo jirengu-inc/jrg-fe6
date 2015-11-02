@@ -7,7 +7,7 @@ ul li{list-style: none;}
 
 /*global*/
 .warpper{width: 100%;position: relative;}
-.panel{margin: 0 62px;}
+.panel{padding:100px 62px;}
 /*global-end*/
 
 /*清除浮动*/
@@ -17,7 +17,7 @@ ul li{list-style: none;}
 
 /*topbar*/
 .header{width: 100%;border-top: 4px solid #222935;}
-.header .topbar{padding-left: 166px;}
+.header .topbar{padding-left: 166px;margin: 0 62px;}
 .header .topbar .topbar-img-left{float: left;}
 .header .topbar .topbar-main{float: left;background: #222935;height: 48px;width: 885px;}
 .header .topbar .topbar-img-right{float: left;}
@@ -32,7 +32,7 @@ ul li{list-style: none;}
 /*topbar--end*/
 
 /*logo*/
-.nav{margin-top: 30px;}
+.nav{margin: 30px 62px 0 62px;}
 .nav img{float: left;}
 .nav .nav-ul{float: right;}
 .nav .nav-ul .column{display: inline-block;}
@@ -47,23 +47,21 @@ ul li{list-style: none;}
 
 
 /*solution*/
-.solution{padding-top: 100px;background: #f9f9f9;width: 100%;text-align: center;}
-.solution .solu-text{margin: 10px auto;}
-/*.solution .solu-text h2{  font-size: 40px;margin-top: 0px;margin-bottom: 15px;font-weight: bold;color: #232c3b;font-family: 'Alegreya Sans';letter-spacing: 1px;}*/
+.solution{background: #f9f9f9;text-align: center;}
+.solu-text{margin: 10px auto;}
 h2{font-size: 40px;margin-top: 0px;margin-bottom: 15px;font-weight: bold;color: #232c3b;font-family: 'Alegreya Sans';letter-spacing: 1px;}
-.solution .solution-sub{margin-top: 84px;}
-.solution .solution-sub .icon{float: left;width: 25%;}
-.solution .solution-sub .icon .icon-title{font-size: 12px;margin: 40px 0 20px 0;letter-spacing: 1.3px;font-weight: bolder;}
-.solution .solution-sub .icon .icon-content{font-size: 13px;color: #6a7483;line-height: 24px;font-weight: normal;}
+.solution-sub{margin-top: 84px;}
+.solution-sub .icon{float: left;width: 25%;}
+.solution-sub .icon .icon-title{font-size: 12px;margin: 40px 0 20px 0;letter-spacing: 1.3px;font-weight: bolder;}
+.solution-sub .icon .icon-content{font-size: 13px;color: #6a7483;line-height: 24px;font-weight: normal;}
 /*solution--end*/
 
-.google{margin-top: 60px;}
-.google .google-con{float: left;width: 50%;}
-.google .google-con img{max-width: 100%;margin-top: 30px;}
-.google .google-con p{line-height: 24px;color: #6a7483;font-weight: 400;}
-.google .google-con ul{margin-bottom: 33px;}
-.google .google-con .list-icon img{position: relative;top: 7px; margin-right: 12px;}
-.google .google-con .list-icon span{color: #232c3b;font-size: 15px;}
+.google-con{float: left;width: 50%;}
+.google-con img{max-width: 100%;margin-top: 30px;}
+.google-con p{line-height: 24px;color: #6a7483;font-weight: 400;}
+.google-con ul{margin-bottom: 33px;}
+.google-con .list-icon img{position: relative;top: 7px; margin-right: 12px;}
+.google-con .list-icon span{color: #232c3b;font-size: 15px;}
 
 
 .btn{width: 150px;height: 45px;background:#ff6c3a;display: inline-block;color: #fff;text-align: center;line-height: 45px;text-transform: uppercase;font-size: 12px;font-weight: bold;cursor: pointer;border-radius: 4px;margin-right: 33px;border-bottom: 3px solid rgba(0,0,0,0.4);}
@@ -71,18 +69,18 @@ h2{font-size: 40px;margin-top: 0px;margin-bottom: 15px;font-weight: bold;color: 
 .btn-learn{background: #222935;}
 .btn-learn:hover{background: #ff6c3a;}
 
-.clients{background: #4ad5c0;width: 100%;margin-top: 60px;padding:80px 0 10px 0;text-align: center;color: #fff;}
-.clients .clients-con{margin-bottom: 90px;}
-.clients .clients-con h2{color: #fff;}
-.clients .clients-con .clients-img{float: left;width: 20%;}
+.clients{background: #4ad5c0;text-align: center; color: #fff;}
+.clients-con ul{margin-top: 50px;}
+.clients-con h2{color: #fff;}
+.clients-con .clients-img{float: left;width: 20%;}
 
-.team{margin-top: 100px;text-align: center;}
+.team{text-align: center;}
 .text-span{display: inline-block;line-height: 30px;width: 60%;margin: 0 auto;font-size: 15px;letter-spacing: 1px;font-weight: normal;}
-.team .member {margin-top: 85px;margin-left: -15px;margin-right: -15px;}
-.team .member .people{float: left;width: 30%;padding: 0 15px;}
-.team .member .people img{max-width: 100%;}
-.team .member .people .people-pan{position: relative;}
-.team .member .people .people-pan .people-msg{
+.member {margin-top: 85px;margin-left: -15px;margin-right: -15px;}
+.member .people{float: left;width: 30%;padding: 0 15px;}
+.member .people img{max-width: 100%;}
+.member .people .people-pan{position: relative;}
+.member .people .people-pan .people-msg{
 	color: #fff;
 	height: 80px;
 	background: rgba(35,44,59,0.8);
@@ -91,18 +89,18 @@ h2{font-size: 40px;margin-top: 0px;margin-bottom: 15px;font-weight: bold;color: 
 	bottom: -1px;
 	width: 100%; 
 }
-.team .member .people .people-pan .people-msg .msg-1{
+.member .people .people-pan .people-msg .msg-1{
 	font-size: 18px;
 	margin: 20px 0 0 25px;
 	text-align: left;
 }
-.team .member .people .people-pan .people-msg .msg-2{
+.member .people .people-pan .people-msg .msg-2{
 	font-size: 14px;
 	margin: 10px 0 0 25px;
 	text-align: left;
 	font-weight: normal;
 }
-.team .member .people .people-pan .people-msg a{
+.member .people .people-pan .people-msg a{
 	color: #a2574a;
 	border-left: 1px solid #a2574a;
 	font-size: 25px;
@@ -114,26 +112,23 @@ h2{font-size: 40px;margin-top: 0px;margin-bottom: 15px;font-weight: bold;color: 
 	top: -57px;
 	right: 5px;
 }
-.team .member .people .people-pan .people-msg a:hover{
+.member .people .people-pan .people-msg a:hover{
 	color: #fff;
 }
+
+
+
 .footer{
-	margin-top: 100px;
 	background: #232c3b;
 	color: #fff;
-	padding-bottom: 50px;
 }
 .footer .letter{
-	/*background-color: red;*/
-	padding-bottom: 50px;
+	margin: 0 62px 50px 62px;
 }
 .footer .letter .letter-col{
 	float: left;
 	width: 50%;
 	padding-top: 50px;
-}
-.footer .letter .letter-col form{
-	/*width: 70%;*/
 }
 h5{
 	display: inline-block;
@@ -165,14 +160,13 @@ h5{
 .footer .letter .letter-col ul{
 	margin-top: 10px;
 }
-hr{
-	border-top: 1px solid #3c4450;
-}
-
 
 .footer .infinity{
 	border-top: 1px solid #3c4450;
-	padding-top: 50px;
+	width: 100%;
+}
+.footer .infinity-hr{
+	margin: 50px 62px 0 62px;
 }
 .footer .infinity  .infinity-pal{
 	margin-right: 20px;
@@ -180,7 +174,7 @@ hr{
 	width: 30%;
 }
 .footer .infinity .infinity-pal ul{
-	margin: 40px 0;
+	margin: 32px 0;
 }
 .footer .infinity .infinity-pal .infinity-list{
 	border-bottom: 1px solid #3c4450;
@@ -191,9 +185,14 @@ hr{
 	margin-bottom: 40px;
 }
 .footer .infinity .infinity-pal dl{
-	margin-top: 80px;
+	margin-top: 50px;
 	display: block;
 
+}
+hr{
+	display: block;
+	width: 100%;
+	border-top: 1px solid #3c4450;
 }
 .infinity-pal dl dt{
 	float: left;
@@ -238,7 +237,7 @@ hr{
 	font-size: 20px;
 	margin-right: 15px;
 }
-.footer p,span,dl,dt,dd,a{
+.footer p,dl,dt,dd,a{
 	color: #969ea7;
 	font-size: 12px;
 }
@@ -248,6 +247,7 @@ hr{
 	line-height: 56px;
 	background: #161c28;
 	color: #969ea7;
+	padding-left: 62px;
 }
 
 
