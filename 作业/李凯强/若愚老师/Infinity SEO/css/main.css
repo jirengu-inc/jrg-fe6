@@ -78,7 +78,7 @@ img{
 	margin-right: 5px;
 	color: #fff;
 	cursor: Pointer;
-	transition: all 0.3s;
+	transition: background-color 0.5s;
 }
 #top-bar .contact-link i:hover{
 	background: #ff6c3a;
@@ -109,23 +109,23 @@ img{
 #header .navi{
 	float: right;
 }
-#header .navi li{
+#header .navi>li{
 	float: left;
 }
-#header .navi li.search{
+#header .navi>li{
 	position: relative;
 }
-#header .navi li.search:hover .search-menu{
+#header .navi>li.search:hover .search-menu{
 	display: block;
 }
-#header .navi li>a{
+#header .navi>li>a{
 	font-size: 12px;
 	color: #232c3b;
 	padding: 10px 20px;
-	transition: all 0.3s;
+	transition: background-color 0.5s;
 	display: inline-block;
 }
-#header .navi li .search-menu{
+#header .navi>li .search-menu{
 	width: 510px;
 	background: #141414;
 	position: absolute;
@@ -134,7 +134,7 @@ img{
 	top: 100%;
 	display: none;
 }
-#header .navi li .search-menu input{
+#header .navi>li .search-menu input{
 	width: 100%;
 	box-sizing:border-box;
 	padding: 9px;
@@ -142,7 +142,7 @@ img{
 	border: none;
 	color: #fff;
 }
-#header .navi li .search-menu a{
+#header .navi>li .search-menu a{
 	background-color: #FF6C3A;
 	padding: 9px 40px;
 	color: #fff;
@@ -152,7 +152,29 @@ img{
 	right: 30px;
 	font-size: 13.3333px
 }
-#header .navi li>a:hover{
+#header .navi>li.paces-menu ul{
+	width: 210px;
+	background: #141414;
+	padding: 10px;
+	position: absolute;
+	top: 100%;
+	display: none;
+}
+#header .navi>li.paces-menu li a{
+	line-height: 20px;
+	font-size: 12px;
+	padding: 10px 20px;
+	display: block;
+	color: #6f6f6f;
+	transition: color 0.5s;
+}
+#header .navi>li.paces-menu li a:hover{
+	color: #ff6c3a;
+}
+#header .navi>li.paces-menu:hover ul{
+	display: block;
+}
+#header .navi>li>a:hover{
 	color: #fff;
 	background: #4F5662;
 }
@@ -169,7 +191,7 @@ img{
 #content .content-title{
 	height: 382px;
 	margin-top: 20px;
-	background: url(http://premiumlayers.com/demos/infinity/images/bg/sub-banner.jpg) no-repeat;
+	background: url(../img/sub-banner.jpg) no-repeat;
 	overflow: hidden;
 }
 #content .content-title h2{
@@ -410,7 +432,7 @@ img{
 	text-align: center;
 	line-height: 70px;
 	color: #a15642;
-	transition: 0.5s;
+	transition: color 0.5s;
 }
 #content .team .person-brief a:hover{
 	color: #fff;
@@ -554,7 +576,7 @@ img{
 #footer .footer-main .ser-pro li a{
 	font-size: 13px;
 	color: #969ea7;
-	transition: all 0.5s;
+	transition: color 0.5s,border 0.5s;
 }
 #footer .footer-main .ser-pro li a:hover{
 	color: #fff;
@@ -607,7 +629,7 @@ img{
     background-color: #ff6c3a;
     width: 23%;
     color: #333;
-    transition: all 0.5s;
+    transition: color 0.5s,background 0.5s;
     border-bottom: 3px solid rgba(0,0,0,0.4);
 }
 #footer .footer-main .free-quote a:hover{
