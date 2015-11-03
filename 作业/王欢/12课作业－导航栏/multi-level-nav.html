@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12课作业</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/*body{background-color: #ccc;}*/
+		a{
+			text-decoration: none;
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		div{
+			text-align: center;
+			padding: 40px;
+			line-height: 40px;
+		}
+		ul{
+			list-style: none;
+			border: 1px solid #ddd;
+			border-right: none;
+			display: inline-block;
+		}
+		.nav li{
+			width: 200px;
+			border-right: 1px solid #ddd;
+			background-color: #fff;
+			float: left;
+			position: relative;
+		}
+		.nav li .level{
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			margin-left: -1px;
+		}
+		.nav li:hover .level{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="nav clearfix">
+			<li>
+				<a href="#">首页</a>
+				<ul class="level">
+					<li>首页1</li>
+					<li>首页2</li>
+					<li>首页3</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">关于</a>
+				<ul class="level">
+					<li>关于1</li>
+					<li>关于2</li>
+					<li>关于3</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">下载</a>
+				<ul class="level">
+					<li>下载1</li>
+					<li>下载2</li>
+					<li>下载3</li>
+				</ul>
+			</li>
+			<li>	
+				<a href="#">博客</a>
+				<ul class="level">
+					<li>博客1</li>
+					<li>博客2</li>
+					<li>博客3</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
