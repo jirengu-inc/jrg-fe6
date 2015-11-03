@@ -1,7 +1,7 @@
 *{margin: 0;padding:0;}
 a{text-decoration: none;}
 li{list-style: none;}
-body{font-family:"Microsoft Yahei";font-size: 14px;}
+body{font-family:"Microsoft Yahei";font-size: 14px;width: 1264px;}
 img{border:none; vertical-align:top;}
 
 @font-face {font-family: 'iconfont';
@@ -14,7 +14,7 @@ img{border:none; vertical-align:top;}
 
 .iconfont{
     font-family:"iconfont" !important;
-    font-size:30px;font-style:normal;
+    font-size:14px;font-style:normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
@@ -29,12 +29,16 @@ img{border:none; vertical-align:top;}
 	visibility: hidden;
  }
 
+ .ft-color{font-size: 12px;color: white;}
+
 .wrapper{width: 1264px;}
 .header{position:relative;height: 52px;width: 1264px;background-image: url(../image/header.png);}
 .header-wrapper{width:880px;height:52px;position: absolute;left:268px;}
 
 .header-wrapper-left{height:52px;float: left;margin-right: 100px;}
-.facebook li{float: left;color: #4f5561;line-height: 52px;margin-right: 4px;}
+.facebook{margin-top: 10px;}
+.facebook li{float: left;background-color: #565a65;line-height: 31px;width:31px;
+	border-radius: 16px;margin-right: 4px;text-align: center;}
 
 .header-wrapper-right{height:52px;float: left;}
 .phone li{float: left;color:#4f5561;line-height: 52px;font-size: 16px;
@@ -66,7 +70,7 @@ background-image: url(../image/sub-banner.jpg);position: relative;
 .welcome p{text-align: center;}
 .welcome-p1{font-size: 40px;color: #232c3b;margin-bottom: 30px;}
 .welcome-p2{font-size: 15px;color: #6a7483;margin-bottom: 84px;}
-.welcome ul{width:1264px;padding: 0 20px;}
+.welcome ul{width:1224px;padding: 0 20px;}
 .welcome li{float: left;width:276px;padding: 0 15px;}
 .welcome li div{text-align: center;margin-bottom:47px; }
 
@@ -123,10 +127,52 @@ font-weight: bold;letter-spacing: 1px;text-align: center;}
 
 .avatar-introduce{width:310px;height: 80px;padding: 0 25px;
 background:rgba(35,44,59,0.8);position: absolute;right: 15px;bottom: 0; }
-.avatar-introduce-name{margin-top: 20px;font-size: 18px;color: white;}
+.avatar-introduce-name{margin-top: 20px;}
 .avatar-introduce-job{margin-bottom: 20px;font-size: 13px;line-height: 24px;color: white;}
 .avatar-introduce a{float: right;display:inline-block;height:70px;margin-top: -85px;
 	border-left: 1px solid #a15642;padding-left: 15px;line-height: 70px;}
-}
 
-.jinxiaoyun{color: red !important;font-size: 30px;}
+.ft18{font-size: 18px;color: white;}
+.ft20{font-size: 20px;color: white;}
+.ft20-c{font-size: 20px;color:#a15642;}
+.mg52{margin-right: 52px;}
+.margin-bottom-30{margin-bottom: 30px;}
+
+.footer{background-color: #232c3b;}
+
+.news{float: left;padding: 50px 15px 0;position: relative;}
+.followus{float: left;padding: 50px 15px 0;}
+.followus ul{position: relative;top: 10px;}
+
+.newsletter{height:150px;margin:0 auto;border-bottom: 1px solid #4a5362;}
+.newsletter input{height: 36px;width: 364px;background-color: transparent;
+	color: #969ea7;border:1px solid #3d4655;font-size: 13px;padding: 6px 12px;}
+.email{position:absolute;bottom:1px;right: 15px;display: inline-block;width: 53px;height: 48px;
+background-color: #ff6b3b;text-align: center;line-height: 48px;}
+.newsletter-wrapper{width: 1170px;margin: 0 auto;}
+.footer-letter{display: inline-block;width: 300px;}
+.footer-letter li{float: left;background-color: #565a65;line-height: 31px;width:31px;
+	border-radius: 16px;margin-right: 4px;text-align: center;margin-right: 4px;}
+
+.floatL{float: left;width: 360px;padding:0 15px;}
+
+.footer-info{width: 1170px;padding: 30px 15px;margin:0 auto;}
+.footer-info h3{color: white;}
+.services-L{float: left;}
+.services-R{float:right;}
+
+
+.footer-info-services ul li{line-height: 24px;font-size: 13px;padding: 10px 0;
+color: #969ea7;}
+.footer-info-quote input{width: 334px;padding:6px 12px;height: 26;background-color: transparent;
+	margin-bottom: 30px;color: #969ea7;border:1px solid #3d4655;}
+.footer-info-address p{margin-bottom: 10px;font-size: 13px;color: #969ea7;line-height: 26px;}
+.footer-info-address li{line-height: 24px;font-size: 12px;padding: 10px 0;
+color: #969ea7;border-bottom: 1px solid #3c4554;}
+.sendnow{display: inline-block;width: 70px;height: 17px;padding: 15px 35px;
+border-bottom:3px;background-color: #ff6b3b;border-radius: 4px;font-size: 12px;color: white;}
+
+.footer-rights{background-color: #161c28;height: 56px;padding:0 ;}
+.footer-rights-copy{width: 1140px;margin:0 auto;}
+.footer-rights span{line-height: 56px;color: #565b77;}
+

@@ -15,10 +15,19 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-facebook:before { content: "\e602"; }
-.icon-twitter:before { content: "\e61c"; }
-.icon-google:before { content: "\e607"; }
-.icon-dianhua:before { content: "\e623"; }
+.icon-facebook:before { content: "\e6b8"; }
+.icon-twitter:before { content: "\ecb3"; }
+.icon-google:before { content: "\e6f3"; }
+.icon-dianhua:before { content: "\e608"; }
 .icon-youjian:before { content: "\e61b"; }
 .icon-weixin:before { content: "\e636"; }
-.icon-wenhao:before { content: "\e60c"; }
+.icon-wenhao:before { content: "\e6c5"; }
+.icon-fangdajing:before { content: "\e649"; }
+.icon-youjian1:before { content: "\e614"; }
+.icon-google1:before { content: "\e670"; }
+.icon-in:before { content: "\e620"; }
+.icon-icon5:before { content: "\e61a"; }
+.icon-s:before { content: "\e648"; }
+.icon-be:before { content: "\e601"; }
+.icon-dingwei:before { content: "\e6aa"; }
+.icon-sanjiao:before { content: "\e676"; }
