@@ -198,7 +198,7 @@ footer .service h6 {
 }
 .quote{width:390px;float:left;box-sizing:border-box;}
 footer .quote h6{margin-top: 0;}
-footer form{margin-top: 40px;}
+footer .quote form{margin-top: 40px;}
 footer form input,textarea{width:360px;}
 .footer-info .quote .form-control {
 	background: transparent none repeat scroll 0% 0%;
