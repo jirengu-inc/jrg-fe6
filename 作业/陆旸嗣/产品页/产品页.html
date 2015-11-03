@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品页</title>
+<style type="text/css">
+  *{margin: 0;padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none;}
+  .top{position: fixed;
+  	   top: 80px;
+  	   left: 0px;
+  	   z-index: 2;
+       width: 100%;
+       background-color: #fefefe;
+       opacity: 0.7;
+       padding: 10px 0px 10px 85px;
+  	}
+  .logo{display: inline ;
+  	    float: left;
+  	    margin-right: 0px;}
+  .navigation{display: inline-block;
+  	          float: left;
+  	          position: relative;
+  	           left: 280px;
+  	           top: 15px;}
+  .navigation a{color: #232c3b;
+  	            font-size: 16px;
+  	            padding: 10px 20px; }
+  .navigation a:hover{background-color: #232c3b;
+                       color: #fff;
+                       transition: all 0.8s;}
+  /*头部导航栏完成*/
+  .photo{position: relative;
+  	     top: 165px;
+         text-align: center;}
+  /*图片滚动*/
+  .welcome{position: relative;
+            top: 260px;
+            text-align: center;
+            font-size: 40px;
+            font-family: "Alegreya Sans";
+            color:#232C3B; }
+  .doyou{position: relative;
+         top: 290px;
+         color: #6A7483;
+         font-size: 15px;
+         letter-spacing: 1px;
+         text-align: center;
+       }
+   /*中间字搞定*/
+  .middlephoto{position: relative;
+               top:380px; 
+               display: inline;
+                text-align: center;}
+  .middlephoto li{width: 262.5px;
+                  height:246.2px;
+                  text-align: center;
+                  display: inline-block;
+                  padding: 0px 10px;
+                }
+ /*中间图片搞定*/
+
+ .pad{position: relative;
+      top: 550px;
+      display: inline-block;
+      float: left;}
+ .padpaper{width: 550px;
+ 	       height: 209px;
+ 	       position: relative;
+ 	       top: 500px; 
+           float: right;
+           display: inline-block;}
+ .padpaper h1{word-wrap:break-word;
+              font-size: 40px;
+              text-transform: none;
+              margin-top: 0px;
+              margin-bottom: 15px;
+              font-weight: bold;
+              color: #232c3b;
+              font-family: 'Alegreya Sans';
+              letter-spacing: 1px;}
+ .padpaperword{font-weight: 400;
+             color: #6a7483;
+             font-size: 13px;
+             line-height: 24px;
+             font-family: 'Open Sans', sans-serif;
+             padding-bottom: 20px;}
+  .padicon{position: relative;
+  	display: inline-block;} 
+  .padicon li{padding-bottom: 20px;}
+  .littleicon1{background: url(http://premiumlayers.com/demos/infinity/images/list-icon-1.png)0 0 no-repeat;
+              height: 25px;}
+  .littleicon2{background: url(http://premiumlayers.com/demos/infinity/images/list-icon-2.png)0 0 no-repeat;
+              height: 25px;}
+  .littleicon3{background: url(http://premiumlayers.com/demos/infinity/images/list-icon-3.png)0 0 no-repeat;
+              height: 25px;} 
+  .littleicon4{background: url(http://premiumlayers.com/demos/infinity/images/list-icon-4.png)0 0 no-repeat;
+              height: 25px;} 
+  .padicon a{display: inline-block;
+  	         padding: 15px 35px;
+  	         font-weight: bold;
+  	         font-family: 'Montserrat', sans-serif;
+  	         border-radius: 4px;
+             border-bottom: 3px solid rgba(0,0,0,0.4);
+             text-align: center;
+             color: #fff;
+             margin-right: 30px;} 
+   .astyle1{background-color:black;}
+   .astyle1:hover{background-color:#ff6c3a;
+                  transition: all 0.8s;}
+   .astyle2{background-color:#ff6c3a;}
+   .astyle2:hover{background-color:black;
+                  transition: all 0.8s;}
+/*pad部分搞定*/
+
+   .greenphoto{
+   	           position: relative;
+               top: 700px;
+               text-align: center;}
+/*绿色图片*/
+   
+   .meetour{position: relative;
+   	        top:800px;
+   	        width:60%;
+   	        margin:0 auto;
+   	        text-align: center;
+   	        line-height: 30px;}
+  .meetour span{color: #6a7483;
+                font-size: 15px;
+                letter-spacing: 1px;}               
+/*字搞定*/
+
+  .man{position: relative;
+  	   top: 900px;
+  	   text-align: center;}
+  .man img{margin-right: 15px;
+           margin-left: 15px;
+           display: inline-block;}
+  .manname1{position: absolute;
+            background: rgba(35,44,59,0.8);
+            padding: 0 25px;}
+/*人图片，差下面的文字*/
+
+ .low{position: relative;
+ 	   top: 1000px;
+ 	   width: 100%;
+       height: 631px;
+       background: #232c3b;}
+  .low h6{float: left;
+           color: #fff;
+           margin-top: 20px;
+           font-weight: bold;
+           font-family: 'Montserrat';
+           font-size: 22px;
+           margin: 10px 50px 0 50px;}
+   .low input{display: inline-block;
+   	          float: left;
+   	          border: 1px solid #3c4450;
+              height: 50px;
+              width: 333px;
+              background: none;
+              color: #fff;}
+    .low li{background: #4f5662;
+               width: 10px;
+               height: 10px;}
+    .lowhead{padding-top: 50px;}
+    .email{background: url(imges/iconfont-youjian.png)0 0 no-repeat;
+    	   background-color:#ff6c3a;
+    	    height: 52px;
+    	    width:52px;
+    	    display: inline-block;
+    	    float: left;
+    	    color: white;}
+    .littleicon{background-color: #4f5662;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+                margin-top: 10px;
+                border-radius: 20px;}
+    .low a:hover{background-color:#ff6c3a; }
+    .line{color:#4f5662;}
+    .lastlogo{width: 360px;
+    	      height: 324px;
+    	      position: relative;
+    	      margin-top: 30px;
+    	      margin-left: 100px;
+    	      display: inline-block;
+    	      float: left;
+    	      text-align: left;}
+    .lastlogo img{margin-left: 0;
+                  margin-right:0;}
+    .lastlogo p{color: #969ea7;
+    	        width: 360px;
+                line-height: 26px;
+                font-weight: 400;
+                font-family: 'Open Sans';
+                margin-top: 20px;
+                text-align: left;}
+    .location{background: url(imges/iconfont-dingwei.png)0 0 no-repeat;
+    	      color: #969ea7;
+    	      font-size: 12px;}
+    .lastmiddle{display: inline-block;
+                 margin-left: 50px;
+                 margin-right: 50px;}
+    .lastmiddle h3{color:#969ea7;
+    	           margin-top: 30px;}
+    .lastinput{display: inline-block;
+    	       float: right;
+    	       margin-right: 100px;}
+    .lastinput h3{color:#969ea7;
+    	           margin-top: 30px;}
+    .lastinput input{margin-top: 15px;}	
+    .lastinput a{display: inline-block;
+    	         margin-top: 15px;
+  	             padding: 15px 35px;
+  	             font-weight: bold;
+  	             font-family: 'Montserrat', sans-serif;
+  	             border-radius: 4px;
+                 border-bottom: 3px solid rgba(0,0,0,0.4);
+                 text-align: center;
+                 color: #fff;
+                 background-color: #ff6c3a;}
+    .lastinput a:hover{background-color:black;}                      
+
+
+
+
+
+
+
+</style>
+<body>
+<div class="top">
+  <div class="logo">
+    <a href="#"><img src="http://premiumlayers.com/demos/infinity/images/logo.png"></a>
+  </div>
+  <div class="navigation">
+    <a href="#">HOME</a>
+    <a href="#">ABOUT</a>
+    <a href="#">CASESTUDIES</a>
+    <a href="#">PAGES</a>
+    <a href="#">BLOG</a>
+    <a href="#">CONTACT</a>
+    <a href="#">Q</a>
+  </div>
+</div>
+<!--头部导航栏完成-->
+
+<div class="photo">
+	<img src="imges/20151102171855.png">
+</div>
+<!--图片滚动-->
+
+<div class="welcome">
+	<p>Welcome To Infinity Solution</p>
+</div>
+<div class="doyou">
+  <p>Do you want to improve the online visibility of your brand and traffic to your website?</p>
+</div> 
+<!--中间字搞定-->
+
+<div class="middlephoto">
+   <ul>
+     <li>
+       <img src="http://premiumlayers.com/demos/infinity/images/icon-1.png">
+       <p>Web Analytics</p><br>
+       <p>Duis posuere blandit orci sed tinc in Curabitur porttitor nisi ac nunc fringilla nisl blandit.</p>
+     </li>
+     <li>
+       <img src="http://premiumlayers.com/demos/infinity/images/icon-2.png">
+       <p>Keyword Targeting</p><br>
+       <p>Duis posuere blandit orci sed tinc in Curabitur porttitor nisi ac nunc fringilla nisl blandit.</p>
+     </li>
+     <li>
+       <img src="http://premiumlayers.com/demos/infinity/images/icon-3.png">
+       <p>Technical Service</p><br>
+       <p>Duis posuere blandit orci sed tinc in Curabitur porttitor nisi ac nunc fringilla nisl blandit.</p>
+     </li>
+      <li>
+       <img src="http://premiumlayers.com/demos/infinity/images/icon-4.png">
+       <p>Support Center</p><br>
+       <p>Duis posuere blandit orci sed tinc in Curabitur porttitor nisi ac nunc fringilla nisl blandit.</p>
+     </li>
+   </ul>
+</div>
+<!--中间图片搞定-->
+
+<div class="pad">
+   <img src="http://premiumlayers.com/demos/infinity/images/ipad.jpg">
+</div>
+<div class="padpaper">
+   <h1>Get Appear On the Front Page of Google!</h1><br>
+   <p class="padpaperword">Get Appear On the Front Page of Google!
+Monitor keyword rankings daily to strategise and forecast your digital marketing efforts. Track tens of thousands of keywords and manage valuable keyterms with easy-to-edit labels. intalyse Rankings also allows you to keep an eye on the with for comparison with your own keyword performance</p>
+  <div class="padicon">
+	 <li class="littleicon1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We deliver Top Rankings.</li>
+	 <li class="littleicon2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;High customer retention rate.</li>
+	 <li class="littleicon3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We always return e-mails and calls within one business day.</li>
+	 <li class="littleicon4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Afordable pricing offers.</li>
+	 <a  class="astyle1" href="#">Learn More</a>
+	 <a  class="astyle2" href="#">Get a quote</a>
+  </div>
+</div>
+<!--pad部分搞定-->
+<div class="greenphoto">
+	<img src="imges/20151103105842.png">
+</div>
+<!--绿色图片搞定-->
+
+<div class="meetour">
+	<h1>Meet Our Creative Team</h1><br>
+	<span><p>Do you want to improve the online visibility of your brand and drive more relevant traffic to your website?</p></span>
+</div>
+<!--字搞定-->
+
+<div class="man">
+  <div>
+	<img src="http://premiumlayers.com/demos/infinity/images/team-1.jpg">
+	<img src="http://premiumlayers.com/demos/infinity/images/team-2.jpg">
+	<img src="http://premiumlayers.com/demos/infinity/images/team-3.jpg">
+  </div>
+ </div>
+<!--人图片，差下面的文字-->
+
+<div class="low">
+	<div class="lowhead">
+		<h6>News Letter</h6>
+		<input type="text" value="Enter Your Email..."></input>
+		<a class="email" href="#"></a>
+	</div>
+	    <h6>Flow US</h6>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<a class="littleicon"href="#"></a>
+		<br><br><br><br><br><br>
+		<hr class="line">
+
+		<div class="lastlogo">
+          <img src="http://premiumlayers.com/demos/infinity/images/logo-footer.png">
+          <p>Aoluptas sit aspernatur aut odit aut fugit, sed elits quias consequuntur magni dolores eos qui ratione volust luptatem sequi nesciunt. .</p>
+        </div>
+        <div class="lastmiddle">
+        	<h3>SERVICE PROVIDED</h3>
+        </div>
+        <div class="lastinput">
+        	<h3>GET FREE QUOTE</h3>
+        	<input type="text" value="Name"></input><br>
+        	<input type="text" value="Phone NO"></input><br>
+        	<input type="text" value="Messages"></input><br>
+        	<a href="#">SEND NOW</a>
+        </div>
+
+
+	</div>
+
+</body>
