@@ -1,0 +1,142 @@
+background  color position  repeat  attachment image
+attachment scroll fixed inherit
+color color_name hex_number rgb_number transparent inherit
+image url('URL') none inherit
+position top left right bottom x% y% xpos ypos
+repeat repeat repeat-x repeat-y no-repeat inherit
+
+boder border-width border-style border-color inherit
+border-bottom border-bottom-width border-bottom-style border-bottom-color inherit
+border-bottom-color color-name hex_number rgb_number transparent inherit
+border-bottom-style none hidden dotted dashed solid double groove ridge inset outset inherit
+border-bottom-width thin medium thick length inherit
+border-color color_name hex_number rbg_number transparent inherit
+border-left border-left-width border-left-style border-left-color inherit
+border-left-color color_name hex_number rgb_number transparent inherit
+border-left-style none hedden dotted dashed solid double groove redge inset outset inherit
+border-left-width thin medium thick length inherit
+border-right border-right-width border-right-style border-right-color inherit
+border-right-color color_name hex_number rgb_number transparent inherit
+border-right-style none hedden dotted dashed solid double groove ridge inset outset inherit
+border-right-width thin medium thick length inherit
+border-style none hedden dotted dashed solid double groove ridge inset outset inherit
+border-top border-top-width border-top-style border-top-color inherit
+border-top-color color_name hex_number rgb_number transparent inherit
+border-top-style none hidden dotteddashed solid double groove ridge inset outset inherit
+border-top-width thin medium thick length inherit
+border-width thin medium thick lengthin herit
+outline outline-color outline-style outline-width inherit
+outline color_name hex_number rgb_number invert inherit
+outline-style none dotted dashed solid double groove ridge inset outset inherit
+outline-width thin medium thick length inherit
+
+height auto length % inherit
+max-height none length % inherit
+max-width none length % inherit
+min-height length % inherit
+min-width length % inherit
+width auto length % inherit
+
+font font-style font-variant font-weight font_size/line-height font-family caption
+icon menu message-box small-caption status-bar
+font-family family-name generic-family inherit
+font-size xx-small x-small small medium farge x-large xx-large smaller larger length % inherit
+font-size-adjust none number
+font-stretch normal wider narrower ultra-condensed extra-condensed condensed
+semi-condensed semi-expanded expanded extra-expanded ultra-expanded
+font-style normal italic oblique inherit
+font-variant normal small-caps inherit
+font-weight normal bold bolder lighter 100-900 inherit
+
+content none normal content specifications inherit
+counter-increment none id number (正0负) inderit
+counter-reset none id number inherit
+quotes引用符号类型 none (string sting string string) inherit
+
+list-style list-style-type list-style-position list-style-image inherit
+list-style-image url none inherit
+list-style-position insede ouside inherit
+list-style-type none disc circle squara decimal decimal-leading-zero lower-rman
+upper-roman lower-alpha upper-alpha lower-greek lower-latin upper-latin hebrew
+armenian georgian cjk-ideographic hiragana katakana hiragana-iroha katakana-iroha
+marker-offset
+
+margin auto length % inherit
+margin-bottom auto length % inherit
+margin-left auto length % inherit
+margin-right auto length % inherit
+margin-top auto length % inherit
+
+padding auto length % inherit
+padding-bottom length % inherit
+padding-left length % inherit
+padding-right length % inherit
+padding-top length % inherit
+
+bottom auto % length inherit
+clear left right both none inherit
+clip shape auto inherit
+cursor url default auto crosshair pointer move e-resize ne-resize nw-resize
+n-resize sw-resize w-resize text wait help
+display none block inline inline-block list-item run-in compact marker table
+inline-table table-row-group table-header-group table-footer-group table-row
+table-column table-cell table-caption inherit
+float left right none inherit
+left auto % length inherit
+overflow visible hidden scroll auto inherit
+position absolute fixed  relative static inherit
+right auto % length inherit
+top auto % length inherit
+vertical-align  daseline aub super top text-top middle bottom text-bottom bength % inherit
+visibility visible hedden collapse inherit
+z-index 堆叠顺序 auto number inherit
+
+orphans
+page-break-after  auto always avoid left right inherit
+page-break-before auto lways avoid left right inherit
+page-break-inside auto avoid inherit
+widows
+
+border-collapse separate collapse inherit
+border-spacing langth length (非负)inherit
+caption-side top bottom inherit
+empty-cells hide show inherit
+table-layout automatic fixed inherit
+
+color color_name hex_number rgb_number inherit
+diraction itr rtl inherit
+letter-spacing normal length(可负) inherit
+line-height normal number length % inherit
+text-align left right center justify inherit
+text-decoration none underline overline line-through blink inherit
+text-indent length % inherit
+text-shadow
+text-transform none capitalize uppercase lowercase inherit
+unicode-bidi文本方向 normal embed bidi-override
+white-space normal per nowrap pre-wrap pre-line inherit
+word-spacing normal length inherit
+.class
+#id
+*
+element
+element,element
+element element
+element>element
+element+element
+[attribute=value] 
+[attribute~=value]
+[attribute\value]
+:link
+:visited
+:active
+:hover
+:focus
+:first-letter
+:first-line
+:first-child
+:before
+:after
+:lang(language)
+
+
+ 
