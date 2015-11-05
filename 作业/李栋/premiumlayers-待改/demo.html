@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont">&#xe607;</i>
+                    <div class="name">google </div>
+                    <div class="code">&amp;#xe607;</div>
+                    <div class="fontclass">.google</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe602;</i>
+                    <div class="name">facebook</div>
+                    <div class="code">&amp;#xe602;</div>
+                    <div class="fontclass">.facebook</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe600;</i>
+                    <div class="name">twitter</div>
+                    <div class="code">&amp;#xe600;</div>
+                    <div class="fontclass">.twitter</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe619;</i>
+                    <div class="name">phone</div>
+                    <div class="code">&amp;#xe619;</div>
+                    <div class="fontclass">.phone</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe6c8;</i>
+                    <div class="name">envelope</div>
+                    <div class="code">&amp;#xe6c8;</div>
+                    <div class="fontclass">.envelope</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe632;</i>
+                    <div class="name">weixin</div>
+                    <div class="code">&amp;#xe632;</div>
+                    <div class="fontclass">.weixin</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#x3435;</i>
+                    <div class="name">question</div>
+                    <div class="code">&amp;#x3435;</div>
+                    <div class="fontclass">.question</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe605;</i>
+                    <div class="name">search</div>
+                    <div class="code">&amp;#xe605;</div>
+                    <div class="fontclass">.search</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60d;</i>
+                    <div class="name">linkedin</div>
+                    <div class="code">&amp;#xe60d;</div>
+                    <div class="fontclass">.linkedin</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe600;</i>
+                    <div class="name">dribbble_c</div>
+                    <div class="code">&amp;#xe600;</div>
+                    <div class="fontclass">.dribbblec</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe60c;</i>
+                    <div class="name">behance</div>
+                    <div class="code">&amp;#xe60c;</div>
+                    <div class="fontclass">.behance</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xe6b1;</i>
+                    <div class="name">map-marker</div>
+                    <div class="code">&amp;#xe6b1;</div>
+                    <div class="fontclass">.map-marker</div>
+                </li>
+            
+        </ul>
+
+
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+</pre>
+第二步：定义使用iconfont的样式
+            <pre>
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+</pre>
+第三步：挑选相应图标并获取字体编码，应用于页面
+<pre>
+&lt;i class="iconfont"&gt;&amp;#x33;&lt;/i&gt;
+</pre>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+body{
+    background-color: white;
+    color: #6d6d6d;
+    margin:0 10%;
+}
+#container{
+     width:auto;
+     background-color:orange;
+     padding:5% 10%;
+ }
+#header{
+    background-image: url("img/head.jpg");
+    color:black;
+    height:250px;
+    width:auto;
+    margin: 0;
+}
+#header p{
+    padding:100px 200px 0 50px;
+    float: right;
+    font-size: 3em;
+}
+.bg{
+    background-image: url("img/bg.jpg");
+}
+.content{
+    width: auto;
+    height: 920px;
+    padding: 50px;
+}
+.left{
+    text-align:right;
+    width: 25%;
+    float: left;
+
+}
+.right{
+    width: 68%;
+    float: left;
+    padding-left: 45px;
+    font-size:1em;
+    line-height:2.5em;
+}
+.right h3{
+    background-image: url("img/kuan1.jpg");
+    color: white;
+    font-weight: normal;
+    width: 137px;
+    text-align: center;
+}
+.right p{
+    padding-top: 20px;
+}
+.reword{
+    width: auto;
+    font-size:1em;
+    line-height:2.5em;
+    padding-left: 50px;
+}
+.reword h3{
+    background-image: url("img/kuan1.jpg");
+    color: white;
+    font-weight: normal;
+    width: 137px;
+    height: 32px;
+    text-align: center;
+    position: absolute;
+    top:800px;
+}
+.skill{
+    width: auto;
+    font-size:1em;
+    line-height:2.5em;
+    padding-left: 50px;
+}
+.skill h3{
+    background-image: url("img/kuan1.jpg");
+    color: white;
+    font-weight: normal;
+    width: 137px;
+    height: 32px;
+    text-align: center;
+    position: absolute;
+    top:1035px;
+}
+.mark{
+    width: auto;
+    font-size:1em;
+    line-height:2.5em;
+    padding-left: 50px;
+}
+.mark h3{
+    background-image: url("img/kuan1.jpg");
+    color: white;
+    font-weight: normal;
+    width: 137px;
+    height: 32px;
+    text-align: center;
+    position: absolute;
+    top:1160px;
+}
+.footer{
+    background-image: url("img/footer.jpg");
+    height:40px;
+    width: auto;
+    margin: 0;
+}

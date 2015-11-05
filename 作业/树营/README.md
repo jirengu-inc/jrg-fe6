@@ -20,5 +20,10 @@ site: http://csy347.coding.io
 - @font-face
 - @media 媒体查询
 
+##### multi-level-nav
+- 优雅降级: IE7+
+- css3: transition transform 标准浏览器 IE10 chrome firefox safari
+- prefixer: -webkit- -moz- -ms- -o-
+
 
 
