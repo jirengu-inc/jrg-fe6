@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS导航栏(下拉框）</title>
+	<style type="text/css">
+	*{margin: 0; padding: 0;}
+	a{text-decoration: none;   color: black;}
+	
+	ul{list-style: none;}
+
+	body{background: #666;
+		padding: 20px;}
+
+	.clearfix:after{
+		display: block;
+		content: '';
+		clear: both;
+	}
+
+	.navigator{
+		display: inline-block;
+	}
+
+	.navigator>li{
+		float: left;
+		width: 180px;
+		text-align: center;
+		background: white;
+		padding: 15px 0;
+		line-height: 20px;
+		border:1px solid #ddd;
+		position: relative;
+	}
+
+
+	.navigator>li>ul{
+		display: none;
+		position: absolute;
+		top: 100%;
+		margin-top: 1px;
+		margin-left: -1px;
+		border: 1px solid #ddd;
+		border-top: none;
+	}
+	/*  li下级的ul暂时不显示  */
+
+	.navigator>li:hover>ul{
+		display: block;
+	}
+	/*  当鼠标移到li时，下级的ul则显示出来  */
+
+	.navigator>li>ul>li{
+		width: 180px;
+		text-align: center;
+		background: white;
+		padding: 15px 0;
+		line-height: 20px;
+		border:1px solid #ddd;
+	}
+
+	</style>
+</head>
+<body>
+	<ul class="navigator clearfix">
+		<li><a href="">首页</a>
+			<ul>
+				<li><a href="">产品1</a></li>
+				<li><a href="">产品2</a></li>
+				<li><a href="">产品3</a></li>
+			</ul>
+		</li>
+		<li><a href="">关于</a>
+			<ul>
+				<li><a href="">联系我们</a></li>
+				<li><a href="">加入我们</a></li>
+			</ul>
+		</li>
+		<li><a href="">下载</a></li>
+		<li><a href="">博客</a></li>
+	</ul>
+</body>
+</html>
