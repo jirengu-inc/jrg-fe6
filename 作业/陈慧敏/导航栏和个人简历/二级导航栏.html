@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding:0;text-decoration: none;list-style: none;}
+		nav{
+			width: 980px;
+			height: 300px;
+			margin: 50px auto 0;
+		}
+		nav>ul>li{
+			float:left;
+		}
+		nav>ul>li>a{
+			margin-right: 2px;
+		}
+		nav>ul>li:first-child:hover>ul{
+			visibility: visible;
+			opacity: 1;
+			transition:all 1s;
+		}
+		nav>ul>li>ul{
+			position: relative;
+			top:2px;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+		}
+		nav>ul>li>a,nav>ul>li>ul>li>a{
+			width: 150px;
+			height:50px;
+			background-color: #DDD;
+			text-align: center;
+			line-height: 50px;
+			display: inline-block;
+		}
+		nav>ul>li>ul>li{
+			margin-bottom: 2px;
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">栏目1</a>
+				<ul>
+					<li><a href="">二级1</a></li>
+					<li><a href="">二级2</a></li>
+					<li><a href="">二级3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">栏目2</a></li>
+			<li><a href="#">栏目3</a></li>
+			<li><a href="#">栏目4</a></li>
+			<li><a href="#">栏目5</a></li>
+		</ul>		
+	</nav>
+</body>
+</html>

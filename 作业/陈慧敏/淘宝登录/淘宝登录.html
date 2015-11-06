@@ -22,8 +22,8 @@
 	  -webkit-text-stroke-width: 0.2px;
 	  -moz-osx-font-smoothing: grayscale;
 	}
-	.icon-password:before { content: "\e687"; }
-	.icon-login:before { content: "\e60b"; }
+	.icon-login:before { content: "\e668"; }
+	.icon-icon:before { content: "\e60b"; }
 
 	.clearfix:after{
 		content: "";
@@ -53,7 +53,7 @@
 	.content .login-area .hd a{
 		box-sizing:border-box;
 		display: inline-block;
-		width: 48%;
+		width: 50%;
 		line-height: 27px;
 		padding:10px 0;
 		text-align: center;
@@ -70,8 +70,11 @@
 	.content .login-area .bd .ipt{
 		margin-top: 20px;
 		position: relative;
+		outline: 1px solid rgb(222,222,222);
 	}
-	.content .login-area .bd .ipt input:focus{
+
+
+	.content .login-area .bd .ipt:focus{
 		outline: 2px solid rgb(150,184,239);
 	}
 	.content .login-area .bd .ipt .icon{
@@ -82,13 +85,15 @@
 		text-align: center;
 		line-height: 38px;
 		outline: none;
+		color: white;
 	}
 	.content .login-area .bd .ipt input{
 		height: 34px;
 		width: 196px;
 		position: absolute;
 		padding-left: 10px;
-		outline: rgb(222,222,222);
+		outline: none;
+		border: none;
 	}
 	.content .login-area .bd .txt{
 		margin-top: 20px;
@@ -156,8 +161,7 @@
 			</div>
 			<div class="login-area">
 				<div class="hd">
-					<a href="#" class="title">快速登录</a>
-					<a href="#" class="title active">账户密码登录</a>
+					<a href="#" class="title">快速登录</a><a href="#" class="title active">账户密码登录</a>
 				</div>
 				<div class="bd">
 					<div class="ipt">
@@ -165,7 +169,7 @@
 						<input id="userName" type="text" placeholder="手机号/会员名/邮箱">
 					</div>
 					<div class="ipt">
-						<label for="password"><span class="icon iconfont icon-password"></span></label>
+						<label for="password"><span class="icon iconfont icon-icon"></span></label>
 						<input id="password" type="password">
 					</div>
 					<div class="txt">

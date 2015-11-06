@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>二级导航</title>
+  <style>
+	*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration:none;
+}
+body{
+  background: #fff;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.wrap{
+  margin:20px;
+}
+.nav{
+   display:inline-block;
+   border: 1px solid #ddd;
+   border-right:none;
+}
+.nav li{
+  width: 100px;
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+}
+.nav>li{
+  background: #eee;
+  float: left;
+  border-right: 1px solid #ddd;
+  position: relative;
+  /* list-style: none; */
+}
+.nav>li .panel{
+  visibility: hidden;
+  position: absolute;
+  /* bottom:100%; */
+  top:0;
+  left:0;
+  border:1px solid #ddd;
+  position: absolute;
+  left:-1px;
+}
+.nav>li:hover{
+  background: #fff;
+}
+.nav>li:hover .panel{
+  visibility: visible;
+  top:100%;
+  z-index: -1;
+  transition:top 0.3s;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="nav clearfix">
+      <li> 
+        <a href="#">首页</a>
+        <ul class="panel">
+          <li>首页1</li>
+          <li>首页2</li>
+          <li>首页3</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">关于</a>
+        <ul class="panel">
+          <li>关于1</li>
+          <li>关于2</li>
+          <li>关于3</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">下载</a>
+        <ul class="panel">
+          <li>下载1</li>
+          <li>下载2</li>
+          <li>下载3</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">博客</a>
+        <ul class="panel">
+          <li>博客1</li>
+          <li>博客2</li>
+          <li>博客3</li>
+          <li>博客4</li>
+          <li>博客5</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    
+</body>
+</html>
