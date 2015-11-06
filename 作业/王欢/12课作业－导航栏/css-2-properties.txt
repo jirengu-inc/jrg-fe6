@@ -1,0 +1,125 @@
+css背景属性
+	background
+	background-attachment
+	background-color
+	background-image
+	background-position
+	background-repeat
+css边框属性
+	border
+		border-color
+		border-style
+		border-width
+		border-top
+		border-top-width
+		border-top-style
+		border-top-color
+		border-right
+		border-right-width
+		border-right-style
+		border-right-color
+		border-bottom
+		border-bottom-color
+		border-bottom-style
+		border-bottom-width
+		border-left
+		border-left-widht
+		border-left-style
+		border-left-width
+	outline设置轮廓
+		outline-color
+		outline-sytle
+		outline-width
+css尺寸属性
+	width
+	height
+	max-width
+	min-width
+	max-height
+	min-height
+css字体属性
+	font
+	font-family
+	font-style
+	font-size
+	font-size-adjust
+	font-variant
+	font-weight
+css内容生成
+	content
+	quites
+	counter-increment
+	counter-reset
+css列表属性
+	list-style
+	list-style-images
+	list-style-position
+	list-style-type
+css外边距
+	margin
+		margin-top
+		margin-right
+		margin-bottom
+		margin-left
+css内边距
+	padding
+		padding-top
+		padding-right
+		padding-bottom
+		padding-left
+css定位属性
+	top
+	left
+	bottom
+	right
+	clear
+	cursor
+	display
+	float
+	position
+	overflow
+	visibility
+	z-index
+	clip
+	vertical-align
+css打印属性
+css表格属性
+	border-collspse
+	border-spacing
+	caption-side
+	empty-cells
+	table-layout
+css文本属性
+	color
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
