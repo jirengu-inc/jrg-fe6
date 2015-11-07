@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>二级导航</title>
+<style type="text/css">
+  *{margin: 0;padding: 0;}
+  li{list-style: none;}
+  a{text-decoration: none;}
+  .firstline >ul {position: relative;
+             top: 30px;
+             left: 30px;
+             }
+  .firstline > ul > a{display: inline-block;
+               float: left;
+               width: 100px;
+               padding: 15px 0;
+               text-align: center;
+               background-color: gray;
+               color: white;
+               border-top: 1px solid black;
+               border-left: 1px solid black;
+               border-bottom: 1px solid black;
+               }
+  .firstline > ul > a:last-child{border-right: 1px solid black;}
+  .firstline > ul > ul{position: absolute;
+                  top: 50px;
+                  left: 0px;
+                  opacity:0;
+                  overflow: visible;}
+  .firstline > ul > ul > li{width: 100px;
+                   padding: 15px 0;
+                   background-color: gray;
+                   text-align: center;
+                   border-right: 1px solid black;
+                   border-left: 1px solid black;
+                   border-bottom: 1px solid black;}
+    .firstline > ul:hover>ul{opacity:1;
+                             color: black;
+                             background-color: white;}
+</style>
+</head>
+
+<body>
+	<div class="firstline">
+		<ul>
+			<a href=""><li>首页</li></a>
+			<ul >
+				<li><a href="">第一页</a></li>
+				<li><a href="">第二页</a></li>
+				<li><a href="">第三页</a></li>
+			</ul>
+		</ul>
+		<ul>
+			<a href=""><li>联系方式</li></a>
+			<a href=""><li>产品</li></a>
+			<a href=""><li>更多</li></a>
+		</ul>
+	</div>
+
+</body>
