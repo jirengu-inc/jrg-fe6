@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		#menu{
+			border: 1px solid #ccc;
+			border-right: none;
+			display: inline-block;
+			margin: 20px;
+		}
+		#menu>ul>li{
+			float: left;
+			border-right: 1px solid #ccc;
+			background: #f1f1f1;
+			position: relative;
+			transition: all 0.5s;
+		}
+		#menu>ul>li:hover{
+			background: #fff;
+		}
+		#menu li{
+			background: #fff;
+			width: 150px;
+			padding: 15px 0;
+			text-align: center;
+		}
+		#menu>ul>li ul{
+			display: none;
+			position: absolute;
+			top: 49px;
+			border: 1px solid #ccc;
+			border-top: none;
+			margin-left: -1px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+			transition: all 0.5s;
+		}
+		#menu>ul>li:hover ul{
+			display: block;
+		}
+		#menu a{
+			color: #666;
+		}
+	</style>
+</head>
+<body>
+	<nav id="menu" class="clearfix">
+		<ul>
+			<li>
+				<a href="#" title="">首页</a>
+				<ul>
+					<li><a href="#">产品1</a></li>
+					<li><a href="#">产品2</a></li>
+					<li><a href="#">产品3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" title="">关于我们</a>
+				<ul>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" title="">下载</a>
+				<ul>
+					<li><a href="#">下载1</a></li>
+					<li><a href="#">下载2</a></li>
+					<li><a href="#">下载3</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" title="">博客</a>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>
