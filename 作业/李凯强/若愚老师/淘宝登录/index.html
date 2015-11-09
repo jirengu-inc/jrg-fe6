@@ -16,7 +16,7 @@
   		url('./fonts/iconfont.woff') format('woff'), /* chrome、firefox */
   		url('./fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
  		url('./fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
+	}
 
 	.iconfont {
 	  font-family:"iconfont1" !important;
@@ -110,24 +110,37 @@
 		color: #000;
 		border-bottom: 1px solid orange;
 	}
+	#content .login-inp{
+		position: relative;
+	}
 	#content .login-inp input{
 		margin: 10px 0;
 		padding: 8px;
+		padding-left: 38px;
 		background-color: #FAFFBD;
 		width: 196px;
 		border: 1px solid #ccc;
 	}
-	#content .login-inp span{
+	#content .login-inp i{
 		display: inline-block;
 		*display: inline;
 		*zoom:1;
-		width: 35px;
-		height: 35px;
+		width: 33px;
+		height: 33px;
 		text-align: center;
-		line-height: 35px;
+		line-height: 33px;
 		background-color: #ccc;
 		cursor: default;
+		position: absolute;
 		
+	}
+	#content .user-icon{
+		left: 0;
+		top: 10px;
+	}
+	#content .pwd-icon{
+		left: 0;
+		top: 63px;
 	}
 	#content .login-inp .pwd-inp{
 		background-color: #fff;
@@ -199,32 +212,32 @@
 <body>
 	<div id="header">
 		<div class="wrap">
-			<a href="javascript:;"><img src="https://assets.alicdn.com/apps/login/static/logo.png" alt="淘宝网"></a>
+			<a href="#"><img src="https://assets.alicdn.com/apps/login/static/logo.png" alt="淘宝网"></a>
 		</div>
 	</div>
 	<div id="content">
 		<div class="content-wrap clear">
 			<div class="ad">
-				<a href="javascript:;"><img src="./img/tmall.png"></a>
+				<a href="#"><img src="./img/tmall.png"></a>
 			</div>
 			<div class="login-area">
 				<div class="login-head">
-					<a href="">快速登录</a><a href="">账号密码登录</a>
+					<a href="javascript:;">快速登录</a><a href="javascript:;">账号密码登录</a>
 				</div>
 				<div class="login-inp">
-					<span class="iconfont">&#xe626;</span><input type="text" placeholder="手机号/会员名/邮箱">
-					<span class="iconfont">&#xe69a;</span><input type="password" class="pwd-inp">
+					<label for="user-inp"><i class="iconfont user-icon">&#xe626;</i></label><input type="text" placeholder="手机号/会员名/邮箱" id="user-inp">
+					<label for="pwd-inp"><i class="iconfont pwd-icon">&#xe69a;</i></label><input type="password" class="pwd-inp" id="pwd-inp">
 				</div>
 				<div class="login-text clear">
-					<a href="">忘记登录密码</a>
-					<a href="">免费注册</a>
+					<a href="#">忘记登录密码</a>
+					<a href="#">免费注册</a>
 				</div>
 				<div class="login-btn">
-					<a href="">登　录</a>
+					<a href="#">登　录</a>
 				</div>
 				<div class="login-link">
-					<a href=""><i id="weibo-lg"></i>微博登录</a>
-					<a href=""><i id="zfb-lg"></i>支付宝登录</a>
+					<a href="#"><i id="weibo-lg"></i>微博登录</a>
+					<a href="#"><i id="zfb-lg"></i>支付宝登录</a>
 				</div>
 			</div>
 		</div>

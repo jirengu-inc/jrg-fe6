@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "MicroSoft Yahei",Helvetica,Arial,sans-serif;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.clearfix{
+	*zoom: 1;
+}
+
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}

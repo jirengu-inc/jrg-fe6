@@ -1,0 +1,166 @@
+*{
+	margin:0;
+	padding: 0;
+	font-size: 12px;
+	color: #404040;
+	font-family: Tahoma,Helvetica,Arial;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: #f60;
+}
+li{
+	list-style: none;
+}
+.out-framework{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#header{
+	height: 80px;
+	line-height: 80px;
+	margin-bottom: 70px;
+}
+#content{
+	*zoom:1;	
+	height: 470px;
+}
+#content:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+.logo{
+	display: block;
+	height: 80px;
+}
+.logo > img{
+	vertical-align: middle;
+}
+.ad{
+	float: left;
+	width: 60%;
+}
+.ad-detail{
+	text-align: center;
+}
+.login-area{
+	float: left;
+	width: 40%;
+}
+.login-box{
+	width: 255px;
+	padding: 25px 30px;
+	border: 2px solid #dfdfdf;
+	border-top-color: #ff5738;
+}
+.login-style >a {
+	font-weight: bold;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	width: 50%;
+	padding-bottom: 14px;
+	border-bottom: 1px solid #dfdfdf;
+	color: #999;
+}
+a.slected-style{
+	color: #333;
+	border-bottom: 1px solid #f40;
+}
+.login-box .login-input{
+	margin: 22px 0 27px 0;
+}
+.login-box .login-input label{
+	background: #ccc;
+	float: left;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+}
+label > i{
+	color: #fff;
+}
+.login-box .login-input input{
+	display: inline-block;
+	clear: both;
+	width: 208px;
+	height: 33px;
+	border:1px solid #dfdfdf;
+	padding-left: 10px;
+}
+.login-box .login-input .password{
+	margin-top: 20px;
+}
+.login-box .short-cut{
+	margin: 27px 0 16px 0;
+	overflow: hidden;
+}
+.login-box .short-cut a{
+	color: #666;
+}
+.forget-password{
+	float: left;
+}
+.free-register{
+	float: right;
+}
+.button{
+	display: inline-block;
+	height: 37px;
+	width: 100%;
+    color: #FFF;
+    background: #f40;
+    border-radius: 3px;
+    border:0;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.other-login{
+	margin-top: 21px;
+}
+.other-login a{
+	color: #666;
+}
+.weibo-login{
+	background: url(../img/c.png) no-repeat 0 -215px;
+	padding-left: 20px;
+	margin-right: 10px;
+}
+.zhifubao-login{
+	background: url(../img/c.png) no-repeat 0 -145px;
+	padding-left: 20px;
+}
+.footer-bar{
+	margin: 15px 0;
+}
+.advice{
+	float: right;
+}
+.advice img{
+	vertical-align: middle;
+}
+.net-link{
+	border:1px solid #ddd;
+	border-left:0;
+	border-right: 0;  
+	padding: 15px 0;
+}
+.net-link ul{
+	overflow: hidden;
+}
+.net-link li{
+	float: left;
+	border-right: 1px solid #ddd;
+	padding:0 10px; 
+}
+.net-link li.first-link{
+	padding-left: 0;
+}
+.net-link li.last-link{
+	border-right: 0;
+}

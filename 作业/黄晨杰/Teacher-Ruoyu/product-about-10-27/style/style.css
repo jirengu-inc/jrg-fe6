@@ -1,0 +1,761 @@
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face{
+	font-family: 'Montserrat';
+	src: url(../fonts/montserrat/montserrat-regular-webfont.eot);
+	src: url('../fonts/montserrat/montserrat-regular-webfont?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/montserrat/montserrat-regular-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/montserrat/montserrat-regular-webfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face{
+	font-family: 'Open Sans';
+	src: url(../fonts/opensans/opensans-regular-webfont.eot);
+	src: url('../fonts/opensans/opensans-regular-webfont?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/opensans/opensans-regular-webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/opensans/opensans-regular-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/opensans/opensans-regular-webfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face{
+	font-family: 'Alegreya Sans';
+	src: url(../fonts/alegreyasans/alegreyasans-regular-webfont.eot);
+	src: url('../fonts/alegreyasans/alegreyasans-regular-webfont?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/alegreyasans/alegreyasans-regular-webfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/alegreyasans/alegreyasans-regular-webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/alegreyasans/alegreyasans-regular-webfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+	border-top: 4px solid #222935;
+}
+
+.contact-way-wrap{
+	width: 915px;
+	margin: 0 auto;
+	background-color: #222935;
+	height: 49px;
+	line-height: 49px;
+	color: #fff;
+	font-size: 12px;
+	position: relative;
+	left: 60px;
+}
+
+.contact-way-wrap:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 49px;
+	left: -35px;
+	top: 0;
+	background-image: url(../images/top-left-bar.jpg);
+}
+
+.contact-way-wrap:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 35px;
+	height: 49px;
+	right: -35px;
+	top: 0;
+	background-image: url(../images/top-right-bar.jpg);
+}
+
+.contact-way-wrap .circle-icon{
+	color: #fff;
+	background-color: #4f5662;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	/* font-size 最小为 12px 怎么更加小？ */
+
+	margin: 9px 0 0 5px;
+	transition: 0.3s all ease-in-out;
+}
+
+.contact-way-wrap a:first-child{
+	margin-left: 15px;
+}
+
+.contact-way-wrap .circle-icon:hover{
+	background-color: rgb(255, 108, 58);
+}
+
+.contact-way-wrap .header-icon{
+	color: #4f5662;
+}
+
+.contact-info-wrap{
+	float: right;
+	margin-right: 15px;
+}
+
+.contact-info-wrap i{
+	margin: 0 4px 0 55px;
+	font-size: 18px;
+}
+
+.contact-info-wrap i:first-child{
+	margin-right: 3px;
+}
+
+
+/* contact-wrap part finish */
+
+.nav-bar{
+	margin: 15px 0;
+}
+
+.nav-bar .container{
+	width: 1170px;
+	height: 80px;
+	margin: 0 auto;
+}
+
+.nav-bar img, .parent-nav-wrap>li{
+	float: left;
+}
+
+.nav-bar img{
+	margin-top: 15px;
+}
+
+.nav-bar .container .parent-nav-wrap{
+	float: right;
+	margin: 31px 20px 0 0;
+}
+
+.nav-bar .parent-nav-wrap>li{
+	position: relative;
+	display: inline-block;
+}
+
+.nav-bar .parent-nav-wrap>li>a{
+	padding: 10px 20px;
+	color: #232c3b;
+	font-size: 12px;
+	font-family: 'Montserrat';
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-bar .container>ul>li:last-child>a{
+	padding: 10px 12px;
+}
+
+.nav-bar .container>ul>li:last-child>a>i{
+	font-size: 12px;
+}
+
+.nav-bar .container>ul>li>a:hover, .nav-bar .container .current{
+	text-decoration: none;
+	color: white;
+	background-color: #222935;
+}
+
+.page-btn:hover>.pages-nav-wrap{
+	display: block;
+}
+
+.pages-nav-wrap{
+	position: absolute;
+	display: none;
+	width: 250px;
+	top: 25px;
+	line-height: 20px;
+	font-size: 12px;
+	padding-top: 5px;
+	background-color: #222935;
+}
+
+.pages-nav-wrap li{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.pages-nav-wrap li a{
+	padding: 10px 20px;
+	color: #6f6f6f;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+.pages-nav-wrap li a:hover{
+	color: #ff6c3a;
+}
+
+.search-btn:hover .search-wrap{
+	display: block;
+}
+
+.search-wrap{
+	display: none;
+	position: absolute;
+	top: 25px;
+	right: 0;
+	background-color: #141414;
+	padding: 30px;
+	width: 515px;
+}
+
+.search-wrap input{
+	padding: 12px 0 12px 21px;
+	font-size: 12px;
+	color: #fff;
+	width: 355px;
+	background-color: #2b2b2b;
+	border: 1px solid transparent;
+	float: left;
+	transition: all 0.3s ease-in-out;
+}
+
+.search-wrap input:focus{
+	border-color: #66afe9;
+}
+
+.search-wrap .search{
+	background-color: #ff6c3a;
+	color: #fff;
+	width: 133px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	text-align: center;
+	float: left;
+	margin-left: -1px;
+	cursor: pointer;
+}
+
+/* nav-bar part finished */
+
+
+.main .title-wrap{
+	height: 382px;
+	background: url(../images/sub-banner.jpg) fixed center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	/* 触发BFC 防止margin重合折叠 */
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+
+.title-wrap h1{
+	color: #fff;
+	font-size: 50px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 150px 0 35px;
+}
+
+.title-wrap a{
+	color: #ff6c3a;
+}
+
+/* main-title part finished */
+
+.solution-intro-wrap{
+	color: #232c3b;
+	background-color: #f9f9f9;
+	overflow: hidden;
+	padding-bottom: 100px;
+}
+
+.solution-intro-wrap h2{
+	margin-top: 100px;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+
+.solution-intro-wrap>p{
+	font-size: 15px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #6a7483;
+}
+
+.solution-intro-wrap ul{
+	width: 1170px;
+	margin: 80px auto 0;
+	overflow: hidden;
+}
+
+.solution-intro-wrap ul>li{
+	width: 25%;
+	float: left;
+	text-align: center;
+}
+
+.solution-intro-wrap ul>li h4{
+	font-size: 14px;
+	margin: 40px 0 10px;
+	font-weight: normal;
+	letter-spacing: 1.3px;
+}
+
+.solution-intro-wrap ul>li p{
+	color: #6a7483;
+	font-size: 13px;
+	line-height: 24px;
+	padding: 0 15px;
+}
+
+/* main-solution part finished */
+
+.advertise-google-wrap{
+	width: 1170px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.advertise-google-wrap>img{
+	width: 50%;
+	float: left;
+	margin-top: 30px;
+}
+
+.advertise-google-wrap .word-ad-wrap{
+	margin-left: 2%;
+	width: 48%;
+	float: left;
+}
+
+.word-ad-wrap h2{
+	font-size: 40px;
+	margin-bottom: 15px;
+	color: #232c3b;
+	letter-spacing: 1px;
+	font-family: "Alegreya Sans";
+}
+
+.word-ad-wrap p{
+	color: #6a7483;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.word-ad-wrap ul{
+	margin: 35px 0;
+	color: #232c3b;
+}
+
+.word-ad-wrap ul li{
+	height: 27px;
+	line-height: 27px;
+	margin-bottom: 15px;
+}
+
+.word-ad-wrap ul li img{
+	width: 27px;
+	float: left;
+}
+
+.word-ad-wrap ul li span{
+	margin-left: 20px;
+	line-height: 27px;
+	font-size: 14px;
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.word-ad-wrap .btn{
+	width: 155px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 3px solid rgba(0,0,0,0.4);
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	border-radius: 4px;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.word-ad-wrap .btn-default{
+	background-color: #222935;
+}
+
+.word-ad-wrap .btn-default:hover{
+	background-color: #ff6c3a;
+}
+
+.word-ad-wrap .btn-checked{
+	background-color: #ff6c3a;
+	margin-left: 35px;
+}
+
+.word-ad-wrap .btn-checked:hover{
+	background-color: #222935;
+}
+
+/* main-advertise part finished */
+
+.clients-wrap{
+	padding: 100px 0;
+	background-color: #4ad5c0;
+	color: #fff;
+}
+
+.clients-wrap h2{
+	font-size: 40px;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+	font-family: "Alegreya Sans";
+	text-align: center;
+}
+
+.clients-wrap p{
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: "Open Sans";
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+}
+
+.clients-wrap ul{
+	margin: 80px auto 0;
+	width: 1170px;
+}
+
+.clients-wrap li{
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+
+/* main-clients part finished */
+
+.team-intro-wrap{
+	padding: 100px 0;
+}
+
+.team-intro-wrap h2{
+	font-size: 40px;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+	font-family: "Alegreya Sans";
+	text-align: center;
+}
+
+.team-intro-wrap>p{
+	font-size: 15px;
+	color: #6a7483;
+	letter-spacing: 1px;
+	font-family: "Open Sans";
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 30px;
+}
+
+.team-intro-wrap ul{
+	margin: 80px auto 0;
+	width: 1170px;
+}
+
+.team-intro-wrap li{
+	float: left;
+	margin-left: 35px;
+	width: 360px;
+	position: relative;
+}
+
+.team-intro-wrap li:first-child{
+	margin-left: 0;
+}
+
+.team-intro-wrap li img{
+	width: 360px;
+	height: auto;
+	display: block;
+}
+
+.team-intro-wrap li>div{
+	width: 320px;
+	height: 40px;
+	padding: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(35,44,59,0.8);
+	color: white;
+}
+
+.team-intro-wrap li>div p{
+	font-size: 18px;
+	margin-bottom: 5px;
+	font-family: "Alegreya Sans";
+}
+
+.team-intro-wrap li>div em{
+	font-size: 13px;
+	font-family: "Open Sans";
+}
+
+.team-intro-wrap li>div>div{
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	width: 66px;
+	height: 66px;
+	line-height: 66px;
+	text-align: center;
+	border-left: 1px solid #a15642;
+	color: #a15642;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.team-intro-wrap li>div>div:hover{
+	color: white;
+}
+
+.team-intro-wrap li>div>div>i{
+	font-size: 20px;
+}
+
+/* main-team part finished */
+
+/* main-wrap part finished */
+
+footer{
+	background-color: #232c3b;
+}
+
+footer h3{
+	color: #fffefe;
+	font-size: 16px;
+	font-family: "Montserrat";
+}
+
+footer .email-info-container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+footer .email-info-wrap{
+	height: 150px;
+	line-height: 150px;
+	border-bottom: 1px solid #4f5662;
+}
+
+footer .email-info-container>h3{
+	float: left;
+	margin-right: 50px;
+}
+
+footer .email-info-container>div{
+	float: left;
+	margin-right: 30px;
+}
+
+footer .search-footer-wrap{
+	width: 390px;
+	height: 50px;
+	position: relative;
+	margin-top: 50px;
+}
+
+footer .search-footer-wrap input{
+	width: 308px;
+	border: 1px solid #3c4450;
+	background-color: #232c3b;
+	height: 48px;
+	padding: 0 60px 0 20px;
+	font-size: 14px;
+	color: white;
+	float: left;
+}
+
+footer .search-footer-wrap>i{
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 55px;
+	height: 50px;
+	line-height: 50px;
+	color: white;
+	font-size: 17px;
+	text-align: center;
+	background-color: #ff6c3a;
+}
+
+footer .contact-icon-wrap i{
+	color: #fff;
+	background-color: #4f5662;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	/* font-size 最小为 12px 怎么更加小？ */
+
+	margin-left: 1px;
+	transition: 0.3s all ease-in-out;
+}
+
+footer .contact-icon-wrap i:hover{
+	background-color: rgb(255, 108, 58);
+}
+
+footer .footer-info-container{
+	width: 1170px;
+	margin: 50px auto;
+}
+
+.footer-info-container>div{
+	float: left;
+	width: 30%;
+	margin-right: 3%;
+}
+
+footer .intro-footer-wrap img{
+	margin-bottom: 30px;
+}
+
+footer .intro-footer-wrap p{
+	color: #969ea7;
+	line-height: 26px;
+	font-size: 13px;
+	font-family: "Open Sans";
+}
+
+footer .intro-footer-wrap ul{
+	margin-top: 50px;
+	color: #969ea7;
+}
+
+footer .intro-footer-wrap ul li{
+	border-bottom: 1px solid #3c4450;
+	height: 44px;
+	line-height: 44px;
+	font-style: 'Montserrat';
+	font-size: 12px;
+}
+
+footer .intro-footer-wrap ul li i{
+	margin-right: 10px;
+}
+
+footer .service-footer-wrap ul{
+	margin-top: 30px;
+	font-style: "Open Sans";
+	font-size: 14px;
+	color: #969ea7;
+}
+
+footer .service-footer-wrap ul li{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	width: 50%;
+}
+
+footer .service-footer-wrap ul li a{
+	color: inherit;
+	padding-left: 15px;
+	position: relative;
+}
+
+footer .service-footer-wrap ul li a:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	border-left: 6px solid #969ea7;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	top: 4px;
+	left: 1px;
+}
+
+footer .connect-footer-wrap input[type=text]{
+	margin-top: 20px;
+	border: 1px solid #3c4450;
+	background-color: #232c3b;
+	width: 100%;
+	font-size: 13px;
+	height: 14px;
+	padding: 12px 10px;
+	font-family: "Open Sans";
+}
+
+footer .connect-footer-wrap textarea{
+	margin-top: 20px;
+	border: 1px solid #3c4450;
+	background-color: #232c3b;
+	width: 100%;
+	font-size: 13px;
+	height: 66px;
+	padding: 12px 10px;
+	font-family: "Open Sans";
+}
+
+footer .connect-footer-wrap .btn-checked{
+	margin-top: 20px;
+	width: 155px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 3px solid rgba(0,0,0,0.4);
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	border-radius: 4px;
+	font-weight: bold;
+	float: left;
+	cursor: pointer;
+	background-color: #ff6c3a;
+	transition: all 0.3s ease-in-out;
+}
+
+footer .connect-footer-wrap .btn-checked:hover{
+	background-color: #222935;
+}
+
+footer .copyright-wrap{
+	background-color: #161c28;
+	height: 56px;
+}
+
+footer .copyright-wrap p{
+	width: 1170px;
+	margin: 0 auto;
+	font-size: 13px;
+	color: #969ea7;
+	height: 100%;
+	line-height: 56px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin:0;padding:0;}
+			ul{list-style: none;}
+			a{text-decoration: none;color:inherit;}
+			body{padding:12px;}
+			.clearfix:after{content:" ";height:0;display: block;clear:both;}
+			.nav{
+				  border: 1px solid #ddd;
+				  border-right: none;
+				  display: inline-block;
+				}
+				.nav  li {
+				  width: 150px;
+				  text-align: center;
+				  background: #fff;
+				  padding: 15px 0;
+				  line-height: 20px;
+				}
+			.nav>li{
+				 -webkit-transition: all .4s;
+				  transition: all .4s;
+				  float: left;
+				  background: #eee;
+				  border-right: 1px solid #ddd;
+				  position: relative;
+				  }
+			.nav>li:hover{background:#fff;}
+			.nav>li ul{visibility: hidden;position:absolute;}
+			.nav>li>ul{ 
+				top:0;
+				margin-top: 1px;
+				margin-left:-1px;
+				border: 1px solid #ddd;
+				border-top: none;
+				box-shadow: 1px 2px 2px rgba(0,0,0,0.25);
+				-webkit-transform: translateY(40px);
+      			-ms-transform: translateY(40px);
+          		transform: translateY(40px);
+  				-webkit-transition: -webkit-transform 0.2s;
+          		transition: transform 0.2s;
+			 }
+			.nav>li:hover>ul{visibility: visible;
+			    -webkit-transform: translateY(50px);
+      			-ms-transform: translateY(50px);
+          		transform: translateY(50px);
+          		}
+
+		</style>
+	</head>
+	<body>
+		<ul class="nav clearfix" >
+			<li><a href="#">首页</a>
+				<ul>
+					<li><a href="#">产品1</a></li>
+					<li><a href="#">产品2</a></li>
+					<li><a href="#">产品3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">关于</a>
+				<ul>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+				</ul>
+			</li>
+			<li><a href="#">下载</a>
+				<ul>
+					<li><a href="#">产品1</a></li>
+					<li><a href="#">产品2</a></li>
+					<li><a href="#">产品3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">博客</a>
+				
+			</li>
+		</ul>
+	</body>
+</html>

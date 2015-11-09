@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>苹果旧官网导航栏练习01</title>
+	<style>
+	  *{
+		  margin: 0px;
+		  padding: 0px;
+		  border: 0px;
+	    }
+     #wrapped{
+     	width: 1108px;
+     	margin: 0px auto;
+     }
+
+	</style>
+	
+</head>
+<body>
+<div id="wrapped">
+<div id="nav">
+<img src="images/apple-nav.jpg" usemap="#map1">
+	
+</div>
+<div id="main"><img src="images/iPad.png">
+	
+</div>
+<map name="map1">
+	<area shape="rect" coords="12,12,119,48" href="http://wwww.baidu.com" target="_blank">
+	<area shape="rect" coords="119,12,224,48" href="#" target="_blank">
+	<area shape="rect" coords="225,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+	<area shape="rect" coords="12,12,119,48" href="#" target="_blank">
+</map>
+</div>
+</body>
+</html>
