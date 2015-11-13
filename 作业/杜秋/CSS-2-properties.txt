@@ -1,1 +1,108 @@
-hello
+CSS2属性:
+{
+    /*边框属性*/
+    border-bottom-color: ;
+    border-bottom-style: ;
+    border-left-color: ;
+    border-left-style: ;
+    border-right-color: ;
+    border-right-style: ;
+    border-top-color: ;
+    border-top-style: ;
+
+    outline: ;/*在一个声明中设置所以轮廓属性*/
+    outline-color: ;
+    outline-style: ;
+    outline-width: ;
+
+    max-height: ;
+    max-width: ;
+    min-height: ;
+    min-width: ;
+    /*尺寸属性 */
+
+    font-size-adjust: ;
+    font-stretch: ;
+    /*字体属性
+    为元素规定aspect值
+    收缩或拉伸当前的字体系列
+    */
+
+    content: ;
+    counter-increment: ;
+    counter-reset: ;
+    quotes: ;
+    /*内容生成
+          与：before以及：after伪元素配合使用，来插入生成内容
+          递增或递减一个或多个计数器
+          创建或重置一个或多个计数器
+          设置嵌套引用的引号类型
+    */
+
+    bottom: ;
+    clip: ;
+    cursor: ;
+    left: ;
+    overflow: ;
+    position: ;
+    right: ;
+    top: ;
+    visibility: ;
+    z-index: ;
+    /*定位属性
+    规定元素是否可见
+    设置元素的堆叠顺序*/
+
+    orphans: ;
+    widows: ;
+    page-break-after: ;
+    page-break-before: ;
+    page-break-inside: ;
+    /*打印属性
+    设置当元素内部发生分页时必须在页面底部保留的最少行数
+    设置当元素内部发生分页时必须在页面顶部保留的最少行数
+    设置元素后的分页行为
+    设置元素前d分页行为
+    设置元素内部的分页行为
+    */
+
+    border-collapse: ;
+    border-spacing: ;
+    caption-side: ;
+    empty-cells:;
+    table-layout: ;
+    /* 表格属性
+    是否合并表格边框
+    相邻单元格边框之间的距离
+    表格标题的位置
+    是否显示表格中的空单元格上的边框和背景
+    用于表格的布局算法
+    */
+
+    direction: ;
+    text-shadow: ;
+    unicode-bidi: ;
+    /*文本属性text
+    文本/书写的方向
+    添加文本的阴影效果
+    文本的方向
+    */
+
+}
+CSS2选择器:{
+    *       /*选择所有元素*/
+
+    element>element     (div>p)     /*选择父元素为<div>元素的所有<p>元素*/
+    element+element     (div+p)     /*选择紧接在<div>之后的所有<p>元素*/
+
+    [attribute]         [target]    /*选择带有target属性的所有元素*/
+    [attribute=value]         [target=_blank]    /*选择target="_blank"的所有元素*/
+    [attribute~=value]         [title~=flower]    /*选择title属性包含单词"flower"的所有元素*/
+    [attribute|=value]         [lang|=en]    /*选择lang属性值以"en"开头的所有元素*/
+
+    ：focus             (input:focus)        /*选择获得焦点的input元素*/
+    ：first-child      （p:first-child）     /*选择属于父元素的第一个子元素的每个<p>元素*/
+    :before            (p:before)            /*在每个<p>元素的内容之前插入内容*/
+    :after             (p:after)             /*在每个<p>元素的内容之后插入内容*/
+    ：lang(language)   (p:lang(it))          /*选择带有以"it"开头的lang属性的每一个<p>元素*/
+}
