@@ -1,0 +1,43 @@
+
+.header-top{height: 100%;border-top: 4px solid #222935;}
+.fixclear:after{clear: both;display: block;content: '';}
+.header-w{width: 1140px;margin: 0px auto;}
+.header-w976{width: 976px;height: 49px;float:right; background:#222935; position: relative;}
+.header-w976-left{width: 35px; height: 49px; background: url(../img/top-left-bar.jpg)no-repeat;}
+.header-w976-right{width: 35px; height: 49px; right: 0px;top: 0px; position:absolute; background: url(../img/top-right-bar.jpg)no-repeat;}
+.header-w976icon{position: absolute; top: 5px;left: 45px;}
+.header-icon1>li>a{width: 30px; height: 30px; border-radius: 50px;display: block; background: #4F5662;transition-property:background-color;transition-duration:0.5s;}
+.header-icon1>li>a:hover{background: #ff6c3a; }
+.header-icon1>li>a>i{text-align: center;display: block;line-height: 30px;color: #fff;}
+.header-w976icon ul >li{float: left; padding: 0px 3px;}
+.header-w976icon-r{position: absolute;right: 75px;top: 8px; float:right;}
+.header-w976icon-r ul >li{float:left;margin-left: 50px;}
+.header-icon2>li> i{width: 30px; height: 30px; margin-right:10px; line-height: 30px;color: #ccc;}
+.header-icon2>li> span{text-align: center; color: #f8f8f8; font-size: 10px;} 
+/**/
+.header{margin:36px 0px 23px 0px; float: left; width: 1140px;}
+.header .logo{float: left; height: 51px; width: 191px;}
+.header .mune{float: right;margin-top: 7px;}
+.mune ul li{float: left; height: 37px; line-height: 37px;}
+.mune ul > li{ display: block; position: relative;}
+.mune ul > li a{color: #000; display: block; padding: 0px 20px;font-size: 12px;transition-property:background-color;transition-duration:0.2s;}
+.mune ul > li a:hover{background: #222935;color: #fff;}
+.mune ul li> ul{display: none;position: absolute;float: left; width: 250px; top: 100%;}
+.mune ul li> ul li{line-height: 37px; width: 250px;background:#222935; }
+.mune ul li:hover> ul{ display: block;}
+.mune ul li> ul li:hover{background: #d8d8d8;}
+.mune ul li> ul li a{display: block;transition-property:color;transition-duration:0.5s;color: #6f6f6f;}
+.mune ul li> ul li a:hover{color: #f6b138;}
+.active a{background: #222935;color: #fff!important;}
+/**/
+.banner{background:url(../img/sub-banner.jpg) center; height: 382px;}
+.banner-text{text-align: center;padding-top: 150px;}
+.banner-text h2{font-size: 50px; color: #fff;}
+.banner-text span a{color: #f6b138;}
+.banner-text span{color: #fff;}
+
+
+
+
+
+.solution{height: 700px;}
