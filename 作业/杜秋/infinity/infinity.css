@@ -105,7 +105,7 @@ span img{
     list-style-type: none;
 }
 .nav li{
-    height: 37px;
+    height: 35px;
     cursor: pointer;
     display: inline-block;
 }
@@ -630,7 +630,7 @@ span p{
     height: 30px;
     width: 1100px;
     position: relative;
-    top: 68px;
+    top: 60px;
     left: -80px;
     clear: both;
     color:  #969ea7;
