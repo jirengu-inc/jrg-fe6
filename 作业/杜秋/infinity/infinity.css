@@ -29,12 +29,27 @@ h1,h2,h3,h6{
     display: block;
     float: left;
     padding-left: 5px;
+    clear: both;
 }
 .log-left li{
     padding-left: 2px;
     display: inline-block;
     text-align: center;
 
+}
+.icons li a{
+    background: #4f5662;
+    height: 31px;
+    width: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+}
+.icons li a:hover,.icons li a:active{
+    background: #ff6c3a;
 }
 .log-right{
     display: block;
@@ -67,15 +82,21 @@ span img{
     display: block;
     float: left;
 }
-#nav{
-    margin-top:10px ;
+.clearFix{
+    content: "";
+    clear: both;
+    display: block;
+}
+.nav{
     display: block;
     float: left;
-    padding-left: 220px;
     height: 50px;
     background-color: #FFFFFF;
+    position: relative;
+    left: 450px;
+    top: -40px;
 }
-#nav ul{
+.nav ul{
     width: auto;
     height: 50px;
     float: right;
@@ -83,8 +104,8 @@ span img{
     margin:10px 0 0 0;
     list-style-type: none;
 }
-#nav li{
-    height: 50px;
+.nav li{
+    height: 37px;
     cursor: pointer;
     display: inline-block;
 }
@@ -92,7 +113,11 @@ a{
     text-decoration: none;
     color: #141414;
 }
-#nav li a{
+.nav li.active a{
+    color: #ffffff;
+    background: #232c3b;
+}
+.nav li a{
     padding: 10px 20px;
     color:#232c3b ;
     float: left;
@@ -100,8 +125,9 @@ a{
     font-weight: bold;
     display: block;
     list-style-type: none;
+    text-transform: uppercase;
 }
-#nav li a:hover,a:active,a:visited{
+.nav li a:hover,a:active,a:visited{
     padding: 10px 20px;
     color:#FFFFFF ;
     background-color: #232c3b;
@@ -111,12 +137,79 @@ a{
     display: block;
     list-style-type: none;
 }
-.search{
+.nav>li{
+    float: left;
     position: relative;
-    top: 0px;
 }
-.search img{
-    width: 12px;
+.dropDown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 1px;
+}
+.nav>li:hover>.dropDown{
+    display: block;
+}
+.dropDown li a{
+    text-transform: uppercase;
+    border: none;
+    line-height: 20px;
+    color: #6f6f6f;
+    font-size: 12px;
+    width: 200px;
+    text-align: left;
+    padding: 10px 20px;
+    background-color: #141414;
+    margin-top: -11px;
+}
+.dropDown li a:hover,a:active{
+    color: #ff6c3a;
+    background-color: #141414;
+}
+.indicator{
+    position: relative;
+    right: 5px;
+    float: right;
+    font-size: 14px;
+    display: none;
+}
+.searchBox{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.searchBox li form{
+    padding: 30px;
+    width: 490px;
+    text-transform: uppercase;
+    border: none;
+    line-height: 20px;
+    background-color: #141414;
+    margin-top: -5px;
+}
+.nav>li:hover>.searchBox{
+    display: block;
+}
+.searchBox form input{
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    box-shadow: none;
+    height: 40px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #232c3b;
+}
+.searchBox form button{
+    border: none;
+    color: #ffffff;
+    background: #ff6c3a;
+    height: 40px;
+    float: right;
+    padding: 0 40px;
+    margin-top: -40px;
 }
 #aboutImg{
     overflow: hidden;
@@ -453,6 +546,9 @@ span p{
     border-radius: 50%;
     display: inline-block;
     font-size: 12px;
+}
+.letterRight li a:hover,.icons li a:active{
+    background: #ff6c3a;
 }
 .service{
     margin-top: 50px;
