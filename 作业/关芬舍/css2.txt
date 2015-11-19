@@ -1,0 +1,58 @@
+/*大概写了下，并将css按照自己的了解分为个块吧，没有把所以都写上，只是写了普遍用得多的css*/
+
+/*区块/框架相关*/
+	width:  100px/100%;
+	height: 100px/100%;
+	max-width: 100px;/*最大宽度*/
+	min-width: 100px;/*最小宽度*/
+	padding/top/left/right/bottom: 100px;/*内边距*/
+	margin/top/left/right/bottom:100px;/*外边距*/
+	border/top/left/right/bottom: 1px solid #fff;/*边框*/
+
+/*定位相关*/
+	position: absolute relative fixed;/*绝对定位，相对定位，固定定位*/
+	left/right/top/bottom:10px;
+	float: left/right;/*浮动*/
+	z-index: 1px;
+	display: block;
+	clear: both/left/right;/*清除浮动*/
+	content: "";
+
+/*文本相关*/
+	text-align:center/right/left/justify;/*文字对齐：左，中，右，两边对齐*/
+	color:red/#ccc;/*文字颜色*/
+	background-color:red;/*背景颜色*/
+	background-repeat: no-repeat/repeat-x/repeat-y ;/*定义是否向xy方向重复*/
+	background-position:left/right/50%;/*图片定位*/
+	background-image:url(xxxx.jpg) no-repeat/repeat-x/repeat-y; /*背景图片和背景图片是否向xy方向重复*/
+	line-height: 100px;/*行距*/
+	font-family:'宋体','微软雅黑';/*字体*/
+	font-size:12px;/*文字大小*/
+	font-weight: bold;/*粗体*/
+	text-decoration:underline;/*下划线*/
+
+
+/*css3效果*/
+	transition-property:background-color;transition-duration:0.2s;/*过渡效果*/
+	box-shadow: 1px;/*阴影效果*/
+	border-radius:1px; /*圆角效果*/
+
+}
+
+
+/*选择器*/
+h1{} /*元素选择器*/
+.header{}/*类选择器*/
+#header{}/*ID选择器*/
+a[href][title]{color: red;}/*属性选择器*/
+ul li{}/*后代选择器*/
+ul >li{}/*子选择器*/
+h1+p{}/*相邻选择器*/
+
+
+/*伪类和伪元素*/
+a:hover{}/*鼠标经过触发的效果*/
+a:first-child{}/*第一个元素*/
+a:last-child{}/*最后一个元素*/
+h1:after {content:'123';}/*在内容之后插入内容*/
+h1:before{content:'123';}/*在内容之前插入内容*/

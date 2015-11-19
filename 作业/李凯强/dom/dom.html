@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>dom</title>
+</head>
+<body>
+	<div>test1</div>
+	<div>test2</div>
+	<div id="test">
+		<span>123</span>
+		我是test
+	</div>
+	<div>test3</div>
+	<div>test4</div>
+	<input type="button" value="setChildText">
+	<input type="button" value="createTextElement">
+	<input type="button" value="createLink">
+<script type="text/javascript">
+	var lj=function(id){
+		return document.getElementById(id);
+	}
+	lj.dom=(function(){
+		return {
+			firstSibling: function(node){
+				var tempNode=node.parentElement.firstElementChild;
+				return tempNode;
+			},
+			lastSibling: function(node){
+				var tempNode=node.parentElement.lastElementChild;
+				return tempNode;
+			},
+			previous: function(node){
+				var tempNode=node.previousSibling;
+				while(!!tempNode&&tempNode.nodeType!=1)
+					tempNode=tempNode.previousSibling;
+				return tempNode;
+			},
+			next: function(node){
+				var tempNode=node.nextSibling;
+				while(!!tempNode&&tempNode.nodeType!=1)
+					tempNode=tempNode.nextSibling;
+				return tempNode;
+			},
+			getChildText: function(node){
+				if(!node.hasChildNodes()) return false;
+				var tempNode=node.firstChild;
+				while(!!tempNode&&(tempNode.nodeType!=3||/^\s+$/.test(tempNode.nodeValue))){   //nodeValue不是文本或者是一堆空格
+					tempNode=tempNode.nextSibling;
+				}
+				return tempNode||false;
+			},
+			setChildText: function(node,value){
+				if(!node.hasChildNodes()) return false;
+				var tempNode=node.firstChild;
+				while(!!tempNode&&(tempNode.nodeType!=3||/^\s+$/.test(tempNode.nodeValue))){
+					tempNode=tempNode.nextSibling;
+				}
+				if(!!tempNode) return tempNode.nodeValue=value;
+				else return false;
+			},
+			createTextElement: function(element,value){
+				var element=document.createElement(element);
+				var text=document.createTextNode(value);
+				element.appendChild(text);
+				return element;
+			},
+			createLink: function(href,text){
+				var link=this.createTextElement('a',text);
+				link.href=href;
+				return link;
+			}
+		}
+	})();
+	var test=lj('test');
+	var firstSibling=lj.dom.firstSibling(test);
+	var lastSibling=lj.dom.lastSibling(test);
+	var previous=lj.dom.previous(test);
+	var next=lj.dom.next(test);
+	console.log({
+		'test的第一个同胞': firstSibling,
+		'test的最后一个同胞': lastSibling,
+		'test的前一个同胞': previous,
+		'test的后一个同胞': next
+	});
+	console.log('test的childText:');
+	console.log(lj.dom.getChildText(test));
+	document.getElementsByTagName('input')[0].addEventListener('click',function(){
+		lj.dom.setChildText(test,'我是新的test');
+	});
+	document.getElementsByTagName('input')[1].addEventListener('click',function(){
+		var p=lj.dom.createTextElement('p','我是p');
+		test.appendChild(p);
+	});
+	document.getElementsByTagName('input')[2].addEventListener('click',function(){
+		var a=lj.dom.createLink('javascript:;','百度');
+		test.appendChild(a);
+	});
+</script>
+</body>
+</html>
