@@ -115,7 +115,7 @@ fj.event = (function(){
                 window.event.returnValue = false;
             }
         },
-        add: function(e){
+        add: function(node, eventType, fn){
             if(node.addEventListener){
                 node.addEventListener(eventType, fn, false);
             } else if(node.attachEvent){
