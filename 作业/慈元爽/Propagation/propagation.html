@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 20px;
+		}
+		li{
+			list-style: none;
+		}
+		div{
+			background: red;
+		}
+		ul{
+			background: green;
+		}
+		li{
+			background: yellow;
+		}
+		a{
+			display: inline-block;
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="#">点我</a></li>
+		</ul>
+	</div>
+	<script>
+	function getMyDomByTag(tagName){
+		var dom = document.getElementsByTagName(tagName)[0];
+		dom.addEvent = addEvent;
+		return dom;
+	}
+	function addEvent(eventName,handler){
+		if(typeof document.addEventListener === 'function'){
+			this.addEventListener(eventName,handler);
+		}else{
+			this.attachEvent('on'+eventName,handler);
+		}
+		
+	}
+	function stopPropagation(event){
+		try{
+			event.stopPropagation()
+		}catch(e){
+			event.cancelBubble = true; 
+		}
+	}
+	var myClickFunc = function(event){
+		event = event || window.event;
+		var currObj = event.target || event.srcElement;
+		alert(currObj.tagName+'被点击了');
+		stopPropagation(event);
+	}
+	var div = getMyDomByTag('div');
+	div.addEvent('click',myClickFunc);
+	var ul = getMyDomByTag('ul');
+	ul.addEvent('click',myClickFunc);
+	var li = getMyDomByTag('li');
+	li.addEvent('click',myClickFunc);
+	var a = getMyDomByTag('a');
+	a.addEvent('click',myClickFunc);
+	</script>
+</body>
+</html>
