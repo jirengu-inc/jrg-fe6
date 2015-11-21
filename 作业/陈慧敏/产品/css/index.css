@@ -1,4 +1,4 @@
-*{padding:0;margin:0;text-decoration: none;list-style: none}
+*{padding:0;margin:0;text-decoration: none;list-style: none;font-family:"微软雅黑";}
 
 body{
 	border-top: 4px solid rgb(34,41,53)
@@ -97,4 +97,91 @@ header nav ul>li a.active{
 	height: 382px;
 	background-image: url(../images/section1.png);
 	margin-top: 10px;
+	position: relative;
+}
+.first-section .center{
+	overflow: hidden;
+	position: absolute;
+	height:100px;
+	width: 300px;
+	top:50%;
+	left:50%;
+	text-align: center;
+	margin-top: -50px;
+	margin-left:-150px;
+}
+.first-section .center h2{
+	font-size: 40px;
+	font-family: "微软雅黑";
+	color:#fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.first-section .center .breadcrumb{
+	overflow: hidden;
+	margin-top: 15px;
+}
+.first-section .center .ulll{
+	margin: 0 auto;
+	width: 110px;
+}
+.first-section .center .breadcrumb>li{
+	float: left;
+	color:#fff;
+	display: inline;
+	width: 55px;
+}
+.first-section .center .breadcrumb>li>a{
+	color:#ff6c3a;
+	font-family: "微软雅黑"
+}
+.second-section{
+	background-color: rgb(249,249,249);
+	padding:100px 0;
+}
+.second-section .wrapper{
+	width: 1140px;
+	height: 406px;
+	margin:0 auto;
+}
+.second-section .wrapper .header{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.second-section .wrapper .header h2{
+	font-family: "微软雅黑";
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.second-section .wrapper .header span{
+	color:#6a7483;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: "微软雅黑";
+}
+.second-section .wrapper .item-list{
+	width: 1064px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.second-section .wrapper .item-list ul>li{
+	float:left;
+	display: inline-block;
+	width: 246px;
+	text-align: center;
+	margin-right: 20px
+}
+.second-section .wrapper .item-list ul>li>h6{
+	margin:40px 0 10px;
+	font-size:12px;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+.second-section .wrapper .item-list ul>li>p{
+	color:#6a7483;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 400;
 }
