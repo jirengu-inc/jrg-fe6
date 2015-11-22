@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM-Parctice</title>
+</head>
+<body>
+	<ul>
+		<li id="exp_1">Hello</li>
+		<li>World</li>
+		<li>WitNesS</li>
+	</ul>
+	<p id="exp_2">
+		<span>Hello</span> World <strong id="exp_3">WitNesS</strong>
+	</p>
+<script type="text/javascript" src="dom.js"></script>
+<script type="text/javascript">
+	// console.log(DOM_handle.lastSibling(document.getElementById("exp_1")));
+	// console.log(DOM_handle.firstSibling(document.getElementById("exp_3")));
+	// console.log(DOM_handle.nextElement(document.getElementById("exp_1")));
+	console.log(DOM_handle.previousElement(document.getElementById("exp_3")));
+	console.log(DOM_handle.getText(document.getElementById("exp_2")));
+	console.log(DOM_handle.setText(document.getElementById("exp_2"), " China "));
+</script>
+</body>
+</html>
