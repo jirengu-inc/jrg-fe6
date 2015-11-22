@@ -72,7 +72,7 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-rotate-right:before,.icon-repeat:before{content:"\f01e";}
 .icon-refresh:before{content:"\f021";}
 .icon-list-alt:before{content:"\f022";}
-.icon-lock:before{content:"\f023";}
+.icon-lock:before{padding: 0 1.5px;content:"\f023";}
 .icon-flag:before{content:"\f024";}
 .icon-headphones:before{content:"\f025";}
 .icon-volume-off:before{content:"\f026";}
@@ -399,5 +399,5 @@ a .icon-rotate-90:before,a .icon-rotate-180:before,a .icon-rotate-270:before,a .
 .icon-archive:before{content:"\f187";}
 .icon-bug:before{content:"\f188";}
 .icon-vk:before{content:"\f189";}
-.icon-weibo:before{content:"\f18a";}
+.icon-weibo:before{content:"\f18a";font-size: 18px;}
 .icon-renren:before{content:"\f18b";}

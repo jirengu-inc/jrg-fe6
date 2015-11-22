@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2015 by anonymous (http://js.jirengu.com/cuwudutuvi/43/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>multi-level-nav</title>
+<style id="jsbin-css">
+*{margin:0;padding:0;}
+li{list-style:none;
+}
+body{background:#ddd;}
+a{text-decoration:none;}
+.clearfix:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.clearfix{*zoom:1;}
+#content{
+  text-align:center;
+}
+.wraped{
+  color:bllue;
+  width:608px;
+  margin:0 auto;
+  background: white;
+  border:1px solid #ddd;
+  transition:all 0.5s;
+}
+.content li{
+  padding:15px;
+  width:120px;
+  line-height:20px;
+  text-align:center;
+}
+.content>li{
+  float:left;
+  border-right:1px solid #ddd;
+  position:relative;
+}
+.content li>ul{
+  position:absolute;
+  top:100%;
+  left:0;
+  
+}
+.content>li:hover>ul{
+  display:block;
+  line-height:20px;
+  background: white;
+ border-top:none;
+  margin-top:1px;
+  padding:0 1px;
+  margin-left:-1px;
+  
+}
+.content>li>ul{
+ display:none;
+  
+}
+</style>
+</head>
+<body> 
+    
+      <div class="wraped ">
+      <ul class="content clearfix">
+        <li><a href="#">首页</a>
+          <ul>
+            <li><a href="">产品1</a></li>
+            <li><a href="">产品2</a></li>
+            <li><a href="">产品3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">关于</a>
+          <ul>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">加入我们</a></li>
+            
+          </ul>
+        </li>
+        <li><a href="#">下载</a>
+          <ul>
+            <li><a href="">产品1</a></li>
+            <li><a href="">产品2</a></li>
+            <li><a href="">产品3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">博客</a>
+          <ul>
+            <li><a href="">我的博客</a></li>
+            <li><a href="">分享</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+   
+    
+</body>
+</html>

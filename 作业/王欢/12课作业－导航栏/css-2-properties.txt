@@ -91,6 +91,16 @@ css表格属性
 	table-layout
 css文本属性
 	color
+	direction
+	letter-spacing
+	line-height
+	text-align
+	text-decoration
+	text-indent
+	text-transform
+	unicode-bidi
+	white-spacing
+	word-spacing
 	
 
 

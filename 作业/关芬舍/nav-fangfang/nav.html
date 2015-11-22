@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>css特效导航栏</title>
+  <style type="text/css">
+*{padding:0px;}
+body{margin: 100px 0px 0px 100px}
+a{color:#000; text-decoration: none;}
+ul{list-style: none;}
+.fixclear:after{clear: both;display: block;content: '';}
+.nav{border: 1px solid #ccc; border-right: 0px;float: left;}
+.nav li{width: 100px; text-align: center;  line-height: 30px;}
+.nav > li{float: left; border-right: 1px solid #ccc;position: relative;}
+.nav> li> ul{display: none;position: absolute;border:1px solid #ccc;border-bottom:0px; top: 100%;left: -1px;}
+.nav> li> ul li{line-height: 30px;border-bottom:1px solid #ccc; }
+.nav li:hover> ul{ display: block;}
+.nav> li> ul li:hover{background: #d8d8d8;}
+.nav> li> ul li a{display: block;}
+.nav> li a{display: block;}
+  </style>
+
+
+
+
+</head>
+<body class="fixclear">
+  <ul class="nav fixclear">
+    <li>
+        <a href="#">下载</a>
+      <ul>
+        <li>
+        <a href="#">方案</a>
+        <ul>
+          <li><a href="#">第三</a></li>
+          <li><a href="#">第三</a></li>
+          <li><a href="#">第三</a></li>
+        </ul>
+        </li>
+        <li><a href="#">方案1</a></li>
+        <li><a href="#">方案2</a></li>
+      </ul>
+    </li>
+    <li>
+        <a href="#">测试</a>
+      <ul>
+        <li><a href="#">测试1</a></li>
+        <li>
+        <a href="#">测试2</a>
+        <ul>
+          <li><a href="#">第三</a></li>
+          <li><a href="#">第三</a></li>
+          <li><a href="#">第三</a></li>
+        </ul>
+        </li>
+        <li><a href="#">测试3</a></li>
+      </ul>
+    </li>
+    <li>
+        <a href="#">售后</a>
+      <ul>
+        <li><a href="#">售后1</a></li>
+        <li><a href="#">售后2</a></li>
+        <li><a href="#">售后3</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+</html>

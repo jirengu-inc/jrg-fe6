@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+a{
+  color:#666;
+  text-decoration:none;
+}
+li{
+  list-style:none;
+}
+.nav{
+  border:1px solid #ddd;
+  display:inline-block;
+  margin:0 auto;
+  border-right:0;
+}
+.nav li{
+  float:left;
+  width:120px;
+  height:35px;
+  line-height:35px;
+  text-align:center;
+}
+.nav > li{
+  position:relative;
+  border-right:1px solid #ddd;
+  font-weight:bold;
+}
+.sub-menu{
+  display:none;
+  position: absolute;
+  top:100%;
+  left:0;
+  border:1px solid #ddd;
+  margin-left:-1px;
+  border-bottom:0;
+}
+.sub-menu li{
+  border-bottom:1px solid #ddd;
+  font-weight:normal;
+}
+.sub-menu li a{
+  display:block;
+  height:100%;
+}
+.nav > li:hover .sub-menu{
+  display:block;
+}
+  </style>
+</head>
+<body>
+    <ul class="nav">
+      <li>
+        <a href="#">主页</a>
+        <ul class="sub-menu">
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">帮助</a>
+        <ul class="sub-menu">
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">关于我们</a>
+        <ul class="sub-menu">
+          <li><a href="#">菜单1</a></li>
+          <li><a href="#">菜单1</a></li>
+        </ul>
+      </li>
+    </ul>
+</body>
+</html>
