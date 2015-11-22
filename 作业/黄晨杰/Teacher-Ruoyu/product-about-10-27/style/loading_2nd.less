@@ -1,0 +1,59 @@
+@orange: #F6A45D;
+
+@keyframes pulse {
+  0%   { flex: 0 0 1;}
+  100% { flex: 0 0 0.5;}
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: @orange;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: auto;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.column{
+  flex-basis: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  // animation: pulse 0.5s ease-in infinite alternate;
+  background-color: darken(@orange, 15%);
+}
+
+.an_two {
+  animation-delay: 0.2s;
+  flex: 0 0 20%;
+}
+
+.an_three {
+  animation-delay: 0.4s;
+}
+
+.an_four {
+  animation-delay: 0.6s;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<ul>
+			<li>nihao1</li>
+			<li>nihao2</li>
+			<li id="test">nihao3</li>
+			<li>nihao4</li>
+			<li>nihao5</li>
+		</ul>
+		<script>
+				var dom={
+					lastSibling:function(node){
+						var tempNode=node.parentNode.lastChild
+						if(!!tempNode&&tempNode.nodeType!==1){
+							tempNode=this.previous(tempNode)
+						}
+						return tempNode
+					},
+					firstSibling:function(node){
+						var tempNode=node.parentNode.firstChild
+						if(!!tempNode&&tempNode.nodeType!==1){
+							tempNode=this.next(tempNode)
+						}
+						return tempNode
+					},
+					previous:function(node){
+						var tempNode=node.previousSibling
+						while(!!tempNode&&tempNode.nodeType!==1){
+							tempNode=tempNode.previousSibling
+						}
+						return tempNode
+					},
+					next:function(node){
+						var tempNode=node.nextSibling
+						while(!!tempNode&&tempNode.nodeType!==1){
+							tempNode=tempNode.nextSibling
+						}
+						return tempNode
+					},
+					getChildText:function(node){
+						if(!node.hasChildNodes()){return false}
+						var tempNode=node.firstChild
+						while(!!tempNode&&(tempNode.nodeType!==3||/^\s+$/.test(tempNode.nodeValue))){
+							tempNode=tempNode.nextSibling
+						}
+						return tempNode.nodeValue||false
+					},
+					setChildText:function(node,text){
+						if(!node.hasChildNodes()){return false}
+						var tempNode=node.firstChild
+						while(!!tempNode&&(tempNode.nodeType!==3||/^\s+$/.test(tempNode.nodeValue))){
+							tempNode=tempNode.nextSibling
+						}
+						if(tempNode){return tempNode.nodeValue=text}
+						else{return false}
+					},
+					createTextElement:function(elementName,text){
+						var element=document.createElement(elementName.toLowerCase())
+						element.appendChild(document.createTextNode(text))
+						return element
+					},
+					createLink:function(href,text){
+						var link=this.createTextElement('a',text)
+						link.setAttribute('href',href)
+						return link
+					}
+			
+
+
+				}
+			   var fj=function(id){
+			     return document.getElementById(id)
+			   }
+			  
+ 			   	console.log(dom.lastSibling(fj('test')))
+			    console.log(dom.firstSibling(fj('test')))
+			    console.log(dom.previous(fj('test')))
+ 				console.log(dom.next(fj('test')))
+				console.log(dom.getChildText(fj('test')))
+ 				console.log(dom.setChildText(fj('test'),'你好'))
+ 				console.log(dom.createTextElement('p','你好'))
+				console.log(dom.createLink('http://www.baidu.com','百度'))
+		</script>
+		
+	</body>
+</html>

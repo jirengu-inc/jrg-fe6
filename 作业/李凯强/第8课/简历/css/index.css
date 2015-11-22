@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
 	padding: 0;
 	margin: 0;
@@ -24,9 +25,9 @@
 		width: 970px;
 		margin: 0 auto;
 	}
-	@media (max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.wrap{
-			width: 100%;
+			width: auto;
 		}
 	}
 	.top-bar {
@@ -67,7 +68,7 @@
 		background-color: #28c5d6;
 		float: left;
 	}
-	@media (max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.brief-info{
 			width: 100%;
 			float: none;
@@ -85,7 +86,7 @@
 		margin-top: 10px;
 		text-align: center;
 	}
-	@media(max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.avater{
 			width: 100%;
 		}
@@ -96,7 +97,7 @@
 		float: left;
 		background-color: #fff;
 	}
-	@media(max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.text{
 			float: none;
 			width: auto;
@@ -112,7 +113,7 @@
 		word-break: break-all;
 		color: #797979;
 	}
-	@media(max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.text p{
 			margin-top: 10px;
 			padding-top: 20px;
@@ -123,7 +124,7 @@
 		float: left;
 
 	}
-	@media (max-width: 760px){
+	@media  only screen and (max-width: 800px){
 		.panel{
 			width: auto;
 			float: none;
@@ -136,7 +137,7 @@
 		background-color: #fff;
 		margin-top: 14px;
 	}
-	@media(max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.personal-info,.career{
 			width: auto;
 			float: none;
@@ -200,7 +201,7 @@
 		margin-top: 14px;
 		margin-left: 14px;
 	}
-	@media(max-width: 760px){
+	@media only screen and (max-width: 800px){
 		.interview, .resume{
 			width: auto;
 			margin-left: 0;

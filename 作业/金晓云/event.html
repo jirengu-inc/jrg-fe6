@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Event</title>
+	<style>
+		*{padding: 20px;margin:0px;}
+		li{list-style:none}
+		a{text-decoration:none;}
+		div{background-color: yellow;}
+		ul{background-color: gray;}
+		li{background-color: green;}
+		a{background-color: blue;font-family: "微软雅黑";color: white;}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="#">baidu</a></li>
+		</ul>
+	</div>
+<script>
+	var g=function(tag){
+		return document.getElementsByTagName(tag);
+	}
+
+var addHandler=function(element,type,handler){
+	if (element.addEventListener){
+		element.addEventListener(type, handler,false);
+	}
+	else if (element.attachEvent){
+		element.attachEvent("on"+type,handler);
+	}else {element["on"+type]=handler;}
+}
+addHandler(g("div")[0],"click",function(e){
+	alert("div"+"被点击了");
+	var event=event||window.event;
+	if(event.stopPropagation){event.stopPropagation();}
+	else{event.cancelBubble=true;}
+	})
+addHandler(g("ul")[0],"click",function(e){
+	alert("ul"+"被点击了");
+	var event=event||window.event;
+	if(event.stopPropagation){event.stopPropagation();}
+	else{event.cancelBubble=true;}
+	})
+addHandler(g("li")[0],"click",function(e){
+	alert("li"+"被点击了");
+	var event=event||window.event;
+	if(event.stopPropagation){event.stopPropagation();}
+	else{event.cancelBubble=true;}
+	})
+addHandler(g("a")[0],"click",function(e){
+	alert("a"+"被点击了");
+	var event=event||window.event;
+	if(event.stopPropagation){event.stopPropagation();}
+	else{event.cancelBubble=true;}
+	})
+
+</script>
+</body>
+</html>
