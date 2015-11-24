@@ -9,44 +9,57 @@ fj.init = function(){
 
 fj.dom = (function(){
     return {
+        // 尾节点
         lastSibling: function(node){
             var tempNode = node.parentNode.lastChild;
+            // 最后一个子节点不是元素节点,则继续往前追溯
             if(!!tempNode && tempNode.nodeType !== 1){
                 tempNode = this.previous(tempNode);
             }
             return tempNode;
         },
+        // 初节点
         firstSibling: function(node){
             var tempNode = node.parentNode.firstChild;
+            // 第一个子节点不是元素节点,则继续往后查找
             if(!!tempNode && tempNode.nodeType !== 1){
                 tempNode = this.next(tempNode);                
             }
             return tempNode;
         },
+        // 前面兄弟节点
         previous: function(node){
             var tempNode = node.previousSibling;
+            // 如果前面的兄弟节点不是元素节点,则继续往前查找
             while(!!tempNode && tempNode.nodeType !== 1){
                 tempNode = tempNode.previousSibling;
             }
             return tempNode;
         },
+        // 后面兄弟节点
         next: function(node){
             var tempNode = node.nextSibling;
+            // 如果后面的兄弟节点不是元素节点,则继续往后查找
             while(!! tempNode && tempNode.nodeType !== 1){
                 tempNode = tempNode.nextSibling;
             }
             return tempNode;
         },
+        // 子文本节点获取
         getChildText: function(node){
+            // 如果不包含子节点,直接返回false
             if( !node.hasChildNodes() ){
                 return false;
             };
             var tempNode = node.firstChild;
+            // 如果第一个子节点,非文本或者是空格, 则往后继续寻找
             while( !!tempNode && ( tempNode.nodeType != 3 || /^\s+$/.test(tempNode.nodeValue) ) ){
                 tempNode = tempNode.nextSibling;
             }
+            // 返回text文本的值, 或者返回空
             return tempNode.nodeValue || false;
         },
+        // 子文本节点设置
         setChildText: function(node, text){
             if( !node.hasChildNodes() ){
                 return false;
