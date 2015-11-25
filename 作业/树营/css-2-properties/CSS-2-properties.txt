@@ -1,0 +1,85 @@
+﻿CSS2属性
+
+
+# 边框 Border
+border-top-color
+border-top-style
+
+border-right-color
+border-right-style
+
+border-bottom-color
+border-bottom-style
+
+border-left-color
+border-left-style
+
+
+# 轮廓 Outline
+outline
+outline-color
+outline-style
+outline-width
+
+
+# 尺寸属性 Dimension
+max-height
+max-width
+min-height
+min-width
+
+# 字体属性 Font
+font-size-adjust 为元素规定aspect值
+font-stretch     收缩或拉伸当前的字体系列
+
+
+# 内容生成 Generated Content
+content            与:before以及:after伪元素配合使用，来插入生成内容
+counter-increment   递增或递减一个或多个计数器
+counter-reset       创建或重置一个或多个计数器
+quotes              设置嵌套引用的引号类型
+
+
+# 列表 List
+marker-offset
+
+
+# 定位 Positioning
+clip
+cursor
+overflow
+visibility
+position
+top
+right
+bottom
+left
+z-index
+
+
+# 打印属性 Print
+orphans
+page-break-after
+page-break-before
+page-break-inside
+windows
+
+
+# 表格 Table
+border-collapse
+border-spacing
+caption-side
+empty-cells
+table-layout
+
+
+# 文本属性 Text
+direction
+text-shadow
+unicode-bidi
+
+
+
+
+
+
