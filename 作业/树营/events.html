@@ -47,17 +47,14 @@ window.onload = function() {
 
     function fn1 (e) {
         var e = e || window.event;
-        if(window.event){
-            console.log('你点击了' + e.srcElement.nodeName.toLowerCase() );
-            // e.cancelBubble = true;
-        } else {
-            console.log('你点击了' + e.target.nodeName.toLowerCase() );
-            // e.stopPropagation();
-        }
+        e.target = window.event?e.srcElement:e.target;
 
-        if(e.stopPropagation) {
-            e.stopPropagation;
-        } else {
+        console.log('你点击了' + e.target.nodeName.toLowerCase() );
+
+
+        if( e && e.stopPropagation) {
+            e.stopPropagation();
+        } else if(window.event){
             e.cancelBubble = true;
         }
    
