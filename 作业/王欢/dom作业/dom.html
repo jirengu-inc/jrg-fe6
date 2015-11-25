@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom</title>
+</head>
+<body>
+	<ul id='a'>
+		<li>1</li>
+		<li id="li2"><p>这是一个p节点</p>
+		第一个文本节点 
+			
+			<span>这是一个span节点</span>
+		第二个文本节点
+		</li>
+		<li id="li3">3</li>
+		<li id="li4">4</li>
+		<li id="li5"></li>
+	</ul>	
+
+
+
+	<script>
+		var util = {
+			// 返回当前节点的最后一个兄弟节点
+			lastSibling:function(node){
+				var tempNode = node.parentNode.lastChild;
+				if (!!tempNode && tempNode.nodeType !== 1) {
+					tempNode = this.previous(tempNode);
+				};
+				return tempNode;
+			},
+			// 返回当前节点的第一个兄弟节点
+			firstSibling:function(node){
+				var tempNode = node.parentNode.firstChild;
+				if (!!tempNode && tempNode.nodeType !== 1) {
+					tempNode = this.next(tempNode);
+				}
+				return tempNode;
+			},
+			// 返回当前节点的前一个节点
+			previous:function(node){
+				var tempNode = node.previousSibling;
+				while(!!tempNode && tempNode !== 1) {
+					tempNode = tempNode.previousSibling;
+				}
+				return tempNode;
+			},
+			// 返回当前节点的下一个节点
+			next:function(node){
+				var tempNode = node.nextSibling;
+				while(!!tempNode && tempNode !== 1){
+					tempNode = tempNode.nextSibling;
+				}
+				return tempNode;
+			},
+			// 获取到当前节点的所有子代文本节点
+			getText:function(node){
+				if (!node.hasChildNodes()) { return false};
+				var tempNode = node.firstChild;
+				var tempText = '';
+				while(!!tempNode){
+					if(tempNode.nodeType === 3){
+						tempText += tempNode.nodeValue;
+					}
+					tempNode = tempNode.nextSibling;	
+				}
+				return tempText;
+			},
+			//  当前节点加入文本节点
+			setText:function(node,text){
+				var tempText = document.createTextNode(text);
+				if (!node.hasChildNodes()) { 			
+					node.appendChild(tempText);
+					return;
+				}
+				var tempNode = node.lastChild;
+				while(tempNode.nextSibling){
+					tempNode = tempNode.nextSibling;
+				}
+				node.insertBefore(tempText,tempNode.nextSibling);
+			}
+		}
+
+		var li2 = document.getElementById('li2');
+		var li3 = document.getElementById('li3');
+		var li5 = document.getElementById('li5');
+	</script>
+</body>
+</html>

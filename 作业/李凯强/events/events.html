@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>events</title>
+  <style type="text/css">
+	*{
+  		border: 1px solid #ddd;
+  		padding: 20px;
+	}
+
+	div{
+	  background: grey;
+	}
+	ul{
+	  background: green;
+	}
+
+	li{
+	  background: blue;
+	}
+
+	a{
+	  background: white;
+	}
+  </style>
+</head>
+<body>
+<div id='c1'>
+  <ul>
+    <li><a href="#">点我</a></li>
+  </ul>
+</div>
+  <script type="text/javascript">
+  	var c1=document.getElementById('c1');
+  	if(c1.addEventListener){
+	  	c1.addEventListener('click',function(e){
+	  		alert(e.target.nodeName.toLowerCase()+'被点击了');
+	  		//alert(e.currentTarget.nodeName.toLowerCase()+'是监听元素');
+	  	});
+	 }
+	 else{
+	  	c1.attachEvent('onclick',function(){
+	  		alert(window.event.srcElement.nodeName.toLowerCase()+'被点击了');
+	  	});
+	 }
+  </script>
+</body>
+</html>

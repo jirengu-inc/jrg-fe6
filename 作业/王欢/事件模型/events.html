@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件模型</title>
+	<style>
+		*{
+		   border: 1px solid #ddd;
+		  padding: 20px;
+		}
+		div{
+		  background: #ddd;
+		  width:180px;
+		}
+		ul{
+		  background: #dff;
+		  list-style: none;
+		}
+		li{
+		  background: pink;
+		}
+		a{
+		  display: inline-block;
+		  background: #ddf;
+		  text-decoration:none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href="#"> 请点击</a></li>
+		</ul>
+	</div>
+
+
+	<script>
+		function getTag(tagName){
+			return document.getElementsByTagName(tagName)[0];
+		}
+		function con(event){
+			event = event|| window.event;//兼容IE
+		  	alert(event.target.tagName.toLowerCase()+'被点击了');
+		}
+		var div = getTag('div');
+		if (div.addEventListener) {
+			div.addEventListener('click',con)
+		}else{
+			//兼容IE
+			div.attachEvent('onclick',con);
+		}
+		
+
+	</script>
+</body>
+</html>

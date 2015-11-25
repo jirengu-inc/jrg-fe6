@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+	#d1{
+	  width:200px;
+	  height:200px;
+	  background:red;
+	  padding:20px;
+	}
+	#u1{
+	  width:100px;
+	  height:100px;
+	  background:green;
+	  padding:20px;
+	}
+	#l1{
+	  background:yellow;
+	}
+	#a1{
+	  background:blue;
+	}
+
+  </style>
+</head>
+<body>
+  <div id="d1">
+    <ul id="u1">
+      <li id="l1">
+        <a href="javascript:void(0)"  id="a1">点我</a>
+      </li>
+    </ul>
+  </div>
+<script>
+	var listener = function(){
+	    console.log(this.id)
+	}
+	if(window.attachEvent){
+		document.getElementById("d1").attachEvent("onclick",listener)
+		document.getElementById("u1").attachEvent("onclick",listener)
+		document.getElementById("l1").attachEvent("onclick",listener)
+		document.getElementById("a1").attachEvent("onclick",listener)
+	}else if(window.addEventListener){
+	    document.getElementById("d1").addEventListener("click",listener)
+		document.getElementById("u1").addEventListener("click",listener)
+		document.getElementById("l1").addEventListener("click",listener)
+		document.getElementById("a1").addEventListener("click",listener)
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)file:///Users/logbird/Desktop/jrg-fe6/%E4%BD%9C%E4%B8%9A/%E7%8E%8B%E6%AC%A2/%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/events.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<title>事件模型</title>
+	<style>
+		*{
+			border: 1px solid #ddd;
+			padding: 20px;
+		}
+		div{
+			background: rgb(211, 224, 222);;
+		}
+		ul{
+			background: green;
+			list-style-type: none;
+		}
+		li{
+			background: yellow;
+		}
+		a{
+			background: pink;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href=""> 请点击</a></li>
+		</ul>
+	</div>
+
+
+	<script>
+		function con(){
+			console.log('xxxxx');
+		}
+
+		var a = document.getElementsByTagName('a')[0];
+		var li = document.getElementsByTagName('li')[0];
+		var ul = document.getElementsByTagName('ul')[0];
+		var div = document.getElementsByTagName('div')[0];
+
+		a.addEventListener('click',con)
+		li.addEventListener('click',con)
+		ul.addEventListener('click',con)
+		div.addEventListener('click',con)
+	</script>
+
+</body></html>
