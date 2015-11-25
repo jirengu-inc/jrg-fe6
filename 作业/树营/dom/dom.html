@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <ul id="main">
+        <li id="one">列表一</li>
+        <li id="two"><span>list2</span>列表二</li>
+        <li id="three"></li>
+        <li id="four">列表四</li>
+    </ul>
+    <script>
+        var cj = {};
+        cj.dom = (function(){
+            return {
+                getPrev: function ( node ) {
+                    if ( !node || !node.previousSibling ) return false;
+                    var tempNode = node.previousSibling;
+                    while ( !!tempNode && tempNode.nodeType !== 1 ) {
+                        tempNode = tempNode.previousSibling;
+                    }
+                    return tempNode;
+                },
+                getNext: function ( node ) {
+                    if ( !node || !node.nextSibling ) return false;
+                    var tempNode = node.nextSibling;
+                    while ( !!tempNode && tempNode.nodeType !== 1 ) {
+                        tempNode = tempNode.nextSibling;
+                    }
+                    return tempNode;
+                },
+                getFirst: function ( node ) {
+                    if ( !node || !node.firstChild ) return false;
+                    var tempNode = node.firstChild;
+                    if ( !!tempNode && tempNode.nodeType !== 1 ) {
+                        tempNode = this.getNext( tempNode );
+                    }
+                    return tempNode;       
+                },
+                getLast: function ( node ) {
+                    if ( !node || !node.lastChild ) return false;
+                    var tempNode = node.lastChild;
+                    if ( !!tempNode && tempNode.nodeType !== 1 ) {
+                        tempNode = this.getPrev( tempNode );
+                    }
+                    return tempNode;
+                },
+                getText: function ( node ) {
+                    if ( !node || !node.hasChildNodes() ) return false;
+                    var tempNode = node.firstChild;
+                    while ( !!tempNode && ( tempNode.nodeType != 3 || /^\s+$/.test(tempNode.nodeValue) ) ) {
+                        tempNode = tempNode.nextSibling;
+                    }
+                    return tempNode.nodeValue || false;
+                },
+                setText: function ( node, text ) {
+                    if ( !node || !node.hasChildNodes() ) return false;
+                    var tempNode = node.firstChild;
+                    // 不是文本或者是空格
+                    while( !!tempNode && ( tempNode.nodeType != 3 || /^\s+$/.test(tempNode.nodeValue) ) ) {
+                        tempNode = tempNode.nextSibling;
+                    }
+                    if ( !!tempNode ) {
+                        return tempNode.nodeValue = text;
+                    } else {
+                        return false;
+                    }
+                }
+
+            }
+        })();
+
+
+    </script>
+    <script>
+        var oUl = document.getElementById('main');
+        var oLi2 = document.getElementById('two');
+        var oLi3 = document.getElementById('three');
+        var oBtn = document.getElementById('btn');
+
+        console.log( cj.dom.getFirst(oUl) );
+        console.log( cj.dom.getLast(oUl) );
+        console.log( cj.dom.getPrev(oLi2) );
+        console.log( cj.dom.getNext(oLi2) );
+        console.log( cj.dom.getText(oLi2) );
+        cj.dom.setText( oLi3, '这个是JS载入的内容' );
+
+
+    </script>
+</body>
+</html>

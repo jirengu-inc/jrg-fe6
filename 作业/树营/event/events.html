@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+* { 
+    margin: 0; 
+    padding: 0;
+    border: 1px solid #eee;
+    padding: 50px;
+}
+
+div {
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+
+ul {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+}
+
+li {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+</style>
+<script>
+window.onload = function() {
+    var oDiv = document.getElementsByTagName('div')[0];
+    // var oUl = document.getElementsByTagName('ul')[0];
+    // var oLi = document.getElementsByTagName('li')[0];
+    // var oA = document.getElementsByTagName('a')[0];
+
+    function fn1 (e) {
+        var e = e || window.event;
+        e.target = window.event?e.srcElement:e.target;
+
+        console.log('你点击了' + e.target.nodeName.toLowerCase() );
+
+
+        if( e && e.stopPropagation) {
+            e.stopPropagation();
+        } else if(window.event){
+            e.cancelBubble = true;
+        }
+   
+
+    }
+
+    // if(addEventListener){
+    //     oDiv.addEventListener('click', fn1, false);
+    //     oUl.addEventListener('click', fn1, false);
+    //     oLi.addEventListener('click', fn1, false);
+    //     oA.addEventListener('click', fn1, false);
+    // } else {
+    //     oDiv.attachEvent('onclick', fn1);
+    //     oUl.attachEvent('onclick', fn1);
+    //     oLi.attachEvent('onclick', fn1);
+    //     oA.attachEvent('onclick', fn1);
+    // }
+
+    if (oDiv.addEventListener) {
+        oDiv.addEventListener('click', fn1, false);
+    } else {
+        oDiv.attachEvent('onclick', fn1);
+    }
+
+ }
+</script>
+</head>
+
+<body>
+    <p>console.log();</p>
+    <div class="c1">
+        <ul>
+            <li><a href="#">点我</a></li>
+        </ul>
+    </div>
+</body>
+</html>
