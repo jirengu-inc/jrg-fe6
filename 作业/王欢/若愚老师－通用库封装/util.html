@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>util</title>
+	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	
+	<script>
+		var Util = {
+			isNumber:function(el){
+				return typeof el === 'number';
+			},
+			isString:function(el){
+				return typeof el === 'string';
+			},
+			isBoolean:function(el){
+				return typeof el === 'boolean';
+			},
+			isFunction:function(){
+				return typeof el === 'function';
+			},
+			isArray:function(el){
+				if(!Array.isArray){
+					return Object.prototype.toString.call(el).toLowerCase() === '[object array]';
+				}else{
+					return Array.isArray(el)
+				}
+			},
+			isJson:function(el){
+				return typeof el == "object" && Object.prototype.toString.call(el).toLowerCase() == "[object object]" && !el.length; 
+			},
+			isSimpleType: function(el){
+    			return this.isNumber(el) || this.isString(el) || this.isBoolean(el);
+  			},
+  			//克隆json
+  			cloneJson:function(json){
+  				if (!this.isJson(json)) { return {}};
+  				var newJson = {}
+  				for(var key in json){
+  					var value = json[key];
+  					if (this.isSimpleType(value)) {
+  						newJson[key] = value;
+  					}else if (this.isArray(value)) {
+  						newJson[key] = this.cloneArray(value);
+  					}else if (this.isJson(json[key])) {
+  						newJson[key] = this.cloneJson(value);
+  					};
+  				}
+  				return newJson;
+  			},
+  			//克隆数组
+  			cloneArray:function(array){
+  				if (!this.isArray(array)) { return []};
+  				var newArray = [];
+  				for (var i = 0; i < array.length; i++) {
+  					var value = array[i];
+
+  					if( this.isSimpleType( value ) ){
+				        newArray.push(value);
+				    }else if( this.isJson(value) ){
+				        newArray.push( this.cloneJson( value ) );
+				    }else if( this.isArray(value) ){
+				        newArray.push( this.cloneArray( value ) );
+				    } 
+  				};
+  				return newArray;
+  			},
+  			//深克隆
+  			deepClone:function(obj){
+  				var newObj;
+  				if (this.isArray(obj)) {
+  					newObj = this.cloneArray(obj);
+  				}else if (this.isJson(obj)) {
+  					newObj = this.cloneJson(obj);
+  				};
+  				return newObj;
+  			},
+  			//对象遍历输出
+  			objOutput:function(obj){
+  				if (this.isSimpleType(json)) {return false};
+  				if (this.isArray(obj)) {
+  					for (var i = 0; i < obj.length; i++) {
+  						$("p").append(obj[i]);
+  					};
+  				};
+  			},
+  			//对象转化为url拼接
+  			jsonToUrl:function(json){
+  				if (this.isSimpleType(json)) { return false};
+  			}
+  			
+		}
+
+
+		var obj = {age: 100,name:'wanghuan'};
+
+		var obj1 = {
+		  age: 100,
+		  name: 'hunger',
+		  friends: [
+		    {
+		      name: 'xiaoming',
+		      age: 10
+		    },
+		    {
+		      name: 'xiaowang',
+		      age: 20
+		    }
+		  ],
+		  car: {
+		    color: 'white'
+		  }
+		  
+		};
+
+		var obj4 = [1,2,3,4,5,6];
+	</script>
+</body>
+</html>
