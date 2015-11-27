@@ -3,10 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>util</title>
-	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-	
+	<p></p>
 	<script>
 		var Util = {
 			isNumber:function(el){
@@ -79,11 +78,30 @@
   			},
   			//对象遍历输出
   			objOutput:function(obj){
-  				if (this.isSimpleType(json)) {return false};
+  				if (this.isSimpleType(obj)) {return false};
+  				var getEle = document.getElementsByTagName('p')[0];
   				if (this.isArray(obj)) {
   					for (var i = 0; i < obj.length; i++) {
-  						$("p").append(obj[i]);
+  						var value = obj[i];
+  						if (this.isSimpleType(value)) {
+  							getEle.innerHTML += (value+'<br>');
+  						}else {
+  							this.objOutput(value);
+  						};
+  							
   					};
+  				}else if (this.isJson(obj)) {
+  					for(var key in obj){
+//   						console.log(key+":"+obj[key]);
+  						if (this.isSimpleType(obj[key])) {
+  							var content = key +":"+obj[key]+'<br>';
+  							console.log(content);
+  							getEle.innerHTML += content;
+  						}else{
+  							getEle.innerHTML += key+'<br>';
+  							this.objOutput(value);
+  						}
+  					}
   				};
   			},
   			//对象转化为url拼接
@@ -116,6 +134,8 @@
 		};
 
 		var obj4 = [1,2,3,4,5,6];
+		var obj5 = [1,2,[3,3,3],4,5,[6,6,6,6,6,6],7,8]
+		Util.objOutput(obj1);
 	</script>
 </body>
 </html>
