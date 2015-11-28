@@ -1,0 +1,13 @@
+.slides{
+	width: 310px;
+	height: 209px;
+	overflow: hidden;
+	position: relative;
+}
+.slides ul{
+	height: 209px;
+	position: absolute;
+}
+.slides ul>li{
+	float: left;
+}
