@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery插件注意事项</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+    /*
+    // 写插件
+    $.goToTop = function () {
+        $('body').scrollTop(0);
+    };
+
+    // 用插件
+    $('button').click(function(){
+        $.goToTop();
+    });
+
+
+    1. jq插件的文件名推荐命名为 jquery.xx.js, 以免和其他js库插件混淆
+    2. 所有对象方法都应当附加到jQuery.fn对象上
+    3. 在插件内部, this指向的是当前通过选择器获取的jQuery对象, 而不是一般的方法那样, 内部的this指向DOM元素
+    4. 可以通过this.each来遍历所有元素
+    5. 所有的方法或者函数插件, 都应当以分号结尾, 否则压缩的时候可能出问题.
+    6. 插件应该返回一个jQuery对象, 以保证插件的可链式操作,
+    7. 避免在插件内部使用$作为jQuery对象的别名. 当然,可以利用闭包来回避,使得插件内部使用$.
+    */
+
+
+    // 写插件
+    ;(function($){
+        // 这里编写jQuery插件代码
+    })(jQuery);
+
+
+
+    ;(function($){
+        // 这里编写jQuery插件代码
+        $.fn.extend({
+            'color': function(value){/* 插件代码 */},
+            'border': function(value){/* 插件代码 */},
+            'bgc': function(value){/* 插件代码 */}
+        });
+    })(jQuery);
+
+
+
+    </script>
+</body>
+</html>
