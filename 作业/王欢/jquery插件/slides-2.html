@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+      }
+      .clearfix:after{
+        display: block;
+        content:'';
+        clear:both;
+      }
+      ul{
+        list-style:none;
+        width:1200px;
+        position:relative;
+        left:0;
+      }
+      ul>li{
+        float:left;
+      }
+      .slides{
+        width:300px;
+        height:200px;
+        /* border:2px solid block; */
+        overflow: hidden;
+        position:relative;
+        margin-bottom:20px;
+      }
+      .arrow{
+        width:30px;
+        height:30px;
+        background:#4e443c;
+        color:#fff;
+        display:block;
+        position:absolute;
+        top:50%;
+        margin-top:-15px;
+        text-decoration:none;
+        text-align:center;
+        line-height:30px;
+        border-radius:30px;
+        box-shadow: 0 0 2px #999;
+        opacity:0.8
+      }
+      .prev{
+        left:5px;
+      }
+      .next{
+        right:5px;
+      }
+  </style>
+</head>
+<body>
+<div class="slides">
+  <ul class="clearfix">
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=6649aa&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=333366&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=ab99aa&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=ff99bb&fg=fff" alt=""></a></li>
+  </ul>
+  <a href="#" class="prev arrow"><</a>
+  <a href="#" class="next arrow">></a>
+</div>
+  <div class="slides">
+  <ul class="clearfix">
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=6649aa&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=333366&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=ab99aa&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=300x200&bg=ff99bb&fg=fff" alt=""></a></li>
+  </ul>
+  <a href="#" class="prev arrow"><</a>
+  <a href="#" class="next arrow">></a>
+</div>
+
+<script>
+  
+  $.fn.solides = function(){
+  $(this).each(function(){
+    var $ul = $(this).find('ul');
+    var imgWidth = $ul.children('li').width();
+    $(this).find('.next').on('click',function(){
+      $ul.animate({'left':-imgWidth},function(){
+        $ul.append($ul.children('li').first());
+        $ul.css('left',0)
+      })
+    })
+    $(this).find('.prev').on('click',function(){
+      $ul.prepend($ul.children('li').last())
+      $ul.css('left',-imgWidth)
+      $ul.animate({'left':0});
+    })
+  });
+}
+$('.slides').solides();
+</script>
+</body>
+</html>
