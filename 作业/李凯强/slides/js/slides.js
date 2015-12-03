@@ -39,7 +39,7 @@ $.fn.slides=function(isCycle,autoPlay){
 			if(autoPlay){
 				setTimeout(function(){
 					currentIndex++;
-					if(currentIndex==4)
+					if(currentIndex==length)
 						currentIndex=0;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
@@ -52,7 +52,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				btnStatus();
 				$leftBtn.on('click',function(e){
 					currentIndex++;
-					if(currentIndex==4)
+					if(currentIndex==length)
 						currentIndex=0;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
@@ -62,7 +62,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				$rightBtn.on('click',function(e){
 					currentIndex--;
 					if(currentIndex==-1)
-						currentIndex=3;
+						currentIndex=length-1;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
 					});
@@ -74,7 +74,7 @@ $.fn.slides=function(isCycle,autoPlay){
 			if(autoPlay){
 				setTimeout(function(){
 					currentIndex++;
-					if(currentIndex==4) currentIndex=0;
+					if(currentIndex==length) currentIndex=0;
 					$currentUl.animate({
 						'left': -liWidth
 					},function(){
@@ -89,7 +89,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				btnStatus();
 				$leftBtn.on('click',function(e){
 					currentIndex++;
-					if(currentIndex==4) currentIndex=0;
+					if(currentIndex==length) currentIndex=0;
 					$currentUl.animate({
 						'left': -liWidth
 					},function(){
@@ -100,7 +100,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				})
 				$rightBtn.on('click',function(e){
 					currentIndex--;
-					if(currentIndex==-1) currentIndex=3;
+					if(currentIndex==-1) currentIndex=length-1;
 					$currentUl.css({
 						'left': 0-liWidth
 					});
