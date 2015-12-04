@@ -5,11 +5,18 @@
     <title>Document</title>
 </head>
 <body>
-Hello, {{user}}!
+请提交你的报名信息
 
     <form action="/" method="post">
-        <input type="text" name="user">
-        <button type="submit">提交</button>
+        <div class="row">
+            姓名：<input type="text" name="name">
+        </div>
+        <div class="row">
+            手机：<input type="text" name="phone">
+        </div>
+        <div class="row">
+            <button type="submit">提交</button>
+        </div>
     </form>
 </body>
 </html>

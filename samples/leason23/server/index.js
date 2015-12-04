@@ -1,7 +1,6 @@
 var koa = require('koa')
 var path = require('path')
 var views = require('koa-views')
-var config = require('config')
 var serve = require('koa-static')
 var bodyParser = require('koa-body-parser')
 

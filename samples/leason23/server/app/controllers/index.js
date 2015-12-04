@@ -7,9 +7,14 @@ module.exports = {
     },
 
     post: function *(next) {
-        var user = this.request.body.user
+        var name = this.request.body.name
+        var phone = this.request.body.phone
+        // 提交到数据库...
+        // mysql ...
+
         yield this.render('post.hbs', {
-            user: user
+            name: name,
+            phone: phone
         });
         yield next;
     }
