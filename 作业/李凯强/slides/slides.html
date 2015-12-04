@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>slides</title>
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/slides.css">
 	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./js/slides.js"></script>
 </head>
@@ -28,10 +28,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-		$('.img-ct1').slides(true,true);//循环自动播放
-		//$('.img-ct1').slides(true,false);//循环手动播放
-		//$('.img-ct1').slides(false,true);//顺序自动播放
-		//$('.img-ct1').slides(false,false);//顺序手动播放
+		$('.img-ct1').slides({loop:true,autoplay:false});
 	</script>
 </body>
 </html>
