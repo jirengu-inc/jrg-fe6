@@ -1,34 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>slides</title>
-	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/slides.css">
-	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="./js/slides.js"></script>
+	<title>Slides Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="slides">
-		<ul class="img-ct1 clearfix">
+	<div class="wrap">
+		<ul>
 			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg" height="206" width="310"></a></li>
 			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg" height="206" width="310"></a></li>
 			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg" height="206" width="310"></a></li>
 			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg" height="206" width="310"></a></li>
 		</ul>
-		<a href="javascript:;" class="leftBtn"><</a>
-		<a href="javascript:;" class="rightBtn">></a>
-		<div class="tab-wrap">
-			<div class="tab">
-				<a href="javascript:;"></a>
-				<a href="javascript:;"></a>
-				<a href="javascript:;"></a>
-				<a href="javascript:;"></a>
-			</div>
-		</div>
 	</div>
-	<script type="text/javascript">
-		$('.img-ct1').slides({loop:true,autoplay:false});
-	</script>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="slides-app.js"></script>
 </body>
 </html>

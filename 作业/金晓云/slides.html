@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+  <meta charset="utf-8">
+  <title>slides.html</title>
+  <style>
+		*{padding: 0px;margin:0px;}
+		li{list-style:none}
+		a{text-decoration:none;}
+		img{border:none; vertical-align:top;}
+		.slides {width: 310px; overflow: hidden;height: 206px;}
+		.slides > ul {position: relative;left:0; top:0;}
+		.img-ct:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.slides > ul > li{float: left;}
+
+
+  </style>
+</head>
+<body>
+<div id="c1" class="slides">
+			<ul class="img-ct">
+				<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg" height="206" width="310"></a></li>
+				<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg" height="206" width="310"></a></li>
+				<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg" height="206" width="310"></a></li>
+				<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg" height="206" width="310"></a></li>
+			</ul>
+		</div>
+<script>
+	var n=0;
+	$.fn.slides=function(){
+		var currentIndex=0;
+		var $ul=this;
+		$ul.each(function(){
+			var $currentUl=$(this);
+			var imageCount=$currentUl.children("li").length;
+			var imageWidth=$currentUl.children("li").first().width();
+			$currentUl.width(imageCount*imageWidth)
+
+			setTimeout(function step(){
+				currentIndex++;
+
+				if(currentIndex<imageCount){$currentUl.animate({left:currentIndex*(-imageWidth)});
+
+
+				setTimeout(step,2000)
+			}
+
+		else{
+			currentIndex=-1;
+			step();
+
+		}
+				
+				//$currentUl.children("li").append($currentUl)
+				
+			},2000)
+		})
+	}
+	$("ul").slides()
+
+</script>
+</body>
+</html>
