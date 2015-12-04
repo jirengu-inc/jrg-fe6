@@ -1,4 +1,4 @@
-$.fn.slides=function(isCycle,autoPlay){
+$.fn.slides=function(obj){
 	var $ul=this;
 	$ul.each(function(){
 		var currentIndex=0;
@@ -35,8 +35,8 @@ $.fn.slides=function(isCycle,autoPlay){
 			})
 		}
 		$tab.first().addClass('active');
-		if(!isCycle){
-			if(autoPlay){
+		if(!obj.loop){
+			if(obj.autoplay){
 				setTimeout(function(){
 					currentIndex++;
 					if(currentIndex==length)
@@ -71,7 +71,7 @@ $.fn.slides=function(isCycle,autoPlay){
 			}
 		}
 		else{
-			if(autoPlay){
+			if(obj.autoplay){
 				setTimeout(function(){
 					currentIndex++;
 					if(currentIndex==length) currentIndex=0;
