@@ -11,3 +11,47 @@
 .slides ul>li{
 	float: left;
 }
+.slides .leftBtn,.slides .rightBtn{
+	position: absolute;
+	display: inline-block;
+	width: 28px;
+	height: 62px;
+	font-size: 15px;
+	color: #eee;
+	line-height: 62px;
+	text-align: center;
+	background-color: #bdbdbd;
+	font-weight: bold;
+	display: none;
+}
+.slides .leftBtn{
+	left: 0;
+	top: 50%;
+	margin-top: -31px;
+}
+.slides .rightBtn{
+	right: 0;
+	top: 50%;
+	margin-top: -31px;
+}
+.slides .tab-wrap{
+	position: absolute;
+	width: 100%;
+	bottom:10px;
+	text-align: center;
+
+}
+.slides .tab-wrap .tab{
+	display: inline-block;
+}
+.slides .tab-wrap .tab a{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #3e3e3e;
+	border-radius: 5px;
+	font-size: 10px;
+}
+.slides .tab-wrap .tab .active{
+	background-color: #b61b1f;
+}

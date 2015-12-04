@@ -8,6 +8,7 @@
 		*{
 			padding: 0;
 			margin: 0;
+			"font-family: "Microsoft YaHei";
 		}
 		img{
 			border: 0;
@@ -21,6 +22,7 @@
 			left: 0;
 			width: 400px;
 			height: 300px;
+			text-align: center;
 		}
 		.jrg-slides ul{
 			position: relative;
@@ -44,12 +46,35 @@
 			text-align: center;
 			color: #fff;
 			cursor: pointer;
+			display: none;
 		}
 		.jrg-prev{
 			left: 10px;
 		}
 		.jrg-next{
 			right: 10px;
+		}
+		.mini-bar{
+			position: absolute;
+			bottom: 10px;
+			margin:0 auto;
+			left: 50%;
+		}
+		.mini-bar a{
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			line-height: 15px;
+			font-size: 12px;
+			text-decoration: none;
+			color: #fff;
+			margin:0 5px;
+			background: #666;
+			border-radius: 7px;
+			text-align: center;
+		}
+		.curr-img{
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -64,43 +89,93 @@
 		</ul>
 		<div class="jrg-prev arrow"><</div>
 		<div class="jrg-next arrow">></div>
+		<div class="mini-bar"></div>
 	</div>
 	<script type="text/javascript">
-		$.fn.jrgSlides = function(){
+		$.fn.jrgSlides = function(para){
+			para = $.extend({
+				autoSlide:true
+			},para);
 			$.each($(this),function(i,o){
 				var $slide = $(o);
 				var $ul = $slide.find('ul');
 				var $li = $slide.find('li');
+				var $minibar = $('.mini-bar');
 				var itemWidth = $li.width();
 				var itemCount = $li.length;
-				$ul.width(itemWidth*itemCount)
+				$ul.width(itemWidth*itemCount);
+				for(var _i = 0;_i<itemCount;_i++){
+					$('<a href="javascript:;">'+(_i+1)+'</a>').appendTo($minibar);
+				}
+				$minibar.css('marginLeft',0-$minibar.width()/2);
+				var $minibarButton = $('.mini-bar a');
+				var currImg = 0;
+				$minibarButton.eq(currImg).addClass('curr-img');
+				$minibar.on('click','a',function(){
+					var to = $(this).index();
+					var from = currImg;
+					step(from,to);
+				})
 				$slide.on('click','.jrg-next',function(){
-					if($ul.is(":animated")){
-						return;
-					}
-					$li = $slide.find('li');
-					$ul.animate({
-						left:0-itemWidth
-					},1000,function(){
-						$ul.css("left",0);
-						$ul.append($li.first());
-					})
+					step(currImg,currImg+1);
 				})
 				$slide.on('click','.jrg-prev',function(){
+					step(currImg,currImg-1);
+				})
+				function step(from,to){
 					if($ul.is(":animated")){
 						return;
 					}
-					$li = $slide.find('li');
-					$ul.css("left",0-itemWidth);
-					$ul.prepend($li.last());
-					$ul.animate({
-						left:0
-					},1000)
-				})
+					var count,$moveli;
+					if (from === to) {
+						return;
+					}else if (from<to) {
+						count = to - from;
+						$moveli = $slide.find('li:lt('+count+')');
+						$ul.animate({
+							left:(0-itemWidth)*count
+						},1000,function(){
+							$ul.css("left",0);
+							$ul.append($moveli);
+							currImg = (to%itemCount);
+							$minibarButton.eq(currImg).addClass('curr-img')
+							$minibarButton.eq(from).removeClass('curr-img');
+						})
+					}else{
+						count = from - to;
+						currImg = (to===-1?itemCount-1:to);
+						$moveli = $slide.find('li:gt('+(itemCount-count-1)+')');
+						$ul.prepend($moveli);
+						$ul.css("left",(0-itemWidth)*count);
+						$ul.animate({
+							left:0
+						},1000,function(){
+							$minibarButton.eq(currImg).addClass('curr-img')
+							$minibarButton.eq(from).removeClass('curr-img');
+						})
+					};
+				}
+				if(para.autoSlide){
+					var interval = setIntervalFun();
+				}
+				$slide.hover(function(){
+					if(para.autoSlide){clearInterval(interval);}
+					$('.arrow').show();
+				},function(){
+					if(para.autoSlide){interval = setIntervalFun();}
+					$('.arrow').hide();
+				});
+				function setIntervalFun(){
+					return setInterval(function(){
+						$('.jrg-next').click();
+					},3000);
+				}
+				
 			});
+			
 		}
 		$(function(){
-			$('.jrg-slides').jrgSlides();
+			$('.jrg-slides').jrgSlides({autoSlide:true});
 		});
 	</script>
 </body>

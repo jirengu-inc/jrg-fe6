@@ -1,0 +1,45 @@
+@charset="UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+.slides {
+    width:310px;
+    height: 206px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides > ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slides > ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.slides > ul > li {
+    display: block;
+    float: left;
+    /*
+    width: 310px;
+    height: 206px;
+    */
+}
+
+.slides > ul > li > img{
+    display: block;
+    width: 310px;
+    height: 206px;
+}
+
