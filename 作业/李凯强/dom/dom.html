@@ -23,11 +23,11 @@
 	lj.dom=(function(){
 		return {
 			firstSibling: function(node){
-				var tempNode=node.parentElement.firstElementChild;
+				var tempNode=node.parentElement.children[0];
 				return tempNode;
 			},
 			lastSibling: function(node){
-				var tempNode=node.parentElement.lastElementChild;
+				var tempNode=node.parentElement.children[node.parentElement.children.length-1];
 				return tempNode;
 			},
 			previous: function(node){

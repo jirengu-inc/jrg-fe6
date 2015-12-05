@@ -8,9 +8,20 @@ $.fn.slides=function(obj){
 		$currentUl.width(liWidth*length);
 		var $tab=$currentUl.closest('.slides').find('.tab').children();
 		var $slides=$currentUl.closest('.slides');
-		var $leftBtn=$currentUl.closest('.slides').find('.leftBtn');
-		var $rightBtn=$currentUl.closest('.slides').find('.rightBtn');
+		var $leftBtn;
+		var $rightBtn;
 		function btnStatus() {
+			var leftBtn=document.createElement('a');
+			var rightBtn=document.createElement('a');
+			leftBtn.href='javascript:;';
+			rightBtn.href='javascript:;';
+			leftBtn.className='leftBtn';
+			rightBtn.className='rightBtn';
+			leftBtn.textContent='<';
+			rightBtn.textContent='>';
+			$leftBtn=$(leftBtn);
+			$rightBtn=$(rightBtn);
+			$slides.append($leftBtn,$rightBtn);
 			$slides.on('mouseover', function(e) {
 				$(this).find('.leftBtn,.rightBtn').css({
 					'display': 'inline-block',
