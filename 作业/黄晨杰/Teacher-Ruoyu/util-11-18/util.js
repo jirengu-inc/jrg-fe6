@@ -39,12 +39,12 @@ var Util = (function(){
 
 	function isFunction(ele){
 		// 老版本 Chrome7 之前和 Firefox5 之前正则表达式也别识别成 function
-		return Object.prototype.toString.call(ele) === "[Object Function]" ? true : false;
+		return Object.prototype.toString.call(ele) === "[object Function]" ? true : false;
 		// return typeof ele === "function" ? true : false;
 	}
 
 	function isDate(ele){
-		return Object.prototype.toString.call(ele) === "[Object Date]" ? true : false;
+		return Object.prototype.toString.call(ele) === "[object Date]" ? true : false;
 	}
 
 	// JSON对象操作
@@ -99,6 +99,22 @@ var Util = (function(){
 		return _src;
 	}
 
+	function isEmptyJSON(ele){
+		if(!isObject(ele)){
+			return false;
+		}
+		if(Object.keys){
+			// 高版本浏览器可以支持这种写法
+			return Object.keys(obj).length > 0;
+		}
+		for(var prop in ele){
+			if(ele.hasOwnProperty(prop)){
+				return false;
+			}
+		}
+		return true;
+	}
+
 	var object1 = {
 	  apple: 0,
 	  banana: { weight: 52, price: 100 },
@@ -122,7 +138,7 @@ var Util = (function(){
 	  return "{ " +  arr.join( ", " ) + " }";
 	};
  
-$( "#log" ).append( printObj( object1 ) );
+	$( "#log" ).append( printObj( object1 ) );
 
 	function JSONParseUrl(ele){
 		var str = null;
