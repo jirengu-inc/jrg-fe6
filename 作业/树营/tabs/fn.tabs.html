@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$.fn.tabs</title>
+</head>
+<body>
+    
+
+
+
+    <script src="./scripts/jquery-1.11.2.js"></script>
+
+    <script>
+
+        // TODO
+
+        $.fn.tabs = function (_options) {
+            var defaultOptions = {
+                activeClassName: 'active',
+                tabsSelector: '.tabs',
+                tabButtonSelector: '.tab-button',
+                tabContentSelector: '.tab-content'
+            }
+            var options = $.extend({}, defaultOptions, _options)
+
+            var $tabs = this // jQuery
+            $tabs.each(function (index, dom) {
+                var $oneTab = $(dom)
+                $oneTab.on('click', options.tabButtonSelector + ' > li', function (e) {
+                    var $li = $(e.currentTarget).addClass(options.activeClassName)
+
+                    $li.siblings().removeClass(options.activeClassName)
+
+                    var index = $li.index()
+                    $li.closest(options.tabsSelector).find(options.tabContentSelector).children('li')
+                        .eq(index).addClass(options.activeClassName).siblings().removeClass(options.activeClassName)
+                })
+            })
+        }
+
+        $('.tabs').tabs()
+
+    </script>
+    <div class="tabs">
+        <ol class="tab-button">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <ol class="tab-content">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+</body>
+</html>
