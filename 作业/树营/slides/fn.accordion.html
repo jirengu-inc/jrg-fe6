@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴插件</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+    // $.fn.accordion
+
+    /*
+    // 版本1
+    $.fn.accordion = function(object){
+        var from = object.from;
+        var to = object.to;
+        this.on('click', 'li', function(){
+            // this // li
+            var $li = $(this);
+            if($li.height() === from){
+                $li.height(to).siblings().height(from);
+            } else {
+                $li.height(from).siblings().height(to);
+            }
+        });
+    };
+
+    $('ul').accordion({
+        from: 22,
+        to: 299
+    });
+    */
+
+    /*
+    // 版本2
+    $.fn.accordion = function(object){
+        var to = object.to;
+        this.on('click', 'li', function(){
+            // this // li
+            var $li = $(this);
+            if($li.hasClass(to)){
+                $li.removeClass(to);
+            }else{
+                $li.addClass(to).siblings().removeClass(to);
+            }
+        });
+    };
+
+    $('ul').accordion({
+        to: 'open'
+    });
+    */
+
+    // 版本2 优化
+    $.fn.accordion = function(object){
+        var to = object.to;
+        var selector = object.selector;
+
+        this.on('click', selector, function(){
+            // this // selector
+            var $node = $(this);
+            if($node.hasClass(to)){
+                $node.removeClass(to);
+            }else{
+                $node.addClass(to).siblings().removeClass(to);
+            }
+        });
+    };
+
+    $('ul').accordion({
+        to: 'open',
+        selector: '[name = item]'
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>手风琴 菜单</title>
+  <style>
+	*{
+	  margin:0;
+	  padding:0;
+	}
+	body{
+	  margin-top:20px;
+	}
+	ul{
+	  list-style:none;
+	  border:1px solid #ddd;
+	  border-top:none;
+	  width:145px;
+	  padding-left:10px;
+	  display:none;
+	  border-radius: 5px;
+	}
+	ul>li{
+		height: 20px;
+		line-height: 20px;
+	}
+	.content{
+		width: 300px;
+		margin: 0 auto;
+	}
+	.sub{
+	  width:250px;
+	  height: 30px;
+	  line-height: 30px;
+	  border:1px solid #ddd;
+	  border-top:none;
+	  border-radius: 5px;
+	  padding-left: 5px;
+	  cursor: pointer;
+	}
+	.sub:first-child{
+	  border-top:1px solid #ddd;
+	}
+  </style>
+</head>
+<body>
+	<div class="content">
+		  <div class="sub">新闻中心</div>
+		  <ul>
+		    <li>新闻中心1</li>
+		    <li>新闻中心2</li>
+		    <li>新闻中心3</li>
+		    <li>新闻中心4</li>
+		  </ul>
+		  <div class="sub">关于我们</div>
+		  <ul>
+		    <li>关于我们1</li>
+		    <li>关于我们2</li>
+		    <li>关于我们3</li>
+		    <li>关于我们4</li>
+		  </ul>
+		  <div class="sub">业务系统</div>
+		  <ul>
+		    <li>业务系统1</li>
+		    <li>业务系统2</li>
+		    <li>业务系统3</li>
+		    <li>业务系统4</li>
+		  </ul>
+		  <div class="sub">招商加盟</div>
+		  <ul>
+		    <li>招商加盟1</li>
+		    <li>招商加盟2</li>
+		    <li>招商加盟3</li>
+		    <li>招商加盟4</li>
+		  </ul>
+	</div>
+  
+
+  <script>
+  $.fn.accordion = function(){
+	  $(this).on('click',function(){
+	    $(this).next('ul').slideToggle().siblings('ul').slideUp();
+	  })
+	}
+	$('.sub').accordion()
+  </script>
+</body>
+</html>

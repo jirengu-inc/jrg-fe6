@@ -1,4 +1,4 @@
-$.fn.slides=function(isCycle,autoPlay){
+$.fn.slides=function(obj){
 	var $ul=this;
 	$ul.each(function(){
 		var currentIndex=0;
@@ -8,9 +8,20 @@ $.fn.slides=function(isCycle,autoPlay){
 		$currentUl.width(liWidth*length);
 		var $tab=$currentUl.closest('.slides').find('.tab').children();
 		var $slides=$currentUl.closest('.slides');
-		var $leftBtn=$currentUl.closest('.slides').find('.leftBtn');
-		var $rightBtn=$currentUl.closest('.slides').find('.rightBtn');
+		var $leftBtn;
+		var $rightBtn;
 		function btnStatus() {
+			var leftBtn=document.createElement('a');
+			var rightBtn=document.createElement('a');
+			leftBtn.href='javascript:;';
+			rightBtn.href='javascript:;';
+			leftBtn.className='leftBtn';
+			rightBtn.className='rightBtn';
+			leftBtn.textContent='<';
+			rightBtn.textContent='>';
+			$leftBtn=$(leftBtn);
+			$rightBtn=$(rightBtn);
+			$slides.append($leftBtn,$rightBtn);
 			$slides.on('mouseover', function(e) {
 				$(this).find('.leftBtn,.rightBtn').css({
 					'display': 'inline-block',
@@ -35,11 +46,11 @@ $.fn.slides=function(isCycle,autoPlay){
 			})
 		}
 		$tab.first().addClass('active');
-		if(!isCycle){
-			if(autoPlay){
+		if(!obj.loop){
+			if(obj.autoplay){
 				setTimeout(function(){
 					currentIndex++;
-					if(currentIndex==4)
+					if(currentIndex==length)
 						currentIndex=0;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
@@ -52,7 +63,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				btnStatus();
 				$leftBtn.on('click',function(e){
 					currentIndex++;
-					if(currentIndex==4)
+					if(currentIndex==length)
 						currentIndex=0;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
@@ -62,7 +73,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				$rightBtn.on('click',function(e){
 					currentIndex--;
 					if(currentIndex==-1)
-						currentIndex=3;
+						currentIndex=length-1;
 					$currentUl.animate({
 						'left': -currentIndex*liWidth
 					});
@@ -71,10 +82,10 @@ $.fn.slides=function(isCycle,autoPlay){
 			}
 		}
 		else{
-			if(autoPlay){
+			if(obj.autoplay){
 				setTimeout(function(){
 					currentIndex++;
-					if(currentIndex==4) currentIndex=0;
+					if(currentIndex==length) currentIndex=0;
 					$currentUl.animate({
 						'left': -liWidth
 					},function(){
@@ -89,7 +100,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				btnStatus();
 				$leftBtn.on('click',function(e){
 					currentIndex++;
-					if(currentIndex==4) currentIndex=0;
+					if(currentIndex==length) currentIndex=0;
 					$currentUl.animate({
 						'left': -liWidth
 					},function(){
@@ -100,7 +111,7 @@ $.fn.slides=function(isCycle,autoPlay){
 				})
 				$rightBtn.on('click',function(e){
 					currentIndex--;
-					if(currentIndex==-1) currentIndex=3;
+					if(currentIndex==-1) currentIndex=length-1;
 					$currentUl.css({
 						'left': 0-liWidth
 					});

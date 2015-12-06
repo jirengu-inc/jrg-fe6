@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>返回顶部插件</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+    /*
+    // 写插件
+    $.goToTop = function () {
+        $('body').scrollTop(0);
+    };
+
+    // 用插件
+    $('button').click(function(){
+        $.goToTop();
+    });
+    */
+
+    // 版本1
+    $.clickToTop = function(node) {
+        var $node = $(node);
+        $node.click(function(){
+            $('body').animate({scrollTop: 0});
+        });
+    };
+
+    $.clickToTop($('button'));
+
+    // 版本2
+    $.fn.clickToTop = function(){
+        this.click(function(){
+            $('body').animate({scrollTop: 0});
+        });
+    };
+
+    $('button').clickToTop();
+    </script>
+</body>
+</html>
