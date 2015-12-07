@@ -7,14 +7,22 @@
 	<link rel="stylesheet" type="text/css" href="./css/slides.css">
 	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="./js/slides.js"></script>
+	<!--
+	slides插件依赖页面上的相关dom，window.onload不可省
+	-->
+	<script type="text/javascript">
+		window.onload=function(){
+			$('.img-ct1').slides({loop:true,autoplay:false,width:500,height:400});
+		}
+	</script>
 </head>
 <body>
 	<div class="slides">
 		<ul class="img-ct1 clearfix">
-			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg" height="206" width="310"></a></li>
-			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg" height="206" width="310"></a></li>
-			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg" height="206" width="310"></a></li>
-			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg" height="206" width="310"></a></li>
+			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg"></a></li>
+			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg"></a></li>
+			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg"></a></li>
+			<li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg"></a></li>
 		</ul>
 		<div class="tab-wrap">
 			<div class="tab">
@@ -25,8 +33,5 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$('.img-ct1').slides({loop:true,autoplay:false});
-	</script>
 </body>
 </html>

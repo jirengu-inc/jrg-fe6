@@ -3,11 +3,24 @@ $.fn.slides=function(obj){
 	$ul.each(function(){
 		var currentIndex=0;
 		var $currentUl=$(this);
-		var length=$currentUl.children().length;
-		var liWidth=$currentUl.children().first().width();
+		var length=$currentUl.children('li').length;
+		var $slides=$currentUl.closest('.slides');
+		$slides.width($currentUl.children('li').width());
+		$slides.height($currentUl.children('li').height());
+		var $imgObject=$currentUl.children('li').find('img');
+		var defaultSize={
+			width: $slides.width(),
+			height: $slides.height()
+		}
+		var $slidesSize=$.extend(true,{},defaultSize,obj);		
+		$slides.width($slidesSize.width);
+		$slides.height($slidesSize.height);
+		$currentUl.height($slidesSize.height);
+		$imgObject.width($slidesSize.width);
+		$imgObject.height($slidesSize.height);
+		var liWidth=$slidesSize.width;
 		$currentUl.width(liWidth*length);
 		var $tab=$currentUl.closest('.slides').find('.tab').children();
-		var $slides=$currentUl.closest('.slides');
 		var $leftBtn;
 		var $rightBtn;
 		function btnStatus() {
