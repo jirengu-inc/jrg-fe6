@@ -8,7 +8,7 @@
 .slides ul>li{
 	float: left;
 }
-.slides .leftBtn,.slides .rightBtn{
+.slides .pre,.slides .next{
 	position: absolute;
 	display: inline-block;
 	width: 28px;
@@ -21,12 +21,12 @@
 	font-weight: bold;
 	display: none;
 }
-.slides .leftBtn{
+.slides .pre{
 	left: 0;
 	top: 50%;
 	margin-top: -31px;
 }
-.slides .rightBtn{
+.slides .next{
 	right: 0;
 	top: 50%;
 	margin-top: -31px;
