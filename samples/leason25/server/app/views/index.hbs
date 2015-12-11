@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+请提交你的报名信息 2
+
+    <form action="/" method="post" target="b" name="form1">
+        <div class="row">
+            <label>
+                姓名：<input type="text" name="name">
+            </label>
+        </div>
+        <div class="row">
+            手机：<input type="text" name="phone">
+        </div>
+        <div class="row">
+            <button type="submit">提交</button>
+        </div>
+    </form>
+<div class="output"></div>
+
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $('form').on('submit', function (e) {
+        e.preventDefault()
+        var form = this // form dom
+        var name = form.name.value
+        var phone = form.phone.value
+        $.ajax({
+            type: "POST",
+            url: 'xxx',
+            data: {
+                name: name,
+                phone: phone
+            },
+            success: function (response) {
+                if(response.errorCode === 0){
+                    var data = response.data
+                    var name = data.name
+                    var phone = data.phone
+                    alert('提交成功，你的姓名是\n' + name + '\n你的手机是\n' + phone)
+                }else{
+                    alert('提交失败')
+                }
+            },
+            error: function () {
+                alert('服务器出错了')
+            }
+        });
+
+    })
+</script>
+</body>
+</html>
