@@ -17,6 +17,24 @@
             手机：<input type="text" name="phone">
         </div>
         <div class="row">
+            手机2：<input type="text" name="phone2">
+        </div>
+        <div class="row">
+            手机3：<input type="text" name="phone3">
+        </div>
+        <div class="row">
+            手机4：<input type="text" name="phone4">
+        </div>
+        <div class="row">
+            手机5：<input type="text" name="phone5">
+        </div>
+        <div class="row">
+            手机6：<input type="text" name="phone6">
+        </div>
+        <div class="row">
+            邮箱：<input type="text" name="email">
+        </div>
+        <div class="row">
             <button type="submit">提交</button>
         </div>
     </form>
@@ -27,15 +45,56 @@
     $('form').on('submit', function (e) {
         e.preventDefault()
         var form = this // form dom
-        var name = form.name.value
-        var phone = form.phone.value
+
+        var rules = {
+            // 接受一个 value，返回它是否合法
+                email: function(value){
+                    if(value.indexOf('@')>=0){
+                        return true
+                    }else{
+                        return false
+                    }
+                },
+                phone: function(value){
+                    if(value === ''){
+                        return false
+                    }else{
+                        return true
+                    }
+                }
+            }
+
+        var valid = true // 整个表单的合法性
+
+        $(form).find('input').each(function(index, node){
+            var name = $(node).attr('name')
+            var value = $(node).val()
+
+            var rule = rules[name]
+
+            if(!rule){
+                // 什么都不做
+            } else{
+                // 要验证
+                var currentValid = rule(value)
+                if(currentValid === false){
+                    valid = false
+                    return false
+                }
+            }
+        })
+
+        if(valid === false){
+            alert('error')
+            return
+        }
+
+
+        var data = $(form).serialize()
         $.ajax({
             type: "POST",
-            url: 'xxx',
-            data: {
-                name: name,
-                phone: phone
-            },
+            url: '/',
+            data: data,
             success: function (response) {
                 if(response.errorCode === 0){
                     var data = response.data
