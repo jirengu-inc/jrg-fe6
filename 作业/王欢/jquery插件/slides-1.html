@@ -7,28 +7,38 @@
   <style>
 	*{ margin:0;padding:0;}
 	.clearfix:after{display:block;content:'';clear:both;}
-	.slides{width:400px;height:300px;overflow:hidden;}
-	.two{width:100px;height:100px;margin-top:10px;margin-left:20px;}
-	ul{list-style:none;width:1600px;position:relative;left:0;}
-	.sec-ul{width:400px;}
+	.slides{
+		width:400px;
+		height:300px;
+		overflow:hidden;
+		margin-bottom: 20px;
+	}
+	.sec
+	ul{
+		list-style:none;
+		width:1600px;
+		position:relative;
+		left:0;
+	}
+
 	ul>li{float:left;}
   </style>
 </head>
 <body>
 <div class="slides">
-  <ul class="first-ul clearfix">
+  <ul class="clearfix">
     <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=ddf&fg=fff" alt=""></a></li>
     <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=33ffcc&fg=fff" alt=""></a></li>
     <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=cc00cc&fg=fff" alt=""></a></li>
     <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=ffff99&fg=fff" alt=""></a></li>
   </ul>
 </div>
-<div class="slides two"> 
-  <ul class="sec-ul clearfix">
-    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=100x100&bg=ddf&fg=fff" alt=""></a></li>
-    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=100x100&bg=33ffcc&fg=fff" alt=""></a></li>
-    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=100x100&bg=cc00cc&fg=fff" alt=""></a></li>
-    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=100x100&bg=ffff99&fg=fff" alt=""></a></li>
+<div class="slides sec">
+  <ul class="clearfix">
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=ddf&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=33ffcc&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=cc00cc&fg=fff" alt=""></a></li>
+    <li><a href=""><img src="http://www.atool.org/placeholder.png?size=400x300&bg=ffff99&fg=fff" alt=""></a></li>
   </ul>
 </div>
 
@@ -41,27 +51,27 @@
 		  $(this).each(function(){
 		      var $ul = $(this);
 		      var i = 0;
-		      var imgWidth = $ul.find('img').first().width();
+		      var imgWidth = $ul.children('li').first().width();
 		      var imgCount = $ul.children('li').length;
-		      
+		      console.log(imgWidth);
 		      setTimeout(function step(){
-		        i++;
-		        $ul.animate({'left':i*(-imgWidth)});
-		        if(i>=(imgCount - 1)){
-		          setTimeout(function(){
-		            $ul.css('left',0);
-		          },speed);
-		          i = -1;    
-		        setTimeout(step,speed);
-		       }else{
-		        setTimeout(step,speed)
-		      } 
-		    },1000)
+		        	i++;
+		        	$ul.animate({'left':i*(-imgWidth)});
+		        	if(i>=(imgCount - 1)){
+		        	  setTimeout(function(){
+		          	  		$ul.css('left',0);
+		         		},speed);
+		          	i = -1;    
+		       		setTimeout(step,speed);
+		     	 	}else{
+		        	setTimeout(step,speed)
+		      		} 
+		    	},1000)
 		  });
 		  return this;
 		}
 		var param = {
-		  speed : 2000
+// 		  speed : 2000
 		}
 		$('ul').slides(param);
   </script>

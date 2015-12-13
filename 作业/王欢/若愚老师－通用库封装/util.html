@@ -6,112 +6,8 @@
 </head>
 <body>
 	<p></p>
+  <script src="util.js  "></script>
 	<script>
-		var Util = {
-			isNumber:function(el){
-				return typeof el === 'number';
-			},
-			isString:function(el){
-				return typeof el === 'string';
-			},
-			isBoolean:function(el){
-				return typeof el === 'boolean';
-			},
-			isFunction:function(){
-				return typeof el === 'function';
-			},
-			isArray:function(el){
-				if(!Array.isArray){
-					return Object.prototype.toString.call(el).toLowerCase() === '[object array]';
-				}else{
-					return Array.isArray(el)
-				}
-			},
-			isJson:function(el){
-				return typeof el == "object" && Object.prototype.toString.call(el).toLowerCase() == "[object object]" && !el.length; 
-			},
-			isSimpleType: function(el){
-    			return this.isNumber(el) || this.isString(el) || this.isBoolean(el);
-  			},
-  			//克隆json
-  			cloneJson:function(json){
-  				if (!this.isJson(json)) { return {}};
-  				var newJson = {}
-  				for(var key in json){
-  					var value = json[key];
-  					if (this.isSimpleType(value)) {
-  						newJson[key] = value;
-  					}else if (this.isArray(value)) {
-  						newJson[key] = this.cloneArray(value);
-  					}else if (this.isJson(json[key])) {
-  						newJson[key] = this.cloneJson(value);
-  					};
-  				}
-  				return newJson;
-  			},
-  			//克隆数组
-  			cloneArray:function(array){
-  				if (!this.isArray(array)) { return []};
-  				var newArray = [];
-  				for (var i = 0; i < array.length; i++) {
-  					var value = array[i];
-
-  					if( this.isSimpleType( value ) ){
-				        newArray.push(value);
-				    }else if( this.isJson(value) ){
-				        newArray.push( this.cloneJson( value ) );
-				    }else if( this.isArray(value) ){
-				        newArray.push( this.cloneArray( value ) );
-				    } 
-  				};
-  				return newArray;
-  			},
-  			//深克隆
-  			deepClone:function(obj){
-  				var newObj;
-  				if (this.isArray(obj)) {
-  					newObj = this.cloneArray(obj);
-  				}else if (this.isJson(obj)) {
-  					newObj = this.cloneJson(obj);
-  				};
-  				return newObj;
-  			},
-  			//对象遍历输出
-  			objOutput:function(obj){
-  				if (this.isSimpleType(obj)) {return false};
-  				var getEle = document.getElementsByTagName('p')[0];
-  				if (this.isArray(obj)) {
-  					for (var i = 0; i < obj.length; i++) {
-  						var value = obj[i];
-  						if (this.isSimpleType(value)) {
-  							getEle.innerHTML += (value+'<br>');
-  						}else {
-  							this.objOutput(value);
-  						};
-  							
-  					};
-  				}else if (this.isJson(obj)) {
-  					for(var key in obj){
-//   						console.log(key+":"+obj[key]);
-  						if (this.isSimpleType(obj[key])) {
-  							var content = key +":"+obj[key]+'<br>';
-  							console.log(content);
-  							getEle.innerHTML += content;
-  						}else{
-  							getEle.innerHTML += key+'<br>';
-  							this.objOutput(value);
-  						}
-  					}
-  				};
-  			},
-  			//对象转化为url拼接
-  			jsonToUrl:function(json){
-  				if (this.isSimpleType(json)) { return false};
-  			}
-  			
-		}
-
-
 		var obj = {age: 100,name:'wanghuan'};
 
 		var obj1 = {
@@ -135,9 +31,9 @@
 
 		var obj4 = [1,2,3,4,5,6];
 		var obj5 = [1,2,[3,3,3],4,5,[6,6,6,6,6,6],7,8]
-		Util.objOutput(obj1);
+		// Util.objOutput(obj1);
 
-    var obj6;
+    	var obj6;
 	</script>
 </body>
 </html>
