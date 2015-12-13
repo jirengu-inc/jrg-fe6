@@ -1,0 +1,23 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+input{
+    outline: none;
+}
+
+.clearfix{
+    *zoom: 1;
+}
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}

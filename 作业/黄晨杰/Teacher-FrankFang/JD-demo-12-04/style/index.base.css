@@ -1,0 +1,38 @@
+@charset "utf-8";
+html{
+    font: 12px/1.5 Arial,Verdana;
+    color: #666;
+}
+
+.wrap-1210{
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.separator-default{
+    height: 14px;
+    background-color: #dfdcd9;
+    width: 1px;
+    border: none;
+    outline: none;
+    padding: 0 !important;
+    margin-top: 8px;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('https://at.alicdn.com/t/font_1449643144_5293057.eot'); /* IE9*/
+    src: url('https://at.alicdn.com/t/font_1449643144_5293057.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://at.alicdn.com/t/font_1449643144_5293057.woff') format('woff'), /* chrome、firefox */
+    url('https://at.alicdn.com/t/font_1449643144_5293057.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('https://at.alicdn.com/t/font_1449643144_5293057.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
