@@ -11,10 +11,13 @@
 		
 		var defaultConfig = {
 			'container' : $(this),
-			'directions' : "btt",
+			'directions' : "vertical",
+            'plusOrminus' : "+",
+            'animateWay' : "move",
 			'interval' : 3000,
 			'animateTime' : 300,
-			'nav' : false
+			'nav' : true,
+			'navClassName' : "slides-nav"
 		};
 
 		var config = $.extend({}, defaultConfig, options || {});
@@ -27,73 +30,120 @@
 		// if you set first property - true, extend can recursive merge the arguments like deep merge the Object / Array
 		
 		var $ul = config.container.find("ul");
+		var lengthLi = $ul.children('li').length;
+
+        var presentIndex = 0;
 
 		// 判断是否可以生成轮播
-		if($ul.children('li').length <= 1){
+		if(lengthLi <= 1){
 			console.log("Only one child of the slides, it can't begin the animate.");
 			return false;
 		}
 
-		var timerId = setSlides();
+        function init(animateWay){
+            if(animateWay == "move"){
+                // 翻倍轮播 方便跳转
+                $ul.children("li").clone().appendTo($ul);
+            }else if(animateWay == "fade"){
+
+            }
+            var _styles = null;
+            if(config.directions === "horizontal"){
+                _styles = {
+                    "width": "auto",
+                    "left": config.container.width() * (-4)
+                };
+                $ul.css(_styles);
+            }else if(config.directions === "vertical"){
+                _styles = {
+                    "width": config.container.width(),
+                    "top": config.container.height() * (-4)
+                };
+                $ul.css(_styles);
+            }
+        }
+
+        init(config.animateWay);
+
+        var timerId = setSlides();
 
 		function setSlides(){
-			if(config.directions === "ltr" || config.directions === "rtl"){
-				$ul.css("width", "auto");
-			}else{
-				$ul.css("width", config.container.find("li").width());
-			}
 			return setInterval(function(){
-				animateStep($ul, config.directions);
+				animateStep(1, config.directions, config.plusOrminus);
 			}, config.interval);
 		}
 
-		function animateStep($ele, direction){
-			// animate-step function
-			if(direction === "rtl"){
-				$ele.animate({ "left": "-=" + config.container.width()}, config.animateTime, function(){
-					if(Math.abs($(this).css("left").substring(0, $(this).css("left").indexOf("px"))) > config.container.width()){
-						$(this).children('li').first().appendTo($(this));
-						$(this).css("left", "-" + config.container.width() + "px");
-					}else if(Math.abs($(this).css("left").substring(0, $(this).css("left").indexOf("px"))) == 0){
-						$(this).children('li').last().prependTo($(this));
-						$(this).css("left", "-" + config.container.width() + "px");
-					}
-				});
-			}else if(direction === "ltr"){
-				$ele.animate({ "left": "+=" + config.container.width()}, config.animateTime, function(){
-					if(Math.abs($(this).css("left").substring(0, $(this).css("left").indexOf("px"))) > config.container.width()){
-						$(this).children('li').first().appendTo($(this));
-						$(this).css("left", "-" + config.container.width() + "px");
-					}else if(Math.abs($(this).css("left").substring(0, $(this).css("left").indexOf("px"))) == 0){
-						$(this).children('li').last().prependTo($(this));
-						$(this).css("left", "-" + config.container.width() + "px");
-					}
-				});
-			}else if(direction === "btt"){
-				$ele.animate({ "top": "-=" + config.container.height()}, config.animateTime, function(){
-					if(Math.abs($(this).css("top").substring(0, $(this).css("top").indexOf("px"))) > config.container.height()){
-						$(this).children('li').first().appendTo($(this));
-						$(this).css("top", "-" + config.container.height() + "px");
-					}else if(Math.abs($(this).css("top").substring(0, $(this).css("top").indexOf("px"))) == 0){
-						$(this).children('li').last().prependTo($(this));
-						$(this).css("top", "-" + config.container.height() + "px");
-					}
-				});
-			}else{
-				$ele.animate({ "top": "+=" + config.container.height()}, config.animateTime, function(){
-					if(Math.abs($(this).css("top").substring(0, $(this).css("top").indexOf("px"))) > config.container.height()){
-						$(this).children('li').first().appendTo($(this));
-						$(this).css("top", "-" + config.container.height() + "px");
-					}else if(Math.abs($(this).css("top").substring(0, $(this).css("top").indexOf("px"))) == 0){
-						$(this).children('li').last().prependTo($(this));
-						$(this).css("top", "-" + config.container.height() + "px");
-					}
-				});
-			}
-		}
+        function animateStep(step, direction, plusOrminus){
+            if(direction == "horizontal"){
+                if(plusOrminus == "+"){
+                    $ul.animate({"left": "-=" + config.container.width() * step}, config.animateTime, function(){
+                        for(var i = 0; i < step; i++){
+                            $ul.children("li").first().appendTo($ul);
+                        }
+                        $ul.css("left", config.container.width() * (-4));
+                        if(changeNav) presentIndex = changeNav(step + presentIndex);
+                    });
+                }else if(plusOrminus == "-"){
+                    $ul.animate({"left": "+=" + config.container.width() * step}, config.animateTime, function(){
+                        for(var i = 0; i < step; i++){
+                            $ul.children("li").last().prependTo($ul);
+                        }
+                        $ul.css("left", config.container.width() * (-4));
+                        if(changeNav) presentIndex = changeNav(step + presentIndex);
+                    });
+                }
+            }else if(direction == "vertical"){
+                if(plusOrminus == "+"){
+                    $ul.animate({"top": "-=" + config.container.height() * step}, config.animateTime, function(){
+                        for(var i = 0; i < step; i++){
+                            $ul.children("li").first().appendTo($ul);
+                        }
+                        $ul.css("top", config.container.height() * (-4));
+                        if(changeNav) presentIndex = changeNav(step + presentIndex);
+                    });
+                }else if(plusOrminus == "-"){
+                    $ul.animate({"top": "+=" + config.container.height() * step}, config.animateTime, function(){
+                        for(var i = 0; i < step; i++){
+                            $ul.children("li").last().prependTo($ul);
+                        }
+                        $ul.css("top", config.container.height() * (-4));
+                        if(changeNav) presentIndex = changeNav(step + presentIndex);
+                    });
+                }
+            }
+        }
 
 		if(config.nav === true){
 			// 有导航按钮
+			var $nav = $("<ul>");
+			$nav.addClass(config.navClassName);
+			for(var i = 0, length = lengthLi; i < lengthLi; i++){
+				var _$li = $("<li>");
+				_$li.val(i).text(i+1);
+                $nav.append(_$li);
+
+                if(i == presentIndex){
+                    _$li.addClass("chosen");
+                }
+			}
+
+            $nav.on("click", "li", function(event){
+                var _index = $(this).index();
+                if(_index != presentIndex){
+                    clearInterval(timerId);
+                    var _plusOrminus = _index > presentIndex ? "+" : "-";
+                    var _diff = Math.abs(_index - presentIndex);
+                    animateStep(_diff, config.directions, _plusOrminus);
+                }
+            });
+
+            config.container.css("position", "relative").append($nav);
+
+            var changeNav = function(index){
+                var _index = index % lengthLi;
+                $nav.children("li").removeClass("chosen").get(_index).className = "chosen";
+                return _index;
+            }
 		}
 
 		var $li = config.container.find("ul").children();

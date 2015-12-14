@@ -12,7 +12,6 @@
 
 ul{
 	list-style: none;
-	width: 1200px;
 	position: relative;
 }
 
@@ -50,4 +49,41 @@ li:nth-of-type(3){
 
 li:nth-of-type(4){
 	background-color: rgba(255, 255, 0, 0.5);
+}
+
+.slides-nav{
+	*zoom: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.slides-nav:after{
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.slides-nav li{
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #666;
+    font: 12px/20px "Microsoft Yahei";
+    text-align: center;
+    float: left;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.slides-nav li:hover, .slides-nav .chosen{
+    background-color: #fefefe;
 }
