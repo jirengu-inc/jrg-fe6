@@ -7,24 +7,33 @@
 </head>
 <body>
 <div>
-    <div id="nav">
-        <ul>
+    <div>
+        <ul id="nav">
             <li><a class="lnav" href="http://news.baidu.com/">新闻</a> </li>
             <li><a class="lnav" href="http://www.hao123.com/?tn=96466265_hao_pg">hao123</a></li>
             <li><a class="lnav" href="http://map.baidu.com/">地图</a></li>
             <li><a class="lnav" href="http://v.baidu.com/">视频</a></li>
             <li><a class="lnav" href="http://tieba.baidu.com/">贴吧</a></li>
-            <li><a class="rnav" href="https://www.baidu.com/">登陆</a></li>
-            <li>设置</li>
-            <li><span>更多产品</span></li>
+            <li><a class="dnav" href="https://www.baidu.com/">登陆</a></li>
+            <li>
+                <a class="install" href="#">设置</a>
+                <ul class="install-more">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+
+            </li>
+            <li><a class="moreProduct">更多产品</a></li>
         </ul>
     </div>
 
     <div id="forms">
         <img src="img/bd_logo1.png" style="width: 270px; height: 129px;">
         <form>
-            <input type="text" class="te">
-            <input type="submit" class="su" value="百度一下">
+            <input type="text" class="middle-search" name="searchBox">
+            <input type="submit" class="middle-baidu" value="百度一下">
         </form>
     </div>
     <div id="footer">

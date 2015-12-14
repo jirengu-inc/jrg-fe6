@@ -8,62 +8,112 @@ ul,li{
     display:block;
     list-style: none;
     color:#333;
-    font-size: 13px;
-    line-height: 24px;
-    margin-left: 20px;
-    float: left;
-    text-decoration: underline;
 }
-#nav{
+#nav {
     height: 50px;
-    width:100%;
     /*padding-left: 830px;*/
     padding-top: 20px;
-    padding-left: 850px;
+    float: right;
     overflow: hidden;
+    clear: both;
+    content: '';
+}
+#nav>li{
+    position: relative;
+    float: left;
 }
 .lnav{
     font-weight: bold;
+    color: black;
+    margin-left: 21px;
+    font-size: 13px;
+    line-height: 24px;
+    float: left;
 }
-span{
+#nav a:hover,#nav a:active{
+    color:#00c ;
+}
+.dnav{
+    color: #333333;
+    text-decoration: underline;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 21px;
+}
+.install{
+    color: #333333;
+    font-size: 13px;
+    text-decoration: underline;
+    line-height: 24px;
+    margin-left: 21px;
+}
+.install-more{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left:-50px;
+    width: 70px;
+    border:1px solid #d1d1d1;
+    background-color: #ffffff;
+    float: none;
+}
+.install-more a{
+    display: block;
+    line-height: 26px;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    margin: 0!important;
+    clear:both;
+
+}
+#nav>li:hover>.install-more{
+    display: block;
+}
+
+.moreProduct{
     background-color: #3385ff;
     padding: 5px;
     color: white;
     list-style-type: none;
+    margin-right: 10px;
+    margin-left: 21px;
 }
 #forms{
     text-align: center;
     height:191px;
+    padding-top: 80px;
 }
 input{
     padding: 0;
     border: 0;
 }
-.te{
+.middle-search{
     margin: 22px auto 0;
-    padding: 0 auto;
-    width: 641px;
-    text-align: left;
-    z-index: 100;
+    padding:0 auto;
     width: 539px;
+    text-align: left;
     height: 34px;
     display: inline-block;
     border: 1px solid #b6b6b6;
     overflow: hidden;
+    border-right: none;
 
 }
-.su{
+.middle-baidu{
     width: 100px;
     height: 36px;
     color: white;
     font-size: 15px;
     letter-spacing: 1px;
     background-color: #3385ff;
-    border-bottom: 1px solid #2d78f4;
+    /*border-bottom: 1px solid #2d78f4;*/
     outline: medium;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
-    margin-left:-7.1px;
+    margin-left:-8.0px;
+    position: relative;
+    bottom: -1px;
 }
 #footer{
     text-align: center;
@@ -77,10 +127,9 @@ input{
 .aout{
     width: 100%;
     display: block;
-
 }
 .about a{
-    color:#0000cc;
+    color:#272727;
     padding-left: 15px;
 }
 .note,.note a{
