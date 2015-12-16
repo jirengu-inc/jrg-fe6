@@ -69,13 +69,14 @@ var Exposure = {
   },
 
   checkShow: function(){
-    console.log('checkShow');
+    // console.log('checkShow');
     var me = this;
     this.$target.each(function(){
 
       var $cur = $(this);
-      if(me.isShow($cur) && !me.hasLoaded($cur) ){
-          me.handler && me.handler.call( this, this );
+      var dom = this;
+      if(!me.hasLoaded($cur) && me.isShow($cur)){
+          me.handler && me.handler.call( dom, dom );
           $cur.data('loaded', true);
       }
     });
@@ -110,8 +111,8 @@ Exposure.init( $('p'), function( el ){
 } );
 
 // Exposure.init( $('img'), function(el){
-//   //var $el = $(this);
-//   $(el).attr('src', $(el).attr('data-src'));
+   
+//   $(el).attr('src', $(this).attr('data-src'));
 // } );
   
 

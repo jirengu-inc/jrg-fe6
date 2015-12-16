@@ -4,7 +4,7 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
   <meta charset="utf-8">
-  <title>图片懒加载-模块化</title>
+  <title>图片懒加载-简单</title>
   <style>
     ul,li{
       list-style:none;
@@ -21,7 +21,11 @@
       width: 220px;
       height: 400px;
     }
+    p{
+      float: left;
+    }
   </style>
+
 </head>
 <body>
 <ul class="container">
@@ -35,6 +39,9 @@
   <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
   <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
     <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
+
+    <p id="hello" style="font-size: 30px;">hello </p>
+
   <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
   <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
   <li><a href="#"><img src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/blank.jpg" data-src="http://kejian.jirengu.com/data/fe/%E8%AF%BE%E4%BB%B6/32-%E6%87%92%E5%8A%A0%E8%BD%BD/code/girl.jpg" /></a></li>
@@ -46,63 +53,65 @@
 </ul>
 
 <script type="text/javascript">
-function checkShow(){
-
-}
-
-var LazyImg = {
-
-  init: function($imgs){
-
-    this.$c = $(window),
-    this.$target = $imgs;
-
-    this.bind();
-  },
-
-  bind: function(){
-    var me = this;
-    this.$c.on('scroll', function(){
-      me.checkShow();
+  
+  $.fn.lazyLoad = function(handler){
+    var $imgs = this;
+    $(window).on('scroll', function(){
+      checkShow();
     });
-  },
 
-  checkShow: function(){
-    var me = this;
-    this.$target.each(function(){
+    checkShow();
 
-      var $cur = $(this);
-      if(me.isShow($cur)){
-        // setTimeout(function(){
-          me.showImg($cur);
-        // }, 1500);
-        
-      }
-    });
-  },
+    function checkShow(){
+      $imgs.each(function(){
+        var $cur = $(this);
 
-  isShow: function($el){
-    //console.log($el);
-    var scrollH = this.$c.scrollTop(),
-        winH = this.$c.height(),
-        top = $el.offset().top ;
-        
-    if(top < winH + scrollH){
-      return true;
-    }else{
-      return false;
+        if(isShow($cur)){
+          //setTimeout(function(){
+            handler($cur);
+          //}, 500);
+          
+        }
+      });
     }
-  },
 
-  showImg: function($el){
-    $el.attr('src', $el.attr('data-src'));
-    //console.log($el);
+    function isShow($el){
+      var scrollH = $(window).scrollTop(),
+          winH = $(window).height(),
+          top = $el.offset().top;
+
+        if(top < winH + scrollH){
+          return true;
+        }else{
+          return false;
+        }
+    }
+
+  };
+  
+  $('.container img').lazyLoad(function($el){
+    showImg($el);
+  });
+
+  $('.container p').lazyLoad(function($el){
+    showP($el);
+  });
+
+  function showImg($el){
+    //setTimeout(function(){
+      console.log($el);
+      $el.attr('src', $el.attr('data-src'));
+    //}, 1000)
+    
   }
 
-}
+  function showP($el){
+      $el.fadeOut(1000, function(){
+        $el.fadeIn();
+      });
+  }
 
-LazyImg.init( $('.container img') );
-	
+
 
 
 </script>
