@@ -1,0 +1,31 @@
+@charset "utf-8";
+.top-bar-area-detail-wrap{
+    width: 311px;
+    border: 1px solid #dddddd;
+    position: absolute;
+    padding: 10px 0 10px 10px;
+    display: none;
+}
+
+.top-bar-area-detail-wrap li{
+    width: 60px;
+    height: 24px;
+    float: left;
+    padding: 2px 0;
+}
+
+.top-bar-area-detail-wrap li a{
+    color: #666;
+    text-decoration: none;
+    padding: 5px 8px;
+}
+
+.top-bar-area-detail-wrap li a:hover{
+    background-color: #f4f4f4;
+    color: #C81623;
+}
+
+.top-bar-area-detail-wrap li .chosen, .top-bar-area-detail-wrap li .chosen:hover{
+    background-color: #C81623;
+    color: white;
+}

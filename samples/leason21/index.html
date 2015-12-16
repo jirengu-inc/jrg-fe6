@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--[if IE lte 8]>
+<html class="oldIe"><![endif]-->
+<!--[if !IE]><!-->
+<html> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8">
+        <title>某商城</title>
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1449394185_9633622.css">
+        <style>
+            * { margin: 0; padding: 0; }
+            body { font-size: 12px; line-height: 1.5; font-family: Arial, Verdana, "宋体"; }
+            body { color: #666; }
+            a { text-decoration: none; }
+            ul, ol, dl { list-style: none; }
+            .jd-iconfont { font-size: inherit; }
+            .wrapped { width: 1210px; margin: 0 auto; }
+            .clearfix:after { content: ''; display: block; clear: both; }
+            .oldIe .clearfix { zoom: 1; }
+            .siteTopbar-wrapper { line-height: 30px; background: #F1F1F1; }
+            .siteTopbar, .logo-search-cart {
+                margin: 0 auto;
+                width: 1210px;
+            }
+            .siteTopbar .city > span {
+                padding: 0 3px;
+                position: relative;
+            }
+            .siteTopbar .city > span.active {
+                border-right: 1px solid #ddd;
+                border-left: 1px solid #ddd;
+                margin-left: -1px;
+                background: white;
+                display: inline-block;
+            }
+            .siteTopbar .city > span i {
+                display: inline-block;
+            }
+            .siteTopbar .city > span.active i {
+                transform: rotate(180deg);
+            }
+            .siteTopbar .city > span > .popover {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 300px;
+                padding: 10px;
+                background: white;
+                border: 1px solid #ddd;
+                z-index: 1;
+            }
+            .siteTopbar .city > span.active > .popover {
+                display: block;
+            }
+            .siteTopbar .links > span {
+                padding: 0 3px;
+            }
+            .siteTopbar .links > span.active {
+            }
+            .siteTopbar a > strong {
+                color: #C81623;
+            }
+            .siteTopbar a { color: inherit; }
+            .siteTopbar .links > .split { border-left: 1px solid #ddd; height: 16px; margin: 0 8px 0 4px; }
+            .siteTopbar .icon-down { font-size: 16px; }
+            .adBanner { text-align: center; background: #e02428; }
+            .siteLogo { text-indent: -9999px; display: block;
+                background: transparent url(./images/logo-201305.png) no-repeat 0 0;
+                width: 270px; height: 60px;
+            }
+            .logo-search-cart .logo { float: left; margin-top: 20px; }
+            .logo-search-cart .search { float: left; margin-left: 100px; }
+            .logo-search-cart .search .form { margin-top: 25px; }
+            .logo-search-cart .search input[type=text] { float: left; width: 446px; height: 24px; line-height: 24px;
+                color: inherit; padding: 4px; margin-bottom: 4px;
+                outline: 0; font-size: 14px;
+            }
+            .logo-search-cart .search button { float: left; width: 82px; height: 36px; background: #B61D1D; border: none;
+                line-height: 1; color: #fff; font-size: 16px; cursor: pointer;
+            }
+            .logo-search-cart .search .recommends a { float: left; white-space: nowrap; margin-right: 10px; color: inherit; }
+            .logo-search-cart .search .recommends a:hover { color: #C81623; }
+            .logo-search-cart .myShoppingCart { float: left; position: relative; margin-top: 25px; margin-left: 85px; }
+            .logo-search-cart .myShoppingCart .button { display: block; width: 75px; height: 34px; border: 1px solid #DFDFDF; padding: 0 28px 0 36px; background: #F9F9F9; text-align: center; line-height: 34px; }
+            .logo-search-cart .myShoppingCart > .icon-cart { top: 7px; left: 18px; position: absolute; color: #BE433E; font-size: 14px; }
+            .logo-search-cart .myShoppingCart > .icon-right { top: 9px; right: 10px; position: absolute; }
+            .logo-search-cart .myShoppingCart > .budget { position: absolute; top: -4px; left: 104px; display: inline-block; padding: 1px 2px; font-size: 12px; line-height: 12px; color: #fff; background-color: #c81623; border-radius: 7px 7px 7px 0; min-width: 12px; text-align: center; }
+            .siteNav-wrapper { margin-top: 17px; border-bottom: 2px solid #B1191A; }
+            .siteNav { margin: 0 auto; width: 1210px; }
+            .siteNav > .categoryListHeader { float: left; position: relative; width: 190px; height: 44px; line-height: 44px; overflow: visible; background: #B1191A; padding: 0 10px; font-weight: normal; color: #fff; font-size: 15px; text-decoration: none; }
+            .siteNav .navItems { float: left; }
+            .siteNav .navItems > a { display: inline-block; height: 44px; font-size: 15px; line-height: 44px; padding: 0 20px; text-align: center; text-decoration: none; color: #333; }
+            .siteNav .navItems > a:hover { color: #C81623; }
+            .siteNav .ad { float: right; height: 44px; overflow: hidden; }
+            .list-slides-news-service { width: 1210px; margin: 0 auto; }
+            .productCategoryList { float: left; width: 210px; }
+            .productCategoryList > ul { height: 466px; background: #c81623; }
+            .productCategoryList > ul > li { border-left: 1px solid #b61d1d; position: relative; height: 31px; color: #fff; }
+            .productCategoryList > ul > li > h3 { position: absolute; height: 31px; padding: 0 10px; line-height: 31px; font-family: "microsoft yahei"; font-size: 14px; font-weight: normal; }
+            .productCategoryList > ul > li > i { position: absolute; top: 8px; right: 10px; }
+            .productCategoryList > ul > li:hover { color: #B61D1D; background: #f7f7f7; }
+            .productCategoryList > ul > li:hover > i { display: none; }
+            .list-slides-news-service .adSlides { float: left; margin-top: 12px;
+                margin-left: 10px;
+                width: 730px; height: 454px; }
+            .list-slides-news-service .adSlides > .container {
+                overflow: hidden; height: 100%; position: relative;
+            }
+            .list-slides-news-service .adSlides > .container .controls {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                color: white;
+                width: 100%;
+                text-align: center;
+            }
+            .list-slides-news-service .adSlides > .container .controls span {
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                display: inline-block;
+                margin: 0 2px;
+                background: #3e3e3e;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            .list-slides-news-service .adSlides > .container .controls span:hover {
+                background: #B61D1D;
+            }
+            .list-slides-news-service aside {
+                float: left; margin-left: 10px; margin-top: 12px;
+            }
+            .list-slides-news-service aside .news {
+                height: 200px;
+                width: 248px;
+                overflow: hidden;
+                border: solid 1px #e4e4e4;
+                border-bottom: 0;
+                position: relative;
+            }
+            .list-slides-news-service aside .services > h2,
+            .list-slides-news-service aside .news > h2 {
+                padding: 0 15px;
+                border-bottom: 1px dotted #E8E8E7;
+                height: 43px;
+                line-height: 43px;
+            }
+            .list-slides-news-service aside .news > .more {
+                position: absolute; top: 0; right: 10px;
+                line-height: 43px;
+            }
+            .list-slides-news-service aside .news ul {
+                height: 140px;
+                padding: 8px 0 0 15px;
+            }
+            .list-slides-news-service aside .news ul > li {
+                width: 210px;
+                height: 27px;
+                line-height: 27px;
+                overflow: hidden;
+            }
+            .list-slides-news-service aside .services {
+                border: solid 1px #e4e4e4;
+                border-top: dashed 1px #e4e4e4;
+                overflow: hidden;
+                width: 248px;
+                height: 252px;
+            }
+            .list-slides-news-service aside .services > .tabs {
+                height: 208px;
+                position: relative
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-button {
+                position: relative; width: 260px; height: 209px; overflow: hidden;
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-button > li {
+                float: left; width: 62px;
+                border-right: 1px solid #E8E8E7;
+                border-bottom: 1px solid #E8E8E7;
+                overflow: hidden;
+                cursor: pointer;
+                height: 27px;
+                text-align: center;
+                line-height: 27px;
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-button > li.active {
+                border-top: 2px solid #c81623;
+                border-bottom: none;
+                background: #fff;
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-content {
+                position: absolute;
+                top: 28px;
+                left: 0;
+                width: 250px;
+                height: 180px;
+                background: #fff;
+                text-align: center;
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-content > li {
+                display: none;
+            }
+            .list-slides-news-service aside .services > .tabs > .tab-content > li.active {
+                display: block;
+            }
+            .g-droplist.active {
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+        <div class="siteTopbar-wrapper">
+            <nav class="siteTopbar clearfix">
+                <div class="city" style="float: left;">
+                    <span class="g-droplist">送至：北京 <i class="jd-iconfont icon-down"></i>
+                        <div class="popover">
+                            <ul>
+                                <li>北京</li>
+                                <li>上海</li>
+                                <li>天津</li>
+                                <li>重庆</li>
+                                <li>河北</li>
+                                <li>山西</li>
+                                <li>河南</li>
+                                <li>辽宁</li>
+                            </ul>
+                        </div>
+                    </span>
+                </div>
+                <div class="links" style="float: right;">
+                    <a href="//passport.jd.com/new/login.aspx?ReturnUrl=http%3A%2F%2Fwww.jd.com%2F" class="login">你好，请登录</a>
+                    <a href="#"><strong>免费注册</strong></a>
+                    <span class="split"></span>
+                    我的订单
+                    <span class="split"></span>
+                    <span class="g-droplist">我的京东 <i class="jd-iconfont icon-down"></i></span>
+                    <span class="split"></span>
+                    京东会员
+                    <span class="split"></span>
+                    企业采购
+                    <span class="split"></span>
+                    <span class="g-droplist"><i class="jd-iconfont icon-phone" style="font-size:16px;"></i>手机京东
+                        <i class="jd-iconfont icon-down"></i></span>
+                    <span class="split"></span>
+                    <span class="g-droplist">关注京东 <i class="jd-iconfont icon-down"></i></span>
+                    <span class="split"></span>
+                    <span class="g-droplist">客户服务 <i class="jd-iconfont icon-down"></i></span>
+                    <span class="split"></span>
+                    <span class="g-droplist">网站导航 <i class="jd-iconfont icon-down"></i></span>
+                </div>
+            </nav>
+        </div>
+        <div class="adBanner">
+            <img src="./images/banner-ad.jpg" width="1210" height="80" alt="" style="vertical-align:middle;">
+            <span class="close"></span>
+        </div>
+        <div class="logo-search-cart clearfix">
+            <h1 class="logo">
+                <a href="#" class="siteLogo">
+                    京东
+                </a>
+            </h1>
+
+            <div class="search">
+                <div class="form clearfix">
+                    <input type="text" name="keyword">
+                    <button>搜索</button>
+                </div>
+                <div class="recommends">
+                    <a href="#">0元白拿</a><a href="#">1212来了</a><a href="#">农用物资</a><a href="#">冬装9.9</a><a href="#">张小娴</a><a href="#">活性炭口罩</a><a href="#">2016年台历</a><a href="#">润唇膏</a>
+                </div>
+            </div>
+            <div class="myShoppingCart">
+                <i class="jd-iconfont icon-cart"></i>
+
+                <div class="button">
+                    <span class="content">我的购物车</span>
+                </div>
+                <span class="budget">0</span>
+                <i class="jd-iconfont icon-right"></i>
+            </div>
+        </div>
+
+        <div class="siteNav-wrapper">
+            <nav class="siteNav clearfix">
+                <h2 class="categoryListHeader">
+                    全部商品分类
+                </h2>
+
+                <div class="navItems">
+                    <a href="#">服装城</a><a href="#">美妆馆</a><a href="#">超市</a><a href="#">全球购</a><a href="#">闪购</a><a href="#">团购</a><a href="#">拍卖</a><a href="#">金融</a>
+                </div>
+                <div class="ad">
+                    <img src="./images/nav-ad.jpg" width="140" height="44" alt="">
+                </div>
+            </nav>
+        </div>
+        <div class="list-slides-news-service clearfix">
+            <div class="productCategoryList">
+                <ul>
+                    <li><h3>家用电器</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>手机、数码、京东通信</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>电脑、办公</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>家居、家具、家装、厨具</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>男装、女装、内衣、珠宝</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>个护化妆、清洁用品</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>鞋靴、箱包、钟表、奢侈品</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>运动户外</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>汽车、汽车用品</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>母婴、玩具乐器</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>食品、酒类、生鲜、特产</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>营养保健</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>图书、音像、电子书</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>彩票、旅行、充值、票务</h3><i class="jd-iconfont icon-right"></i></li>
+                    <li><h3>理财、众筹、白条、保险</h3><i class="jd-iconfont icon-right"></i></li>
+                </ul>
+            </div>
+            <div class="adSlides">
+                <div class="container g-slides">
+                    <ul>
+                        <li>
+                            <a href=""><img src="./images/slides/1.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/slides/2.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/slides/3.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/slides/4.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/slides/5.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/slides/6.jpg" width="730" height="454" alt=""></a>
+                        </li>
+                    </ul>
+
+                    <div class="controls">
+                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <section class="news">
+                    <h2>
+                        京东快报
+                    </h2>
+                    <a href="#" class="more">更多 <i class="jd-iconfont icon-right"></i></a>
+                    <ul>
+                        <li>
+                            <strong>[特惠]</strong> 大牌自营 鞋服低至11元
+                        </li>
+                        <li>
+                            <strong>[公告]</strong>南海大件运营中心正式开启
+                        </li>
+                        <li>
+                            <strong>[特惠]</strong>抢跑12.12 爆品秒杀低至9.9
+                        </li>
+                        <li>
+                            <strong>[公告]</strong>京东“极速达”产品升级通告
+                        </li>
+                        <li>
+                            <strong>[特惠]</strong>1元抢精品 爽购感恩节
+                        </li>
+                    </ul>
+                </section>
+                <section class="services">
+                    <h2>生活服务</h2>
+
+                    <div class=tabs>
+                        <ol class=tab-button>
+                            <li class="active">话费</li>
+                            <li>机票</li>
+                            <li>电影票</li>
+                            <li>游戏</li>
+                        </ol>
+                        <ol class=tab-content>
+                            <li class="active">
+                                <div>tab 1</div>
+                            </li>
+                            <li>
+                                <div>tab 2</div>
+                            </li>
+                            <li>
+                                <div>tab 3</div>
+                            </li>
+                            <li>
+                                <div>tab 4</div>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </aside>
+        </div>
+        <div style="height:400px;"></div>
+
+
+        <div>
+            <button></button>
+            <div class="popover"></div>
+        </div>
+        <div>
+            <button></button>
+            <div class="popover"></div>
+        </div>
+        <div>
+            <button></button>
+            <div class="popover"></div>
+        </div>
+
+        <script src="./scripts/jquery-1.11.2.js"></script>
+
+        <script>
+            !function ($) {
+
+
+                $.fn.hoverToggle = function (className) {
+
+                    this.on('mouseenter', function () {
+                        $(this).addClass(className)
+                    }).on('mouseleave', function () {
+                        $(this).removeClass(className)
+                    })
+                }
+
+                $('.g-droplist').hoverToggle('active')
+
+            }(jQuery)
+
+
+            $.fn.tabs = function (_options) {
+                var defaultOptions = {
+                    activeClassName: 'active',
+                    tabsSelector: '.tabs',
+                    tabButtonSelector: '.tab-button',
+                    tabContentSelector: '.tab-content'
+                }
+                var options = $.extend({}, defaultOptions, _options)
+
+                var $tabs = this // jQuery
+                $tabs.each(function (index, dom) {
+                    var $oneTab = $(dom)
+                    $oneTab.on('click', options.tabButtonSelector + ' > li', function (e) {
+                        var $li = $(e.currentTarget).addClass(options.activeClassName)
+
+                        $li.siblings().removeClass(options.activeClassName)
+
+                        var index = $li.index()
+                        $li.closest(options.tabsSelector).find(options.tabContentSelector).children('li')
+                            .eq(index).addClass(options.activeClassName).siblings().removeClass(options.activeClassName)
+                    })
+                })
+            }
+
+            $('.tabs').tabs()
+
+        </script>
+
+        <!--<div class="tabs">-->
+        <!--<ol class="tab-button">-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--</ol>-->
+        <!--<ol class="tab-content">-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--<li></li>-->
+        <!--</ol>-->
+        <!--</div>-->
+    </body>
+</html>

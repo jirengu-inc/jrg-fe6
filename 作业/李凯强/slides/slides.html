@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slides</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/slides.css">
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<!--
+	slides插件依赖页面上的相关dom，window.onload不可省
+	-->
+	<script type="text/javascript">
+		window.onload=function(){
+			$('.img-ct1').slides({autoplay:false,width:500,height:400});
+		}
+	</script>
+</head>
+<body>
+	<div class="slides">
+		<ul class="img-ct1 clearfix">
+			<li><a href="#"><img src="./imgs/slides_img_1.jpg" alt=""></a></li>
+			<li><a href="#"><img src="./imgs/slides_img_2.jpg" alt=""></a></li>
+			<li><a href="#"><img src="./imgs/slides_img_3.jpg" alt=""></a></li>
+			<li><a href="#"><img src="./imgs/slides_img_4.jpg" alt=""></a></li>
+		</ul>
+		<a href="javascript:;" class="pre"><</a>
+		<a href="javascript:;" class="next"></a>
+		<div class="tab-wrap">
+			<div class="tab">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
