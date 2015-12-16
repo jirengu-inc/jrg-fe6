@@ -44,22 +44,22 @@
             if(animateWay == "move"){
                 // 翻倍轮播 方便跳转
                 $ul.children("li").clone().appendTo($ul);
+                var _styles = null;
+                if(config.directions === "horizontal"){
+                    _styles = {
+                        "width": "auto",
+                        "left": config.container.width() * (-4)
+                    };
+                    $ul.css(_styles);
+                }else if(config.directions === "vertical"){
+                    _styles = {
+                        "width": config.container.width(),
+                        "top": config.container.height() * (-4)
+                    };
+                    $ul.css(_styles);
+                }
             }else if(animateWay == "fade"){
 
-            }
-            var _styles = null;
-            if(config.directions === "horizontal"){
-                _styles = {
-                    "width": "auto",
-                    "left": config.container.width() * (-4)
-                };
-                $ul.css(_styles);
-            }else if(config.directions === "vertical"){
-                _styles = {
-                    "width": config.container.width(),
-                    "top": config.container.height() * (-4)
-                };
-                $ul.css(_styles);
             }
         }
 
@@ -74,6 +74,8 @@
 		}
 
         function animateStep(step, direction, plusOrminus){
+            if(changeNav) presentIndex = changeNav(step + presentIndex);
+            step = Math.abs(step);
             if(direction == "horizontal"){
                 if(plusOrminus == "+"){
                     $ul.animate({"left": "-=" + config.container.width() * step}, config.animateTime, function(){
@@ -81,7 +83,6 @@
                             $ul.children("li").first().appendTo($ul);
                         }
                         $ul.css("left", config.container.width() * (-4));
-                        if(changeNav) presentIndex = changeNav(step + presentIndex);
                     });
                 }else if(plusOrminus == "-"){
                     $ul.animate({"left": "+=" + config.container.width() * step}, config.animateTime, function(){
@@ -89,7 +90,6 @@
                             $ul.children("li").last().prependTo($ul);
                         }
                         $ul.css("left", config.container.width() * (-4));
-                        if(changeNav) presentIndex = changeNav(step + presentIndex);
                     });
                 }
             }else if(direction == "vertical"){
@@ -99,7 +99,6 @@
                             $ul.children("li").first().appendTo($ul);
                         }
                         $ul.css("top", config.container.height() * (-4));
-                        if(changeNav) presentIndex = changeNav(step + presentIndex);
                     });
                 }else if(plusOrminus == "-"){
                     $ul.animate({"top": "+=" + config.container.height() * step}, config.animateTime, function(){
@@ -107,7 +106,6 @@
                             $ul.children("li").last().prependTo($ul);
                         }
                         $ul.css("top", config.container.height() * (-4));
-                        if(changeNav) presentIndex = changeNav(step + presentIndex);
                     });
                 }
             }
@@ -117,7 +115,7 @@
 			// 有导航按钮
 			var $nav = $("<ul>");
 			$nav.addClass(config.navClassName);
-			for(var i = 0, length = lengthLi; i < lengthLi; i++){
+			for(var i = 0, length = lengthLi; i < length; i++){
 				var _$li = $("<li>");
 				_$li.val(i).text(i+1);
                 $nav.append(_$li);
@@ -127,12 +125,12 @@
                 }
 			}
 
-            $nav.on("click", "li", function(event){
+            $nav.on("mouseover", "li", function(event){
                 var _index = $(this).index();
                 if(_index != presentIndex){
                     clearInterval(timerId);
                     var _plusOrminus = _index > presentIndex ? "+" : "-";
-                    var _diff = Math.abs(_index - presentIndex);
+                    var _diff = _index - presentIndex;
                     animateStep(_diff, config.directions, _plusOrminus);
                 }
             });
