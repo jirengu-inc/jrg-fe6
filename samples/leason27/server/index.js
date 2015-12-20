@@ -16,6 +16,15 @@ app.use(views('app/views', {
 
 app.use(bodyParser());
 
+
+app.use(function * (next) {
+    console.log('有人访问了: ' + this.request.host + this.request.url) //打印出被访问的路径
+    this.set('Access-Control-Allow-Origin', 'http://a.com:3000')
+    yield next
+})
+
+app.use(require('koa-static')('./static'));  // 开启静态文件的访问
+
 require('./app/routes')(app);
 
 if (!module.parent) {

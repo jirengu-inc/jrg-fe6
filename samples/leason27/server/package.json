@@ -14,7 +14,7 @@
     "koa-body-parser": "~1.1.2",
     "koa-bodyparser": "^1.5.0",
     "koa-router": "^4.3.2",
-    "koa-static": "^1.4.9",
+    "koa-static": "~1.5.2",
     "koa-views": "^3.0.0",
     "waterline": "^0.10.21"
   },
