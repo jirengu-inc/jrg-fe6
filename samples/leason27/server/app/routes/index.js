@@ -6,7 +6,8 @@ module.exports = function(app) {
 
 	router
 		.get('/', indexCtrl.index)
-        .get('/2', indexCtrl.index2)
+        .get('/index2', indexCtrl.index2)
+        .get('/data.js', indexCtrl.data)
         .post('/', indexCtrl.post)
         .post('/post2', indexCtrl.post2)
 

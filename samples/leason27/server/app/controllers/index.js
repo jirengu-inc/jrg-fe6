@@ -7,6 +7,25 @@ module.exports = {
         yield this.render('index2.hbs');
         yield next;
     },
+    data: function *(next) {
+
+        // from mysql
+
+        var userData = {
+            name: 'frank',
+            age: 25
+        }
+
+        var userDataString = JSON.stringify(userData)  // '{"name":"frank","age":25}'
+
+        var callback = this.query.call2
+
+        callback = callback.replace(/\(/g, '')
+        callback = callback.replace(/\)/g, '')
+
+        this.body = callback + '(' + userDataString + ')'
+        //this.body = '<script>' + callback + '(' + userDataString + ')' + '</script>'
+    },
 
     post: function *(next) {
         var name = this.request.body.name
@@ -21,7 +40,7 @@ module.exports = {
 
         this.body = {
             errorCode: 0,
-            data:{
+            data: {
                 name: name,
                 phone: phone
             }

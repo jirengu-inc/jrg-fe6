@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
-请提交你的报名信息 2
+<body style="background:grey;">
+<div>
+    a.com index
+</div>
 
-    <form action="/" method="post" target="b" name="form1">
-        <div class="row">
-            <label>
-                姓名：<input type="text" name="name">
-            </label>
-        </div>
-    </form>
-<div class="output"></div>
 
-<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
 <script>
-    $.get('//b.com:3000/main.js')
+    $.get('//b.com/data', function (response) {
+        console.log(response);
+    })
 </script>
+
 </body>
 </html>
