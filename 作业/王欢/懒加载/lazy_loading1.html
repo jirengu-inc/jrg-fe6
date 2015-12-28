@@ -123,17 +123,24 @@
 			},
 			bind:function(){
 				var _this = this;
+				var timer = null;
 				_this.checkImg();
 				$(window).on('scroll',function(){
-					_this.checkImg();
+					// //当不再滚动的时候再执行加载程序
+					timer && clearTimeout(timer);
+					timer = setTimeout(function(){
+						_this.checkImg();
+					},100);
 				});
 			},
 			checkImg:function(){
 				var _this = this;
 				_this.$container.each(function(){
 					var $cur = $(this);
-					if (_this.isSee($cur)) {
+					//添加data-load属性来确定图片是否被加载过 加载则不会重新加载
+					if (_this.isSee($cur) && !_this.isLoaded($cur)) {
 						_this.showImg($cur);
+						$cur.attr('data-load','true');
 					};
 				})
 			},
@@ -147,6 +154,14 @@
 				setTimeout(function(){
 					$el.attr('src',$el.attr('data-src'));	
 				},1000)	
+			},
+			//判断图片是否已经加载
+			isLoaded:function($el){
+				if ($el.attr('data-load')) {
+					return true;
+				}else{
+					return false;
+				}
 			}
 		}
 		lazyLoad.init($('.container img'));
