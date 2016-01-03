@@ -12,8 +12,12 @@ module.exports = function (app) {
 
         .get('/update', song.update)
         .post('/update', song.doUpdate)
-        //.post('/delete', song.delete)
-        .post('/remove', song.remove) // 为什么不用 delete ?
+
+        .post('/remove', song.remove)
+
+
+    // CRUD
+
 
 
     app.use(router.middleware());
