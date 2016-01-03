@@ -6,7 +6,10 @@ module.exports = function (app) {
 
     router
         .get('/read', song.read)
-        .post('/create', song.create)
+
+        .get('/create', song.create)
+        .post('/create', song.doCreate)
+
         .post('/update', song.update)
         //.post('/delete', song.delete)
         .post('/remove', song.remove) // 为什么不用 delete ?

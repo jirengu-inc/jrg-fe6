@@ -2,7 +2,7 @@ var koa = require('koa')
 var path = require('path')
 var views = require('koa-views')
 var serve = require('koa-static')
-var bodyParser = require('koa-body-parser')
+var bodyParser = require('koa-body')
 
 
 var app = module.exports = koa()
@@ -12,7 +12,8 @@ app.use(views('app/views', {
     map: {hbs: 'handlebars'}
 }))
 
-app.use(bodyParser());
+
+app.use(bodyParser({multipart: true, formidable: {uploadDir: path.join(__dirname, 'static/uploaded')}}));
 
 
 app.use(function * (next) {

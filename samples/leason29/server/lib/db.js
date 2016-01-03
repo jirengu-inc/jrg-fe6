@@ -3,3 +3,15 @@
  */
 
 
+exports.read = function () {
+    db.serialize(function () {
+        var a = db.run('SELECT * from song');
+        console.log(a)
+    });
+
+    db.close();
+}
+
+exports.create = function () {
+   
+}
