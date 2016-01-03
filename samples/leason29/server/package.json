@@ -4,7 +4,7 @@
   "description": "A simple Koajs application starter template.",
   "main": "index.js",
   "scripts": {
-    "start": "node --harmony index.js"
+    "start": "nodemon --watch app/controllers --watch app/routers --harmony index.js"
   },
   "dependencies": {
     "config": "^1.12.0",
@@ -16,6 +16,8 @@
     "koa-router": "^4.3.2",
     "koa-static": "~1.5.2",
     "koa-views": "^3.0.0",
+    "nodemon": "^1.8.1",
+    "sqlite3": "^3.1.1",
     "waterline": "^0.10.21"
   },
   "engines": {

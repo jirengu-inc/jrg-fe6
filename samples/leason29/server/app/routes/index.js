@@ -1,15 +1,16 @@
-module.exports = function(app) {
-	var Router 		= require('koa-router'), 
-		indexCtrl 	= require('../controllers/index');
+module.exports = function (app) {
+    var Router = require('koa-router')
+    var song = require('../controllers/song')
 
-	var router = new Router();
+    var router = new Router();
 
-	router
-		.get('/', indexCtrl.index)
-        .get('/index2', indexCtrl.index2)
-        .get('/data.js', indexCtrl.data)
-        .post('/', indexCtrl.post)
-        .post('/post2', indexCtrl.post2)
+    router
+        .get('/read', song.read)
+        .post('/create', song.create)
+        .post('/update', song.update)
+        //.post('/delete', song.delete)
+        .post('/remove', song.remove) // 为什么不用 delete ?
 
-	app.use(router.middleware());
+
+    app.use(router.middleware());
 };
