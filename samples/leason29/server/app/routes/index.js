@@ -10,7 +10,8 @@ module.exports = function (app) {
         .get('/create', song.create)
         .post('/create', song.doCreate)
 
-        .post('/update', song.update)
+        .get('/update', song.update)
+        .post('/update', song.doUpdate)
         //.post('/delete', song.delete)
         .post('/remove', song.remove) // 为什么不用 delete ?
 
