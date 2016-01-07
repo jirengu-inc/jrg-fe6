@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+	div{
+		height: 200px;
+		border: 1px solid orange;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	div img{
+		height: 100%;
+	}
+	</style>
+</head>
+<body>
+	<div><img src="./imgs/blank.png" data-src="./imgs/1.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/2.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/3.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/4.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/5.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/1.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/2.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/3.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/4.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/5.jpg"></div>
+	<script type="text/javascript">
+		$(window).on('scroll',function(e){
+			$('div img').each(function(index,node){
+				if(isshow(node)){
+					showImg(node);
+				}
+			});
+		});
+		function isshow(node){
+			var winHeight=$(window).height();
+			var scrollTop=$(window).scrollTop();
+			var elTop=$(node).offset().top;
+			if(winHeight+scrollTop>elTop)
+				return true;
+			else
+				return false;
+		}
+		function showImg(node){
+			setTimeout(function(){
+				$(node).attr('src',$(node).attr('data-src'));
+			},500);
+		}
+	</script>
+</body>
+</html>

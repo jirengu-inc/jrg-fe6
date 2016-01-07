@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+	div{
+		height: 200px;
+		border: 1px solid orange;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	div img{
+		height: 100%;
+	}
+	</style>
+</head>
+<body>
+	<div><img src="./imgs/blank.png" data-src="./imgs/1.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/2.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/3.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/4.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/5.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/1.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/2.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/3.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/4.jpg"></div>
+	<div><img src="./imgs/blank.png" data-src="./imgs/5.jpg"></div>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<p>hello</p>
+	<script type="text/javascript">
+		var lazyLoding={
+			init: function($img,hander){
+				this.$target=$($img);
+				this.hander=hander;
+				this.$w=$(window);
+				this.bind();
+			},
+			bind: function(){
+				var _self=this;
+				this.$w.on('scroll',function(e){
+					_self.checkShow();
+				})
+			},
+			checkShow:function(){
+				var _self=this;
+				this.$target.each(function(index,node){
+					var scrollTop=_self.$w.scrollTop();
+					var winHeight=_self.$w.height();
+					var targetTop=$(node).offset().top;
+					if(scrollTop+winHeight>targetTop&&!_self.hasLoded($(node))){;
+						$(node).data('loding',true);
+						_self.hander.call($(node));
+					}
+				});
+			},
+			hasLoded: function($el){
+				if($el.data('loding'))
+					return true;
+				else
+					return false;
+			}
+		}
+		lazyLoding.init($('div img'),function(){
+			this.attr('src',this.attr('data-src'));
+			console.log('ok');
+		});
+	</script>
+</body>
+</html>
