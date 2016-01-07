@@ -1,0 +1,446 @@
+.wrapped{
+	width: 1210px;
+	margin: 0 auto;
+}
+@media(max-width: 768px){
+	.wrapped{
+		width: 100%;
+	}
+}
+body{
+	font-size: 12px;
+	font-family: 'å¾®è½¯é›…é»‘','Microsoft YaHei';
+}
+.top-bar{
+	color: #666;
+	background-color: #f1f1f1;
+	min-height: 33px;
+	line-height: 33px;
+}
+.top-bar .delivery-login{
+	float: left;
+	width: 533px;
+	padding-right: 10px;
+}
+@media(max-width: 768px){
+	.top-bar .delivery-login{
+		width: 45%;
+		box-sizing:border-box;
+	}
+}
+.top-bar .delivery-login .delivery{
+	float: left;
+	width: 50%;
+	position: relative;
+}
+.top-bar .g-droplist{
+	display: inline-block;
+	height: 100%;
+	padding: 0 10px;
+	border-left:1px solid #f1f1f1;
+	border-right: 1px solid #f1f1f1;
+}
+.top-bar .icon-down{
+	display: inline-block;
+	margin-left: 5px;
+	transition: transform 0.1s;
+}
+.top-bar .icon-phone{
+	font-size: 16px;
+}
+.active{
+	background-color: white;
+}
+.active i{
+	transform: rotate(180deg);
+}
+.top-bar .delivery-login .delivery ul{
+	padding: 10px;
+	padding-right: 0;
+	width: 300px;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+	display: none;
+	border:1px solid #ddd;
+	border-top: none;
+}
+.top-bar .delivery-login .delivery ul .border-top{
+	height: 1px;
+	position: absolute;
+	width: 219px;
+	right: -1px;
+	background-color: #ddd;
+	top: -1px;
+}
+.top-bar .delivery-login .delivery ul li{
+	float: left;
+	line-height: 24px;
+	margin-right: 20px;
+	color: #666;
+}
+.top-bar .delivery-login .delivery ul li:hover{
+	background-color: #f4f4f4;
+	color: #C81623;
+}
+.top-bar .delivery-login .delivery ul li:first-child{
+	background-color: #b61d1d;
+	color: white;
+}
+.top-bar .delivery-login .delivery ul li.long-name{
+	margin-right: 8px;
+}
+.top-bar .delivery-login .delivery ul li a{
+	font-size: 12px;
+	color: inherit;
+	padding: 0 8px;
+}
+.top-bar .delivery-login .login{
+	float: right;
+	width: 50%;
+	text-align: right;
+}
+.top-bar .delivery-login .login a{
+	color: inherit;
+}
+.top-bar .delivery-login .login a:last-child{
+	color: #c81623;
+}
+.top-bar .user{
+	width: 667px;
+	float: right;
+}
+@media(max-width: 768px){
+	.top-bar ul{
+		width: 55%;
+		box-sizing:border-box;
+	}
+}
+.top-bar .user>li{
+	float: left;
+	position: relative;
+}
+.top-bar .user>li a{
+	color: inherit;
+	padding: 0 5px 0 5px;
+	border-left:1px solid #f1f1f1;
+	border-right: 1px solid #f1f1f1;
+}
+.top-bar .user>li a:hover{
+	color: #c81623;
+
+}
+.top-bar .user>li a:hover i{
+	color: #666;
+}
+.top-bar .user>li a.attention-jd:hover{
+	color: #666;
+}
+.top-bar .user>li a.client-service:hover{
+	color: #666;
+}
+.top-bar .user>li a.site-map:hover{
+	color: #666;
+}
+.top-bar .user>li a~section{
+	background-color: white;
+	position: absolute;
+	left: 6px;
+	border:1px solid #ddd;
+}
+.top-bar .user>li a.phone-jd~section,.top-bar .user>li a.client-service~section{
+	left: 5px;
+}
+.top-bar .user>li>div{
+	width: 0;
+	border-left: 1px solid #ddd;
+	height: 12px;
+	display: inline-block;
+}
+.ad{
+	background-color: #F65066;
+}
+.ad img{
+	height: 80px;
+}
+.logo-search-cart{
+	padding-top: 25px;
+}
+.logo-search-cart .logo{
+	float: left;
+}
+.logo-search-cart .logo a h1{
+	display: inline-block;
+	width: 271px;
+	height: 59px;
+	background-image: url(../img/logo.png);
+	text-indent: -9999px;
+}
+@media(max-width: 768px){
+	.logo-search-cart .logo{
+		width: 22%;
+	}
+	.logo-search-cart img{
+		width: 100%;
+	}
+}
+.logo-search-cart .search-area{
+	width: 525px;
+	float: left;
+	margin-left: 97px;
+}
+.logo-search-cart .search{
+	width: 423px;
+	height: 17px;
+	float: left;
+	padding: 8px;
+	border: 2px solid #b61d1d;
+	border-right: none;
+	outline: none;
+
+}
+.logo-search-cart .search-btn{
+	width: 82px;
+	float: left;
+	height: 37px;
+	color: #fff;
+	background-color: #b61d1d;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+
+}
+.logo-search-cart .recommend{
+	color: #666;
+	padding-top: 6px;
+	float: left;
+	width: 442px;
+}
+.logo-search-cart .recommend a{
+	color: inherit;
+	padding-right: 4px;
+}
+.logo-search-cart .recommend a:first-child{
+	color: #b61d1d;
+	font-weight: bold;
+}
+.logo-search-cart .cart{
+	margin-left: 110px;
+	float: left;
+	font-size: 12px;
+	padding: 10px 10px 10px 44px;
+	text-align: center;
+	background-color: #f9f9f9;
+	border: 1px solid #dfdfdf;
+	color: #666;
+	position: relative;
+}
+.logo-search-cart .cart .shopping-amount{
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background-color: #c81623;
+	border-radius: 7px 7px 7px 0;
+	right: 23px;
+	top: -3px;
+	text-align: center;
+	line-height: 14px;
+	color: white;
+}
+.logo-search-cart .cart .icon-right{
+	margin-left: 10px;
+}
+.logo-search-cart .cart .icon-cart{
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	color: #c81623;
+}
+@media(max-width: 768px){
+	.logo-search-cart .search-area{
+		width: 44%;
+		margin-left: 8%;
+	}
+	.logo-search-cart .search-area .search{
+		width: 84%;
+		box-sizing:border-box;
+	}
+	.logo-search-cart .search-area .search-btn{
+		width: 16%;
+		box-sizing:border-box;
+	}
+	.logo-search-cart .recommend{
+		width: 84%;
+		box-sizing:border-box;
+	}
+	.logo-search-cart .cart{
+		width: 8%;
+		box-sizing:border-box;
+		margin-left: 9%;
+	}
+}
+.category{
+	padding-top: 17px;
+	border-bottom: 2px solid #b1191a;
+}
+.category .product-category{
+	width: 210px;
+	height: 45px;
+	background-color: #B1191A;
+	float: left;
+}
+.category .product-category a{
+	line-height: 45px;
+	text-indent: 8px;
+	color: white;
+	width: 100%;
+	display: inline-block;
+	font-size: 15px;
+}
+.category .app-item{
+	float: left;
+}
+.category .app-item li{
+	float: left;
+	line-height: 45px;
+	padding: 0 20px;
+	font-size: 15px;
+}
+.category .app-item li>a{
+	color: #333;
+}
+.category .app-item li>a:hover{
+	color: #C81623;
+}
+@media(max-width: 768px){
+	.category .product-category{
+		width: 17%;
+		box-sizing:border-box;
+	}
+	.category .product-category a{
+		text-align: center;
+		text-indent: 0;
+	}
+	.category .app-item{
+		width: 56%;
+		box-sizing:border-box;
+	}
+	.category .app-item li{
+		padding: 0 1%;
+	}
+}
+.products .products-list{
+	float: left;
+	width: 210px;
+	height: 466px;
+}
+.products .products-list li{
+	height: 31px;
+	line-height: 31px;
+	font-size: 14px;
+	color: white;
+	background-color: #C81623;
+	border-left: 1px solid #b61d1d;
+	text-indent: 8px;
+}
+.products .products-list li a{
+	color: inherit;
+	float: left;
+}
+.products .products-list li i{
+	float: right;
+	margin-right: 10px;
+	font-size: 12px;
+}
+.products .products-list li:hover{
+	color: #b61d1d;
+	background-color: #f7f7f7;
+}
+.products .products-list li:hover i{
+	display: none;
+}
+.products .slides{
+	margin: 10px 10px 0 10px;
+	float: left;
+}
+.products .bull-ser{
+	width: 248px;
+	float: left;
+	border: 1px solid #E4E4E4;
+	margin-top: 10px;
+}
+.products .bull-ser .bulletin{
+	border-bottom: 1px dashed #e4e4e4;
+}
+.products .bull-ser .bulletin h2{
+	height: 45px;
+	border-bottom: 1px dotted #E8E8E7;
+	line-height: 45px;
+	text-indent: 14px;
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+	position: relative;
+}
+.products .bull-ser .bulletin h2 a{
+	position: absolute;
+	right: 14px;
+	color: inherit;
+	font-size: 12px;
+}
+.products .bull-ser .bulletin h2 a:hover{
+	color: #C81623;
+}
+.products .bull-ser .bulletin ul{
+	margin: 7px 0 10px 14px;
+}
+.products .bull-ser .bulletin ul li{
+	line-height: 28px;
+}
+.products .bull-ser .bulletin ul li a{
+	font-size: 12px;
+	color: #666;
+}
+.products .bull-ser .bulletin ul li a:hover{
+	color: #C81623;
+}
+.products .bull-ser .servers h2{
+	height: 45px;
+	border-bottom: 1px dotted #E8E8E7;
+	line-height: 45px;
+	text-indent: 14px;
+	color: #666;
+	font-size: 16px;
+	font-weight: normal;
+}
+.products .bull-ser .servers .tab-button{
+
+}
+.products .bull-ser .servers .tab-button li{
+	float: left;
+	padding: 0 17px;
+	border-right: 1px solid #E8E8E7;
+	border-bottom: 1px solid #E8E8E7;
+	height: 25px;
+	line-height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+.products .bull-ser .servers .tab-button li:last-child{
+	border-right: none;
+}
+.products .bull-ser .servers .tab li{
+	height: 180px;
+}
+.products .bull-ser .servers .tab-button li.active:hover:before{
+	content: " ";
+	display: block;
+	height: 2px;
+	background-color: #c81623;
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+.products .bull-ser .servers .tab-button li.active:hover{
+	border-bottom: none;
+}

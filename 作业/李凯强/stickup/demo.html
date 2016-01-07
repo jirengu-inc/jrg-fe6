@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="stickup.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+		header{
+			height: 80px;
+			background-color: #18D018;
+		}
+		nav{
+			height: 50px;
+			background-color: #05CBE8;
+		}
+		aside{
+			width: 100px;
+			height: 300px;
+			background-color: pink;
+		}
+		footer{
+			height: 800px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<header>header</header>
+	<main>
+		<nav>nav</nav>
+		<aside>aside</aside>
+	</main>
+	<footer>footer</footer>
+	<script type="text/javascript" src="./stickup.js"></script>
+	<script type="text/javascript">
+		$('aside').stickup(function(){
+			$(this).addClass('test');
+		},'test');
+	</script>
+</body>
+</html>
