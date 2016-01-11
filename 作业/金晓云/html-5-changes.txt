@@ -1,0 +1,60 @@
+HTML5中的新元素
+
+
+新的语义元素
+标签—描述
+<article>—在文档中定义一篇文章
+<aside>—定义页面内容以外的内容
+<bdi>——定义一部分文本，包含该文本的全部文本可能设置了不同的文本方向
+<details>——定义用户可以浏览或者隐藏的附加信息/细节
+<dialog>——定义对话框或者窗体
+<figcaption>——定义<figure>元素的标题
+<figure>——定义独立内容，如插图、图表、照片、代码列表等
+<footer>——定义section或文档的页脚
+<header>——定义section或文档的头
+<main>——定义文档的主要内容
+<mark>——定义标记的或者高亮的文本
+<menuitem>——定义用户可以从弹出菜单调用的命令/菜单项目
+<meter>——定义一个在已知范围内的度量(一个标尺)
+<nav>——在文档中定义一个导航链接
+<progress>——定义任务的进度
+<rp>——定义不支持ruby注释的浏览器中的显示
+<rt>——定义字母的注释或发音
+<ruby>——定义ruby注释
+<section>——在文档中定义章节
+<summary>——为<details>元素定义一个可见的头
+<time>——定义时间/日期
+<wbr>——定义可能的换行
+
+
+新的表单元素
+标签—描述
+<datalist>——为input控制定义预先定义好的选项
+<keygen>——为表单定义一个密钥生成区域
+<output>——定义计算结果
+
+
+新的input类型：color date datetime datetime-local email month number range search tel time url week
+新的input属性：autocomplete autofocus form formaction formenctype formmethod formnovalidate forntarget height ans width list min and max multiple pattern（regexp） placeholder required step
+
+
+新的属性语法
+类型——举例
+空的——<input type="text" value="John" disabled>
+无引号——<input type="text" value=John>
+双引号——<input type="text" value="John Doe">
+单引号——<input type="text" value='John Doe'>
+
+制图
+
+<canvas>——定义用javascript绘制的图形
+<svg>——定义用SVG绘制的图形
+
+定义多媒体元素
+<audio>——定义声音或音乐内容
+<embed>——为外部应用(如插件)提供容器
+<source>——为<video>和<audio>定义资源
+<track>——为video>和<audio>定义文本轨道
+<video>——定义视频内容
+
+
