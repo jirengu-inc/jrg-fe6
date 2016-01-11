@@ -1,0 +1,153 @@
+HTML5 New Elements
+
+New Elements in HTML5  
+//在HTML5新元素
+Below is a list of the new HTML5 elements, and a description of what they are used for.
+//下面是新的HTML5元素的列表,和他们使用的描述。
+New Semantic/Structural Elements
+新的语义/结构元素
+HTML5 offers new elements for better document structure:
+HTML5为更好的文档结构提供新的元素:
+Tag	                            Description
+<article>	        	   Defines an article in the document  
+//定义文档中的一篇文章
+<aside>	            	   Defines content aside from the page content  
+//从页面内容中定义内容旁白
+<bdi>	             	  Defines a part of text that might be formatted in a different direction from other text
+//定义一段文字可能和别的文字格式化方向不同
+<details>	         	  Defines additional details that the user can view or hide
+//定义了用户可以查看或隐藏的更多额外细节,
+<dialog>	         	   Defines a dialog box or window
+//定义了一个对话框或窗口
+<figcaption>	  	        Defines a caption for a <figure> element
+//为figure元素定义一个标题
+<figure>	   		        Defines self-contained content, like illustrations, diagrams, photos, code listings, etc.
+//定义自成体系的内容，如插图、图表、照片、代码列表等。
+<footer>	   		        Defines a footer for the document or a section
+//定义文档的页脚或一部分
+<header>	  	           Defines a header for the document or a section
+//定义文档的页眉或一部分
+<main>	                Defines the main content of a document
+//定义文档的主要内容
+<mark>                 Defines marked or highlighted text
+//定义标记或高亮文本
+<menuitem> 	        Defines a command/menu item that the user can invoke from a popup menu
+//定义一个用户可以从一个弹出式菜单调用的命令或菜单项，
+<meter>	            Defines a scalar measurement within a known range (a gauge)
+//定义一个度量衡的范围
+<nav>	                 Defines navigation links in the document
+//定义文档中的导航链接
+<progress>	           Defines the progress of a task
+//定义任务的进度条
+<rp>	                    Defines what to show in browsers that do not support ruby annotations
+//定义不支持 ruby 元素的浏览器所显示的内容
+<rt>	                   Defines an explanation/pronunciation of characters (for East Asian typography)
+//定义一个字符的解释/发音
+<ruby>	               Defines a ruby annotation (for East Asian typography)
+//定义一个ruby注释
+<section>	           Defines a section in the document
+//定义文档中的区段
+<summary>	       Defines a visible heading for a <details> element
+//为 details元素 定义一个标题
+<time>	               Defines a date/time
+//定义日期/时间
+<wbr>	               Defines a possible line-break
+//定义一个可行的行中断
+Read more about HTML5 Semantics.
+//阅读更多关于HTML5语义。
+
+New Form Elements
+
+Tag	                            Description
+
+<datalist>	             Defines pre-defined options for input controls
+//定义输入控件的预定义选项
+<keygen>	              Defines a key-pair generator field (for forms)
+//定义一个密钥对生成字段（用于表单）
+<output>	             Defines the result of a calculation
+//定义计算结果/类型输出
+Read all about old and new form elements in HTML Form Elements.
+//在HTML表单元素阅读所有关于旧的和新的form元素。
+New Input Types
+
+New Input Types	
+
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range                                                 范围
+search
+tel
+time
+url
+week
+
+New Input Attributes
+
+autocomplete
+autofocus
+form
+formaction                    表单的 action 属性
+formenctype                  表单的 enctype 属性
+formmethod                  表单的 method 属性
+formnovalidate			   表单的 novalidate 属性					
+formtarget                    表单的 target 属性
+height and width
+list
+min and max
+multiple                        允许一个以上的值
+pattern (regexp)
+placeholder
+required
+step
+Learn all about old and new input types in HTML Input Types.
+Learn all about input attributes in HTML Input Attributes.
+
+HTML5 - New Attribute Syntax
+//HTML5新的属性语法
+HTML5 allows four different syntaxes for attributes.
+//HTML5允许四种不同的语法属性。
+This example demonstrates the different syntaxes used in an <input> tag:
+//这个例子演示了在input标签不同的语法
+Type	     Example
+//
+Empty	  				<input type="text" value="John" disabled>
+
+Unquoted				<input type="text" value=John>
+
+Double-quoted		<input type="text" value="John Doe">
+
+Single-quoted		<input type="text" value='John Doe'>
+
+In HTML5, all four syntaxes may be used, depending on what is needed for the attribute.
+//在HTML5中，所有的四个语法都可以使用，这取决于需要那个属性。
+
+HTML5 Graphics
+
+Tag							Description
+
+<canvas>			Defines graphic drawing using JavaScript
+//使用脚本来绘制图形
+<svg>				Defines graphic drawing using SVG
+//使用svg来绘制图形
+Read more about HTML5 Canvas.
+Read more about HTML5 SVG.
+
+New Media Elements
+
+Tag								Description
+//
+<audio>				Defines sound or music content
+//定义声音或音乐内容
+<embed>				Defines containers for external applications (like plug-ins)
+//定义嵌入的内容(比如插件)
+<source>				Defines sources for <video> and <audio>
+//为媒体元素（比如 <video> 和 <audio>）定义媒介资源
+<track>					Defines tracks for <video> and <audio>
+//为媒体元素（比如 <video> 和 <audio>）定义字幕
+<video>				Defines video or movie content
+//定义视频或电影内容
