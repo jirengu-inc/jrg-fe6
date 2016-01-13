@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452151748_504958.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+    		font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+    		color: #666;
+    		margin-bottom: 200px;
+		}
+		a{
+			text-decoration: none;
+			color: #666;
+		}
+		a:hover{
+			color: #c81623;
+		}
+		ul{
+			list-style: none;
+		}
+
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.wrap{
+			width: 1210px;
+			margin: 0 auto;
+		}
+
+
+		.topbar{
+			background: #f1f1f1;
+			height: 30px;
+			line-height: 30px;
+		}
+		.topbar .topbar-city{
+			float: left;
+		}
+		.topbar .topbar-linklist{
+			float: right;
+		}
+		.topbar .topbar-linklist .linklist{
+			list-style: none;
+		}
+		.topbar .topbar-linklist .linklist>li{
+			float: left;
+			margin:auto 5px;
+		}
+		.topbar .topbar-linklist .linklist .spacer{
+			width: 1px;
+			height: 13px;
+			background: #ddd;
+			margin-top: 9px;
+			padding: 0;
+		}
+
+		.ad{
+			height: 81px;
+			background: #080404;
+		}
+		.ad .ad-img img{
+			height: 80px;
+
+		}
+		.ad .ad-img{
+			position: relative;
+		}
+		.ad .ad-img .ad-close{
+			width: 12px;
+			height: 12px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			color: #fff;
+			line-height: 12px;
+			text-align: center;
+		}
+
+		.logoandsearch{
+			height: 60px;
+			padding: 20px 0 20px 0;
+		}
+		.logoandsearch .logo{
+			float: left;
+			width: 270px;
+			height: 60px;
+			background: url(http://misc.360buyimg.com/lib/img/e/logo-201305.png) no-repeat 0 0;
+		}
+		.logoandsearch .search{
+			float: left;
+			margin:5px 104px 0 90px;
+		}
+		.logoandsearch .search .search-ipt input{
+			border: 2px solid #b61d1d;
+			border-right: none;
+			width: 449px;
+			height: 32px;
+			font-size: 14px;
+			font-family: "microsoft yahei";
+			padding-left: 5px;
+		}
+		.logoandsearch .search .search-ipt button{
+			width: 82px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			font-size: 16px;
+			color: #fff;
+			border: none;
+			background-color: #b61d1d;
+			position: relative;
+			left: -3px;
+			top: 1px;
+		}
+		.logoandsearch .search .search-links{
+			margin-top: 8px;
+		}
+		.logoandsearch .search .search-links span{
+			margin-right: 7px;
+		}
+		.logoandsearch .shopping-cart{
+			float: left;
+			width: 114px;
+			height: 18px;
+			border: 1px solid #DFDFDF;
+			background: #F9F9F9;
+			margin-top: 5px;
+			padding: 8px 10px 8px 15px;
+		}
+		.logoandsearch .shopping-cart .cart{
+			display: inline-block;
+			position: relative;
+		}
+		.logoandsearch .shopping-cart .cart .cart-count{
+			background: #b61d1d;
+			color: #fff;
+			width: 15px;
+			height: 15px;
+			line-height: 15px;
+			text-align: center;
+			position: absolute;
+			top: -12px;
+			right: -15px;
+			border-radius: 6px 6px 8px 0;
+		}
+
+		.nav{
+			border-bottom: 2px solid #b61d1d;
+			font:400 15px/44px "microsoft yahei";
+		}
+		.nav .nav-left{
+			width: 200px;
+			height: 44px;
+			line-height: 44px;
+			background-color: #B1191A;
+			color: #fff;
+			padding-left: 10px;
+			float: left;
+		}
+		.nav .nav-list{
+			float: left;
+		}
+		.nav .nav-list ul li{
+			float: left;
+			height: 44px;
+			text-align: center;
+			line-height: 44px;
+			padding: 0 20px;
+		}
+		.nav .nav-list ul li a{
+			color: #333;
+		}
+		.nav .nav-list ul li a:hover{
+			color: red;
+		}
+		.nav .nav-ad {
+			float: right;
+			width: 140px;
+			height: 40px;
+			background: url(http://img20.360buyimg.com/da/jfs/t2443/320/1195118691/7654/2751b530/568a845eN5096a4b9.jpg) no-repeat;
+		}
+
+		.menubar{
+			height: 465px;
+			margin-bottom: 10px;
+		}
+		.menubar .menu{
+			width: 209px;
+			height: 465px;
+			float: left;
+			color: #fff;
+			border-left: 1px solid #b61d1d;
+		}
+		.menubar .menu .menu-item{
+			background: #c81623;
+			height: 15px;
+			line-height: 31px;
+			padding: 8px 0;
+			position: relative;
+		}
+		.menubar .menu .menu-item h3{
+			font:400 14px "microsoft yahei";
+			padding: 0 10px;
+		}
+		.menubar .menu .menu-item h3 a{
+			color: #fff;
+		}
+		.menubar .menu .menu-item i{
+			position: absolute;
+			top: 2px;
+			right: 14px;
+		}
+		.menubar .jd-carsousel{
+			float: left;
+			margin: 10px;
+			width: 730px;
+			height: 454px;
+		}
+		.menubar .newsandservice{
+			margin-top: 10px;
+			float: left;
+		}
+		.menubar .newsandservice .ns-item{
+			border: 1px solid #e4e4e4;
+			border-bottom: none;
+			width: 248px;
+		}
+		.menubar .newsandservice .ns-item .title{
+			height: 43px;
+			line-height: 43px;
+			border-bottom: 1px dotted #E8E8E7;
+			padding: 0 15px;
+		}
+		.menubar .newsandservice .ns-item .title h2{
+			font-size: 16px;
+			font-family: "microsoft yahei";
+			font-weight: 400;
+			display: inline-block;
+		}
+		.menubar .newsandservice .ns-item .title a{
+			float: right;
+		}
+		.menubar .newsandservice .ns-item .news-content{
+			border-bottom: 1px dashed #E8E8E7;
+			padding-left: 15px;
+			padding-bottom: 10px;
+		}
+		.menubar .newsandservice .ns-item .news-content li{
+			margin-top: 10px;
+			width: 210px;
+			height: 18px;
+			line-height: 17px;
+			overflow: hidden;
+		}
+		.menubar .newsandservice .ns-item .news-content li span{
+			font-weight: 700;
+			margin-right: 5px;
+		}
+		.menubar .newsandservice .ns-item .service-content .ser-mem{
+			float: left;
+			width: 61px;
+			height: 70px;
+			border-right:1px solid #E8E8E7;
+  			border-bottom:1px solid #E8E8E7;
+
+		}
+		.menubar .newsandservice .ns-item .service-content .ser-mem {
+			text-align: center;
+		}
+		.ser-mem a{
+			  padding-top:40px;
+			  display:block;
+			  position:relative;
+			
+		}
+		.ser-mem i{
+			width: 25px;
+		 	height: 25px;
+		  	display: block;
+		   	position:absolute;
+		  	top:13px;
+		  	left:18px;
+		}
+		.ser-mem span{
+			display:block;
+  			margin-top:6px;
+		}
+
+		.today .today-logo{
+			width: 210px;
+			height: 151px;
+			background: #ddd;
+			float: left;
+		}
+		.today .today-slider{
+			float: left;
+		}
+		.today .today-slider ul li{
+			float: left;
+			background: #eee;
+			width: 249px;
+			height: 151px;
+			margin-right: 1px;
+		}
+		
+		.m{
+			margin-bottom: 20px;
+		}
+		.mt{
+			height: 36px;
+		}
+		.guess .mt h2{
+			line-height: 30px;
+			font-size: 20px;
+			padding-right: 228px;
+    		background: url(http://misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) 85px -91px no-repeat;
+    		font-family: "microsoft yahei";
+    		font-weight: 400;
+		}
+		.mc{
+			height: 230px;
+			border: 1px solid #eee;
+		}
+		.guess .mc .goods li{
+			width: 200px;
+			height: 230px;
+			float: left;
+		}
+		.guess .mc .goods .goods-img{
+			margin-top: 20px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+		.guess .mc .goods .goods-info{
+			padding: 0 36px;
+			border-left: 1px solid #eee;
+		}
+		.guess .mc .goods .goods-info .goods-name{
+			display: block;
+			height: 36px;
+
+		}
+		.goods-info .goods-price{
+			color: #b51d1a;
+    		margin-top: 5px;
+    		font-size: 18px;
+		}
+		.goods-info .goods-price i{
+			font-size: 14px;
+			font-style: inherit;
+		}
+	</style>
+</head>
+<body>
+	<div class="topbar clearfix">
+		<div class="wrap">
+			<div class="topbar-city">
+				送至：北京<i class="jd-iconfont icon-xia"></i>
+			</div>
+			<div class="topbar-linklist">
+				<ul class="linklist clearfix">
+					<li class="link1"><a href="">你好，请登录</a></li>
+					<li class="link2"><a href="">免费注册</a></li>
+					<li class="spacer"></li>
+					<li class="link3"><a href="">我的订单</a></li>
+					<li class="spacer"></li>
+					<li class="link4"><a href="">我的京东<i class="jd-iconfont icon-xia"></i></a></li>
+					<li class="spacer"></li>
+					<li class="link5"><a href="">京东会员</a></li>
+					<li class="spacer"></li>
+					<li class="link6"><a href="">企业采购</a></li>
+					<li class="spacer"></li>
+					<li class="link7"><a href=""><i class="jd-iconfont icon-mobile"></i>手机京东<i class="jd-iconfont icon-xia"></i></a></li>
+					<li class="spacer"></li>
+					<li class="link8"><a href="">关注京东<i class="jd-iconfont icon-xia"></i></a></li>
+					<li class="spacer"></li>
+					<li class="link8"><a href="">客户服务<i class="jd-iconfont icon-xia"></i></a></li>
+					<li class="spacer"></li>
+					<li class="link8"><a href="">网站导航<i class="jd-iconfont icon-xia"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ad">
+		<div class="wrap">
+			<div class="ad-img">
+				<img src="http://img30.360buyimg.com/da/jfs/t1876/24/1915102093/114845/957d03bf/568c83a7Nfb828d5f.jpg" alt="">
+				<div class="ad-close">X</div>
+			</div>
+		</div>
+	</div>
+	<div class="logoandsearch">
+		<div class="wrap clearfix">
+			<div class="logo"></div>
+			<div class="search">
+				<div class="search-ipt">
+					<input type="text" placeholder="家用投影">
+					<button>搜索</button>
+				</div>
+				<div class="search-links">
+					<span><a href="">2元秒杀</a></span>
+					<span><a href="">数码尖货</a></span>
+					<span><a href="">新年必买</a></span>
+					<span><a href="">三星A9</a></span>
+					<span><a href="">1元拿走</a></span>
+					<span><a href="">笔记本电脑</a></span>
+					<span><a href="">休闲男装</a></span>
+					<span><a href="">魅蓝metal</a></span>
+					<span><a href="">收银机</a></span>
+				</div>
+			</div>
+			<div class="shopping-cart">
+				<i class="jd-iconfont icon-gouwuche" style="color:#b61d1d;margin-right:2px;font-weight: bolder;"></i>
+				<div class="cart">
+					我的购物车<div class="cart-count">0</div>
+				</div>			 
+				<i class="jd-iconfont icon-you" style="margin-left:13px;font-size:10px;"></i>
+			</div>
+		</div>
+	</div>
+	<div class="nav">
+		<div class="wrap clearfix">
+			<div class="nav-left">
+				全部商品分类
+			</div>
+			<div class="nav-list">
+				<ul class="clearfix">
+					<li><a href="">服装城</a></li>
+					<li><a href="">美妆馆</a></li>
+					<li><a href="">超市</a></li>
+					<li><a href="">全球购</a></li>
+					<li><a href="">闪购</a></li>
+					<li><a href="">团购</a></li>
+					<li><a href="">拍卖</a></li>
+					<li><a href="">金融</a></li>
+				</ul>
+			</div>
+			<div class="nav-ad">
+			</div>
+		</div>	
+	</div>	
+	<div class="menubar">
+		<div class="wrap clearfix">
+			<div class="menu">
+				<div class="menu-item">
+					<h3><a href="">家用电器</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">手机、数码、京东通信</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">电脑、办公</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">家居、家具、家装、厨具</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">男装、女装、内衣、珠宝</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">个护化妆、清洁用品</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">鞋靴、箱包、钟表、奢侈品</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">运动户外</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">汽车、汽车用品</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">母婴、玩具乐器</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">食品、酒类、生鲜、特产</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">营养保健</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">图书、音像、电子书</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">彩票、旅行、充值、票务</a></h3>
+					<i>></i>
+				</div>
+				<div class="menu-item">
+					<h3><a href="">理财、众筹、白条、保险</a></h3>
+					<i>></i>
+				</div>
+			</div>
+			<div class="jd-carsousel">
+				<img src="http://img11.360buyimg.com/da/jfs/t2245/325/1223312416/99559/d91c2e0e/568c860bN05b89d1d.jpg" alt="">
+			</div>
+			<div class="newsandservice">
+				<div class="ns-item">
+					<div class="title clearfix">
+						<h2>京东快报</h2>
+						<a href="">更多 &gt;</a>
+					</div>
+					<div class="news-content">
+						<ul>
+							<li><a href=""><span>[特惠]</span>闪购周年庆 满199减100</a></li>
+							<li><a href=""><span>[公告]</span>京东与天水市麦积区政府签约</a></li>
+							<li><a href=""><span>[特惠]</span>进口大BUY年 满287-150</a></li>
+							<li><a href=""><span>[公告]</span>温州大件运营中心开启运营</a></li>
+							<li><a href=""><span>[特惠]</span>百草味美食年货节 低至1元</a></li>
+						</ul>
+					</div>
+					<div class="title clearfix">
+						<h2>生活服务</h2>
+					</div>
+					<div class="service-content">
+						<ul class="clearfix">
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat"></i><span>话费</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -25px;"></i><span>机票</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -50px;"></i><span>电影票</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -75px;"></i><span>游戏</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -100px;"></i><span>彩票</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -125px;"></i><span>团购</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -150px;"></i><span>酒店</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -175px;"></i><span>火车票</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -250px;"></i><span>众筹</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -200px;"></i><span>理财</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -275px;"></i><span>礼品卡</span></a></li>
+							<li class="ser-mem"><a href=""><i style="background: url('images/tubiao.png') no-repeat 0 -225px;"></i><span>白条</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="today m">
+		<div class="wrap clearfix">
+			<div class="today-logo">
+				<img src="" alt="">
+			</div>
+			<div class="today-slider">
+				<ul class="clearfix">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="guess m">
+		<div class="wrap">
+			<div class="mt">
+				<h2>猜你喜欢</h2>
+			</div>
+			<div class="mc">
+				<ul class="goods clearfix">
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+					<li>
+						<div class="goods-img">
+							<img src="images/guess1.jpg" alt="">
+						</div>
+						<div class="goods-info">
+							<a class="goods-name">格兰仕（Galanz）微波炉P70D2OTL-D4(白色)</a>
+							<p class="goods-price"><i>¥</i>399.00</p>
+						</div>
+					</li>
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="special-bug m">	
+		<div class="wrap">
+			<div class="mt">
+				<h2>京东特色购</h2>
+			</div>
+			<div class="mc">
+				<div class="sb-content">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
