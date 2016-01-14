@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>列表页</title>
+    </head>
+    <body>
+
+        <nav>
+            <a href="/create">新增一首</a>
+        </nav>
+        <main>
+            <ul>
+                {{#each files}}
+                    <li>
+                        <input type="hidden" name="name" value="{{name}}">
+                        {{name}}
+                        <audio controls>
+                            <source src="{{path}}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <button name="update">更新</button>
+                        <button name="remove">删除</button>
+                    </li>
+                {{/each}}
+            </ul>
+        </main>
+
+        <script src="//libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $('button[name=remove]').on('click', function () { //请优化
+                var $button = $(this)
+                var $item = $button.closest('li')
+                var name = $item.find('input[name=name]').val()
+                $.post('/remove', {
+                    name: name
+                }).then(function (response) {
+                    if (response.errorCode) {
+                        alert('删除失败,错误码：' + response.errorCode)
+                    } else {
+                        $item.remove()
+                    }
+                }, function (xhr) {
+                    alert('服务器繁忙，请稍后再试。')
+                })
+            })
+            $('button[name=update]').on('click', function () {
+                var $button = $(this)
+                var $item = $button.closest('li')
+                var name = $item.find('input[name=name]').val()
+                window.location.href = '/update?name=' + encodeURIComponent(name)
+            })
+        </script>
+    </body>
+</html>

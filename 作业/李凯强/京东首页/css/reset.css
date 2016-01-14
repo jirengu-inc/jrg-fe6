@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei",simsun,arial,sans-serif;
+}
+ul{
+	vertical-align: top;
+	list-style: none;
+}
+ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+	vertical-align: middle;
+}
+.clearfix:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.clearfix{
+	*zoom:1;
+}

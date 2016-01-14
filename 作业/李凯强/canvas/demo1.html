@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		canvas{
+			border: 1px solid red;
+		}
+	</style>
+	<script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<canvas id='c1' width="400" height="400">
+	</canvas>
+	<input type="button" value='clear' id='clear'>
+	<script type="text/javascript">
+		var c1=document.getElementById('c1');
+		var cxt1=c1.getContext('2d');
+		cxt1.beginPath();
+		c1.onmousedown=function(e){
+			var ev=e||window.event;
+			cxt1.moveTo(ev.clientX-c1.offsetLeft,ev.clientY-c1.offsetTop);
+			c1.onmousemove=function(e){
+				var ev=e||window.event;
+				cxt1.lineTo(ev.clientX-c1.offsetLeft,ev.clientY-c1.offsetTop);
+				cxt1.stroke();
+			};
+			c1.onmouseup=function(){
+				c1.onmousemove=null;
+			}
+		}
+		var clearBtn=document.getElementById('clear');
+		clearBtn.addEventListener('click',function(e){
+			cxt1.clearRect(0,0,400,400);
+			cxt1.beginPath();
+		})
+	</script>
+</body>
+</html>

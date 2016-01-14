@@ -1,10 +1,10 @@
 $.fn.slides=function(obj){
 	var $ul=this;
-	$ul.each(function(){
+	$ul.each(function(index,dom){
 		var currentIndex=0;
 		var stopInterval;
 		var stopTimeout;
-		var $currentUl=$(this);
+		var $currentUl=$(dom);
 		var length=$currentUl.children('li').length;
 		var $slides=$currentUl.closest('.slides');
 		$slides.width($currentUl.children('li').width());
@@ -21,32 +21,6 @@ $.fn.slides=function(obj){
 		$imgObject.width($slidesSize.width);
 		$imgObject.height($slidesSize.height);
 		var liWidth=$slidesSize.width;
-<<<<<<< HEAD
-		$currentUl.width(liWidth*length);
-		var $tab=$currentUl.closest('.slides').find('.tab').children();
-		var $leftBtn;
-		var $rightBtn;
-		function btnStatus() {
-			var leftBtn=document.createElement('a');
-			var rightBtn=document.createElement('a');
-			leftBtn.href='javascript:;';
-			rightBtn.href='javascript:;';
-			leftBtn.className='leftBtn';
-			rightBtn.className='rightBtn';
-			leftBtn.textContent='<';
-			rightBtn.textContent='>';
-			$leftBtn=$(leftBtn);
-			$rightBtn=$(rightBtn);
-			$slides.append($leftBtn,$rightBtn);
-			$slides.on('mouseover', function(e) {
-				$(this).find('.leftBtn,.rightBtn').css({
-					'display': 'inline-block',
-					'opacity': 0
-				});
-				$(this).find('.leftBtn,.rightBtn').animate({
-					'opacity': 0.7
-				});
-=======
 		$currentUl.width(liWidth*2);
 		var $tab=$slides.find('.tab').children();
 		var $preBtn=$slides.find('.pre');
@@ -69,7 +43,6 @@ $.fn.slides=function(obj){
 				$currentUl.children().first().appendTo($currentUl);
 				$currentUl.css('left',0);
 				tabStatus();
->>>>>>> 31d222840cc0c3d0165248bee81a41eb691acae5
 			});
 		}
 		function nextPage(){

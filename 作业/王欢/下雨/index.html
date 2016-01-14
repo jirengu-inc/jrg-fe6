@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>下雨效果</title>
+  <style>
+  	*{
+  		margin: 0;
+  		padding: 0;
+  	}
+  </style>
+</head>
+<body>
+	<button>停止</button>
+  	<script>
+  		var Rain = (function(){
+
+  			var winWidth = $(window).width();
+  			var winHeight = $(window).height();
+  			var timer = null;
+
+  			function rainDrop(){
+  				var left = reRandom(0,winWidth);
+  				var $rain = $("<div style='position: fixed; width: 17px; height: 17px; top: -17px;'><img src='http://gitlab.jirengu.com/uploads/company-sys/test-jirengu-com/5dcd85a204/dew-icon.png' alt=''/></div>");
+  				$('body').append($rain);
+  				$rain.css({'left':left});
+  				$rain.animate({'top':winHeight},1000,function(){
+  					$(this).remove();
+  				});
+  				
+  			}
+  			function start(){
+  				timer = setInterval(rainDrop,500);
+  			}
+  			function end(){
+  				timer && clearInterval(timer);
+  			}
+  			function reRandom(min,max){
+  				var result = Math.floor(Math.random()*(max-min)+min);
+  				return result;
+  			}
+  			return{
+  				'start':start,
+  				'end':end
+  			}
+  		})()
+  		Rain.start();
+  		$('button').on('click',function(){
+  			Rain.end();
+  		});
+  	</script>
+</body>
+</html>

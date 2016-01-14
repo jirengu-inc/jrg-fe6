@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "A simple Koajs application starter template.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch app --harmony index.js"
+  },
+  "dependencies": {
+    "config": "^1.12.0",
+    "ect": "^0.5.9",
+    "handlebars": "~4.0.5",
+    "koa": "^0.19.1",
+    "koa-body": "^1.4.0",
+    "koa-body-parser": "~1.1.2",
+    "koa-bodyparser": "^1.5.0",
+    "koa-router": "^4.3.2",
+    "koa-static": "~1.5.2",
+    "koa-views": "^3.0.0",
+    "nodemon": "^1.8.1",
+    "waterline": "^0.10.21"
+  },
+  "engines": {
+    "node": ">=0.12.x"
+  }
+}

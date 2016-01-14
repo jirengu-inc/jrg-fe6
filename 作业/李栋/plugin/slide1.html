@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2015 by xingkongs (http://js.jirengu.com/xel/4/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{margin:0;padding:0;}
+.container li{
+  list-style:none;
+  float:left;
+}
+.container{
+  width:363px;
+  height:121px;
+ position:relative;
+  left:0px;
+}
+.mode{
+  width:121px;
+  height:121px;
+  overflow:hidden;
+}
+
+</style>
+</head>
+<body>
+  <div class="mode">
+    <ul class="container">
+    <li><a href=""></a><img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2247692397,1189743173&fm=5" alt=""></li>
+    <li><a href=""></a><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=598069525,3705173246&fm=5" alt=""></li>
+    <li><a href=""></a><img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2303226966,188128027&fm=58" alt=""></li>
+    
+  </ul>
+  </div>
+  
+<script id="jsbin-javascript">
+// var i=0
+// setTimeout(function step(){
+//   i++
+//   if(i==3){i=0}
+//   $('ul').animate({left:i*(-121)})
+//   setTimeout(step,3000)
+// },3000)
+
+$.fn.slides=function(){
+  var currentIndex=0
+  
+  this.each(function(){
+    var $currentUl=$(this)
+  
+var imagecount=$currentUl.children('li').length
+  var imagewidth=$currentUl.children('li').first().width()
+  setTimeout(function step(){
+    currentIndex++
+    if(currentIndex==imagecount){currentIndex=0}
+    $currentUl.animate({left:currentIndex*(-imagewidth)})
+    setTimeout(step,2000)
+  },2000)
+ }) 
+}
+$('ul').slides()
+</script>
+</body>
+</html>

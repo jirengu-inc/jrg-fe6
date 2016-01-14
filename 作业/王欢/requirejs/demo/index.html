@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>requirejs作业</title>
+	<style>
+		*{
+		  margin:0;
+		  padding: 0;
+		  background: #FFFF66;
+		}
+		.clearfix:after{
+		  content:'';
+		  display:block;
+		  clear:both;
+		}
+		ul{
+			list-style:none;
+		}
+		ul>li{
+			float: left;
+		}
+		.container{
+			width: 1000px;
+			margin: 20px auto;
+		}
+
+		#carousel{
+			/*border: 2px solid red;*/
+		  width: 1000px;
+		  height: 300px;
+		  overflow:hidden;
+		}
+		#carousel .img-list{
+		  width:6000px;
+		  position: relative;
+		  left: 0;
+		}
+		#carousel .img-list img{
+		  width: 1000px;
+		  height: 300px;
+		}
+		#carousel .img-list li{
+		  
+		}
+
+		#lazyLoad{
+			margin-top: 20px;
+		}
+		#lazyLoad .img-list li{
+			margin: 5px;
+		}
+		#lazyLoad .img-list li img{
+			width:240px;
+			height: 130px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="carousel">
+			<ul class="clearfix img-list">
+				<li><img src="http://img2.3lian.com/img2007/10/28/111.jpg" alt=""></li>
+				<li><img src="http://img2.3lian.com/img2007/10/28/112.jpg" alt=""></li>
+				<li><img src="http://img2.3lian.com/img2007/10/28/113.jpg" alt=""></li>
+				<li><img src="http://img2.3lian.com/img2007/10/28/114.jpg" alt=""></li>
+				<li><img src="http://img2.3lian.com/img2007/10/28/115.jpg" alt=""></li>
+				<li><img src="http://img2.3lian.com/img2007/10/28/116.jpg" alt=""></li>
+			</ul>	
+		</div>
+		<div id="lazyLoad">
+			<ul class="clearfix img-list">
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/111.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/112.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/113.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/114.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/115.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/116.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/117.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/118.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/119.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/121.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/122.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/123.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/124.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/125.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/126.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/127.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/128.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/129.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/131.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/132.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/133.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/134.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/135.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/136.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/137.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/138.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/139.jpg"></li><li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/111.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/112.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/113.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/114.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/115.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/116.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/117.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/118.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/119.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/121.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/122.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/123.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/124.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/125.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/126.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/127.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/128.jpg"></li><!-- 
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/129.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/131.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/132.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/133.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/134.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/135.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/136.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/137.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/138.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/139.jpg"></li><li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/111.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/112.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/113.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/114.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/115.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/116.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/117.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/118.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/119.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/121.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/122.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/123.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/124.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/125.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/126.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/127.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/128.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/129.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/131.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/132.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/133.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/134.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/135.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/136.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/137.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/138.jpg"></li>
+				<li><img src="http://www.atool.org/placeholder.png?size=390x260&bg=ddd&fg=ddd" alt="" data-src="http://img2.3lian.com/img2007/10/28/139.jpg"></li> -->
+			</ul>
+		</div>
+	</div>
+	
+	
+	<script src='src/js/lib/require.js'></script>
+	<script src='dist/merge.js'></script>
+	<script type="text/javascript">
+		requirejs(['app/index']);
+	</script>
+</body>
+</html>
