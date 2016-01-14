@@ -42,6 +42,7 @@ New Form Elements        //新的表单元素
 
 Read all about old and new form elements in HTML Form Elements.    //阅读所有关于HTML表单元素旧的和新的表单元素。
 
+
 New Input Types    //新的输入类型
 
 color
@@ -87,6 +88,7 @@ HTML5 allows four different syntaxes for attributes.     //HTML5允许四种不同的语
 
 This example demonstrates the different syntaxes used in an <input> tag:     //这个例子演示了一个<input >标签中使用的不同语法：
 
+
  Type	          Example
 
 Empty	        <input type="text" value="John" disabled>
@@ -97,6 +99,7 @@ Single-quoted	<input type="text" value='John Doe'>
 In HTML5, all four syntaxes may be used, depending on what is needed for the attribute.    //HTML5中，所有四个语法可以使用，这取决于所需要的属性。
 
 
+
 HTML5 Graphics    //HTML5图形
 
   Tag  //标签	    Description   //说明
@@ -105,8 +108,8 @@ HTML5 Graphics    //HTML5图形
 
 
 Read more about HTML5 Canvas.    //了解更多关于HTML5的画布。
-
 Read more about HTML5 SVG.     //了解更多关于HTML5的SVG
+
 
 New Media Elements     //新媒体元素
 
