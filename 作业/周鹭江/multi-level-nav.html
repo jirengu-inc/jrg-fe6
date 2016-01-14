@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Level-Nav</title>
+	<style type="text/css">
+	body{
+		background-color:#ccc;
+	}
+	*{
+		margin:0;
+		padding:0;
+	}
+	a{
+		text-decoration: none;
+	}
+	ul{
+		list-style: none;
+		display:inline-block;
+			
+	}
+	ul li{
+		background:white;
+		width:120px;
+		text-align: center;
+		padding:15px;
+	}
+	div{
+		text-align:center;
+	}
+	#nav > li{
+		border-right:1px solid #ddd;
+		border-bottom:1px solid #ddd;
+		float:left;
+		position:relative;
+	}
+	#nav > li > ul{
+		display:none;
+	}
+	#nav > li:hover > ul{
+		display:block;
+		position:absolute;
+		margin-top:1px;
+		top:100%;
+		left:0;
+		z-index:1;
+	}
+	.clear:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+	</style>
+</head>
+<body>
+<div>
+	<ul id="nav" class="clear">
+		<li>
+			<a href="#">首页</a>
+			<ul>
+				<li><a href="#">产品1</a></li>
+				<li><a href="#">产品2</a></li>
+				<li><a href="#">产品3</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">关于</a>
+			<ul>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">加入我们</a></li>
+			</ul>
+		</li>	
+		<li>
+			<a href="#">下载</a>
+			<ul>
+				<li><a href="#">产品1</a></li>
+				<li><a href="#">产品2</a></li>
+				<li><a href="#">产品3</a></li>
+			</ul>
+		</li>
+		<li><a href="#">博客</a></li>
+	</ul>
+</div>
+</body>
+</html>

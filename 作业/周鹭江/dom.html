@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>1A</li>
+			<li id="test">2B</li>
+			<li>3C</li>
+			<li>4D</li>
+			<li>5E</li>
+			<li>6F</li>
+			<li>7G</li>
+			<li>8H</li>
+		</ul>
+	</div>
+	<script>
+	var dom = {
+		lastSibling:function(node){
+			var tempNode = node.parentNode.lastChild
+			if(!!tempNode && tempNode.nodeType != 1){
+				tempNode = this.previous(tempNode)
+			}
+			return tempNode
+		},
+		firstSibling:function(node){
+			var tempNode = node.parentNode.firstChild
+			if (!!tempNode && tempNode.nodeType !==1){
+				tempNode =this.next(tempNode)
+			}
+			return tempNode
+		},
+		previous:function(node){
+			var tempNode = node.previousSibling
+			while(!!tempNode && tempNode.nodeType !==1){
+				tempNode = tempNode.previousSibling
+			}
+			return tempNode
+		},
+		next:function(node){
+			var tempNode = node.nextSibling
+			while(!!tempNode && tempNode.nodeType!==1){
+				tempNode =tempNode.nextSibling
+			}
+			return tempNode
+		},
+		getChildText:function(node){
+			if(!node.hasChildNodes()) return false
+				var tempNode = node.firstChild
+			while(!!tempNode && (tempNode.nodeType !=3 || /^\s+$/.test(tempNode.nodeValue) )){
+				tempNode = tempNode.nextSibling
+			}
+			return tempNode.nodeValue || false
+		},
+		setChildText:function(node,text){
+			if(!node.hasChildNodes())return false
+				var tempNode = node.firstChild
+			while(!!tempNode && (tempNode.nodeType !=3 || /^\s+$/.test(tempNode.nodeValue))){
+				tempNode = tempNode.nextSibling
+			}
+			if (!!tempNode) return tempNode.nodeValue =text
+				else return false
+			},
+		creatTextElement:function(elementName,text){
+			var element = document.createElement(elementName.toLowerCase());
+			element.appendChild(document.createTextNode(text))
+			return element
+		},
+		creatLink:function(href,text){
+			var link = this.creatTextElement('a',text)
+			link.setAttribute('href',href)
+			return link
+		}
+	}
+
+	var a = function(id){
+		return document.getElementById(id)
+	}
+
+	var testFirst =a('test')
+	console.log(dom.firstSibling(testFirst))
+
+	var testLast =a('test')
+	console.log(dom.lastSibling(testLast))
+
+	var testPre =a('test')
+	console.log(dom.previous(testPre))
+	
+	var testNext =a('test')
+	console.log(dom.next(testNext))
+
+	var testGetText =a('test')
+	console.log(dom.getChildText(testGetText))
+	
+	var testSetText =a('test')
+	console.log(dom.setChildText(testSetText))
+
+	console.log(dom.creatTextElement('p','hello world'))
+
+	console.log(dom.creatLink('http://www.baidu.com','baidu'))
+
+</script>
+</body>
+</html>
