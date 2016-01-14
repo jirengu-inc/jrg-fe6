@@ -1,0 +1,55 @@
+html5 的新标签
+
+新的语义化/结构化标签
+<article>  定义文档里的文章
+<aside> 定义边栏的内容
+<bdi> 定义部分文字，从其他文字可能被格式化成其他的方向
+<details> 定义额外的详细内容，用户可以查看隐藏
+<dialog> 定义一个对话框或窗口
+<figcaption>定义<figure>的头
+<figure>定义一个自包含内容，比如图片、图标、插图、代码等
+<footer>定义一个文档的脚或一个区域的脚
+<header>定义一个文档或者区域的头部
+<main> 定义文档的主要内容
+<mark> 定义文本高亮
+<menuitem> 定义一个菜单项，用户用来从弹出菜单唤醒
+<meter> 定义 标签定义已知范围的度量衡
+<nav> 顶一个文档的导航
+<progress> 定义进度条
+<rp> 定义显示浏览不支持的注音
+<rt> 定义东亚注音
+section 文档的区块
+<summary> detail标签的可见头部
+<time> 时间日期
+<wbr> 可能的折行
+
+<datalist> 给input加一个预定义选项
+<keygen> 给表单定义密钥生成区域
+<output> 定义计算结果
+
+新的input类型
+color 颜色 date 日期 datetime 日期时间 datetime-local 本地事件 email 电子邮箱 month 月 number 数字 range 范围 search 搜索 tel 电话 time 时间 url 网址  week 周
+
+新input属性
+autocomplete 自动完成  autofocus 自动聚焦 form 表单 formaction 表单按钮 formenctype 表单带编码 formmethod 表单提交方式 formnovalidate 表单无需验证 formtarget 打开方式 height and width 宽高 list 列表
+min and max 最大最小值 multiple 多选 pattern 正则 placeholder 预期值
+require 必须填 step 数字的间隔
+
+html5 新的属性语法
+四种属性语法
+空 ，不用引号， 单引号，双引号
+Empty	<input type="text" value="John" disabled>  
+Unquoted	<input type="text" value=John>
+Double-quoted	<input type="text" value="John Doe">
+Single-quoted	<input type="text" value='John Doe'>
+
+html5 图像
+<canavas>  用js控制位图图形
+<svg>   svg控制矢量图
+
+新的媒体标签
+<audio> 声音音乐
+<embed> 外部应用的容器
+<source> 视频音频的源
+<track> 定义视频音频的轨道
+<video> 定义视频的内容
