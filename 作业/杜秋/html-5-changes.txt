@@ -1,18 +1,14 @@
 HTML5 New Elements
 
-New Elements in HTML5
-//HTML5中的新元素
-Below is a list of the new HTML5 elements, and a description of what they are used for.
-//下面是新的HTML5元素列表，以及它们的用途的描述。
+New Elements in HTML5     //HTML5中的新元素
+Below is a list of the new HTML5 elements, and a description of what they are used for.      //下面是新的HTML5元素列表，以及它们的用途的描述。
 
-New Semantic/Structural Elements
-//新的语义/结构元素
-HTML5 offers new elements for better document structure:
-//HTML5提供更好的文档结构的新元素：
+New Semantic/Structural Elements     //新的语义/结构元素
+HTML5 offers new elements for better document structure:     //HTML5提供更好的文档结构的新元素：
 
   Tag //标签	        Description     //说明
 
-<article>   	Defines an article in the document                  //定义了文档中的文章
+<article>      	Defines an article in the document                  //定义了文档中的文章
 <aside>      	Defines content aside from the page content            //定义内容除了页面内容
 <bdi>	        Defines a part of text that might be formatted in a different direction from other text     //定义文本的一部分，可能在从其他文本不同的方向被格式化
 <details>	    Defines additional details that the user can view or hide   //定义了附加的信息，用户可以查看或隐藏
@@ -36,8 +32,7 @@ HTML5 offers new elements for better document structure:
 <wbr>	        Defines a possible line-break       //定义一个可能的换行
 
 
-New Form Elements
-//新的表单元素
+New Form Elements        //新的表单元素
 
    Tag	         Description
 
@@ -45,11 +40,9 @@ New Form Elements
 <keygen>	Defines a key-pair generator field (for forms)   //定义密钥对生成场（表单）
 <output>	Defines the result of a calculation              //限定了计算的结果
 
-Read all about old and new form elements in HTML Form Elements.
-//阅读所有关于HTML表单元素旧的和新的表单元素。
+Read all about old and new form elements in HTML Form Elements.    //阅读所有关于HTML表单元素旧的和新的表单元素。
 
-New Input Types
-//新的输入类型
+New Input Types    //新的输入类型
 
 color
 date
@@ -65,8 +58,7 @@ time
 url
 week
 
-New Input Attributes
-//新的输入属性
+New Input Attributes     //新的输入属性
 
 autocomplete
 autofocus
@@ -86,20 +78,14 @@ required
 step
 
 
-Learn all about old and new input types in HTML Input Types.
-//了解所有的HTML旧的和新的输入类型。
-Learn all about input attributes in HTML Input Attributes.
-//了解所有的HTML关于输入属性
+Learn all about old and new input types in HTML Input Types.    //了解所有的HTML旧的和新的输入类型。
+Learn all about input attributes in HTML Input Attributes.      //了解所有的HTML关于输入属性
 
 
+HTML5 - New Attribute Syntax        //HTML5的 - 新的属性语法
+HTML5 allows four different syntaxes for attributes.     //HTML5允许四种不同的语法的属性。
 
-HTML5 - New Attribute Syntax
-//HTML5的 - 新的属性语法
-HTML5 allows four different syntaxes for attributes.
-//HTML5允许四种不同的语法的属性。
-
-This example demonstrates the different syntaxes used in an <input> tag:
-//这个例子演示了一个<input >标签中使用的不同语法：
+This example demonstrates the different syntaxes used in an <input> tag:     //这个例子演示了一个<input >标签中使用的不同语法：
 
  Type	          Example
 
@@ -108,26 +94,21 @@ Unquoted       	<input type="text" value=John>
 Double-quoted	<input type="text" value="John Doe">
 Single-quoted	<input type="text" value='John Doe'>
 
-In HTML5, all four syntaxes may be used, depending on what is needed for the attribute.
-//HTML5中，所有四个语法可以使用，这取决于所需要的属性。
+In HTML5, all four syntaxes may be used, depending on what is needed for the attribute.    //HTML5中，所有四个语法可以使用，这取决于所需要的属性。
 
 
-HTML5 Graphics
-//HTML5图形
+HTML5 Graphics    //HTML5图形
 
   Tag  //标签	    Description   //说明
 <canvas>	Defines graphic drawing using JavaScript   //定义使用JavaScript的图形绘制
 <svg>	    Defines graphic drawing using SVG          //定义使用SVG图形绘制
 
 
-Read more about HTML5 Canvas.
-//了解更多关于HTML5的画布。
+Read more about HTML5 Canvas.    //了解更多关于HTML5的画布。
 
-Read more about HTML5 SVG.
-//了解更多关于HTML5的SVG
+Read more about HTML5 SVG.     //了解更多关于HTML5的SVG
 
-New Media Elements
-//新媒体元素
+New Media Elements     //新媒体元素
 
 Tag      	Description
 <audio>	   Defines sound or music content                //定义声音或音乐内容
@@ -136,8 +117,7 @@ Tag      	Description
 <track>	   Defines tracks for <video> and <audio>           //定义轨道为<video>与<audio>
 <video>	   Defines video or movie content               //定义视频或电影内容
 
-Read more about HTML5 Video.
-//了解更多关于HTML5视频。
+Read more about HTML5 Video.     //了解更多关于HTML5视频。
 
 
 
