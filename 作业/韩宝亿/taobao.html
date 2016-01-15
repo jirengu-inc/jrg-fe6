@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝登录页</title>
+	<link rel="stylesheet" type="text/css" href="taobao.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<img src="https://assets.alicdn.com/apps/login/static/logo.png">
+	</div>
+	<div id="main">
+		<div class="main_left">
+			<img src="imgs/ad.jpg">
+		</div>
+		<div class="main_right">
+			<div class="hd">
+				<h2 class="quick">快速登录</h2>
+				<h2 class="static">账户密码登录</h2>
+			</div>
+			<div class="static_form">
+				<div class="ipt">
+	 				<img src="imgs/user.jpg"></img>
+	 				<input type="text" placeholder="手机号/会员名/邮箱">
+	 			</div>
+	 			<div class="ipt">
+	 				<img src="imgs/key.jpg"></img>
+	 				<input type="password" placeholder="密码">
+	 			</div>
+	 			<div class="links">
+	 				<a href="#" class="login">忘记登录密码？</a>
+	 				<a href="#" class="register">免费注册</a>
+	 			</div>
+	 				<button type="submit" class="btn">登   录</button>
+				
+				<div class="other_login">
+					<a href="#"><img src="imgs/sina.jpg">微博登录</a>
+					<a href="#"><img src="imgs/alipay.jpg">支付宝登录</a>
+				</div>
+			</div>
+			<div class="quick_form">
+				<div class="wrap_img">
+					<img src="imgs/ewm.jpg">
+				</div>
+				<div class="content">
+					<p>手机扫码 安全登录</p>
+				</div>
+				<div class="ct">
+					<p>使用<a href="#">手机淘宝</a>、<a href="#">阿里钱盾</a>扫描二维码</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var $quick = $('.quick'),
+			$static = $('.static'),
+			$quick_form = $('.quick_form'),
+			$static_form = $('.static_form'),
+			$hd_static = $('.hd .static'),
+			$hd_quick = $('.hd .quick');
+
+		$quick.on('click',function(){
+			$quick_form.css('display','block'),
+			$static_form.css('display','none'),
+			$hd_quick.css('border-bottom', '1px solid #ff5738'),
+			$hd_static.css({
+				'color': '#999',
+  				'border-bottom': '1px solid #dedede'
+			});
+		})
+
+		$static.on('click',function(){
+			$static_form.css('display','block'),
+			$quick_form.css('display','none'),
+			$hd_static.css('border-bottom', '1px solid #ff5738'),
+			$hd_quick.css({
+				'color': '#999',
+  				'border-bottom': '1px solid #dedede'
+			});
+		})
+	</script>
+</body>
+</html>
