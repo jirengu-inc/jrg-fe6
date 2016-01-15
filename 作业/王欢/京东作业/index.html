@@ -4,362 +4,120 @@
 	<meta charset="UTF-8">
 	<title>京东</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/tab.style.css">
 	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452151748_504958.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		body{
-    		font: 12px/150% Arial,Verdana,"\5b8b\4f53";
-    		color: #666;
-    		margin-bottom: 200px;
-		}
-		a{
-			text-decoration: none;
-			color: #666;
-		}
-		a:hover{
-			color: #c81623;
-		}
-		ul{
-			list-style: none;
-		}
+	.category-ad{
+		margin-top: 10px;
+	}
+	.mt .tab{
+		list-style: none;
+		float: right;
+		border: 1px solid #ccc;
+		border-bottom: none;
+		top: 2px;
+		position: relative;
+  		height:32px;
+  		overflow: visible;
+	}
+	.mt .tab .tab-item{
+		float: left;
+		position: relative;
+	}
+	.mt .tab .tab-item a{
+		height: 33px;
+		text-align: center;
+		line-height: 33px;
+		padding: 0 16px;
+	}
+	.mt .tab .tab-item-selected{
 
-		.clearfix:after{
-			content: '';
-			display: block;
-			clear: both;
-		}
+	}
+	.mt .tab .tab-item-selected a{
+		background: #fff;
+		color:#c81623;
+		border-top:3px solid #c81623;
+		border-left:1px solid #c81623;
+		border-right:1px solid #c81623;
+		height:32px;
+		line-height:30px;
+		display:inline-block;
+		position: relative;
+		top:-1px;
+		left:-1px;
+		text-indent: 1px;
+	}
+	.mt .tab .tab-item span{
+		width: 1px;
+		background: #ccc;
+		position: absolute;
+		right: 0;
+		height: 14px;
+		top: 9px;
+	}
+	.mt .tab .tab-item-selected span{
+		position: relative;
+	}
 
-		.wrap{
-			width: 1210px;
-			margin: 0 auto;
-		}
-
-
-		.topbar{
-			background: #f1f1f1;
-			height: 30px;
-			line-height: 30px;
-		}
-		.topbar .topbar-city{
-			float: left;
-		}
-		.topbar .topbar-linklist{
-			float: right;
-		}
-		.topbar .topbar-linklist .linklist{
-			list-style: none;
-		}
-		.topbar .topbar-linklist .linklist>li{
-			float: left;
-			margin:auto 5px;
-		}
-		.topbar .topbar-linklist .linklist .spacer{
-			width: 1px;
-			height: 13px;
-			background: #ddd;
-			margin-top: 9px;
-			padding: 0;
-		}
-
-		.ad{
-			height: 81px;
-			background: #080404;
-		}
-		.ad .ad-img img{
-			height: 80px;
-
-		}
-		.ad .ad-img{
-			position: relative;
-		}
-		.ad .ad-img .ad-close{
-			width: 12px;
-			height: 12px;
-			position: absolute;
-			top: 5px;
-			right: 5px;
-			color: #fff;
-			line-height: 12px;
-			text-align: center;
-		}
-
-		.logoandsearch{
-			height: 60px;
-			padding: 20px 0 20px 0;
-		}
-		.logoandsearch .logo{
-			float: left;
-			width: 270px;
-			height: 60px;
-			background: url(http://misc.360buyimg.com/lib/img/e/logo-201305.png) no-repeat 0 0;
-		}
-		.logoandsearch .search{
-			float: left;
-			margin:5px 104px 0 90px;
-		}
-		.logoandsearch .search .search-ipt input{
-			border: 2px solid #b61d1d;
-			border-right: none;
-			width: 449px;
-			height: 32px;
-			font-size: 14px;
-			font-family: "microsoft yahei";
-			padding-left: 5px;
-		}
-		.logoandsearch .search .search-ipt button{
-			width: 82px;
-			height: 36px;
-			line-height: 36px;
-			text-align: center;
-			font-size: 16px;
-			color: #fff;
-			border: none;
-			background-color: #b61d1d;
-			position: relative;
-			left: -3px;
-			top: 1px;
-		}
-		.logoandsearch .search .search-links{
-			margin-top: 8px;
-		}
-		.logoandsearch .search .search-links span{
-			margin-right: 7px;
-		}
-		.logoandsearch .shopping-cart{
-			float: left;
-			width: 114px;
-			height: 18px;
-			border: 1px solid #DFDFDF;
-			background: #F9F9F9;
-			margin-top: 5px;
-			padding: 8px 10px 8px 15px;
-		}
-		.logoandsearch .shopping-cart .cart{
-			display: inline-block;
-			position: relative;
-		}
-		.logoandsearch .shopping-cart .cart .cart-count{
-			background: #b61d1d;
-			color: #fff;
-			width: 15px;
-			height: 15px;
-			line-height: 15px;
-			text-align: center;
-			position: absolute;
-			top: -12px;
-			right: -15px;
-			border-radius: 6px 6px 8px 0;
-		}
-
-		.nav{
-			border-bottom: 2px solid #b61d1d;
-			font:400 15px/44px "microsoft yahei";
-		}
-		.nav .nav-left{
-			width: 200px;
-			height: 44px;
-			line-height: 44px;
-			background-color: #B1191A;
-			color: #fff;
-			padding-left: 10px;
-			float: left;
-		}
-		.nav .nav-list{
-			float: left;
-		}
-		.nav .nav-list ul li{
-			float: left;
-			height: 44px;
-			text-align: center;
-			line-height: 44px;
-			padding: 0 20px;
-		}
-		.nav .nav-list ul li a{
-			color: #333;
-		}
-		.nav .nav-list ul li a:hover{
-			color: red;
-		}
-		.nav .nav-ad {
-			float: right;
-			width: 140px;
-			height: 40px;
-			background: url(http://img20.360buyimg.com/da/jfs/t2443/320/1195118691/7654/2751b530/568a845eN5096a4b9.jpg) no-repeat;
-		}
-
-		.menubar{
-			height: 465px;
-			margin-bottom: 10px;
-		}
-		.menubar .menu{
-			width: 209px;
-			height: 465px;
-			float: left;
-			color: #fff;
-			border-left: 1px solid #b61d1d;
-		}
-		.menubar .menu .menu-item{
-			background: #c81623;
-			height: 15px;
-			line-height: 31px;
-			padding: 8px 0;
-			position: relative;
-		}
-		.menubar .menu .menu-item h3{
-			font:400 14px "microsoft yahei";
-			padding: 0 10px;
-		}
-		.menubar .menu .menu-item h3 a{
-			color: #fff;
-		}
-		.menubar .menu .menu-item i{
-			position: absolute;
-			top: 2px;
-			right: 14px;
-		}
-		.menubar .jd-carsousel{
-			float: left;
-			margin: 10px;
-			width: 730px;
-			height: 454px;
-		}
-		.menubar .newsandservice{
-			margin-top: 10px;
-			float: left;
-		}
-		.menubar .newsandservice .ns-item{
-			border: 1px solid #e4e4e4;
-			border-bottom: none;
-			width: 248px;
-		}
-		.menubar .newsandservice .ns-item .title{
-			height: 43px;
-			line-height: 43px;
-			border-bottom: 1px dotted #E8E8E7;
-			padding: 0 15px;
-		}
-		.menubar .newsandservice .ns-item .title h2{
-			font-size: 16px;
-			font-family: "microsoft yahei";
-			font-weight: 400;
-			display: inline-block;
-		}
-		.menubar .newsandservice .ns-item .title a{
-			float: right;
-		}
-		.menubar .newsandservice .ns-item .news-content{
-			border-bottom: 1px dashed #E8E8E7;
-			padding-left: 15px;
-			padding-bottom: 10px;
-		}
-		.menubar .newsandservice .ns-item .news-content li{
-			margin-top: 10px;
-			width: 210px;
-			height: 18px;
-			line-height: 17px;
-			overflow: hidden;
-		}
-		.menubar .newsandservice .ns-item .news-content li span{
-			font-weight: 700;
-			margin-right: 5px;
-		}
-		.menubar .newsandservice .ns-item .service-content .ser-mem{
-			float: left;
-			width: 61px;
-			height: 70px;
-			border-right:1px solid #E8E8E7;
-  			border-bottom:1px solid #E8E8E7;
-
-		}
-		.menubar .newsandservice .ns-item .service-content .ser-mem {
-			text-align: center;
-		}
-		.ser-mem a{
-			  padding-top:40px;
-			  display:block;
-			  position:relative;
-			
-		}
-		.ser-mem i{
-			width: 25px;
-		 	height: 25px;
-		  	display: block;
-		   	position:absolute;
-		  	top:13px;
-		  	left:18px;
-		}
-		.ser-mem span{
-			display:block;
-  			margin-top:6px;
-		}
-
-		.today .today-logo{
-			width: 210px;
-			height: 151px;
-			background: #ddd;
-			float: left;
-		}
-		.today .today-slider{
-			float: left;
-		}
-		.today .today-slider ul li{
-			float: left;
-			background: #eee;
-			width: 249px;
-			height: 151px;
-			margin-right: 1px;
-		}
-		
-		.m{
-			margin-bottom: 20px;
-		}
-		.mt{
-			height: 36px;
-		}
-		.guess .mt h2{
-			line-height: 30px;
-			font-size: 20px;
-			padding-right: 228px;
-    		background: url(http://misc.360buyimg.com/product/home/1.0.0/css/i/homebg.png) 85px -91px no-repeat;
-    		font-family: "microsoft yahei";
-    		font-weight: 400;
-		}
-		.mc{
-			height: 230px;
-			border: 1px solid #eee;
-		}
-		.guess .mc .goods li{
-			width: 200px;
-			height: 230px;
-			float: left;
-		}
-		.guess .mc .goods .goods-img{
-			margin-top: 20px;
-			margin-bottom: 10px;
-			text-align: center;
-		}
-		.guess .mc .goods .goods-info{
-			padding: 0 36px;
-			border-left: 1px solid #eee;
-		}
-		.guess .mc .goods .goods-info .goods-name{
-			display: block;
-			height: 36px;
-
-		}
-		.goods-info .goods-price{
-			color: #b51d1a;
-    		margin-top: 5px;
-    		font-size: 18px;
-		}
-		.goods-info .goods-price i{
-			font-size: 14px;
-			font-style: inherit;
-		}
+	.mc .side{
+		float: left;
+		width: 330px;
+	}
+	.mc .side .side-inner{
+		width: 330px;
+	}
+	.mc .side .side-inner .side-theme{
+		height: 92px;
+		width: 330px;
+		background: rgba(255,255,255,.5);
+		position: relative;
+		margin-top: -221px;
+	}
+	.mc .side .side-inner .side-theme .side-theme-sub{
+		display: inline-block;
+		height: 46px;
+		line-height: 46px;
+		font-size: 14px;
+		width: 62px;
+		margin-left: 30px;
+	}
+	.mc .side .side-inner .side-theme .side-theme-sub i{
+		width:26px;
+		height:26px;
+		display:inline-block;
+		position: relative;
+    	top: 7px;
+    	margin-right: 8px;
+	}
+	.mc .side .side-inner .side-words{
+		height: 124px;
+		width: 330px;
+		background: rgba(255,255,255,.7);
+		position: relative;
+	}
+	.mc .side .side-inner .side-words li{
+		float: left;
+		margin: 0 22px 0 30px;
+		height: 96px;
+		padding-top: 15px;
+		width: 100px;
+	}
+	.mc .side .side-inner .side-words li a{
+		color: #999;
+		display: inline-block;
+		height: 24px;
+		line-height: 24px;
+	}
+	.mc .side .side-extra{
+		width: 328px;
+		height: 158px;
+		border-right:1px solid #ededed;
+		border-left: 1px solid #f7f5ee;
+	}
+	.mc .main{
+		float: left;
+	}
 	</style>
 </head>
 <body>
@@ -573,7 +331,7 @@
 	<div class="guess m">
 		<div class="wrap">
 			<div class="mt">
-				<h2>猜你喜欢</h2>
+				<h2 class="has-bgimg">猜你喜欢</h2>
 			</div>
 			<div class="mc">
 				<ul class="goods clearfix">
@@ -641,9 +399,551 @@
 			<div class="mt">
 				<h2>京东特色购</h2>
 			</div>
-			<div class="mc">
-				<div class="sb-content">
+			<div class="mc clearfix">
+				<div class="sb-content-left">
+					<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">科技精品</p>
+					    <p class="sb-item-title-sub">三轮电动车 可站可坐可折叠</p>
+					    <img src="http://img13.360buyimg.com/vclist/jfs/t1855/128/1062680503/10059/e480073c/5660ff4cN1c6b94e8.jpg" width="201" height="200" alt="">
+					</a>
+				  
+					<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">清仓</p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2023/20/2003171304/13446/6cac3a44/568f8916N5e9c971c.jpg" width="201" height="200" alt="">
+				 	</a>			
+				</div>
+				<div class="sb-content-center clearfix">
+					<a href="" class="sb-content-item-big">
+					    <img src="http://img13.360buyimg.com/vclist/jfs/t1975/324/2129703602/16968/af91b8f6/5694c5fdN66018653.jpg" width="404" height="200" alt="">
+					    <div class="sb-item-big-title">
+					      <p class="sb-b-tit">智能家庭影院</p>
+					      <p class="sb-b-subtit">在家看3D大片</p>
+					      <p class="sb-b-btntit">品牌街 ></p>
+					    </div>
+					</a>					  
+					<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">清仓</p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2023/20/2003171304/13446/6cac3a44/568f8916N5e9c971c.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<div class="sb-brands">
+				 		<div class="brands-list">
+				 			<a class="item even" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item even" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item even" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item even" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item even" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+						  <a class="item" href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2506/323/2090912642/3359/b319509e/5694c275N2cfc2b58.jpg" alt="" width="100" height="39"></a>
+				 		</div>
+				 		 
+				 	</div>
+				</div>
+				<div class="sb-content-right">
+					<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    	<span>清仓</span>
+					    </p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2095/217/1365037363/3006/e50f6a2d/5694cf12N24d7fd2f.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    	<span>清仓</span>
+					    </p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2095/217/1365037363/3006/e50f6a2d/5694cf12N24d7fd2f.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<a class="sb-content-item" href="#" style="border-right:none">
+					    <p class="sb-item-title">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    	<span>清仓</span>
+					    </p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2095/217/1365037363/3006/e50f6a2d/5694cf12N24d7fd2f.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<a class="sb-content-item" href="#">
+					    <p class="sb-item-title">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    	<span>清仓</span>
+					    </p>
+					    <p class="sb-item-title-sub">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2095/217/1365037363/3006/e50f6a2d/5694cf12N24d7fd2f.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<a class="sb-content-item sb-item-r5" href="#">
+					    <p class="sb-item-title sb-r5-tit">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    	
+					    </p>
+					    <p class="sb-item-title-sub sb-item-sub-r5">PS4手感 游戏手柄低至39.9</p>
+					    <img src="http://img12.360buyimg.com/vclist/jfs/t2095/217/1365037363/3006/e50f6a2d/5694cf12N24d7fd2f.jpg" width="201" height="200" alt="">
+				 	</a>
+				 	<a class="sb-content-item" href="#" style="border-right:none;">
+					    <p class="sb-item-title sb-r6-tit">
+					    	<span class="sb-item-tit-l">趣购</span>
+					    </p>
+					    <p class="sb-item-title-sub sb-item-sub-r6">PS4手感 游戏手柄低至39.9</p>
+					    <div class="sb-item-r6-list">
+					    	<ul>
+					    		<li>【新品】乐檬3预约赢1000元京券</li>
+					    		<li>【新品】乐檬3预约赢1000元京券</li>
+					    		<li>【新品】乐檬3预约赢1000元京券</li>
+					    		<li>【新品】乐檬3预约赢1000元京券</li>
+					    	</ul>
+					    </div>
+				 	</a>
+
 					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category-ad">
+		<div class="wrap">
+			<a href="" class="ad-img"><img src="http://img10.360buyimg.com/da/jfs/t2365/160/1866957009/23278/143ea78a/568c84e3N846c7c0f.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img11.360buyimg.com/da/jfs/t2197/72/1305123175/15055/a02eaf72/56931b42Nfa4e1d05.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img30.360buyimg.com/da/jfs/t2050/158/1350647710/29856/87ba9337/56962240N6334549c.jpg" alt=""></a>
+		</div>
+	</div>
+
+	<div class="clothes">
+		<div class="wrap">
+			<div class="mt">
+				<h2>服装</h2>
+				<ul class="tab clearfix">
+					<li class="tab-item">
+						<a href="">大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item tab-item-selected">
+						<a href="">大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mc">
+				<div class="side">
+					<div class="side-inner">
+						<div class="side-img">
+							<a href="">
+								<img src="http://img11.360buyimg.com/da/jfs/t2404/194/2074739713/21863/37592035/56975dfdN828ceb80.jpg" alt="">
+							</a>
+						</div>
+						<ul class="side-theme">
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 0 no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -26px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -52px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -78px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -104px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -130px no-repeat;"></i>男装</a>
+							</li>
+							
+						</ul>
+						<ul class="side-words">
+							<li>
+								<a href=""><span class="span-red">羽绒服女</span></a>
+								<a href="">品质男鞋</a>
+								<a href="">服装城</a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href=""><span class="span-red">羽绒服男</span></a>
+								<a href="">保暖内衣</a>
+								<a href="">保暖内衣</a>								
+							</li>
+							<li>
+								<a href="">羽绒服女</a>
+								<a href="">品质男鞋</a>
+								<a href=""><span class="span-red">服装城</span></a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href="">羽绒服男</a>
+								<a href=""><span class="span-red">保暖内衣</span></a>
+								<a href="">保暖内衣</a>								
+							</li>
+						</ul>
+					</div>
+					<div class="side-extra">
+						<a href=""><img src="http://img14.360buyimg.com/da/jfs/t1951/52/1414430218/18645/94d26088/5696fbd4N31bb3842.jpg" alt="" width="328" height="158"></a>
+					</div>
+				</div>
+				<div class="main">
+					ccc
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category-ad">
+		<div class="wrap">
+			<a href="" class="ad-img"><img src="http://img10.360buyimg.com/da/jfs/t2365/160/1866957009/23278/143ea78a/568c84e3N846c7c0f.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img11.360buyimg.com/da/jfs/t2197/72/1305123175/15055/a02eaf72/56931b42Nfa4e1d05.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img30.360buyimg.com/da/jfs/t2050/158/1350647710/29856/87ba9337/56962240N6334549c.jpg" alt=""></a>
+		</div>
+	</div>
+
+	<div class="cosmetic">
+		<div class="wrap">
+			<div class="mt">
+				<h2>个护美妆</h2>
+				<ul class="tab clearfix">
+					<li class="tab-item tab-item-selected">
+						<a href="">热门</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际名品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">个人护理</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">清洁用品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">纸品湿巾</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mc">
+				<div class="side">
+					<div class="side-inner">
+						<div class="side-img">
+							<a href="">
+								<img src="http://img11.360buyimg.com/da/jfs/t2404/194/2074739713/21863/37592035/56975dfdN828ceb80.jpg" alt="">
+							</a>
+						</div>
+						<ul class="side-theme">
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 0 no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -26px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -52px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -78px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -104px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -130px no-repeat;"></i>男装</a>
+							</li>
+							
+						</ul>
+						<ul class="side-words">
+							<li>
+								<a href=""><span class="span-red">羽绒服女</span></a>
+								<a href="">品质男鞋</a>
+								<a href="">服装城</a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href=""><span class="span-red">羽绒服男</span></a>
+								<a href="">保暖内衣</a>
+								<a href="">保暖内衣</a>								
+							</li>
+							<li>
+								<a href="">羽绒服女</a>
+								<a href="">品质男鞋</a>
+								<a href=""><span class="span-red">服装城</span></a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href="">羽绒服男</a>
+								<a href=""><span class="span-red">保暖内衣</span></a>
+								<a href="">保暖内衣</a>								
+							</li>
+						</ul>
+					</div>
+					<div class="side-extra">
+						<a href=""><img src="http://img14.360buyimg.com/da/jfs/t1951/52/1414430218/18645/94d26088/5696fbd4N31bb3842.jpg" alt="" width="328" height="158"></a>
+					</div>
+				</div>
+				<div class="main">
+					ccc
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category-ad">
+		<div class="wrap">
+			<a href="" class="ad-img"><img src="http://img10.360buyimg.com/da/jfs/t2365/160/1866957009/23278/143ea78a/568c84e3N846c7c0f.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img11.360buyimg.com/da/jfs/t2197/72/1305123175/15055/a02eaf72/56931b42Nfa4e1d05.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img30.360buyimg.com/da/jfs/t2050/158/1350647710/29856/87ba9337/56962240N6334549c.jpg" alt=""></a>
+		</div>
+	</div>
+
+	<div class="mobiles">
+		<div class="wrap">
+			<div class="mt">
+				<h2>手机通讯</h2>
+				<ul class="tab clearfix">
+					<li class="tab-item tab-item-selected">
+						<a href="">热门</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际名品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">个人护理</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">清洁用品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">纸品湿巾</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mc">
+				<div class="side">
+					<div class="side-inner">
+						<div class="side-img">
+							<a href="">
+								<img src="http://img11.360buyimg.com/da/jfs/t2404/194/2074739713/21863/37592035/56975dfdN828ceb80.jpg" alt="">
+							</a>
+						</div>
+						<ul class="side-theme">
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 0 no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -26px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -52px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -78px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -104px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -130px no-repeat;"></i>男装</a>
+							</li>
+							
+						</ul>
+						<ul class="side-words">
+							<li>
+								<a href=""><span class="span-red">羽绒服女</span></a>
+								<a href="">品质男鞋</a>
+								<a href="">服装城</a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href=""><span class="span-red">羽绒服男</span></a>
+								<a href="">保暖内衣</a>
+								<a href="">保暖内衣</a>								
+							</li>
+							<li>
+								<a href="">羽绒服女</a>
+								<a href="">品质男鞋</a>
+								<a href=""><span class="span-red">服装城</span></a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href="">羽绒服男</a>
+								<a href=""><span class="span-red">保暖内衣</span></a>
+								<a href="">保暖内衣</a>								
+							</li>
+						</ul>
+					</div>
+					<div class="side-extra">
+						<a href=""><img src="http://img14.360buyimg.com/da/jfs/t1951/52/1414430218/18645/94d26088/5696fbd4N31bb3842.jpg" alt="" width="328" height="158"></a>
+					</div>
+				</div>
+				<div class="main">
+					ccc
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category-ad">
+		<div class="wrap">
+			<a href="" class="ad-img"><img src="http://img10.360buyimg.com/da/jfs/t2365/160/1866957009/23278/143ea78a/568c84e3N846c7c0f.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img11.360buyimg.com/da/jfs/t2197/72/1305123175/15055/a02eaf72/56931b42Nfa4e1d05.jpg" alt=""></a><a href="" class="ad-img"><img src="http://img30.360buyimg.com/da/jfs/t2050/158/1350647710/29856/87ba9337/56962240N6334549c.jpg" alt=""></a>
+		</div>
+	</div>
+
+	<div class="electronics">
+		<div class="wrap">
+			<div class="mt">
+				<h2>家用电器</h2>
+				<ul class="tab clearfix">
+					<li class="tab-item tab-item-selected">
+						<a href="">热门</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际大牌</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">国际名品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">个人护理</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">清洁用品</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">纸品湿巾</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+						<span></span>
+					</li>
+					<li class="tab-item">
+						<a href="">内衣配饰</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mc">
+				<div class="side">
+					<div class="side-inner">
+						<div class="side-img">
+							<a href="">
+								<img src="http://img11.360buyimg.com/da/jfs/t2404/194/2074739713/21863/37592035/56975dfdN828ceb80.jpg" alt="">
+							</a>
+						</div>
+						<ul class="side-theme">
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 0 no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -26px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -52px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -78px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -104px no-repeat;"></i>男装</a>
+							</li>
+							<li class="side-theme-sub"><a href="">
+								<i style="background: url(http://misc.360buyimg.com/product/home/1.0.0/widget/clothes/i/clothesicon.png) 0 -130px no-repeat;"></i>男装</a>
+							</li>
+							
+						</ul>
+						<ul class="side-words">
+							<li>
+								<a href=""><span class="span-red">羽绒服女</span></a>
+								<a href="">品质男鞋</a>
+								<a href="">服装城</a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href=""><span class="span-red">羽绒服男</span></a>
+								<a href="">保暖内衣</a>
+								<a href="">保暖内衣</a>								
+							</li>
+							<li>
+								<a href="">羽绒服女</a>
+								<a href="">品质男鞋</a>
+								<a href=""><span class="span-red">服装城</span></a>
+								<a href="">羊绒围巾</a>
+								<a href="">热卖女靴</a>
+								<a href="">羽绒服男</a>
+								<a href=""><span class="span-red">保暖内衣</span></a>
+								<a href="">保暖内衣</a>								
+							</li>
+						</ul>
+					</div>
+					<div class="side-extra">
+						<a href=""><img src="http://img14.360buyimg.com/da/jfs/t1951/52/1414430218/18645/94d26088/5696fbd4N31bb3842.jpg" alt="" width="328" height="158"></a>
+					</div>
+				</div>
+				<div class="main">
+					ccc
 				</div>
 			</div>
 		</div>
