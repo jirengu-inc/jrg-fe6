@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>touch</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        background-color: red;
+    }
+    div {
+        height: 100%;
+    }
+    div.loading {
+        -webkit-animation: move .6s linear 0s infinite alternate;
+        animation: move .6s linear 0s infinite alternate;
+    }
+    @-webkit-keyframes move {
+        0% { background: red; }
+        100% { background: green; }
+    }
+    @keyframes move {
+        0% { background: red; }
+        100% { background: green; }
+    }
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+    <div></div>
+
+    <script>
+        $('div').on('touchstart', function(){
+            $(this).addClass('loading');
+        }).on('touchend touchmove', function(){
+            $(this).removeClass('loading');
+        });
+    </script>
+
+</body>
+</html>
