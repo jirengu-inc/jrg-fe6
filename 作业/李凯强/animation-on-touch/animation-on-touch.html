@@ -17,7 +17,13 @@
 			background-color: pink;
 		}
 		.change{
-			animation: change 2s infinite;
+			-webkit-animation: change 2s infinite;
+			        animation: change 2s infinite;
+		}
+		@-webkit-keyframes change {
+			25% {background-color: orange;}
+			50% {background-color: #64E7E8;}
+			75% {background-color: #D44A36;}
 		}
 		@keyframes change {
 			25% {background-color: orange;}
@@ -39,9 +45,13 @@
 			transition: transform 1s;
 			transition: transform 1s, -webkit-transform 1s;
 		}
+		@-webkit-keyframes rotation {
+			from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+		}
 		@keyframes rotation {
-			from {transform: rotate(0deg);}
-			to {transform: rotate(360deg);}
+			from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
 		}
 	</style>
 	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1453256391_619966.css">
