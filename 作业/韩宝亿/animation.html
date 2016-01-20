@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="touch不动屏幕一闪一闪" />
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<title>JS Bin</title>
+ <style>
+	*{margin:0}
+html{
+  height:100%
+}
+body{
+  height:100%
+}
+body{
+  background:red
+}
+
+@-webkit-keyframes a{
+  from{background:red;}
+  to{background:green}
+}
+
+@keyframes a{
+  from{background:red;}
+  to{background:green}
+}
+
+body.touching{
+  -webkit-animation: a 1s linear infinite alternate;
+          animation: a 1s linear infinite alternate
+}
+ </style>
+</head>
+<body>
+<script>
+	$('body').on('touchstart',function(){
+  $(this).addClass('touching');
+}).on('touchend',function(){
+  $(this).removeClass('touching')
+})
+</script>
+</body>
+</html>
