@@ -48,8 +48,8 @@
 			list-style: none;
 		}
 		.topbar .topbar-linklist .linklist>li{
+			padding: 1px 6px;
 			float: left;
-			margin:auto 5px;
 		}
 		.topbar .topbar-linklist .linklist .spacer{
 			width: 1px;
@@ -58,9 +58,188 @@
 			margin-top: 9px;
 			padding: 0;
 		}
+		.dorpdown{
+			position: relative;
+		}
+		.dorpdown .dt{
+			padding: 0 6px;
+		}
+		.dorpdown:hover{
+			background: #fff;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+		}
+		.dorpdown i{
+			transition:transform .1s ease-in 0s
+		}
+		.dorpdown:hover i{
+			display: inline-block;
+			transform:rotate(180deg);
+		}
+		.dorpdown .dorpdown-layer{
+			background: #fff;
+			border: 1px solid #ddd;
+			position: absolute;
+			z-index: 10;
+			top: 91%;
+			left: -1px;
+			display: none;
+		}
+		.link10 .dorpdown-layer{
+			width: 1200px;
+			left: inherit;
+			right: -1px;
+		}
+
+		.dorpdown:hover .dorpdown-layer{
+			display: block;
+		}
+		.dorpdown .db-spacer{
+			background: #fff;
+		    width: 88px;
+		    height: 10px;
+		    position: absolute;
+		    top: -4px;
+		    left: 0;
+		}
+		.link10 .db-spacer{
+		    left: inherit;
+    		right: 0;
+		}
+		.link7 .db-spacer{
+			width: 104px;
+		}
+		.dorpdown .dorpdown-layer .city-list{
+		  padding:10px 0 10px 10px;
+		  width: 301px;
+		}
+		.dorpdown .dorpdown-layer .city-list .city-item{
+		  float:left;
+		  width: 60px;
+		  padding:2px 0;
+		}
+		.dorpdown .dorpdown-layer .city-list .city-item .city-selected{
+		  background: #C81623;
+		  color: #fff;
+		}
+		.dorpdown .dorpdown-layer .city-list .city-item a{
+		  font-size:12px;
+		  display:inline-block;
+		  line-height:24px;
+		  padding:0 8px;
+		}
+		.dorpdown .dorpdown-layer .city-list .city-item:hover a{
+		  background: #F4F4F4;;
+		  color:#C81623;
+		}
+		
+		.userinfo{
+			width: 250px;
+			padding: 10px 0 10px 15px;
+			position: relative;
+			line-height: 22px;
+		}
+		.userinfo .user-img{
+			width: 60px;
+			height: 60px;
+			border-radius: 30px;
+			position: absolute;
+			overflow: hidden;
+		}
+		.userinfo .user-name{
+			/*width: 100%;*/
+			padding-left: 80px;
+			color: #666;
+			font-weight: 700;
+			margin-top: 10px;
+		}
+		.userinfo .user-extra{
+			padding-left: 80px;
+		}
+		.userinfo .user-extra .line{
+			border-right: 1px solid #ddd;
+			margin-right: 10px;
+			padding-right: 10px;
+		}
+		.user-links{
+			padding: 10px 0 10px 15px;
+			margin-bottom: 5px;
+		}
+		.user-links .item{
+			float: left;
+			width: 122px;
+			line-height: 24px;
+		}
+
+		.user-view-list{
+   			padding: 10px 0 10px 15px;
+  			border-top: 1px dotted #ccc;
+		}
+		.user-view-list .foot-list .item{
+			float: left;
+			padding: 0 6px;
+		}
+
+		.mobile-jd{
+			width: 250px;
+			height: 195px;
+			background: url("http://img30.360buyimg.com/da/jfs/t2188/335/1660030863/14019/864a6600/566aa1c6N759d9d51.png");
+		}
+		.follow-jd{
+			width: 88px;
+		}
+		.customer{
+			width: 170px;
+			/*padding: 5px 10px;*/
+		}
+		.customer .customer-t{
+			border-bottom: 1px dotted #ccc;
+			padding: 5px 10px;
+		}
+		.customer a{
+			font-weight: 500;
+		    display: block;
+		    width: 75px;
+		    line-height: 24px;
+		    float: left;
+		}
+		.customer .customer-b{
+			padding: 5px 10px;
+		}
+		.customer  p{
+			font-weight: 700;
+		}
+		
+		.web-nav{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.web-nav dl{
+			float: left;
+			padding-left: 20px;
+			height: 150px;
+		}
+		.web-nav dt{
+			font-size: 14px;
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+		.web-nav1{
+			width: 347px;
+		}
+		.web-nav2, .web-nav3 , .web-nav4{
+			width: 255px;
+			border-left: 1px solid #ccc;
+		}
+		.web-nav .item{
+			display: block;
+			width: 84px;
+			float: left;
+			line-height: 24px;
+		}
 
 		.ad{
-			height: 81px;
+			height: 83px;
 			background: #080404;
 		}
 		.ad .ad-img img{
@@ -103,6 +282,7 @@
 			font-size: 14px;
 			font-family: "microsoft yahei";
 			padding-left: 5px;
+			outline: none;
 		}
 		.logoandsearch .search .search-ipt button{
 			width: 82px;
