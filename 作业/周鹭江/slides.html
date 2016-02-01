@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Multi-Level-Nav</title>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<style type="text/css">
+	*{padding:0;margin:0;}
+	ul,ol,dl{list-style:none;}
+	.slides {width: 310px; overflow: hidden;height: 206px;}
+	.slides > ul > li{display: inline-block;} 
+	ul:after{
+	  content:'';
+	  display: block;
+	  clear: both;
+	}
+	ul{ position: relative; left:0;}
+	ul>li{float: left;}
+	</style>
+</head>
+<body>
+<div class="slides">
+	<ul class="img-ct">
+		<li><a href="#"><img src="http://img2.3lian.com/img2007/19/33/001.jpg" height="206" width="310"></a></li>
+		<li><a href="#"><img src="http://img2.3lian.com/img2007/19/33/006.jpg" height="206" width="310"></a></li>
+		<li><a href="#"><img src="http://img2.3lian.com/img2007/19/33/003.jpg" height="206" width="310"></a></li>
+		<li><a href="#"><img src="http://img2.3lian.com/img2007/19/33/010.jpg" height="206" width="310"></a></li>
+	</ul>
+</div>
+<script>
+$.fn.slides = function(){
+  var currentIndex = 0;
+  var $ul = this//
+  $ul.each(function(){
+    this // ul node
+    var $currrentUl = $(this)
+    var imageCount = $currrentUl.children('li').length
+  var imageWidth = $currrentUl.children('li').first().width()
+  $currrentUl.width(imageCount * imageWidth)
+
+  setTimeout(function step(){
+    currentIndex++
+    if(currentIndex === 4){
+      currentIndex = 0
+    }
+    $currrentUl.animate({left: currentIndex*(-imageWidth)})
+    setTimeout(step, 1000)
+  },1000)
+  })
+  return  this // this === $ul
+}
+$('ul').slides().addClass()
+</script>
+</body>
+</html>

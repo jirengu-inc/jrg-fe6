@@ -1,0 +1,93 @@
+HTML5新元素
+在HTML5中的新元素
+下面是一个HTML5新元素的列表，这个列表描述了这些新元素的用途
+新的语义/结构元素
+HTML5为更好的文档结构提供了新的元素
+
+标签			描述
+<article>		一个在文档中表示文章的标签
+<aside>			一个标签，这个标签里面的内容与文档的主体内容不相关
+<bdi>			一个表示文本的标签，标签里的文本可能与其他文本方向不一致
+<details>		一个表示额外信息的标签，这些信息可以被用户展示或者隐藏
+<summary>		为<details>标签定义一个标题
+<dialog>	    一个表示弹窗的标签
+<figcaption>	为<figure>标签定义一个标题
+<figure>		一个包含插图、图表、照片、代码清单的标签
+<footer>		一个表示整个文档或者部分文档结尾的标签
+<header>		一个表示整个文档或者部分文档开头的标签
+<main>			表示文档主要内容的标签
+<mark>			表示被标记或者高亮的文本
+<menuitem> 		定义一个用户可以从一个弹出式菜单中调用的命令/菜单项
+<meter>			定义已知范围或分数值内的标量测量
+<nav>			在文档中定义了一个导航栏
+<progress>		定义了一个进度条，表示任务的进度
+<ruby>			一个表示需要注释的文本的标签（东亚排版）
+<rt>			<ruby>标签里文本的注释
+<rp>			表示在不支持<ruby>标签的浏览器里需要显示的内容
+<section>		表示文档的部分或者文章的段落
+<time>			表示一个日期或者时间
+<wbr>			表示一个可能的断行
+
+新的表单元素
+
+标签 			描述
+<datalist>		为<input>标签定义预输入的选项
+<keygen>		为表单定义密钥生成器
+<output>		一个表示输出（计算结果）的标签
+
+新的input类型
+
+新的input类型 
+color
+date
+datetime
+datetime-local
+email
+month
+number
+range
+search
+tel
+time
+url
+week
+新的input属性
+autocomplete
+autofocus
+form
+formaction
+formenctype
+formmethod
+formnovalidate
+formtarget
+height and width
+list
+min and max
+multiple
+pattern (regexp)
+placeholder
+required
+step
+
+HTML5 新属性语法
+在HTML5中，一个属性可以有四种语法
+这个例子演示了作用在input标签上不同的语法
+类型			例子
+空的			<input type="text" value="John" disabled>
+没有引号		<input type="text" value=John>
+双引号			<input type="text" value="John Doe">
+单引号			<input type="text" value='John Doe'>
+在HTML5中，以上四种语法都是可以使用的，这取决与所需要的属性
+
+HTML5图像
+标签 			描述
+<canvas>		使用JavaScript进行图形绘制
+<svg>			使用SVG进行图形绘制
+
+新的媒体元素
+标签 			描述
+<audio>			表示声音或者音乐
+<embed>			表示容器额外的应用程序（例如插件）
+<source>		与<video>、<audio>标签配合使用，表示媒介资源
+<track>			与<video>、<audio>标签配合使用，定义外部文件轨道（例如字幕）
+<video>			表示视频或者影片		

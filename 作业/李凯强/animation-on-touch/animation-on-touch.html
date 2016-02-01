@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+			background-color: pink;
+		}
+		.change{
+			-webkit-animation: change 2s infinite;
+			        animation: change 2s infinite;
+		}
+		@-webkit-keyframes change {
+			25% {background-color: orange;}
+			50% {background-color: #64E7E8;}
+			75% {background-color: #D44A36;}
+		}
+		@keyframes change {
+			25% {background-color: orange;}
+			50% {background-color: #64E7E8;}
+			75% {background-color: #D44A36;}
+		}
+		.iconfont.box{
+			position:absolute;
+			left: 0;
+			top: 0;
+			display: none;
+			font-size: 3rem;
+		}
+		.rotation{
+			-webkit-animation: rotation 1s linear infinite;
+			        animation: rotation 1s linear infinite;
+			-webkit-transition: -webkit-transform 1s;
+			transition: -webkit-transform 1s;
+			transition: transform 1s;
+			transition: transform 1s, -webkit-transform 1s;
+		}
+		@-webkit-keyframes rotation {
+			from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+		}
+		@keyframes rotation {
+			from {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1453256391_619966.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="iconfont box rotation">&#xe601;</div>
+	<script type="text/javascript">
+		var currentX=0;
+		var currentY=0;
+		$(document.body).on('touchstart',function(e){
+			e.preventDefault();
+			$(this).addClass('change');
+			currentX=e.originalEvent.touches[0].clientX-25;
+			currentY=e.originalEvent.touches[0].clientY-25;
+			$('.box').css({
+				'display':'block',
+				'left':currentX,
+				'top':currentY
+			});
+		}).on('touchend',function(e){
+			$(this).removeClass('change');
+			$('.box').css('display','none');
+		})
+
+	</script>
+</body>
+</html>

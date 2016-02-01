@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="[add your bin description]" />
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>手机页面</title>
+  <style>
+		*{
+		  margin: 0;
+		  padding: 0;
+		}
+		@-webkit-keyframes change{
+		  from{
+		    background: hsl(348,80%,90%)
+		  }
+		  to{
+		    background: hsl(150,50%,50%);
+		  }
+		}
+		@keyframes change{
+		  from{
+		    background: hsl(348,80%,90%)
+		  }
+		  to{
+		   background: hsl(150,50%,50%);
+		  }
+		}
+		html{
+		  height: 100%;
+		}
+		body{
+		  height: 100%;
+		  width: 100%;
+		}
+		div{
+		  width: 100%;
+		  height: 100%;
+		  background: hsl(348,80%,90%)
+		}
+		.change{
+		  -webkit-animation:change 1s linear  infinite alternate;
+		          animation:change 1s linear  infinite alternate;
+		}
+		span{
+		  display:inline-block;
+		  background: blue;
+		  width: 10px;
+		  height: 10px;
+		  position:absolute;
+		  border-radius: 15px;
+		}
+  </style>
+</head>
+<body>
+<div>  
+</div>
+<script>
+	var audio = new Audio();  audio.src="http://demo.mimvp.com/html5/take_you_fly.mp3"||"http://demo.mimvp.com/html5/audio/take_you_fly.ogg"||"http://demo.mimvp.com/html5/audio/take_you_fly.wav";
+
+	$('div').on('touchstart',function(event){
+	  audio.play();
+	  $(this).addClass('change');
+	  var touch = event.originalEvent.touches[0]; 
+	  var top = touch.pageY;
+	  var left = touch.pageX;
+	  $(this).append('<span style="top:'+top+'px;left:'+left+'px"></span>');
+	}).on('touchend',function(){
+	  $(this).removeClass('change');
+	})
+</script>
+</body>
+</html>
