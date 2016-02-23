@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/tab.style.css">
 	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452151748_504958.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/carsousel.js"></script>
 	<style>
 	.category-ad{
 		margin-top: 10px;
@@ -402,69 +403,99 @@
 	<div class="menubar">
 		<div class="wrap clearfix">
 			<div class="menu">
-				<div class="menu-item">
-					<h3><a href="">家用电器</a></h3>
-					<i>></i>
+				<div class="menu-item-list">
+					<div class="menu-item">
+						<h3><a href="">家用电器</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">手机、数码、京东通信</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">电脑、办公</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">家居、家具、家装、厨具</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">男装、女装、内衣、珠宝</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">个护化妆、清洁用品</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">鞋靴、箱包、钟表、奢侈品</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">运动户外</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">汽车、汽车用品</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">母婴、玩具乐器</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">食品、酒类、生鲜、特产</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">营养保健</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">图书、音像、电子书</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">彩票、旅行、充值、票务</a></h3>
+						<i>></i>
+					</div>
+					<div class="menu-item">
+						<h3><a href="">理财、众筹、白条、保险</a></h3>
+						<i>></i>
+					</div>
 				</div>
-				<div class="menu-item">
-					<h3><a href="">手机、数码、京东通信</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">电脑、办公</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">家居、家具、家装、厨具</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">男装、女装、内衣、珠宝</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">个护化妆、清洁用品</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">鞋靴、箱包、钟表、奢侈品</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">运动户外</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">汽车、汽车用品</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">母婴、玩具乐器</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">食品、酒类、生鲜、特产</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">营养保健</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">图书、音像、电子书</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">彩票、旅行、充值、票务</a></h3>
-					<i>></i>
-				</div>
-				<div class="menu-item">
-					<h3><a href="">理财、众筹、白条、保险</a></h3>
-					<i>></i>
+				<div class="menu-inner">
+					<div class="menu-inner-sub" id="category-1">
+						家用电器
+					</div>
+					<div class="menu-inner-sub" id="category-2">
+						手机  数码
+					</div>
+					<div class="menu-inner-sub" id="category-3">
+						电脑办公
+					</div>
+					<div class="menu-inner-sub" id="category-4">
+						家居  家具
+					</div>
+					<div class="menu-inner-sub" id="category-5">
+						男装  女装
+					</div>
+						个护化妆
+					</div>
 				</div>
 			</div>
 			<div class="jd-carsousel">
-				<img src="http://img11.360buyimg.com/da/jfs/t2245/325/1223312416/99559/d91c2e0e/568c860bN05b89d1d.jpg" alt="">
+				<ul>
+					<li><img src="images/index-lunbo/56a0ae0aNbbe2af1f.jpg" alt=""></li>
+					<li><img src="images/index-lunbo/568c860bN05b89d1d.jpg" alt=""></li>
+					<li><img src="images/index-lunbo/56af23e4Nb0d25db9.jpg" alt=""></li>
+					<li><img src="images/index-lunbo/56a9a454Nee845d1f.jpg" alt=""></li>
+					<li><img src="images/index-lunbo/56b16dfcN943caab0.jpg" alt=""></li>
+					<li><img src="images/index-lunbo/566e2cacN612669c5.jpg" alt=""></li>
+				</ul>
+				<div class="prev side"><</div>
+  				<div class="next side">></div>
 			</div>
 			<div class="newsandservice">
 				<div class="ns-item">
@@ -480,6 +511,7 @@
 							<li><a href=""><span>[公告]</span>温州大件运营中心开启运营</a></li>
 							<li><a href=""><span>[特惠]</span>百草味美食年货节 低至1元</a></li>
 						</ul>
+						
 					</div>
 					<div class="title clearfix">
 						<h2>生活服务</h2>
@@ -1139,5 +1171,23 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="js/index.js"></script>
+	<script>
+		var param = {
+		'isShowOrder':true,//是否显示序号
+		'isAutoPlay':true,//是否自动播放
+		'animateTime':500,//动画时间
+		'intervalTime':5000,// 自动播放间隔时间
+		'orderCssName':'order-num',//列表div的css样式
+		'isPrevAndNext':true,
+		'prevCssName':'prev',
+		'nextCssName':'next'
+		}
+		carousel.init($('.jd-carsousel'),param);
+	</script>
+	<script>
+
+	</script>
 </body>
 </html>

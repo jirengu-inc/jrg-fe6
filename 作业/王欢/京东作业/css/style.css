@@ -6,6 +6,7 @@
     		font: 12px/150% Arial,Verdana,"\5b8b\4f53";
     		color: #666;
     		margin-bottom: 200px;
+
 		}
 		a{
 			text-decoration: none;
@@ -375,6 +376,7 @@
 			float: left;
 			color: #fff;
 			border-left: 1px solid #b61d1d;
+			position: relative;
 		}
 		.menubar .menu .menu-item{
 			background: #c81623;
@@ -382,25 +384,92 @@
 			line-height: 31px;
 			padding: 8px 0;
 			position: relative;
+			color: #fff;
 		}
 		.menubar .menu .menu-item h3{
 			font:400 14px "microsoft yahei";
 			padding: 0 10px;
 		}
 		.menubar .menu .menu-item h3 a{
-			color: #fff;
+			color: inherit;
 		}
 		.menubar .menu .menu-item i{
 			position: absolute;
 			top: 2px;
 			right: 14px;
 		}
+		.menubar .menu .menu-inner{
+			background: #fff;
+			width: 999px;
+			height: 464px;
+			position: absolute;
+			top: 0;
+			left: 210px;
+			z-index: 1;
+		}
+		.menubar .menu .menu-inner .menu-inner-sub{
+			z-index: inherit;
+		}
 		.menubar .jd-carsousel{
 			float: left;
 			margin: 10px;
 			width: 730px;
 			height: 454px;
+			position: relative;
+			overflow: hidden;
 		}
+		.menubar .jd-carsousel>ul{
+			position: absolute;
+		}
+		.menubar .jd-carsousel>ul>li{
+			float: left;
+		}
+		.menubar .jd-carsousel .side{
+			-webkit-font-smoothing: antialiased;
+			position: absolute;
+			top: 50%;
+			height: 62px;
+			width: 28px;
+			line-height: 62px;
+			background: rgba(0,0,0,.2);
+			margin-top: -31px;
+			display: none;
+			color: #fff;
+			text-align: center;
+			font-size: 21px;
+			font-family: simsun;
+		}
+		.menubar .jd-carsousel:hover .side{
+			display: block;
+		}
+		.menubar .jd-carsousel .prev{
+			left: 0;
+		}
+		.menubar .jd-carsousel .next{
+			right: 0;
+		}
+		.menubar .jd-carsousel .order-num{
+			line-height: 30px;
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			margin-left: -70px;
+		}
+		.menubar .jd-carsousel .order-num li{
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			text-align: center;
+			color: #fff;
+			border-radius: 15px;
+			font-size: 12px;
+			margin-left: 5px;
+			float: left;
+		}
+		.menubar .jd-carsousel .order-num li:hover{
+			background: rgba(104,0,0,.7);
+		}
+
 		.menubar .newsandservice{
 			margin-top: 10px;
 			float: left;
