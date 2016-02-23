@@ -7,8 +7,7 @@ html,body{ height: 100%;color: #333;}
 .page{ height: 100%; }
 .page>nav{ width: 100%;text-align: center;background: hsla(0,0%,0%,0.5);color: #fff;position: fixed;z-index: 1;top: 0;left: 0;}
 .page>nav>.taggle{display: none;position: absolute;width: 36px;height: 36px;line-height: 36px;font-weight: lighter;text-align: center;background: hsla(0,0%,0%,0.5);}
-.page>nav li{ display: inline-block;}
-.page>nav li{background: #fff;color: #000;}
+.page>nav li{display: inline-block;}
 .page>nav li a{ display: block;padding: 5px 10px;margin: 5px; }
 .page>nav li.selected a,.page>nav li a:hover{background: #fff;color: #000;border-radius: 4px;}
 @media (max-width: 900px) {
