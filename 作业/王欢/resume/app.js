@@ -20,7 +20,7 @@
 	function getCurrentIndex(){
 		var currentIndex;
 		var scrollTop = $('body').scrollTop();
-		var eyePosition = scrollTop + $(window).height() / 2
+		var eyePosition = scrollTop + $(window).height() / 4
 		for (var i = 0; i < sectionToplist.length; i++) {
 			if (sectionToplist[i+1] === undefined) {
 				currentIndex = i;
