@@ -11,6 +11,9 @@
 		var $target = $($(this).attr('href'));
 		scrollTo($target);
 	});
+	$('.taggle').on('click',function(){
+		$('nav ol').toggleClass('open');
+	});
 
 
 	//获取当前应该显示的序号
