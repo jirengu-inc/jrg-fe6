@@ -1,125 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>    
 	<meta charset="UTF-8">
 	<title>京东</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/tab.style.css">
 	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1452151748_504958.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/carsousel.js"></script>
-	<style>
-	.category-ad{
-		margin-top: 10px;
-	}
-	.mt .tab{
-		list-style: none;
-		float: right;
-		border: 1px solid #ccc;
-		border-bottom: none;
-		top: 2px;
-		position: relative;
-  		height:32px;
-  		overflow: visible;
-	}
-	.mt .tab .tab-item{
-		float: left;
-		position: relative;
-	}
-	.mt .tab .tab-item a{
-		height: 33px;
-		text-align: center;
-		line-height: 33px;
-		padding: 0 16px;
-	}
-	.mt .tab .tab-item-selected{
-
-	}
-	.mt .tab .tab-item-selected a{
-		background: #fff;
-		color:#c81623;
-		border-top:3px solid #c81623;
-		border-left:1px solid #c81623;
-		border-right:1px solid #c81623;
-		height:32px;
-		line-height:30px;
-		display:inline-block;
-		position: relative;
-		top:-1px;
-		left:-1px;
-		text-indent: 1px;
-	}
-	.mt .tab .tab-item span{
-		width: 1px;
-		background: #ccc;
-		position: absolute;
-		right: 0;
-		height: 14px;
-		top: 9px;
-	}
-	.mt .tab .tab-item-selected span{
-		position: relative;
-	}
-
-	.mc .side{
-		float: left;
-		width: 330px;
-	}
-	.mc .side .side-inner{
-		width: 330px;
-	}
-	.mc .side .side-inner .side-theme{
-		height: 92px;
-		width: 330px;
-		background: rgba(255,255,255,.5);
-		position: relative;
-		margin-top: -221px;
-	}
-	.mc .side .side-inner .side-theme .side-theme-sub{
-		display: inline-block;
-		height: 46px;
-		line-height: 46px;
-		font-size: 14px;
-		width: 62px;
-		margin-left: 30px;
-	}
-	.mc .side .side-inner .side-theme .side-theme-sub i{
-		width:26px;
-		height:26px;
-		display:inline-block;
-		position: relative;
-    	top: 7px;
-    	margin-right: 8px;
-	}
-	.mc .side .side-inner .side-words{
-		height: 124px;
-		width: 330px;
-		background: rgba(255,255,255,.7);
-		position: relative;
-	}
-	.mc .side .side-inner .side-words li{
-		float: left;
-		margin: 0 22px 0 30px;
-		height: 96px;
-		padding-top: 15px;
-		width: 100px;
-	}
-	.mc .side .side-inner .side-words li a{
-		color: #999;
-		display: inline-block;
-		height: 24px;
-		line-height: 24px;
-	}
-	.mc .side .side-extra{
-		width: 328px;
-		height: 158px;
-		border-right:1px solid #ededed;
-		border-left: 1px solid #f7f5ee;
-	}
-	.mc .main{
-		float: left;
-	}
-	</style>
 </head>
 <body>
 	<div class="topbar clearfix">
@@ -404,84 +292,319 @@
 		<div class="wrap clearfix">
 			<div class="menu">
 				<div class="menu-item-list">
-					<div class="menu-item">
+					<div class="menu-item" data-category='1'>
 						<h3><a href="">家用电器</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='2'>
 						<h3><a href="">手机、数码、京东通信</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='3'>
 						<h3><a href="">电脑、办公</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='4'>
 						<h3><a href="">家居、家具、家装、厨具</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='5'>
 						<h3><a href="">男装、女装、内衣、珠宝</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='6'>
 						<h3><a href="">个护化妆、清洁用品</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='7'>
 						<h3><a href="">鞋靴、箱包、钟表、奢侈品</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='8'>
 						<h3><a href="">运动户外</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='9'>
 						<h3><a href="">汽车、汽车用品</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='10'>
 						<h3><a href="">母婴、玩具乐器</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='11'>
 						<h3><a href="">食品、酒类、生鲜、特产</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='12'>
 						<h3><a href="">营养保健</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='13'>
 						<h3><a href="">图书、音像、电子书</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='14'>
 						<h3><a href="">彩票、旅行、充值、票务</a></h3>
 						<i>></i>
 					</div>
-					<div class="menu-item">
+					<div class="menu-item" data-category='15'>
 						<h3><a href="">理财、众筹、白条、保险</a></h3>
 						<i>></i>
 					</div>
 				</div>
 				<div class="menu-inner">
 					<div class="menu-inner-sub" id="category-1">
-						家用电器
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
 					<div class="menu-inner-sub" id="category-2">
-						手机  数码
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>电脑办公 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>电脑办公 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
 					<div class="menu-inner-sub" id="category-3">
-						电脑办公
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>33333333 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
 					<div class="menu-inner-sub" id="category-4">
-						家居  家具
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>4444444 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
 					<div class="menu-inner-sub" id="category-5">
-						男装  女装
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>5555555 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
-						个护化妆
+					<div class="menu-inner-sub" id="category-6">
+						<div class="channel">
+							<a href="">品牌日<span>></span></a>
+							<a href="">家电城<span>></span></a>
+							<a href="">智能生活馆<span>></span></a>
+							<a href="">京东净化馆<span>></span></a>
+							<a href="">京东帮服务店<span>></span></a>
+							<a href="">值得买精选<span>></span></a>
+						</div>
+						<div class="sub-items">
+							<dl class="clearfix">
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt>大家电 &nbsp;></dt>
+								<dd>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+									<a href="">平板电脑</a>
+								</dd>
+							</dl>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -539,15 +662,25 @@
 	<div class="today m">
 		<div class="wrap clearfix">
 			<div class="today-logo">
-				<img src="" alt="">
+				<img src="images/clock.gif" alt="" width="210" height="150">
 			</div>
 			<div class="today-slider">
 				<ul class="clearfix">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>
+						<a href=""><img src="images/today/today1.jpg" alt=""></a>
+						<a href=""><img src="images/today/today1.jpg" alt=""></a>
+						<a href=""><img src="images/today/today1.jpg" alt=""></a>
+						<a href=""><img src="images/today/today1.jpg" alt=""></a>
+					</li>
+					<li>
+						<a href=""><img src="images/today/today2.jpg" alt=""></a>
+						<a href=""><img src="images/today/today2.jpg" alt=""></a>
+						<a href=""><img src="images/today/today2.jpg" alt=""></a>
+						<a href=""><img src="images/today/today2.jpg" alt=""></a>
+					</li>
 				</ul>
+				<div class="prev side"><</div>
+  				<div class="next side">></div>
 			</div>
 		</div>
 	</div>
@@ -739,11 +872,11 @@
 			<div class="mt">
 				<h2>服装</h2>
 				<ul class="tab clearfix">
-					<li class="tab-item">
+					<li class="tab-item tab-item-selected">
 						<a href="">大牌</a>
 						<span></span>
 					</li>
-					<li class="tab-item tab-item-selected">
+					<li class="tab-item">
 						<a href="">大牌</a>
 						<span></span>
 					</li>
@@ -832,8 +965,60 @@
 						<a href=""><img src="http://img14.360buyimg.com/da/jfs/t1951/52/1414430218/18645/94d26088/5696fbd4N31bb3842.jpg" alt="" width="328" height="158"></a>
 					</div>
 				</div>
-				<div class="main">
-					ccc
+				<div class="main main-selected clearfix">
+					<div class="main-left">
+						<a href=""><img src="images/cloths/cloths_3.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_6.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_7.jpg" alt=""></a>
+					</div>
+					<div class="main-middle">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+					</div>
+					<div class="main-right">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_5.jpg" alt=""></a>
+					</div>
+				</div>
+				<div class="main clearfix">
+					<div class="main-left">
+						<a href=""><img src="images/cloths/cloths_7.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_3.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_6.jpg" alt=""></a>
+						
+					</div>
+					<div class="main-middle">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+					</div>
+					<div class="main-right">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_5.jpg" alt=""></a>
+					</div>
+				</div>
+				<div class="main clearfix">
+					<div class="main-left">
+						<a href=""><img src="images/cloths/cloths_6.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_7.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_3.jpg" alt=""></a>	
+					</div>
+					<div class="main-middle">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+					</div>
+					<div class="main-right">
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_4.jpg" alt=""></a>
+						<a href=""><img src="images/cloths/cloths_5.jpg" alt=""></a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1171,8 +1356,156 @@
 			</div>
 		</div>
 	</div>
+		
+	<div class="jd-service">
+		<div class="service-imgList">
+			<span><img src="images/service_items_1.png" alt=""></span>
+			<span><img src="images/service_items_2.png" alt=""></span>
+			<span><img src="images/service_items_3.png" alt=""></span>
+			<span><img src="images/service_items_4.png" alt=""></span>
+		</div>
+		<div class="service-links wrap clearfix">
+			<dl>
+				<dt>购物指南</dt>
+				<dd>
+					<a href="">购物流程</a>
+					<a href="">会员介绍</a>
+					<a href="">生活旅行/团购</a>
+					<a href="">常见问题</a>
+					<a href="">大家电</a>
+					<a href="">联系客服</a>
+				</dd>	
+			</dl>
+			<dl>
+				<dt>购物指南</dt>
+				<dd>
+					<a href="">购物流程</a>
+					<a href="">会员介绍</a>
+					<a href="">生活旅行/团购</a>
+					<a href="">常见问题</a>
+					<a href="">大家电</a>
+					<a href="">联系客服</a>
+				</dd>	
+			</dl>
+			<dl>
+				<dt>购物指南</dt>
+				<dd>
+					<a href="">购物流程</a>
+					<a href="">会员介绍</a>
+					<a href="">生活旅行/团购</a>
+					<a href="">常见问题</a>
+					<a href="">大家电</a>
+					<a href="">联系客服</a>
+				</dd>	
+			</dl>
+			<dl>
+				<dt>购物指南</dt>
+				<dd>
+					<a href="">购物流程</a>
+					<a href="">会员介绍</a>
+					<a href="">生活旅行/团购</a>
+					<a href="">常见问题</a>
+					<a href="">大家电</a>
+					<a href="">联系客服</a>
+				</dd>	
+			</dl>
+			<dl class="fore">
+				<dt>购物指南</dt>
+				<dd>
+					<a href="">购物流程</a>
+					<a href="">会员介绍</a>
+					<a href="">生活旅行/团购</a>
+					<a href="">常见问题</a>
+					<a href="">大家电</a>
+					<a href="">联系客服</a>
+				</dd>	
+			</dl>
+			<div class="service-map">
+				<div class="dt">
+					京东自营覆盖区县
+				</div>
+				<div class="dd">
+					<p>京东已向全国2433个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+					<p class="rt"><a href="">查看详情></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<footer>
+		<div class="links">
+			<a href="">关于我们1</a>|
+			<a href="">关于我们2</a>|
+			<a href="">关于我们3</a>|
+			<a href="">关于我们4</a>|
+			<a href="">关于我们5</a>|
+			<a href="">关于我们6</a>|
+			<a href="">关于我们7</a>|
+			<a href="">关于我们8</a>|
+			<a href="">关于我们9</a>|
+			<a href="">关于我们10</a>
+		</div>
+		<div class="copy">
+			<a href=""> <img src="images/footer/footer_logo.png" alt="">京公网安备 11000002000088号  &nbsp;</a>|
+			&nbsp;京ICP证070359号&nbsp;|
+			<a href="">&nbsp;互联网药品信息服务资格证编号(京)-经营性-2014-0008&nbsp;</a>|
+			&nbsp;新出发京零 字第大120007号&nbsp;| <br>
+			<a href="">&nbsp;音像制品经营许可证苏宿批005号&nbsp;</a>|
+			&nbsp;出版物经营许可证编号新出发(苏)批字第N-012号&nbsp;|
+			&nbsp;互联网出版许可证编号新出网证(京)字150号 &nbsp;<br>
+			&nbsp;网络文化经营许可证京网文[2014]2148-348号&nbsp;
+			&nbsp;违法和不良信息举报电话：4006561155&nbsp;
+			<a href="">&nbsp;Copyright © 2004-2016 &nbsp;</a>
+			<a href="">&nbsp;京东JD.com &nbsp;</a>
+			<a href="">版权所有&nbsp;</a> <br>
+			&nbsp;京东旗下网站：<a href="">&nbsp;360TOP&nbsp;</a>
+			<a href="">&nbsp;拍拍网&nbsp;</a>
+			<a href="">&nbsp;网银在线&nbsp;</a>
+		</div>
+		<div class="authentication">
+			<a href=""><img src="images/footer/footer_1.png" alt=""></a>
+			<a href=""><img src="images/footer/footer-2.png" alt=""></a>
+			<a href=""><img src="images/footer/footer_3.jpg" alt=""></a>
+			<a href=""><img src="images/footer/footer_4.png" alt=""></a>
+			<a href=""><img src="images/footer/footer_5.jpg" alt=""></a>
+			<a href=""><img src="images/footer/footer_6.jpg" alt=""></a>
+		</div>
+	</footer>
+
+
+	<div class="side-bar side-bar-d">
+		<a href="">
+			<i class="jd-iconfont icon-gouwuche"></i>
+			<p>购物车</p>
+		</a>
+		<a href=""><i class="jd-iconfont icon-xin"></i><p>购物车</p></a>
+		<a href=""><i class="jd-iconfont icon-iconzuji01"></i><p>购物车</p></a>
+		<a href=""><i class="jd-iconfont icon-xiaoxi"></i><p>购物车</p></a>
+		<a href=""><i class="jd-iconfont icon-zixun"></i><p>购物车</p></a>
+		
+	</div>
+	<div class="side-bar">
+		<a href=""><i class="jd-iconfont icon-newshang"></i><p>购物车</p></a>
+		<a href=""><i class="jd-iconfont icon-fankui01"></i><p>购物车</p></a>
+	</div>
+	<div id="side-bar-left">
+		<a href=""><span>1F</span><span class="etitle">服装</span></a>
+		<a href=""><span>2F</span><span class="etitle">美妆</span></a>
+		<a href=""><span>3F</span><span class="etitle">手机</span></a>
+		<a href=""><span>4F</span><span class="etitle">家电</span></a>
+		<a href=""><span>5F</span><span class="etitle">数码</span></a>
+		<a href=""><span>6F</span><span class="etitle"></span></a>
+		<a href=""><span>7F</span><span class="etitle"></span></a>
+		<a href=""><span>8F</span><span class="etitle"></span></a>
+		<a href=""><span>9F</span><span class="etitle"></span></a>
+		<a href=""><span>10F</span><span class="etitle"></span></a>
+		<a href=""><span>11F</span><span class="etitle"></span></a>
+	</div>
+	<div class="tool-right">
+		
+	</div>
 	<script src="js/index.js"></script>
+	<script src="js/tab.js"></script>
 	<script>
 		var param = {
 		'isShowOrder':true,//是否显示序号
@@ -1185,9 +1518,34 @@
 		'nextCssName':'next'
 		}
 		carousel.init($('.jd-carsousel'),param);
+		var Tparam = {
+			'isShowOrder':false,//是否显示序号
+			'isAutoPlay':true,//是否自动播放
+			'animateTime':500,//动画时间
+			'intervalTime':5000,// 自动播放间隔时间
+			'orderCssName':'order-num',//列表div的css样式
+			'isPrevAndNext':true,
+			'prevCssName':'prev',
+			'nextCssName':'next'	
+		}
+		// carousel.init($('.today-slider'),Tparam);
 	</script>
+	<script src="js/floor.js"></script>
 	<script>
-
+		$('.menu').on('mouseenter',function(){
+			$('.menu-inner').css({'display':'block'});
+			$('.menu-item').on('mouseover',function(){
+				var index = $(this).index();
+				$('.menu-inner .menu-inner-sub').eq(index).addClass('menu-inner-sub-selected').siblings().removeClass('menu-inner-sub-selected');
+			})
+		})
+		$('.menu').on('mouseleave',function(){
+			console.log('离开了');
+			$('.menu-inner').css({'display':'none'});
+		})
+		$('.ad .ad-close').on('click',function(){
+			$(this).parents('.ad').addClass('close');
+		});
 	</script>
 </body>
 </html>

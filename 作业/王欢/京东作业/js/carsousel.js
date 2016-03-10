@@ -1,5 +1,5 @@
 var carousel = (function(){
-	var $carousel,$list,count,clock,width,$orderList;
+	var $carousel,$list,count,clock,width,$orderList,$carouselClassName;
 	var nparam = {
 		'isShowOrder':true,
 		'isAutoPlay':true,
@@ -13,10 +13,11 @@ var carousel = (function(){
   	function init($container,param){
   		$.extend(nparam,param);
   		$carousel = $container;
+  		$carouselClassName = $carousel.attr('class');
   		$list = $carousel.children('ul');
   		count = $list.children('li').size();
   		width = $list.children('li').width();
-  		$list.css({'width':count*width});	  		
+  		$list.css({'width':count*width});	
   		bind();
   	}
 	function bind(){
@@ -26,12 +27,12 @@ var carousel = (function(){
 		}
 		nparam.isAutoPlay && autoPlay();
 		if (nparam.isPrevAndNext) {
-			$('.'+nparam.nextCssName).on('click',function(){
+			$('.'+$carouselClassName+' .'+nparam.nextCssName).on('click',function(){
 				stopPlay();
 				next();
 				nparam.isAutoPlay && autoPlay();
 			});
-			$('.'+nparam.prevCssName).on('click',function(){
+			$('.'+$carouselClassName+' .'+nparam.prevCssName).on('click',function(){
 				stopPlay();
 				prev();
 				nparam.isAutoPlay && autoPlay();
