@@ -33,6 +33,61 @@ ul{
 .close{
 	display: none;
 }
+.slider ul{
+	position: absolute;
+}
+.slider ul li{
+	float: left;
+}
+.slider .slider-side{
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	top: 50%;
+	height: 62px;
+	width: 28px;
+	line-height: 62px;
+	background: rgba(0,0,0,.2);
+	margin-top: -31px;
+	display: none;
+	color: #fff;
+	text-align: center;
+	font-size: 21px;
+	font-family: simsun;
+}
+.slider:hover .slider-side{
+	display: block;
+}
+.slider .prev{
+	left: 0;
+}
+.slider .next{
+	right: 0;
+}
+.slider .order{
+	line-height: 30px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -70px;
+}
+.slider .order a{
+	display: block;
+	float: left;
+	height: 18px;
+	width: 18px;
+	text-align: center;
+	line-height: 18px;
+	background: #3e3e3e;
+	color: #fff;
+	border-radius: 10px;
+	font-size: 12px;
+	margin:0 2px;
+}
+.slider .order a:hover,.slider .order a.selected{
+	background: #b61b1f;
+}
+
+
 
 
 .topbar{
@@ -487,7 +542,7 @@ ul{
 .menubar .jd-carsousel>ul>li,.today-slider>ul>li{
 	float: left;
 }
-.menubar .jd-carsousel .side,.today-slider .side{
+.menubar .jd-carsousel .slider-side,.today-slider .slider-side{
 	-webkit-font-smoothing: antialiased;
 	position: absolute;
 	top: 50%;
@@ -502,7 +557,7 @@ ul{
 	font-size: 21px;
 	font-family: simsun;
 }
-.menubar .jd-carsousel:hover .side,.today-slider:hover .side{
+.menubar .jd-carsousel:hover .slider-side,.today-slider:hover .slider-side{
 	display: block;
 }
 .menubar .jd-carsousel .prev,.today-slider .prev{
@@ -511,26 +566,12 @@ ul{
 .menubar .jd-carsousel .next,.today-slider .next{
 	right: 0;
 }
-.menubar .jd-carsousel .order-num{
+.menubar .jd-carsousel .order{
 	line-height: 30px;
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
 	margin-left: -70px;
-}
-.menubar .jd-carsousel .order-num li{
-	width: 16px;
-	height: 16px;
-	line-height: 16px;
-	text-align: center;
-	color: #fff;
-	border-radius: 15px;
-	font-size: 12px;
-	margin-left: 5px;
-	float: left;
-}
-.menubar .jd-carsousel .order-num li:hover{
-	background: rgba(104,0,0,.7);
 }
 
 .menubar .newsandservice{
@@ -1135,9 +1176,24 @@ footer .authentication a{
 	width: 439px;
 	float: left;
 }
+.main .main-left .slider{
+	width: 440px;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+}
+
+
+
 .main .main-middle,.main .main-right{
 	width: 219px;
 	float: left;
+}
+
+.clothes .slider .order a{
+	height: 10px;
+	width: 10px;
+	font-size: 0;
 }
 
 

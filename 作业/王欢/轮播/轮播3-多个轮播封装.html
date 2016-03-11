@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="file:///Users/logbird/Desktop/jquery-1.9.1.min.js"></script>
   <meta charset="utf-8">
   <title>轮播3-多个轮播封装</title>
   <style>
@@ -19,6 +19,8 @@
 		  height: 207px;
 		  overflow:hidden;
 		  position: relative;
+		  margin:20px;
+		  float: left;
 		}
 		.img-list{
 		  list-style:none;
@@ -33,7 +35,7 @@
 		  text-decoration:none;
 		}
 		.btn{
-		  display:inline-block;
+		  display:none;
 		  width:30px;
 		  height:30px;
 		  background-color:rgba(255,255,255,0.3);
@@ -45,38 +47,82 @@
 		  top:50%;
 		  margin-top:-15px;
 		}
+		.carousel:hover .btn{
+			display: block;
+		}
 		.prev{
 		  left:10px;
 		}
 		.next{
 		  right:10px;
 		}
+		img{
+			width: 310px;
+			height: 207px;
+		}
+	.order{
+		position: absolute;
+		left: 0;
+		top: 80%;
+	}
+	.order a{
+		display: block;
+		float: left;
+		height: 10px;
+		width: 10px;
+		text-align: center;
+		line-height: 20px;
+		background: hsla(0,0%,0%,0.3);
+		color: #fff;
+		border-radius: 10px;
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	.order a:hover,.order a.seleted{
+		background: hsla(0,50%,50%,0.9);
+	}
   </style>
 </head>
 <body>
+紫 黄 绿 红
 <div class="carousel">
   <ul class="clearfix img-list">
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/1.png" alt=""></a></li>
+    <li><a href=""><img src="images/2.png" alt=""></a></li>
+    <li><a href=""><img src="images/3.png" alt=""></a></li>
+    <li><a href=""><img src="images/4.png" alt=""></a></li>
   </ul>
-  <a href="#" class="btn prev"><</a>
+  	<a href="#" class="btn prev"><</a>
     <a href="#" class="btn next">></a>
 </div>
 <div class="carousel">
   <ul class="clearfix img-list">
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/1.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/2.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/3.jpg" alt=""></a></li>
-    <li><a href="#"><img src="http://book.jirengu.com/jirengu/sample/%E8%BD%AE%E6%92%AD%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8C%96/imgs/4.jpg" alt=""></a></li>
+    <li><a href=""><img src="images/1.png" alt=""></a></li>
+    <li><a href=""><img src="images/2.png" alt=""></a></li>
+    <li><a href=""><img src="images/3.png" alt=""></a></li>
+  </ul>
+  <a href="#" class="btn prev"><</a>
+  <a href="#" class="btn next">></a>
+</div>
+<div class="carousel">
+  <ul class="clearfix img-list">
+    <li><a href=""><img src="images/1.png" alt=""></a></li>
+    <li><a href=""><img src="images/2.png" alt=""></a></li>
+    <li><a href=""><img src="images/3.png" alt=""></a></li>
+    <li><a href=""><img src="images/4.png" alt=""></a></li>
   </ul>
   <a href="#" class="btn prev"><</a>
     <a href="#" class="btn next">></a>
 </div>
+
 <script>
-	function Carousel($carousel){
+	function Carousel($carousel,param){
+		var nparam = {
+			isShowOrder:false,
+			isAutoPlay:false
+		}
 		this.$carousel = $carousel;
+		this.param = $.extend(nparam,param);
 		this.$list = $carousel.find('ul');
 		this.imgWidth = this.$list.find('li').width();
 		this.imgCount = this.$list.find('li').size();
@@ -89,16 +135,17 @@
 	Carousel.prototype = {
 		bind:function(){
 			var _this = this;
-			this.playAuto();
+			this.param.isAutoPlay && this.playAuto();
+			this.param.isShowOrder && this.setOrder();
 			this.$btnNext.on('click',function(){
-				_this.playAutoStop();
+				_this.param.isAutoPlay && _this.playAutoStop();
 			 	_this.playNext();
-			 	_this.playAuto();
+			 	_this.param.isAutoPlay && _this.playAuto();
 			})
 			this.$btnPrev.on('click',function(){
-				_this.playAutoStop();
+				_this.param.isAutoPlay && _this.playAutoStop();
 				_this.playPrev();
-				_this.playAuto();
+				_this.param.isAutoPlay && _this.playAuto();
 			})
 		},
 		playAuto:function(){
@@ -115,6 +162,7 @@
 			this.$list.animate({'left': -this.imgWidth},function(){
 				_this.$list.append(_this.$list.children().first());
 				_this.$list.css('left', 0);
+				_this.param.isShowOrder && _this.setOrderByImg();
 			});
 		},
 		playPrev:function(){
@@ -122,10 +170,58 @@
 			this.$list.prepend(_this.$list.children().last());
 			_this.$list.css({'left':-this.imgWidth});
 			_this.$list.animate({'left':0});
+			_this.param.isShowOrder && _this.setOrderByImg();
+		},
+		setOrder:function(){
+			var _this = this;
+			_this.$carousel.append('<div class="'+_this.param.orderClass+'"></div>'); 
+			var $orderCurrent = _this.$carousel.children('.'+_this.param.orderClass+'');
+			for (var i = 0; i <_this.imgCount; i++) {
+				$orderCurrent.append('<a href="" data-order='+i+'></a>');
+				_this.$list.children().eq(i).attr('data-order',i);
+				if (i == 0) {
+					$orderCurrent.children().eq(0).addClass('seleted');
+				}
+			}
+			var orderWidth = $orderCurrent.width();
+			$orderCurrent.css({'left':'50%','margin-left':-orderWidth/2});
+			$orderCurrent.children('a').on('click',function(e){
+				e.preventDefault();
+				var num = $(this).attr('data-order');
+				$(this).addClass('seleted').siblings().removeClass('seleted');
+				_this.goToImg(num);
+			});
+		},
+		//   根据序号跳到指定图片
+		goToImg:function(num){
+			var _this = this;
+			var $el = _this.$list.find('li[data-order='+num+']');
+			var length = $el.index();
+			var $prevlist=[];
+			for (var i = 0; i < length; i++) {
+				$prevlist.push(_this.$list.children().get(i));			
+			};
+			_this.$list.append($prevlist);
+		}
+		,setOrderByImg:function(){
+			var _this = this;
+			var orderNum = _this.$list.children().first().attr('data-order');
+			var $el = _this.$carousel.children('.'+_this.param.orderClass).children().eq(orderNum);
+			$el.addClass('seleted').siblings().removeClass('seleted');
 		}
 	}
+	var param = {
+		'isShowOrder':true,
+		'isAutoPlay':false,
+		'orderClass':'order'
+		// 'animateTime':1000,
+		// 'intervalTime':3000,
+		// 'isPrevAndNext':true,
+		// 'prevCssName':'prev',
+		// 'nextCssName':'next'
+	}
 	$('.carousel').each(function(){
-		new Carousel($(this));
+		new Carousel($(this),param);
 	});
 </script>
 </body>
