@@ -9,7 +9,7 @@
     </div>
 </form>
 
-<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
     $('form').submit(function (e) {
         e.preventDefault()
@@ -26,9 +26,13 @@
             contentType: false,
             type: 'POST',
         }).then(function (response) {
-            console.log(response)
+            if(response.errorCode){
+                alert('错误')
+            }else(
+                    alert('成功')
+            )
         }, function () {
-
+            alert('请重试')
         })
     })
 </script>

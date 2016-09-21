@@ -8,7 +8,7 @@ module.exports = {
         var data = files.map(function (file) {
             return {
                 name: p.basename(file),
-                path: '/uploaded/' + file,
+                path: '/uploaded/' + file
             }
         })
         yield this.render('read.hbs', {files: data})
@@ -64,7 +64,7 @@ module.exports = {
         }
         this.body = {errorCode: 0}
         yield next
-    }, // 这个逗号
+    } // 这个逗号
 }
 
 function rename(oldPath, newName) {
